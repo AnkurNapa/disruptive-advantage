@@ -11,6 +11,7 @@ Re-run after editing; it overwrites beer.html.
 import json
 import os
 import re
+from urllib.parse import quote
 
 SITE = os.path.expanduser("~/Documents/da-website")
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -45,8 +46,15 @@ panel = re.search(r'<figure[^>]*class="live"[^>]*>.*?</figure>', idx, flags=re.S
 ask = re.search(r'<section class="ask">.*?</section>', idx, flags=re.S).group(0)
 
 
+def contact(ask):
+    """A contact link that arrives with Beer chosen and the message already written."""
+    return "contact.html?produce=beer&amp;ask=" + quote(ask)
+
+
 def pain(q, a):
-    return f'<div class="pain"><p class="q">{q}</p><p class="a">{a}</p></div>'
+    ask = f"We keep asking: {q.replace('&#39;', chr(39))} I would like to see how you would answer it from our own records."
+    return (f'<div class="pain"><p class="q">{q}</p><p class="a">{a}</p>'
+            f'<a class="txtlink" href="{contact(ask)}">Show me this on our data</a></div>')
 
 
 def leak(name, formula, assume, why):
@@ -75,9 +83,10 @@ MAIN = f'''<main id="main">
  <h1>Find the beer your brewery loses between brewhouse and pack</h1>
  <p class="std">Every brew, tank and line on one live record, inside your own Microsoft tenant. You see where extract, beer and energy go, stage by stage, priced in money, and every figure traces back to your own brew sheets.</p>
  <div class="acts">
- <a class="btn" href="contact.html">Book a free demo</a>
- <a class="btn ghost" href="#method">See how we count savings</a>
+ <a class="btn" href="{contact("I would like a free demo of beer intelligence on our own brew sheets.")}">Book a free demo</a>
+ <a class="btn ghost" href="roi.html">Work out my savings</a>
  </div>
+ <p class="cta-note">30 minutes with a brewer, on your own numbers. No slides, nothing to sign.</p>
  <div class="trust"><span>Brewhouse to pack</span><span>Your Azure, your data</span><span>Built by a former AB InBev master brewer</span><span>Microsoft Partner</span></div>
  </div>
  {panel}
@@ -87,7 +96,7 @@ MAIN = f'''<main id="main">
 <section>
  <div class="wrap">
  <div class="xhead"><div><p class="kicker">Sound familiar?</p><h2>The questions a brewery cannot answer by Friday</h2></div>
- <a class="btn ghost" href="solutions.html">The beer solution in full</a></div>
+ </div>
  <div class="pains">
  {pain("Why did brew 4412 attenuate short?", "Every brew plotted against its own target curve, with the fermenter, the yeast generation and the temperature log beside it.")}
  {pain("Where did this month&#39;s two percent of extract go?", "Extract tracked from the malt&#39;s lab value through mash, lauter, kettle and fermenter, so the loss lands on a stage, not on the month.")}
@@ -103,7 +112,7 @@ MAIN = f'''<main id="main">
  <div class="wrap">
  <div class="xhead"><div><p class="kicker">How we count savings</p><h2>Five leaks, five formulas, no black box</h2>
  <p class="std">Each saving is your volume, times the improvement, times what it is worth. The improvements are planning assumptions until your first month measures the real starting point, and you can replace any of them with your own number.</p></div>
- <a class="btn" href="roi.html">Try it with your numbers</a></div>
+ <a class="btn" href="roi.html">Work out my savings</a></div>
  <div class="leaks">
  {leak("Beer loss", "hL a year &#215; points of loss recovered &#215; brewing cost per hL", "one point recovered.", "Lost beer is valued at what it costs to make, not its selling price, so the figure stays conservative.")}
  {leak("Extract", "hL a year &#215; malt cost per hL &#215; points gained &#247; efficiency today", "one point of brewhouse efficiency.", "Every malt lot arrives with its own lab value. Comparing each brew against it shows whether a short brew was the malt, the mill gap or the sparge.")}
@@ -141,6 +150,7 @@ MAIN = f'''<main id="main">
  {week("9 to 20", "Fix, track and sign off", "Three signed monthly statements.")}
  </div>
  <p class="keep"><b>Whatever you decide afterwards,</b> you keep the signed baseline, the leak analysis, the monthly statements and all of your data.</p>
+ <div class="acts cta-row"><a class="btn" href="{contact("We would like to talk about a 20-week proof of concept on our brewhouse, cellar and packaging lines.")}">Start a proof of concept</a><a class="btn ghost" href="#faq">Read what brewers ask first</a></div>
  </div>
 </section>
 
@@ -150,7 +160,7 @@ MAIN = f'''<main id="main">
  <div class="wrap">
  <div class="xhead"><div><p class="kicker">Where we sit in the market</p><h2 style="color:#fff">We map the beer AI market. Most of it watches one thing.</h2>
  <p class="std">Our open Beverage AI Radar tracks {N_ALL:,} companies applying data and AI to beer, whisky and wine. Most of the tools that ship watch a single point: one fermenter, one filler, one motor. Most brewery software is built for the taproom. We build for production plants, with several packaging lines and an excise register, and join every point into one batch record.</p></div>
- <a class="btn" href="{RADAR_URL}" target="_blank" rel="noopener">Explore the radar</a></div>
+ <a class="btn" href="{RADAR_URL}" target="_blank" rel="noopener">Explore the beer AI radar</a></div>
  <div class="mstats">
  <div><span class="mn">{N_BEER}</span><p>companies on the radar work in beer</p></div>
  <div><span class="mn">{N_SHIP}</span><p>of them ship AI today</p></div>
@@ -170,6 +180,7 @@ MAIN = f'''<main id="main">
  <div class="kpi"><b>Answers cite their source</b><span>Ask in plain English. Every answer names the batch, the tank and the record it came from, and says so when the data has a gap.</span></div>
  <div class="kpi"><b>You own the outcome</b><span>Every report, model and record is yours, whether or not you continue with us.</span></div>
  </div>
+ <p class="morelink"><a class="txtlink" href="{contact("Our IT team has questions about security and where our data would live.")}">Bring your IT team&#39;s questions</a></p>
  </div>
 </section>
 
@@ -187,14 +198,14 @@ MAIN = f'''<main id="main">
  <li>Microsoft Certified Fabric Analytics Engineer</li>
  <li>Delivery teams in North Sydney and Bangalore</li>
  </ul>
- <a class="txtlink" href="about.html">About Disruptive Advantage</a>
+ <div class="acts"><a class="btn ghost" href="{contact("I would like to talk to Ankur about our brewery.")}">Talk to Ankur</a><a class="txtlink" href="about.html">About Disruptive Advantage</a></div>
  </div>
  </div>
 </section>
 
-<section>
+<section id="faq">
  <div class="wrap">
- <div class="xhead"><div><p class="kicker">Brewers ask us</p><h2>Before the first call</h2></div><a class="btn ghost" href="contact.html">Ask us something else</a></div>
+ <div class="xhead"><div><p class="kicker">Brewers ask us</p><h2>Before the first call</h2></div><a class="btn ghost" href="{contact("I have a question before we book a call: ")}">Ask your own question</a></div>
  <div class="fqs">
  {faq("Our records live in Excel. Is that enough?", "Yes. The proof of concept starts from the brew sheets, dips and counts you already keep. Sensors and historian data come later, if they earn their place.")}
  {faq("Do we have to replace our ERP, MES or SCADA?", "No. We read from what you run and sit above it. Control and execution stay exactly where they are.")}
@@ -208,10 +219,12 @@ MAIN = f'''<main id="main">
 <section class="talk">
  <div class="wrap inner">
  <div><h2>Bring one week of <span>brew sheets</span></h2><p>We will show you where the beer went, on a call, before anyone signs anything.</p></div>
- <a class="btn" href="contact.html">Book a free demo</a>
+ <div class="talk-acts"><a class="btn" href="{contact("I would like a free demo of beer intelligence on our own brew sheets.")}">Book a free demo</a>
+ <p>or write to <a href="mailto:info@disruptive-advantage.com">info@disruptive-advantage.com</a></p></div>
  </div>
 </section>
-</main>'''
+</main>
+<div class="stickcta" id="stickcta" hidden><span>Find the beer your brewery loses</span><a class="btn sm" href="{contact("I would like a free demo of beer intelligence on our own brew sheets.")}">Book a free demo</a></div>'''
 
 open(os.path.join(SITE, "beer.html"), "w").write(head + MAIN + foot)
 print("beer.html", N_ALL, N_BEER, N_SHIP, N_NONE)

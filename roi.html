@@ -143,7 +143,7 @@
           <span class="cap-note">against the fixed assessment fee on our pricing page.</span>
         </div>
 
-        <a class="btn" href="contact.html">Book a free demo</a>
+        <a class="btn" id="roiCta" href="contact.html?produce=beer">Check this against my plant data</a>
         <p class="out-fine">An estimate from your own inputs, not a promise. It uses standard brewing extract relationships and assumes the efficiency, energy and tank figures you entered are achievable in your plant. We would test that against your real data before anyone signs anything.</p>
         </div>
       </div>
@@ -202,6 +202,15 @@
     document.getElementById('total').textContent   = money(sym, total);
     document.getElementById('oCap').textContent    = Math.round(capHl).toLocaleString('en-AU') + ' hL';
     document.getElementById('oCapVal').textContent = money(sym, capVal);
+
+    var cta = document.getElementById('roiCta');
+    if (cta) {
+      var note = 'Our calculator estimate: ' + money(sym, total) + ' a year (extract ' + money(sym, maltSave)
+        + ', energy ' + money(sym, energySave) + ', batches ' + money(sym, lostSave) + ') on '
+        + Math.round(vol).toLocaleString('en-AU') + ' hL a year at ' + bhe + ' percent brewhouse efficiency. '
+        + 'We would like to check it against our own plant data.';
+      cta.href = 'contact.html?produce=beer&ask=' + encodeURIComponent(note);
+    }
 
     var pay = document.getElementById('oPay');
     if (total > 0) {

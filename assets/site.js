@@ -101,6 +101,37 @@
     });
   }
 
+  /* --- contact: arrive pre-filled from a call to action -------------
+     contact.html?produce=beer&ask=... picks the produce pill and writes the
+     message, so a visitor who pressed a button on a pain card or in the
+     calculator does not have to explain themselves twice. Nothing is sent
+     until they press Send. */
+  if (form && window.URLSearchParams) {
+    var qs = new URLSearchParams(window.location.search);
+    var want = qs.get('produce');
+    if (want) {
+      pills.forEach(function (p) {
+        var on = p.getAttribute('data-produce') === want;
+        p.classList.toggle('is-on', on);
+        p.setAttribute('aria-pressed', String(on));
+      });
+    }
+    var ask = qs.get('ask');
+    var msg = $('#m');
+    if (ask && msg && !msg.value) { msg.value = ask.slice(0, 1200); }
+  }
+
+  /* --- sticky call to action on long pages (phones) -------------------- */
+  var stick = $('#stickcta');
+  var hero = $('.hero');
+  if (stick && hero && window.IntersectionObserver) {
+    var closing = $('.talk');
+    var heroGone = false, endSeen = false;
+    var paint = function () { stick.hidden = !(heroGone && !endSeen); };
+    new IntersectionObserver(function (es) { heroGone = !es[0].isIntersecting; paint(); }).observe(hero);
+    if (closing) { new IntersectionObserver(function (es) { endSeen = es[0].isIntersecting; paint(); }).observe(closing); }
+  }
+
   /* --- newsletter sign-ups ----------------------------------------- */
   $$('.form button').forEach(function (btn) {
     btn.addEventListener('click', function () {
