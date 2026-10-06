@@ -7,7 +7,7 @@ import os
 import re
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSETS = ["assets/site.css", "assets/theme.css", "assets/site.js"]
+ASSETS = ["assets/site.css", "assets/theme.css", "assets/site.js", "assets/beer365-logo.svg", "assets/beer365-mark.svg"]
 ver = {a: hashlib.sha1(open(os.path.join(SITE, a), "rb").read()).hexdigest()[:8] for a in ASSETS}
 n = 0
 for f in glob.glob(os.path.join(SITE, "*.html")) + [os.path.join(SITE, "_build", "shell_head.html"), os.path.join(SITE, "_build", "shell_foot.html")]:
