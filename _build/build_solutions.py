@@ -84,7 +84,7 @@ main = f'''<main id="main">
 <section class="talk">
  <div class="wrap inner">
  <div><h2>Start with the area that <span>hurts</span></h2><p>Tell us which part of the brewery costs you most. We will show you how it is answered from your own records.</p></div>
- <div class="talk-acts"><a class="btn" href="contact.html?produce=beer">Book a free demo</a><p><a href="features.html">See all twelve modules</a></p></div>
+ <div class="talk-acts"><a class="btn" href="contact.html?produce=beer">Book a free demo</a><p class="direct">Or talk to Ankur directly: <a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a></p><p><a href="features.html">See all twelve modules</a></p></div>
  </div>
 </section>
 </main>'''

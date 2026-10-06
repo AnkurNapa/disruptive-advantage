@@ -71,14 +71,14 @@ def page(w):
 <div class="findings"><p class="blocklabel">Key findings</p><ul>{findings}</ul></div>
 {body}
 <h2>Sources</h2><ul class="caps srcs">{sources}</ul>
-<div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a></p></div></div>
+<div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. He leads Beer365 at Disruptive Advantage.</p><p><a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a><br/><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a></p></div></div>
 </div>
 </div>
 </section>
 <section class="talk noprint">
 <div class="wrap inner">
 <div><h2>Test it on <span>your</span> brewery</h2><p>Bring one week of brew sheets. We will run the same numbers on your records, on a call.</p></div>
-<div class="talk-acts"><a class="btn" href="contact.html?produce=beer">Book a free demo</a><p><a href="downloads/Beer365-Readiness-Workbook.xlsx" download>Or start with the readiness workbook</a></p></div>
+<div class="talk-acts"><a class="btn" href="contact.html?produce=beer">Book a free demo</a><p class="direct">Or talk to Ankur directly: <a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a></p><p><a href="downloads/Beer365-Readiness-Workbook.xlsx" download>Or start with the readiness workbook</a></p></div>
 </div>
 </section>
 </main>'''

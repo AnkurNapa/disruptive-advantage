@@ -160,7 +160,7 @@ def article_page(a, arts):
 </aside>
 <div class="prose">{body}
 <p class="ucline">Part of the Beer365 solution for <a href="solutions.html#{E(a["area"])}">{E(area_name.lower())}</a>.</p>
-<div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
+<div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a><br/><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
 </div>
 </div>
 </section>
@@ -173,7 +173,7 @@ def article_page(a, arts):
 <section class="talk">
 <div class="wrap inner">
 <div><h2>Bring one week of <span>brew sheets</span></h2><p>We will show you where the beer went, on a call, before anyone signs anything.</p></div>
-<div class="talk-acts"><a class="btn" href="contact.html?produce=beer&amp;ask={ask}">Book a free demo</a></div>
+<div class="talk-acts"><a class="btn" href="contact.html?produce=beer&amp;ask={ask}">Book a free demo</a><p class="direct">Or talk to Ankur directly: <a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a></p></div>
 </div>
 </section>
 </main>'''

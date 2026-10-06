@@ -227,6 +227,7 @@ MAIN = f'''<main id="main">
  <li>Microsoft Certified Fabric Analytics Engineer</li>
  <li>Delivery teams in North Sydney and Bangalore</li>
  </ul>
+ <p class="teamcontact"><a href="tel:+917755909445">+91 7755 909445</a><br/><a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a></p>
  <div class="acts"><a class="btn ghost" href="{contact("I would like to talk to Ankur about our brewery.")}">Talk to Ankur</a><a class="txtlink" href="about.html">About Disruptive Advantage</a></div>
  </div>
  </div>
@@ -248,8 +249,7 @@ MAIN = f'''<main id="main">
 <section class="talk">
  <div class="wrap inner">
  <div><h2>Bring one week of <span>brew sheets</span></h2><p>We will show you where the beer went, on a call, before anyone signs anything.</p></div>
- <div class="talk-acts"><a class="btn" href="{contact("I would like a free demo of beer intelligence on our own brew sheets.")}">Book a free demo</a>
- <p>or write to <a href="mailto:info@disruptive-advantage.com">info@disruptive-advantage.com</a></p></div>
+ <div class="talk-acts"><a class="btn" href="{contact("I would like a free demo of beer intelligence on our own brew sheets.")}">Book a free demo</a><p class="direct">Or talk to Ankur directly: <a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a></p></div>
  </div>
 </section>
 </main>

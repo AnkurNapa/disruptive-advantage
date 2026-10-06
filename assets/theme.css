@@ -438,3 +438,8 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 @media (max-width:860px){.appgrid{grid-template-columns:minmax(0,1fr)}}
 
 .appgrid{align-items:start}
+.fdirect{margin-bottom:14px}
+.fdirect b{color:var(--ink);font-weight:700}
+.direct{font-size:.9375rem;font-weight:500;margin:0}
+.direct a,.teamcontact a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;font-weight:600;white-space:nowrap}
+.teamcontact{margin:4px 0 18px;font-size:1rem;line-height:1.8}
