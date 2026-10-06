@@ -523,3 +523,9 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .talk-acts{min-width:0;max-width:100%}
 .direct a,.teamcontact a{white-space:normal;overflow-wrap:anywhere}
 @media (max-width:480px){.direct{display:flex;flex-direction:column;gap:6px}.direct a{display:flex}}
+
+/* images keep their own shape: width and height attributes reserve space, never distort */
+img[width][height]{height:auto}
+.hdr .logo img{height:40px;width:auto}
+@media (max-width:980px){.hdr .logo img{height:32px;width:auto}}
+.frame img{width:100%;height:auto;object-fit:contain}
