@@ -395,3 +395,4 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
   linear-gradient(100deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.86) 42%,rgba(0,0,0,.55) 100%),
   url(photos/brewhouse.jpg) center/cover no-repeat,var(--night)}
 @media print{.p-art .ahero{display:none}}
+.area .aimg,.acard .cimg,.p-art .ahero img{height:auto}

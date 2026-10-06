@@ -17,8 +17,7 @@ SITE = os.path.dirname(HERE)
 BASE = "https://ankurnapa.github.io/disruptive-advantage/"
 E = lambda s: html.escape(str(s), quote=True)
 
-AREA_OF = {f"article-{json.load(open(f))['slug']}.html": json.load(open(f)).get("area", "layer")
-           for f in glob.glob(os.path.join(HERE, "articles", "*.json")) if not os.path.basename(f).startswith("_")}
+AREA_OF = json.load(open(os.path.join(HERE, "article_photos.json")))  # written by build_articles.py
 PAGE_PHOTO = {"index.html": "brewhouse", "use-cases.html": "cellar", "solutions.html": "brewhouse", "features.html": "cellar",
               "roi.html": "brewhouse", "pricing.html": "business", "about.html": "business", "careers.html": "business",
               "contact.html": "layer", "case-studies.html": "brewhouse", "case-study-extract-loss.html": "brewhouse",

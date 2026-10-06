@@ -54,6 +54,18 @@ def load():
             if by_area.get(k):
                 mixed.append(by_area[k].pop(0))
     ordered = pillars + mixed
+    keys = [k for k, *_ in AREAS if k != "layer"]
+    seen = {}
+    for i, a in enumerate(ordered):
+        if a["pillar"]:
+            k = keys[i % len(keys)]
+            a["photo"] = k if (i // len(keys)) % 2 == 0 else (k + "-2" if os.path.exists(os.path.join(SITE, "assets", "photos", k + "-2.jpg")) else k)
+        else:
+            n = seen.get(a["area"], 0)
+            seen[a["area"]] = n + 1
+            alt = a["area"] + "-2"
+            a["photo"] = alt if n % 2 and os.path.exists(os.path.join(SITE, "assets", "photos", alt + ".jpg")) else a["area"]
+    json.dump({f"article-{a['slug']}.html": a["photo"] for a in ordered}, open(os.path.join(HERE, "article_photos.json"), "w"), indent=1)
     day = dt.date(2026, 10, 5)
     for i, a in enumerate(ordered):
         a["date"] = day - dt.timedelta(days=round(i * 2.6))
@@ -136,7 +148,7 @@ def article_page(a, arts):
 <h1>{E(a["title"])}</h1>
 <p class="std">{inline(a["standfirst"])}</p>
 <div class="hmeta"><span>By Ankur Napa</span><span>{a["read_min"]} min read</span><span>{a["date"].strftime("%-d %B %Y")}</span></div>
-<figure class="ahero"><img src="assets/photos/{E(a["area"])}.jpg" alt="" width="1200" height="700"></figure>
+<figure class="ahero"><img src="assets/photos/{E(a["photo"])}.jpg" alt="" width="1200" height="700"></figure>
 </div>
 </section>
 <section>
@@ -171,7 +183,7 @@ def article_page(a, arts):
 
 def card(a, big=False):
     return (f'<a class="acard{" big" if big else ""}" href="article-{a["slug"]}.html" data-area="{E(a["area"])}">'
-            f'<img class="cimg" src="assets/photos/{E(a["area"])}.jpg" alt="" width="1200" height="700" loading="lazy">'
+            f'<img class="cimg" src="assets/photos/{E(a.get("photo", a["area"]))}.jpg" alt="" width="1200" height="700" loading="lazy">'
             f'<span class="topic">{E(AREA.get(a["area"], "Brewing"))}</span><h3>{E(a["title"])}</h3>'
             f'<p>{inline(a["standfirst"])}</p><span class="ameta">{a["date"].strftime("%-d %b %Y")} · {a["read_min"]} min read</span></a>')
 
