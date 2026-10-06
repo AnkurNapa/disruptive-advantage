@@ -520,3 +520,6 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .fdirect a .ic{margin-top:4px}
 .ftr .fdirect{font-size:.875rem}
 @media (max-width:560px){.p-contact .pill{white-space:normal}}
+.talk-acts{min-width:0;max-width:100%}
+.direct a,.teamcontact a{white-space:normal;overflow-wrap:anywhere}
+@media (max-width:480px){.direct{display:flex;flex-direction:column;gap:6px}.direct a{display:flex}}
