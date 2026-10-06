@@ -12,6 +12,9 @@ import json
 import os
 import re
 from urllib.parse import quote
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from areas import AREAS, UC, cases, examples  # noqa: E402
 
 SITE = os.path.expanduser("~/Documents/da-website")
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -27,7 +30,7 @@ RADAR_URL = "https://ankurnapa.github.io/beverage-ai-radar/"
 
 head = open(os.path.join(HERE, "shell_head.html")).read()
 foot = open(os.path.join(HERE, "shell_foot.html")).read()
-TITLE = "Beer intelligence for breweries | Disruptive Advantage"
+TITLE = "Beer365, intelligence for the whole beer business"
 DESC = ("Find the beer, extract and energy your brewery loses between brewhouse and pack. "
         "One live batch record inside your own Microsoft tenant, savings you can check.")
 head = re.sub(r"<title>.*?</title>", f"<title>{TITLE}</title>", head, flags=re.S)
@@ -39,7 +42,7 @@ head = head.replace('href="https://ankurnapa.github.io/disruptive-advantage/" re
 head = head.replace('content="https://ankurnapa.github.io/disruptive-advantage/" property="og:url"',
                     'content="https://ankurnapa.github.io/disruptive-advantage/beer.html" property="og:url"')
 head = head.replace('class="p-index"', 'class="p-index p-beer"')
-head = head.replace('<a href="beer.html">Beer intelligence</a>', '<a aria-current="page" href="beer.html">Beer intelligence</a>', 1)
+head = head.replace('<a href="beer.html">Beer365</a>', '<a aria-current="page" href="beer.html">Beer365</a>', 1)
 
 idx = open(os.path.join(SITE, "index.html")).read()
 panel = re.search(r'<figure[^>]*class="live"[^>]*>.*?</figure>', idx, flags=re.S).group(0)
@@ -70,6 +73,13 @@ def week(w, h, get):
     return f'<div class="wk"><span class="wn">Weeks {w}</span><h4>{h}</h4><p>{get}</p></div>'
 
 
+def area_card(a):
+    k, n, d, _ = a
+    qs = "".join(f"<li>{u['q']}</li>" for u in examples(a))
+    return (f'<a class="area" href="use-cases.html#{k}"><span class="an">{len(cases(a))} questions</span>'
+            f'<h3>{n}</h3><p>{d}</p><ul>{qs}</ul><span class="more">See all {len(cases(a))}</span></a>')
+
+
 def faq(q, a):
     return f'<div class="fq"><h4>{q}</h4><p>{a}</p></div>'
 
@@ -79,7 +89,7 @@ MAIN = f'''<main id="main">
 <section class="hero xh dark">
  <div class="wrap split">
  <div>
- <span class="eyebrow-x">Beer intelligence, built by brewers</span>
+ <span class="eyebrow-x">Beer365, built by brewers</span>
  <h1>Find the beer your brewery loses between brewhouse and pack</h1>
  <p class="std">Every brew, tank and line on one live record, inside your own Microsoft tenant. You see where extract, beer and energy go, stage by stage, priced in money, and every figure traces back to your own brew sheets.</p>
  <div class="acts">
@@ -105,6 +115,15 @@ MAIN = f'''<main id="main">
  {pain("Why does the report never match the head brewer&#39;s notebook?", "One batch record behind every report, so brewhouse yield means the same number in the cellar and the boardroom.")}
  {pain("Is the duty return right, or only reconciled?", "Measured loss reconciled with the excise register, from data the plant already produces.")}
  </div>
+ </div>
+</section>
+
+<section class="whole">
+ <div class="wrap">
+ <div class="xhead"><div><p class="kicker">The whole beer business</p><h2>From the malt lot to the excise return</h2>
+ <p class="std">Beer365 is not a fermentation sensor or a line dashboard. It is one record of the whole brewery, so it answers {len(UC)} questions across every department: the ones your head brewer asks, and the ones your finance director, packaging lead and sales team ask too.</p></div>
+ <a class="btn" href="use-cases.html">See all {len(UC)} questions</a></div>
+ <div class="areas">{"".join(area_card(a) for a in AREAS)}</div>
  </div>
 </section>
 
