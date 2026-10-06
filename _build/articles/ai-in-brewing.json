@@ -1,0 +1,167 @@
+{
+ "slug": "ai-in-brewing",
+ "uc_id": null,
+ "area": "layer",
+ "title": "Where AI in brewing earns its keep across the whole brewery",
+ "standfirst": "AI in brewing works when it answers a question someone on the floor or in finance already asks. It fails when it starts with the model instead of the batch.",
+ "description": "AI in brewing, department by department: where machine learning and GenAI pay back in a brewery, the data each needs and the traps that make it lie.",
+ "keywords": [
+  "AI in brewing",
+  "AI for breweries",
+  "machine learning brewery",
+  "brewery artificial intelligence",
+  "AI beer production"
+ ],
+ "read_min": 6,
+ "sections": [
+  {
+   "h2": "What does AI in brewing actually do?",
+   "blocks": [
+    {
+     "p": "AI in brewing is the use of statistical models and language models on the records a brewery already keeps, to predict, flag or explain something a person would otherwise work out by hand. In practice that means three jobs. Forecasting a number before it happens, such as when a fermentation will reach terminal gravity. Spotting a pattern nobody asked about, such as a pump drawing more current every week. Reading text at scale, such as two years of deviation reports, then answering questions about it with the source attached."
+    },
+    {
+     "p": "None of that is new maths. What changed is cost. Ten years ago a brewery needed a data science team to fit a fermentation curve across a thousand batches. Today the model is the cheap part. The expensive part is the same as it always was: getting the brew number in the brewhouse log to match the tank in the cellar log, the lot on the filler and the sample in the lab book."
+    },
+    {
+     "p": "I spent years as an R&D brewer before I wrote a line of production code. The model sees the number. The brewer sees the three weeks behind it, the yeast that came off a stressed generation, the gravity reading pulled before the tank was roused. Good AI in a brewery keeps that context attached to the number. Bad AI strips it off and presents the result with confidence."
+    }
+   ]
+  },
+  {
+   "h2": "Where AI earns its keep in a brewery, area by area",
+   "blocks": [
+    {
+     "p": "The useful questions are spread across the whole plant, not only the brewhouse. This is the map I use when a brewery asks where to point a model first."
+    },
+    {
+     "table": {
+      "head": [
+       "Area",
+       "Question AI can help answer",
+       "Data it needs"
+      ],
+      "rows": [
+       [
+        "Brewhouse",
+        "Which brews lost extract? Was it the mill, the mash or the lauter?",
+        "Brew sheets, mill gap, lauter run-off times, wort gravity at knockout"
+       ],
+       [
+        "Cellar",
+        "When will this tank reach terminal gravity? Is it behaving like its last ten?",
+        "Gravity and temperature readings per tank, yeast generation, pitch rate"
+       ],
+       [
+        "Packaging",
+        "Why did the filler stop 40 times on Tuesday night?",
+        "Line stoppage codes, shift, SKU, can or bottle supplier lot"
+       ],
+       [
+        "Quality",
+        "Is this sensory or lab result drifting before it fails spec?",
+        "LIMS results, panel scores, sample point, method"
+       ],
+       [
+        "Utilities and maintenance",
+        "Which compressor or pump is degrading before it trips?",
+        "Historian tags: current, vibration, pressures, run hours"
+       ],
+       [
+        "Supply chain",
+        "How much of each SKU do we need in six weeks?",
+        "Sales history by SKU and channel, promotions, holiday calendar"
+       ],
+       [
+        "Sales",
+        "Which accounts are slipping? Which SKU is carrying the growth?",
+        "Invoices, depletions, distributor reports"
+       ],
+       [
+        "Finance",
+        "What did each hectolitre really cost, including losses?",
+        "ERP costs, packaged volume, loss by stage, duty records"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Two things about that table. First, every row needs data from more than one system, which is why AI projects in breweries stall at the join, not at the model. Second, the money is uneven. A forecast that frees one fermenter a week is worth more to a brewery running at capacity than any chatbot."
+    },
+    {
+     "p": "It helps to separate two kinds of AI, because they fail in different ways. Machine learning works on numbers: gravity curves, currents, stoppage counts, sales by week. It is good at forecasts and at flagging the odd one out. It is only as honest as the sensor and the definition behind each column. Generative AI works on language: SOPs, deviation reports, complaint emails, shift handover notes. It is good at finding and summarising what people wrote. It is dangerous when it starts inventing what they did not write. A brewery needs both. It should never let the second one do the job of the first, such as estimating a tank's final gravity from a paragraph of notes when the gravity readings sit in the historian."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example: what one point of brewhouse yield is worth",
+   "blocks": [
+    {
+     "p": "Say a brewery runs 400 brews a year and charges 6,000 kg of malt per brew. Brewhouse yield sits at 94 percent of laboratory extract. A model trained on mill settings, mash profiles and lauter data finds the brews that lose extract and the operating conditions behind them. Yield moves to 95 percent."
+    },
+    {
+     "eq": {
+      "label": "Malt needed for the same extract",
+      "code": "malt at new yield = malt at old yield x (old yield / new yield) = 6,000 kg x (94 / 95) = 5,936.8 kg",
+      "note": "Same wort, same gravity, same volume, less grain."
+     }
+    },
+    {
+     "p": "That is 63.2 kg saved per brew. Over 400 brews it comes to 25,263 kg, about 25 tonnes of malt a year, before the energy and spent grain handling that go with it. The model did not save the malt. The brewer who changed the mill gap did. The model told the brewer which brews to look at."
+    },
+    {
+     "p": "The same shape of sum works everywhere in the plant: a small change in a rate, multiplied by a volume the brewery runs every day. That is the test for any AI in brewing proposal. If nobody can write the sum, the project is a demo."
+    }
+   ]
+  },
+  {
+   "h2": "Where AI in brewing goes wrong",
+   "blocks": [
+    {
+     "ul": [
+      "**Uncalibrated sensors.** A model trained on a temperature probe reading 0.8 °C high learns the error as truth. Check calibration records before training on historian data.",
+      "**Three definitions of one number.** Brewed, packaged and sold volume all get called production. A model that mixes them will rank beers wrongly and say so politely.",
+      "**Survivorship in the data.** Dumped batches often vanish from the records. A model that never sees the failures cannot predict them.",
+      "**Too few events.** Predicting a failure that happened twice in five years is not machine learning. It is a guess with a chart.",
+      "**Arithmetic by language model.** Duty, ABV and blend maths belong in tested formulas. A language model can call the formula. It should not do the sum itself."
+     ]
+    },
+    {
+     "p": "None of these are technology problems. They are definitions-and-trust problems. They sit with the people who know the plant. That is why the brewers have to be in the room when the model is built, not shown the dashboard afterwards."
+    },
+    {
+     "p": "A useful habit is to ask every AI proposal three plain questions before anyone writes code. Which batches will it be tested on? What would the head brewer have predicted for those batches without it? Who changes what on the floor when it is right? If the answers are vague, the proposal is about the technology rather than the beer. If they are specific, the model usually turns out to be the smallest part of the job."
+    }
+   ]
+  },
+  {
+   "h2": "How should a brewery start with AI?",
+   "blocks": [
+    {
+     "p": "Start with one question that costs money every week and that someone already argues about. Fermentation time, brewhouse yield, filler stoppages and beer loss are the usual candidates. Build one record per batch that joins the brewhouse, cellar, packaging and lab data for that question. Agree the definitions in writing. Then fit the simplest model that answers it. Check it against what the head brewer would have said."
+    },
+    {
+     "p": "Beer365 is built for that first step. It reads from the systems you already run, keeps one record per batch inside your own Microsoft tenant and answers questions with the batch records cited, so a brewer can check the answer against the tank it came from."
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "How is AI used in brewing?",
+   "a": "Breweries use AI to forecast fermentation finish times, find brews that lose extract, spot equipment degrading before it fails, forecast demand by SKU and search years of batch records and deviation reports in plain English. Each use depends on joining data from the brewhouse, cellar, packaging and lab."
+  },
+  {
+   "q": "Can AI replace a head brewer?",
+   "a": "No. AI can point a brewer at the batches worth looking at and answer questions about the records faster. It cannot taste the beer, judge a yeast crop or know that a sensor was reading high last month. The judgement stays with the brewer."
+  },
+  {
+   "q": "What data does a brewery need before using AI?",
+   "a": "At minimum a consistent batch or brew number that links brewhouse records, fermentation readings, packaging lots and lab results, plus agreed definitions for volumes and losses. Most breweries already hold this data across several systems. The work is joining it."
+  },
+  {
+   "q": "Is AI worth it for a small brewery?",
+   "a": "Only where the sum works. A small brewery should start with one costly question, such as fermentation time or beer loss, with a simple model. If nobody can write down what a better answer is worth in malt, tank days or hectolitres, it is not ready."
+  }
+ ]
+}

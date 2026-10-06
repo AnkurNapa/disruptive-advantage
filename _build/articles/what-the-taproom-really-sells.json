@@ -1,0 +1,93 @@
+{
+ "slug": "what-the-taproom-really-sells",
+ "uc_id": 121,
+ "area": "market",
+ "title": "What the taproom is really selling, in litres, pours and keg yield",
+ "standfirst": "The till says what was rung up. The kegs say what was poured. The gap between the two and the mix underneath is where taproom margin goes.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why the till is only half the answer",
+   "blocks": [
+    {
+     "p": "A taproom POS export is the cleanest sales data most breweries have. Every pour, every SKU, every timestamp. It is easy to rank beers by revenue and stop there. That ranking hides three things: how much beer left the keg without being rung up, which pour sizes carry the margin and whether the best-seller is the best use of the tanks behind the bar."
+    },
+    {
+     "p": "Convert every POS line to litres first. A 500 ml pour, a 330 ml glass and a 150 ml taster in a flight are different volumes at different prices per litre. Then rank the beers three ways."
+    },
+    {
+     "ul": [
+      "**Share of litres.** What people drink.",
+      "**Share of revenue.** What they pay for. Small pours and flights usually carry a higher price per litre.",
+      "**Share of contribution.** Revenue less liquid cost, per beer. This is what pays the rent."
+     ]
+    },
+    {
+     "p": "Beers that rank high on litres and low on contribution are doing a job, often as the gateway beer for new drinkers. That can be fine. It should be a decision, not an accident."
+    }
+   ]
+  },
+  {
+   "h2": "Keg yield: rung up against poured",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Keg yield",
+      "code": "Yield % = litres rung up on POS / litres drawn from kegs x 100",
+      "note": "Litres drawn = kegs emptied x keg volume, per beer, per week."
+     }
+    },
+    {
+     "p": "Say a 30 litre keg should give 60 pours of 500 ml. If the POS shows 52 pours from that keg, yield is 52 / 60 = 86.7 percent. Eight pints went somewhere: foam on the first pour after a keg change, line flushing, comps, over-pours, or beer that was poured and never rung up. A little loss is physics. A steady 13 percent is a conversation."
+    },
+    {
+     "p": "Track it by beer and by shift. Loss that sits on one beer points to the line or the gas setting. Loss that sits on one shift points to people."
+    },
+    {
+     "p": "Line cleaning deserves its own row. Beer pushed out of a line before cleaning is a known, measurable loss: line length times bore area. Record it each time so it stops hiding inside the yield gap."
+    }
+   ]
+  },
+  {
+   "h2": "Contribution per tank day",
+   "blocks": [
+    {
+     "p": "A taproom brewery's real constraint is usually tank time, not demand. A lager that sells well may still be the wrong beer to brew more of."
+    },
+    {
+     "eq": {
+      "label": "Contribution per tank day",
+      "code": "Contribution per tank day = margin per litre x batch litres / tank days"
+     }
+    },
+    {
+     "p": "Say a lager makes INR 500 a litre in margin on a 2,000 litre batch that holds a fermenter for 28 days: 500 x 2,000 / 28 = about INR 35,700 a tank day. A wheat beer makes INR 450 a litre on a 1,000 litre batch that frees the tank in 10 days: 450 x 1,000 / 10 = INR 45,000 a tank day. The lager sells more. The wheat beer earns more from the same steel. Neither number says drop the lager. Both say know what it costs."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Flights counted as one item.** A flight of four tasters rung up as one line hides which beers were in it. Fix the POS so each taster maps to a beer and a volume.",
+      "**Price changes mid-period.** A price rise in week six makes the first half look worse. Compare per litre at the price that applied.",
+      "**Kegs not logged.** Yield needs the keg change recorded. If nobody notes it, estimate from line flow meters where you have them, or start a simple tick sheet behind the bar.",
+      "**Comps rung up at zero.** Better than not rung up at all, but report them separately so revenue per litre is not dragged down by generosity."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a weekly page per beer: litres, revenue and contribution share, keg yield with contribution per tank day beside it. The taproom manager reads the yield. The brewer reads the tank day column. The owner reads both."
+    },
+    {
+     "p": "Beer365 joins the POS export to the keg and batch records in one record, so every pour can be traced back to the batch it came from."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "slug": "key-account-cost-to-serve",
+ "uc_id": 128,
+ "area": "market",
+ "title": "Counting the cost to serve shows which big customer is a loss leader",
+ "standfirst": "The biggest accounts get the best prices and the most support. Add up what each one really costs, from rebates to the credit days. Some of them stop paying their way.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why the big account looks good on paper",
+   "blocks": [
+    {
+     "p": "Key accounts are judged on volume and gross margin. Both are measured before most of the cost of serving them lands. Listing fees, volume rebates, free goods, cooler placements, small frequent drops, long payment terms, returns of out-of-code stock and a dedicated account team all sit in different cost centres. No single report adds them back to the customer who caused them."
+    },
+    {
+     "p": "So the largest account keeps getting the most attention while nobody can say whether it makes money."
+    },
+    {
+     "p": "This is not the sales team's fault. Each cost was agreed for a sensible reason at the time: a listing to get on the shelf, a cooler to keep the beer cold, longer terms to win the tender. The problem is that nobody adds them up per customer, so the deal is judged on the line that looks best."
+    }
+   ]
+  },
+  {
+   "h2": "The calculation",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Account contribution",
+      "code": "Contribution = net revenue - product cost - trade spend - free goods - logistics - cost of credit - returns - equipment - account team",
+      "note": "Divide by hL sold to compare accounts of different size."
+     }
+    },
+    {
+     "eq": {
+      "label": "Cost of credit",
+      "code": "Cost of credit = annual net revenue x payment days / 365 x cost of capital"
+     }
+    },
+    {
+     "ul": [
+      "**Net revenue** after duty and invoice discounts, from billing.",
+      "**Trade spend** from the agreements: listing fees, rebates, promotional support. Accrue to the period of sale.",
+      "**Logistics** from delivery records: number of drops times cost per drop, not an average freight rate per hL.",
+      "**Returns** at product cost plus handling, from the returns log.",
+      "**Account team** time and travel, allocated by the share of time spent on each account."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Compare two hypothetical accounts over a year. Account A is a large retail chain buying 2,000 hL at INR 26,000 net per hL. Account B is a regional distributor buying 300 hL at INR 32,000. Product cost is INR 14,000 per hL for both. Cost of capital is 11 percent."
+    },
+    {
+     "table": {
+      "head": [
+       "Line (INR)",
+       "Account A",
+       "Account B"
+      ],
+      "rows": [
+       [
+        "Net revenue",
+        "52,000,000",
+        "9,600,000"
+       ],
+       [
+        "Product cost",
+        "28,000,000",
+        "4,200,000"
+       ],
+       [
+        "Rebates and listing fees",
+        "15,000,000",
+        "600,000"
+       ],
+       [
+        "Free goods (100 hL at product cost)",
+        "1,400,000",
+        "0"
+       ],
+       [
+        "Logistics (520 drops at 2,500 / 52 at 4,000)",
+        "1,300,000",
+        "208,000"
+       ],
+       [
+        "Credit (120 days / 30 days)",
+        "1,880,548",
+        "86,795"
+       ],
+       [
+        "Returns (60 hL / 1.5 hL at 15,000)",
+        "900,000",
+        "22,500"
+       ],
+       [
+        "Coolers and merchandising",
+        "2,000,000",
+        "0"
+       ],
+       [
+        "Account team",
+        "2,000,000",
+        "300,000"
+       ],
+       [
+        "Contribution",
+        "-480,548",
+        "4,182,705"
+       ],
+       [
+        "Contribution per hL",
+        "-240",
+        "13,942"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Account A sells nearly seven times the volume and loses INR 240 on every hectolitre once everything is counted. Before the account team it makes about INR 760 per hL, which is still thin. Account B, smaller and less exciting, earns almost INR 14,000 per hL."
+    },
+    {
+     "p": "That does not mean drop Account A. Its volume may fill tanks that would otherwise stand idle. The brand presence may help elsewhere. It means the next negotiation starts from the real number: fewer, larger drops, shorter terms, or rebates tied to growth rather than to volume already being bought."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Average freight per hL.** It hides the cost of many small drops. Count drops.",
+      "**Trade spend paid centrally.** Annual rebates paid by head office never reach the account report unless someone maps them back.",
+      "**Returns written off as quality cost.** Out-of-code stock taken back from one chain is that chain's cost, not the brewery's quality failure.",
+      "**Fixed brewing overhead spread by volume.** Leave it out. It makes big accounts look better and answers a different question."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a ranked list of accounts by contribution per hL, each with the cost lines that drive it, refreshed quarterly and agreed with finance. The sales director sees it before the annual negotiations, not after."
+    },
+    {
+     "p": "Watch the trend as much as the level. An account whose contribution per hL falls each quarter is usually one where support has crept up while the price stayed put. That is easier to fix early than at renewal."
+    },
+    {
+     "p": "Beer365 pulls billing, trade agreements, deliveries and returns into one record, so each account's contribution can be traced to the invoices and drops behind it."
+    }
+   ]
+  }
+ ]
+}

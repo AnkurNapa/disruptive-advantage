@@ -1,0 +1,112 @@
+[
+ {
+  "id": 22,
+  "title": "Extract loss decomposition",
+  "section": "C. Brewhouse, milling to wort cooling",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Where exactly are the litres going?",
+  "area": "brewhouse",
+  "area_name": "Brewhouse"
+ },
+ {
+  "id": 47,
+  "title": "Cellar beer loss",
+  "section": "D. Fermentation and cellar",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "How much beer dies in cones, heels and transfers?",
+  "area": "cellar",
+  "area_name": "Fermentation and cellar"
+ },
+ {
+  "id": 54,
+  "title": "Blend exposure calculation",
+  "section": "E. Filtration, stabilisation, blending, bright beer",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "If one brew is bad, how much beer is affected?",
+  "area": "cellar",
+  "area_name": "Fermentation and cellar"
+ },
+ {
+  "id": 35,
+  "title": "Fermentation curve versus its own plan",
+  "section": "D. Fermentation and cellar",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is this tank following the plan written for it?",
+  "area": "cellar",
+  "area_name": "Fermentation and cellar"
+ },
+ {
+  "id": 36,
+  "title": "Diacetyl rest enforcement",
+  "section": "D. Fermentation and cellar",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Did anyone cut the rest short to free a tank?",
+  "area": "cellar",
+  "area_name": "Fermentation and cellar"
+ },
+ {
+  "id": 41,
+  "title": "Free rise and ramp adherence",
+  "section": "D. Fermentation and cellar",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Are the cellar ramps being followed?",
+  "area": "cellar",
+  "area_name": "Fermentation and cellar"
+ },
+ {
+  "id": 53,
+  "title": "Blend composition optimiser",
+  "section": "E. Filtration, stabilisation, blending, bright beer",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "What blend hits spec at the lowest risk?",
+  "area": "cellar",
+  "area_name": "Fermentation and cellar"
+ },
+ {
+  "id": 65,
+  "title": "Date code and traceability completeness",
+  "section": "F. Packaging",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Can I resolve any date code to a tank?",
+  "area": "packaging",
+  "area_name": "Packaging"
+ },
+ {
+  "id": 61,
+  "title": "TPO and dissolved oxygen monitoring",
+  "section": "F. Packaging",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Am I packaging shelf life away?",
+  "area": "packaging",
+  "area_name": "Packaging"
+ },
+ {
+  "id": 62,
+  "title": "Fill level and give-away",
+  "section": "F. Packaging",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "How many free millilitres am I donating?",
+  "area": "packaging",
+  "area_name": "Packaging"
+ }
+]

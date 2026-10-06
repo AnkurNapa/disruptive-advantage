@@ -1,0 +1,123 @@
+{
+ "slug": "stock-cover-versus-forecast",
+ "uc_id": 118,
+ "area": "market",
+ "title": "Stock cover against lead time shows where you will run out next",
+ "standfirst": "Days of cover only means something when you hold it against how long it takes to make the beer again. Done by depot and SKU, it tells you where the gap will open.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why it matters",
+   "blocks": [
+    {
+     "p": "A stock-out at a depot is lost revenue the brewery never sees on a report, because the sale that did not happen leaves no row. It also costs shelf space, because the retailer fills the gap with someone else. Overstock is the other half: beer ageing in a warehouse, losing freshness, waiting to be discounted."
+    },
+    {
+     "p": "Most breweries look at total stock against total forecast. That is like judging a cellar by its average temperature. The run-out happens in one depot, on one SKU."
+    }
+   ]
+  },
+  {
+   "h2": "The calculation",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Days of cover",
+      "code": "Cover (days) = available stock / forecast demand per day",
+      "note": "Per depot and per SKU. Available means released by quality and inside its sell-by window."
+     }
+    },
+    {
+     "eq": {
+      "label": "Gap",
+      "code": "Gap (units) = max(0, lead time - cover) x forecast demand per day"
+     }
+    },
+    {
+     "p": "Lead time is not a supply chain number alone. It is brewing time plus packaging plus transport. A lager that needs three weeks in tank cannot be rushed because a depot looks thin."
+    },
+    {
+     "ul": [
+      "**Stock.** From the warehouse system, by depot and SKU, with quality hold and near-code stock separated out.",
+      "**Forecast.** By depot and SKU for the next month, with a plausible low and high, not a single number.",
+      "**In transit.** Stock on the road counts, but only from the day it arrives.",
+      "**Lead time.** Tank days for the beer, packaging slot and transport days to that depot."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say one depot holds 4,200 cases of a lager in 24 x 330 ml packs. The forecast for the next 30 days is 6,300 cases, so 210 cases a day. Cover is 4,200 / 210 = 20 days."
+    },
+    {
+     "p": "The lead time to replenish is 21 days in tank, 3 days to package and 4 days on the road: 28 days. The next brew lands eight days after the stock runs out. The gap is 8 x 210 = 1,680 cases, roughly 133 hL at 7.92 litres a case."
+    },
+    {
+     "table": {
+      "head": [
+       "Item",
+       "Value"
+      ],
+      "rows": [
+       [
+        "Available stock",
+        "4,200 cases"
+       ],
+       [
+        "Forecast per day",
+        "210 cases"
+       ],
+       [
+        "Cover",
+        "20 days"
+       ],
+       [
+        "Lead time",
+        "28 days"
+       ],
+       [
+        "Gap",
+        "1,680 cases"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The choices are then concrete. Move stock from a depot with spare cover, if one exists and the freight makes sense. Bring forward a brew if a tank is free. Or tell the sales team now, so they can manage the account instead of explaining a gap after it happens."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Counting stock you cannot sell.** Quality hold, damaged pallets and beer close to its code date all sit in the warehouse total. Leave them out of available stock.",
+      "**A national forecast split by habit.** If depot forecasts are last year's share of the national number, a depot that has grown will run out first.",
+      "**Promotions missing from the forecast.** A price promotion the sales team agreed last week will not be in a forecast built from history.",
+      "**Single-number forecasts.** A forecast of 210 a day with no range hides the fact that some weeks sell 300. Plan the gap against the high case for SKUs you cannot afford to miss.",
+      "**Thin history.** A new SKU with six months of sales does not have enough history for a seasonal forecast. Flag it and plan it by hand.",
+      "**Units.** Cases, hectolitres, pallets and kegs mixed in one report have caused more than one panic. Convert to hectolitres for the comparison."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a weekly table by depot and SKU: available stock, forecast with its range, cover, lead time and gap, sorted by the date the gap opens. The top of that list is the conversation for the planning meeting. A forecast never makes beer appear, but it can buy the brewer two weeks of warning."
+    },
+    {
+     "p": "The same table read from the other end shows the beer at risk of ageing: SKUs with cover far beyond the forecast, especially styles that lose their hop aroma first. Those are the candidates for a transfer to a busier depot before they become a discount."
+    },
+    {
+     "p": "Beer365 reads stock and forecast from your systems into one record and answers where you will run out, with each gap tied back to the depot, the SKU and the batch that could fill it."
+    }
+   ]
+  }
+ ]
+}

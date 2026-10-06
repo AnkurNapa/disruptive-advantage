@@ -1,0 +1,129 @@
+{
+ "slug": "date-code-to-tank",
+ "uc_id": 65,
+ "area": "packaging",
+ "title": "Can you resolve any date code to a tank in minutes",
+ "standfirst": "Traceability is usually tested once a year in a mock recall that everyone prepares for. The honest test is a random can from the warehouse and a stopwatch.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The chain behind the ink",
+   "blocks": [
+    {
+     "p": "A complaint arrives with a photo of a can bottom. The date code is legible. The question is simple: which beer is this? In many breweries the answer takes most of a day, because it needs the packaging supervisor, the cellar log and somebody who remembers which bright tank fed line 3 that afternoon."
+    },
+    {
+     "p": "Traceability is not a single record. It is a chain. Every link is kept by a different team:"
+    },
+    {
+     "ul": [
+      "Date code to packaging run: line number, date and time printed on the pack, matched to the run that was on that line at that time.",
+      "Packaging run to bright beer tank: which tank fed the filler and when it switched, if it did.",
+      "Bright beer tank to fermenters: the blend record.",
+      "Fermenters to brews: which brews filled each tank.",
+      "Brews to material lots: malt, hops, yeast generation, process aids."
+     ]
+    },
+    {
+     "p": "The chain is only as fast as its slowest link. It is only as good as its weakest. One link on paper turns a minute into an afternoon."
+    }
+   ]
+  },
+  {
+   "h2": "Measure completeness, not intention",
+   "blocks": [
+    {
+     "p": "Most plants have a traceability procedure. Fewer measure whether the data actually joins. Completeness is the share of packaging runs where every link resolves to a record, without a phone call."
+    },
+    {
+     "eq": {
+      "label": "Trace completeness for a period",
+      "code": "Complete % = runs where every link resolves / all packaging runs x 100",
+      "note": "Also report each link on its own, so the weak one is obvious."
+     }
+    },
+    {
+     "p": "Pair it with a time test. Each week, pull a handful of real date codes from the warehouse or from complaints and time how long it takes to reach brews and material lots. The completeness figure says whether the data exists. The stopwatch says whether anyone can use it."
+    }
+   ]
+  },
+  {
+   "h2": "A worked month",
+   "blocks": [
+    {
+     "p": "Say a plant packs 120 runs in a month. The date code 14MAR26 L3 1412 means line 3, 14 March 2026, 14:12. That time falls inside run 3-0417, which ran from 11:40 to 17:05. So far, so good."
+    },
+    {
+     "table": {
+      "head": [
+       "Link",
+       "Runs resolving",
+       "Share"
+      ],
+      "rows": [
+       [
+        "Date code to packaging run",
+        "120 of 120",
+        "100.0 %"
+       ],
+       [
+        "Run to bright beer tank",
+        "118 of 120",
+        "98.3 %"
+       ],
+       [
+        "Tank to fermenters (blend record)",
+        "111 of 120",
+        "92.5 %"
+       ],
+       [
+        "Fermenters to brews",
+        "108 of 120",
+        "90.0 %"
+       ],
+       [
+        "All links",
+        "108 of 120",
+        "90.0 %"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Ninety per cent sounds acceptable until you notice that the 12 broken runs are where the next complaint will land. The procedure says nothing about them. Here the biggest drop is the blend record: seven runs have a tank but no reliable record of which fermenters went into it. That is a cellar paperwork fix, not a software project."
+    }
+   ]
+  },
+  {
+   "h2": "Where the chain breaks",
+   "blocks": [
+    {
+     "p": "**Printer clocks.** The coder on the line has its own clock. If it drifts or was never set after a power cut, the printed time points at the wrong run. Check coder time against the line controller every shift."
+    },
+    {
+     "p": "**Runs that cross midnight.** The code carries the pack date, but the run may be booked under the start date. Match on line and timestamp, not on date alone."
+    },
+    {
+     "p": "**Tank switches mid-run.** When the filler changes from one bright tank to another without a new run number, the code needs the switch time to resolve. Without it, both tanks are in the answer."
+    },
+    {
+     "p": "**Best-before instead of pack date.** Some markets print only a best-before date. Resolving it means subtracting the shelf life that applied to that product, which must be recorded per SKU and per period."
+    },
+    {
+     "p": "**Kegs and rework.** Kegs often carry a label applied later or none at all. Beer reworked into a later blend can vanish from the chain. Both need their own link."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a completeness figure close to every run, reported per link every month. A random date code resolved to tanks, brews and lots in minutes by whoever is on shift. When a link breaks, the run is flagged the same day, while somebody still remembers which tank it was."
+    },
+    {
+     "p": "Beer365 joins packaging runs, tank records, blend records and brew records into one chain and reports which links are missing for which runs. A date code typed in returns the tank, the brews and the lots, each citing the record it came from."
+    }
+   ]
+  }
+ ]
+}

@@ -314,3 +314,84 @@ button.sub,.form button{font-weight:600;padding-left:28px;padding-right:28px}
 .ucnone{color:var(--mid);padding:24px 0}
 @media (max-width:980px){.ucbar{top:73px}}
 @media (max-width:760px){.ucl{grid-template-columns:minmax(0,1fr)} .ucbar{position:static}}
+
+/* ---------- beer only: closing bands and the case study colours ---------- */
+section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
+.p-case-study-spirit-account{--c:var(--beer);--t:var(--cream)}
+
+/* ---------- articles, white papers, resources ---------- */
+.acards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.acard{display:flex;flex-direction:column;gap:10px;background:var(--band);border-radius:var(--radius);padding:26px;color:var(--ink);
+  border-top:5px solid transparent;transition:border-color .16s ease,background .16s ease,transform .16s ease;min-width:0}
+.acard:hover{border-top-color:var(--yellow);background:var(--cream);color:var(--ink);transform:translateY(-2px)}
+.tinted .acard{background:#fff}
+.acard .topic{font-size:.8125rem;font-weight:700;color:var(--green)}
+.acard h3{font-size:1.1875rem;font-weight:800;letter-spacing:-.02em;line-height:1.25;overflow-wrap:anywhere}
+.acard p{font-size:.9375rem;color:var(--mid);line-height:1.55}
+.acard .ameta{margin-top:auto;padding-top:6px;font-family:var(--mono);font-size:.75rem;color:var(--soft)}
+.acard[hidden]{display:none}
+.alead .acard.big{background:var(--grad);color:#fff;padding:clamp(28px,4vw,52px);border-top:0}
+.alead .acard.big h3{color:#fff;font-size:clamp(1.6rem,1.1rem + 1.6vw,2.4rem);max-width:28ch}
+.alead .acard.big p{color:rgba(255,255,255,.8);max-width:60ch;font-size:1.0625rem}
+.alead .acard.big .topic{color:var(--yellow)}
+.alead .acard.big .ameta{color:rgba(255,255,255,.6)}
+.aguide{margin:56px 0 22px;font-size:clamp(1.5rem,1.1rem + 1.2vw,2.1rem)}
+.p-art .sidecta{margin-top:28px;padding:18px;background:var(--cream);border-radius:var(--radius-sm)}
+.p-art .sidecta p{font-size:.875rem;font-weight:600;margin-bottom:10px}
+.p-art .ucline{margin-top:36px;padding-top:18px;border-top:1px solid var(--rule);font-size:.9375rem;color:var(--mid)}
+.p-art .afq{padding:16px 0;border-top:1px solid var(--hair)}
+.p-art .afq h3{font-size:1.0625rem;margin-bottom:6px}
+.p-art .prose{min-width:0}
+.p-art .prose p,.p-art .prose li{overflow-wrap:anywhere}
+.p-art .prose ul.caps{margin:14px 0 20px}
+.p-art .eq code{white-space:pre-wrap;overflow-wrap:anywhere}
+.p-art .deftable td:first-child{white-space:normal}
+.p-art .phero h1{max-width:24ch}
+.findings{background:var(--cream);border-radius:var(--radius);padding:22px 26px;margin-bottom:36px;border-top:5px solid var(--yellow)}
+.findings ul{margin:10px 0 0;padding-left:18px;display:grid;gap:8px}
+.findings li{font-weight:600}
+.wpstat{display:flex;align-items:baseline;gap:16px;margin:22px 0;padding:16px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.wpstat b{font-size:clamp(2rem,1.4rem + 2vw,3rem);font-weight:800;letter-spacing:-.04em;background:linear-gradient(transparent 60%,var(--yellow) 60%)}
+.wpstat span{color:var(--mid)}
+.srcs li{font-size:.875rem}
+.p-wp .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.dl{background:var(--grad);color:#fff;border-radius:var(--radius);padding:clamp(28px,4vw,52px)}
+.dl h2{color:#fff;margin:10px 0 14px}
+.dl .topic{color:var(--yellow);font-weight:700;font-size:.875rem}
+.dl .body{color:rgba(255,255,255,.8);max-width:70ch}
+.dl .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.dl .btn.ghost{border-color:#fff;color:#fff}
+@media (max-width:1080px){.acards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.acards{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion: reduce){.acard{transition:none}.acard:hover{transform:none}}
+@media print{
+  .hdr,.ftr,.noprint,.crumb,.stickcta,.skip{display:none !important}
+  body{font-size:11pt}
+  .p-art .article{display:block}
+  .p-art .phero{padding:0 0 18px;background:none}
+  section{padding:14px 0}
+  .wrap{padding:0 14mm}
+  h2{break-after:avoid}
+  .findings,.wpstat,.deftable tr{break-inside:avoid}
+  .scrollx{overflow:visible}
+  .deftable{font-size:9pt}
+  .p-art .phero::before{content:url(beer365-logo.svg);display:block;margin-bottom:22px}
+}
+.p-art .author{display:flex;gap:18px;align-items:flex-start;margin-top:28px;padding:22px 24px;background:var(--band);border-radius:var(--radius)}
+.p-art .author img{flex:none;border-radius:10px}
+.p-art .author p{font-size:.9375rem;line-height:1.55;color:var(--mid);margin:0 0 6px}
+.p-art .author .an{font-weight:800;color:var(--ink)}
+@media print{.p-art .author{break-inside:avoid}}
+
+/* ---------- photography: one graded set, used by area ---------- */
+.area{padding-top:0;overflow:hidden}
+.area .aimg{display:block;width:calc(100% + 52px);max-width:none;margin:0 -26px 6px;aspect-ratio:12/6;object-fit:cover}
+.acard{overflow:hidden}
+.acard .cimg{display:block;width:calc(100% + 52px);max-width:none;margin:-26px -26px 6px;aspect-ratio:12/6;object-fit:cover}
+.alead .acard.big .cimg{display:none}
+.p-art .ahero{margin:30px 0 0;border-radius:var(--radius);overflow:hidden;max-width:880px}
+.p-art .ahero img{display:block;width:100%;aspect-ratio:12/5;object-fit:cover}
+.p-index .hero.xh{background:
+  linear-gradient(100deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.86) 42%,rgba(0,0,0,.55) 100%),
+  url(photos/brewhouse.jpg) center/cover no-repeat,var(--night)}
+@media print{.p-art .ahero{display:none}}

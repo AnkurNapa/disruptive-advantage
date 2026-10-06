@@ -1,0 +1,135 @@
+{
+ "slug": "cellar-beer-loss",
+ "uc_id": 47,
+ "area": "cellar",
+ "title": "How much beer dies in cones, heels and transfers",
+ "standfirst": "Cellar loss is usually a balancing figure on a monthly report. Measured vessel by vessel it becomes a list of named leaks, most of them owned by a valve and a habit.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The number that is always somebody else's",
+   "blocks": [
+    {
+     "p": "Ask a brewery how much beer it loses in the cellar and you will usually get a figure from finance: wort into fermenters minus beer out of the cellar, divided by the first number. It arrives once a month, it is always a little worse than budget and it belongs to nobody. The brewhouse says the meters are fine. Filtration says it only gets what it is sent."
+    },
+    {
+     "p": "That figure is real money. Every hectolitre lost in the cellar has already carried the cost of malt, hops, energy, water and tank time. It is finished product minus the packaging. Losing it at the cone is the most expensive way a brewery can make effluent."
+    }
+   ]
+  },
+  {
+   "h2": "Measure volume in and out of every vessel",
+   "blocks": [
+    {
+     "p": "The monthly total cannot tell you where the beer went. The vessel can. For each fermenter and each bright beer tank, record every movement with a source, a destination and a reason code."
+    },
+    {
+     "eq": {
+      "label": "Cellar loss for one vessel or one month",
+      "code": "Loss % = (volume in - volume out to next stage) / volume in x 100",
+      "note": "Both volumes on one basis, for example hL at 20 C, before any dilution water is added."
+     }
+    },
+    {
+     "p": "The movements that matter are few:"
+    },
+    {
+     "ul": [
+      "Wort into the fermenter, from the brewhouse wort meter.",
+      "Yeast cropped and cone dumps, from a meter or a calibrated dump tank, never from a guess.",
+      "Beer transferred out, from the transfer or filter inlet meter.",
+      "Filter pre-runs, push-outs and water-beer interfaces sent to drain.",
+      "Heels left in tanks and either recovered, carried forward or dumped.",
+      "Samples and anything else, which should be small and stay small."
+     ]
+    },
+    {
+     "p": "When each of these has a number, the loss stops being a balancing figure. What is left over after the named losses is the unexplained part. That is the part worth chasing."
+    }
+   ]
+  },
+  {
+   "h2": "A worked month",
+   "blocks": [
+    {
+     "p": "Say a cellar receives 20,000 hL of high-gravity wort in a month and sends 19,000 hL to filtration before dilution. Cellar loss is (20,000 - 19,000) / 20,000 = 5.0 %. Broken down by movement, the 1,000 hL might look like this."
+    },
+    {
+     "table": {
+      "head": [
+       "Where it went",
+       "hL",
+       "Share of loss"
+      ],
+      "rows": [
+       [
+        "Yeast crop and cone dumps",
+        "520",
+        "52 %"
+       ],
+       [
+        "Filter pre-runs and interfaces to drain",
+        "230",
+        "23 %"
+       ],
+       [
+        "Heels dumped from FVs and BBTs",
+        "140",
+        "14 %"
+       ],
+       [
+        "Samples",
+        "40",
+        "4 %"
+       ],
+       [
+        "Unexplained",
+        "70",
+        "7 %"
+       ],
+       [
+        "Total",
+        "1,000",
+        "100 %"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Now there are conversations to have. Cone dumps that run until the operator sees beer, rather than until a sight glass or turbidity probe says yeast has stopped, will always overshoot. Interfaces that go to drain on a timer set years ago, for a different filter, will always be generous. Recovering half a point of the 5.0 % is 100 hL a month. At a margin of, say, INR 4,200 per hL, that is INR 420,000 a month, from valves you already own."
+    }
+   ]
+  },
+  {
+   "h2": "What makes the number lie",
+   "blocks": [
+    {
+     "p": "**Dilution water in the out figure.** If the out meter sits after the high-gravity dilution point, the cellar can show a gain. Measure out before dilution or subtract the dilution water explicitly."
+    },
+    {
+     "p": "**Mixed temperature bases.** Wort is metered warm at around pitching temperature, beer cold near 0 C. The difference in water density alone is small, but a meter that reports uncorrected volume on one side and corrected on the other quietly moves the loss. Pick one basis and convert both."
+    },
+    {
+     "p": "**Beer inside the yeast.** A cropped slurry carries a large share of beer between the cells. Whether you recover it or not, count the crop as a movement out of the vessel, then count any recovered beer as a movement back in."
+    },
+    {
+     "p": "**Heels that travel.** A bright beer tank heel carried into the next fill is not lost, it is moved. If nobody records it, the first tank shows a loss and the second a gain. Both are wrong."
+    },
+    {
+     "p": "**Meters nobody proves.** A transfer meter 1 % high on 19,000 hL invents 190 hL of beer. That is more than the whole unexplained line in the example. Prove meters on a schedule and keep the proof next to the data."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a cellar where every movement has a meter or a calibrated vessel behind it, where the unexplained share is small enough that nobody argues about it and where each named loss has an owner. The cone dump becomes a cellar SOP with a stop condition. The interface becomes a filter setting with a reason. The heel becomes a decision someone made, recorded at the time."
+    },
+    {
+     "p": "Beer365 builds this from your existing records. It reads the wort meters, transfer logs and filter data into one record per vessel, shows loss by movement type and leaves the unexplained remainder on the screen where it belongs, with every figure citing the batch and the transfer behind it."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+[
+ {
+  "id": 111,
+  "title": "FEFO adherence and stock ageing",
+  "section": "K. Warehouse, distribution and cold chain",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "Am I shipping the oldest beer first?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 116,
+  "title": "Returns and breakage analysis",
+  "section": "K. Warehouse, distribution and cold chain",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "What comes back and why?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 117,
+  "title": "Empties and keg return cycle",
+  "section": "K. Warehouse, distribution and cold chain",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "How long is a keg out of circulation?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 119,
+  "title": "Demand forecast by SKU and channel",
+  "section": "L. Sales",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "How much of what, and when?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 123,
+  "title": "Outlet performance and churn risk",
+  "section": "L. Sales",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "Which accounts are about to stop ordering?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 125,
+  "title": "Price pack architecture",
+  "section": "L. Sales",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "Is my pack ladder coherent or accidental?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 135,
+  "title": "Complaint text as product signal",
+  "section": "M. Marketing, brand and consumer",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "What are complaints telling marketing?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 138,
+  "title": "Taproom event return",
+  "section": "M. Marketing, brand and consumer",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "Which events are worth repeating?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 12,
+  "title": "Live cost to brew per recipe",
+  "section": "B. Recipe, formulation and new product development",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "What does this beer cost me today, not last quarter?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 154,
+  "title": "Water ratio target tracking",
+  "section": "O. ESG, compliance and safety",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "Am I on track against the water target?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ }
+]

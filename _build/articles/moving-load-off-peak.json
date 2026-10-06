@@ -1,0 +1,107 @@
+{
+ "slug": "moving-load-off-peak",
+ "uc_id": 78,
+ "area": "plant",
+ "title": "Which brewery loads can you actually move off the peak tariff?",
+ "standfirst": "Time-of-day tariffs reward breweries that shift load. The bill does not tell you which loads are movable. The interval meter data and the brewing schedule do.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why it matters",
+   "blocks": [
+    {
+     "p": "Most industrial electricity tariffs charge more for energy used in peak hours and add a demand charge on the highest kVA drawn in the billing month. A brewery is a lumpy load. The brewhouse comes on, a fermenter starts its crash, the packaging line runs and the compressors all load up at once. One half hour of coincidence can set the demand charge for the whole month."
+    },
+    {
+     "p": "Some of that load cannot move. Wort will not wait. A lager that is ready to crash should crash. Some of it can. The job is telling the two apart with data rather than with a hunch from the energy manager."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where",
+   "blocks": [
+    {
+     "ul": [
+      "**Interval data from the main incomer.** Fifteen or thirty-minute kWh and kVA, at least three months of it. Monthly bills are useless for this; they average away the peak you are trying to find.",
+      "**Sub-meters on the big users.** Refrigeration compressors, air compressors, CIP heating, the brewhouse and the packaging hall. Without these you know when the peak happened but not who caused it.",
+      "**The tariff itself.** Peak, normal and off-peak windows, the rate in each and the demand charge per kVA. Read your own tariff order; they differ by state and by connection type.",
+      "**The production schedule.** Brew starts, crash-cool starts, CIP cycles and packaging shifts, with timestamps."
+     ]
+    },
+    {
+     "eq": {
+      "label": "Energy cost for a month",
+      "code": "Cost = sum over slots (kWh in slot x rate for that slot) + demand charge x maximum kVA",
+      "note": "kVA = kW / power factor. A poor power factor raises the demand charge for the same kW."
+     }
+    },
+    {
+     "eq": {
+      "label": "Value of moving a load",
+      "code": "Saving = kWh moved x (peak rate - off-peak rate) - storage losses x off-peak rate + reduction in maximum kVA x demand charge"
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say the peak rate is INR 11 per kWh and off-peak is INR 7.50. The refrigeration plant draws 300 kWh during the evening peak to keep the glycol loop down. If a larger glycol buffer is chilled overnight and allowed to rise through the peak, that 300 kWh moves. Over 30 days the shift is worth 300 x 3.50 x 30 = INR 31,500 a month."
+    },
+    {
+     "p": "Storage is not free. Assume 5 percent more energy to cover tank losses and the deeper pull-down, charged at the off-peak rate: 15 kWh x 7.50 x 30 = INR 3,375. Net, about INR 28,100 a month."
+    },
+    {
+     "p": "Now the demand charge. Suppose the monthly maximum of 900 kW at a power factor of 0.95 (947 kVA) happens when the brewhouse and a crash-cool overlap. Staggering the crash by an hour brings the maximum to 760 kW, or 800 kVA. That is 147 kVA less. At a demand charge of, say, INR 400 per kVA, about INR 59,000 a month. Often the demand charge is the bigger prize. It costs nothing but a scheduling rule."
+    },
+    {
+     "table": {
+      "head": [
+       "Lever",
+       "Monthly value (INR)"
+      ],
+      "rows": [
+       [
+        "Shift 300 kWh/day of chilling to off-peak",
+        "31,500"
+       ],
+       [
+        "Less storage losses",
+        "-3,375"
+       ],
+       [
+        "Stagger crash-cool against brewhouse peak",
+        "58,950"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Process first.** A crash started before fermentation is finished fights the yeast, costs more energy and can leave diacetyl behind. Moving a crash for tariff reasons is only fine when the beer is ready either way.",
+      "**Steam has its own peak.** Boiler plant is sized for peak steam demand, which is why many sites run more than one boiler and a steam accumulator for the moment the wort boiler comes on. Shifting electrical load can quietly move a steam peak too.",
+      "**Averages hide it.** A daily kWh chart can look flat while the maximum demand sits on one 30-minute slot every Tuesday.",
+      "**Holidays and dry days.** Tariff calendars and production calendars rarely agree. Check both before trusting a pattern."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a heat map of kVA by half hour across the month, the top ten slots labelled with what was running plus a short list of loads tagged movable, movable with a buffer, or fixed. The brewer signs off the fixed list. Engineering owns the rest."
+    },
+    {
+     "p": "Beer365 lines up the interval meter data with the brew and CIP log in one record, so the answer to which load set the peak names the batch and the time it happened."
+    }
+   ]
+  }
+ ]
+}

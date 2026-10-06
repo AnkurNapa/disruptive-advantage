@@ -1,0 +1,132 @@
+{
+ "slug": "losses-worth-in-a-year",
+ "uc_id": 142,
+ "area": "business",
+ "title": "What your losses from tank to trade are worth in a year",
+ "standfirst": "A loss percentage tells you how much beer went missing. It does not tell you what it cost, because a litre lost at the filler is worth several litres lost at the fermenter.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "A percentage is not a price",
+   "blocks": [
+    {
+     "p": "Every brewery reports a loss figure. Usually it is one number, brewhouse to packaged, somewhere in the monthly pack. It gets compared to last year and to the budget and then everyone moves on, because a percentage does not tell you what to fix first."
+    },
+    {
+     "p": "The trouble is that losses are not equal. Beer lost as tank bottoms has malt, hops and some energy in it. Beer lost at the filler has all of that plus filtration, carbonation and a can. A case broken in the warehouse has the lot. If demand was there it also has the margin you did not earn. Valuing every litre at the same rate points you at the wrong stage."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where",
+   "blocks": [
+    {
+     "ul": [
+      "Volume into fermenters, corrected to 20 °C, from the brewhouse records. Hot wort volume reads several percent high because wort contracts as it cools.",
+      "Volume transferred out of fermenters to bright tanks, from flow meters or tank dips.",
+      "Volume packaged, from the filler counts converted to litres at the measured fill, not the nominal.",
+      "Volume invoiced, from the sales ledger, net of returns.",
+      "Cost accumulated per hL at each stage: what had been spent on the beer by the time it was lost."
+     ]
+    },
+    {
+     "eq": {
+      "label": "Value of a stage loss",
+      "code": "Loss value (INR) = (volume into stage - volume out of stage) (hL) x cost accumulated to that stage (INR per hL)",
+      "note": "Where demand exceeded supply, value finished beer lost at net selling price instead of cost."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery puts 100,000 hL into fermenters in a year. The stage volumes and the cost already in the beer at each stage look like this."
+    },
+    {
+     "table": {
+      "head": [
+       "Stage",
+       "Volume in (hL)",
+       "Volume out (hL)",
+       "Lost (hL)",
+       "Loss of stage input",
+       "Cost to stage (INR/hL)",
+       "Loss value (INR)"
+      ],
+      "rows": [
+       [
+        "Fermenter to bright tank",
+        "100,000",
+        "96,500",
+        "3,500",
+        "3.50%",
+        "1,500",
+        "5,250,000"
+       ],
+       [
+        "Bright tank to packaged",
+        "96,500",
+        "94,600",
+        "1,900",
+        "1.97%",
+        "2,000",
+        "3,800,000"
+       ],
+       [
+        "Packaged to invoiced",
+        "94,600",
+        "94,100",
+        "500",
+        "0.53%",
+        "6,000",
+        "3,000,000"
+       ],
+       [
+        "Total",
+        "100,000",
+        "94,100",
+        "5,900",
+        "5.90%",
+        "",
+        "12,050,000"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The headline says 5.9 percent and INR 12.05 million. The table says something more useful. The last 500 hL is less than a tenth of the volume lost and a quarter of the money. Each hectolitre broken or rejected after packaging costs four times one lost as tank bottoms."
+    },
+    {
+     "p": "That changes the order of work. The fermenter loss is the biggest in volume and may be the hardest to move, because some yeast and trub loss is the price of clean beer. The warehouse loss is small, cheap to investigate and expensive per litre."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Mixing hot and cold volumes.** Measure wort hot and beer cold and you will report a loss that is just thermal contraction. Correct everything to the same temperature.",
+      "**Pack counts at nominal volume.** Overfill is real beer leaving the building. If cans average a few ml over, the packaged volume is higher than the count says and the loss in the next stage looks smaller than it is.",
+      "**One loss line for the plant.** A plant figure hides a brand that loses twice the average. Report by brand, because the fix is usually brand specific.",
+      "**Valuing at selling price everywhere.** Using margin for every litre inflates the business case. Use cost unless you can show the beer would have sold.",
+      "**Recovered beer counted twice.** Beer recovered from yeast or tank bottoms and blended back is not a loss. Make sure it is not also counted as fresh production."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a monthly loss table by stage and by brand, in litres and in rupees, where the stage volumes chain together without a gap. The biggest rupee line gets an owner and an action. The loss allowance for each process step is written down, so a month above it is visible the day it happens rather than at the year end stock count."
+    },
+    {
+     "p": "Beer365 builds the stage volumes from the brewhouse, cellar, packaging and sales records already in your systems, one record per batch, so each rupee of loss points back to the batches where it happened."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "slug": "when-the-head-brewer-leaves",
+ "uc_id": 164,
+ "area": "business",
+ "title": "What leaves the brewery when the head brewer leaves",
+ "standfirst": "The SOPs stay behind. The reasons behind every exception walk out of the gate. Here is how to tell how much of your brewing lives in one head and how to start writing it down.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The SOP is the easy part",
+   "blocks": [
+    {
+     "p": "Every brewery has the procedure for a diacetyl rest. Fewer have the reason the rest got stretched by a day on the last four batches. That reason is usually that the yeast was on its seventh generation, the malt lot was running high in protein and the head brewer tasted it and did not like what she found. None of that is in the SOP. It is in her head, in a line of the shift log and in a WhatsApp message to the cellar supervisor at six in the morning."
+    },
+    {
+     "p": "When she leaves, the SOP stays and the judgement goes. The brewery keeps making beer to the written procedure, which is exactly the procedure she had been quietly overriding for three years. Six months later the lager tastes different and nobody can say why."
+    },
+    {
+     "p": "This is not a criticism of the people who did not write it down. They were busy brewing. The knowledge lived where it was useful, at the tank, at the moment of the decision."
+    }
+   ]
+  },
+  {
+   "h2": "How to measure what is at risk",
+   "blocks": [
+    {
+     "p": "You cannot measure knowledge directly. You can measure the decisions that depart from the plan and whether each one has a reason attached."
+    },
+    {
+     "ul": [
+      "Every manual change to a setpoint, a rest, a mash step, a hop addition or a release decision, from the process records and batch sheets.",
+      "Whether each change carries a written reason that a stranger could understand.",
+      "Who made the change. If one name sits behind most of the departures, that is your concentration risk.",
+      "Which departures repeat. A change made on every batch from one supplier is a rule nobody wrote down."
+     ]
+    },
+    {
+     "eq": {
+      "label": "Reasoned deviation rate",
+      "code": "Reasoned deviation rate % = deviations with a written reason / all deviations from plan x 100",
+      "note": "Count per brewer as well as for the plant."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery brews 120 batches a year. Comparing the process records against the plan shows 30 batches where someone changed a rest, a temperature or a release decision. Nine of those changes have a reason written somewhere a successor could find it. The reasoned deviation rate is 9 / 30 x 100, or 30 percent."
+    },
+    {
+     "p": "Now split by person. Say 24 of the 30 changes were made by the head brewer and only 4 of her 24 have a reason recorded. That is 20 departures from the written process, every one of them a judgement call, with nothing left behind but the outcome. That is roughly what walks out of the gate with her."
+    },
+    {
+     "p": "Read the 20 together and patterns appear. Say eight of them are rests extended when the yeast was beyond its sixth generation. That is not tribal knowledge any more. It is a rule. It can go into the procedure with her name on it as the author."
+    }
+   ]
+  },
+  {
+   "h2": "Traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Interviewing instead of logging.** An exit interview captures what someone remembers in an hour. A reason written at the tank captures what they knew at the moment. Do both, but the log is the one that scales.",
+      "**Free text with no batch attached.** A note that says the lager was slow, with no batch code, cannot be joined to anything. One field for the batch makes the note useful forever.",
+      "**Writing it all up as a document.** A forty page knowledge handover gets read once. Reasons attached to the batches they explain get read every time someone looks at a similar batch.",
+      "**Treating every override as a mistake.** Most departures from plan are the brewer being right. The aim is to keep the reason, not to stop the override."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is boring. Every departure from plan carries one sentence of reason and a batch code. The reasoned deviation rate sits high and stays there. Repeated reasons get promoted into the SOP once a quarter. A new brewer can open any batch and read why it was brewed the way it was."
+    },
+    {
+     "p": "There is honestly not much software in this yet. It starts with a habit and a field on the batch record. Beer365 can help once the habit exists, by keeping each reason on the same record as the batch it belongs to, so a question about a slow ferment finds the note from two years ago. It cannot recover a reason nobody wrote down."
+    }
+   ]
+  }
+ ]
+}

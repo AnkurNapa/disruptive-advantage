@@ -1,0 +1,106 @@
+{
+ "slug": "four-clocks-one-batch",
+ "uc_id": 172,
+ "area": "layer",
+ "title": "Do your four systems agree on what time it was and which batch?",
+ "standfirst": "Before any cross-system answer can be trusted, the historian, ERP, LIMS and the shift spreadsheet have to agree on what time it was and which batch they mean.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The unglamorous job everything else depends on",
+   "blocks": [
+    {
+     "p": "Every interesting question in a brewery crosses systems. Did the beer that failed the forced VDK test leave its diacetyl rest early? The rest plan is in the ERP. The temperature curve is in the historian. The VDK result is in the LIMS. The reason somebody crashed the tank early is in a spreadsheet the cellar shift keeps. Four systems. In most plants that means four different ideas of what time it is."
+    },
+    {
+     "p": "This is not a reporting nicety. If the clocks disagree by five hours, a rest that was cut short by a day can look like a rest that ran to plan, or the other way round. Every root cause finding built on top inherits the error."
+    }
+   ]
+  },
+  {
+   "h2": "What usually disagrees",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "System",
+       "Typical time format",
+       "What goes wrong"
+      ],
+      "rows": [
+       [
+        "Historian",
+        "UTC, ISO 8601 with a Z",
+        "Clock drifts minutes fast or slow and nobody resets it"
+       ],
+       [
+        "ERP",
+        "Local time, no offset written",
+        "Looks like UTC to anything that assumes it"
+       ],
+       [
+        "LIMS",
+        "DD-MON-YY HH24:MI",
+        "Two digit years, local time, sample time versus result time"
+       ],
+       [
+        "Shift spreadsheet",
+        "dd/mm/yyyy text",
+        "05/06 reads as 5 June or 6 May depending on who opens it"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Batch identity is worse. The ERP knows a brew number. The historian knows a tank and a timestamp. The LIMS knows a sample ID that someone typed. The spreadsheet says FV3 or brew 119. A bright tank fed from three brews, filled into one packaging run, carries a single date code on the can. Getting from the can back to the brews is a chain of joins. Each join is a place to be wrong."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say the ERP plans a diacetyl rest to end at 08:30 on 12 May, local time in India, which is UTC plus 5 hours 30 minutes. The historian shows the crash cooling starting at 2026-05-10T21:44:00Z. The historian clock is known to run 4 minutes fast."
+    },
+    {
+     "eq": {
+      "label": "Bringing a historian timestamp to plant time",
+      "code": "Plant time = historian time - clock drift + UTC offset = 21:44 - 0:04 + 5:30 = 03:10 on 11 May",
+      "note": "Correct the drift first, then convert the zone."
+     }
+    },
+    {
+     "p": "The crash started at 03:10 on 11 May and the plan said 08:30 on 12 May. The rest was cut short by 29 hours 20 minutes."
+    },
+    {
+     "p": "Now the same comparison done naively, reading the historian time as if it were local. The crash appears to start at 21:44 on 10 May, 34 hours 46 minutes before the planned end. The error is 5 hours 26 minutes, which is the time zone offset less the drift. Both answers say the rest was short. Only one of them is the number you put in a deviation report. Only one of them lines up with the shift log entry that says why it happened."
+    }
+   ]
+  },
+  {
+   "h2": "Traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Assuming no offset means UTC.** A timestamp with no offset is local time until proven otherwise. Write the zone down for every source once and apply it in code.",
+      "**Correcting drift by eye.** Measure the drift against a reference clock, record it with the date measured and apply it. Drift changes, so check it again after every server restart or clock sync.",
+      "**Sample time versus result time.** The LIMS may stamp when the result was entered, hours after the sample was drawn. Join on draw time.",
+      "**Free text batch codes.** FV3, FV-03 and fermenter 3 are one tank. Build a lookup table of aliases and keep it under change control.",
+      "**Blends treated as single batches.** A bright tank from three brews needs volume weights. A quality result on that tank belongs to all three, in proportion."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is one plant time and one batch identity, applied to every record as it lands, with the raw value kept beside it so anyone can check the conversion. Every source has its zone and drift written down. A date code on a can resolves to its packaging run, bright tank and brews in seconds, with the blend fractions shown."
+    },
+    {
+     "p": "This work earns nothing on its own. Its value sits entirely in the questions it makes answerable. Beer365 does this reconciliation first, before any analysis, so that answers about a batch rest on one record whose times and identity the four systems agree on."
+    }
+   ]
+  }
+ ]
+}

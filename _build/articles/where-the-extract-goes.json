@@ -1,0 +1,143 @@
+{
+ "slug": "where-the-extract-goes",
+ "uc_id": 22,
+ "area": "brewhouse",
+ "title": "Where the extract goes between the mill and the fermenter",
+ "standfirst": "Brewhouse yield is one number. The loss behind it happens in four places, each with a different owner and a different fix. Split it by stage or argue about it forever.",
+ "read_min": 5,
+ "sections": [
+  {
+   "h2": "One yield figure hides four arguments",
+   "blocks": [
+    {
+     "p": "Every brewhouse reports a yield. Most report it as a single percentage at the end of the brew. Most monthly meetings then spend twenty minutes on why it dropped half a point. The miller blames the malt. The brewer blames the mill gap. Nobody can prove anything, because the number was only ever measured at one end."
+    },
+    {
+     "p": "Extract is the thing you paid for. A brewhouse that loses a point of yield on a 10 tonne grist is pouring away around 76 kg of extract every brew, malt you bought and never sold. The question is not whether you lose extract. You always do. The question is where, because the lauter tun, the kettle and the whirlpool each lose it for different reasons."
+    }
+   ]
+  },
+  {
+   "h2": "Measure extract, not litres, at each hand-off",
+   "blocks": [
+    {
+     "p": "Litres lie across a brewhouse because gravity changes at every step. Evaporation in the kettle shrinks the volume without losing a gram of sugar. So every stage has to be converted to kilograms of extract, at a reference temperature, before you compare anything."
+    },
+    {
+     "eq": {
+      "label": "Extract in a wort stream",
+      "code": "Extract (kg) = V (hL at 20 C) x 100 x SG(Plato) x 0.9982 x Plato / 100",
+      "note": "SG from the Plato polynomial at 20/20 C; 0.9982 kg/L is water at 20 C."
+     }
+    },
+    {
+     "eq": {
+      "label": "Extract charged",
+      "code": "Extract charged (kg) = malt (kg) x (fine-grind dry extract % - fine/coarse difference) x (1 - moisture % / 100) / 100",
+      "note": "The Master Brewers as-is coarse-grind basis. Use the lot certificate for each malt."
+     }
+    },
+    {
+     "p": "Four measurement points are enough for most plants:"
+    },
+    {
+     "ul": [
+      "Grist charged, from the malt intake weigher and the lot analysis.",
+      "Kettle full, from the kettle level or flow meter and a first gravity.",
+      "End of boil, from the kettle level and the cast gravity.",
+      "Cold wort into the fermenter, from the wort flow meter and the pitching gravity."
+     ]
+    },
+    {
+     "p": "The gaps between them are the losses: lauter and spent grain between the first two, boil losses between the second and third, whirlpool trub and cooler hold-up between the last two."
+    }
+   ]
+  },
+  {
+   "h2": "A worked brew",
+   "blocks": [
+    {
+     "p": "Say a brew charges 10,000 kg of malt with a fine-grind dry extract of 81.0 %, a fine/coarse difference of 1.5 points and 4 % moisture. The as-is extract is (81.0 - 1.5) x 0.96 = 76.32 %, so 7,632.0 kg of extract goes into the mash."
+    },
+    {
+     "table": {
+      "head": [
+       "Stage",
+       "Volume at 20 C",
+       "Gravity",
+       "Extract",
+       "Loss to here"
+      ],
+      "rows": [
+       [
+        "Grist charged",
+        "",
+        "",
+        "7,632.0 kg",
+        ""
+       ],
+       [
+        "Kettle full",
+        "560.0 hL",
+        "12.0 P",
+        "7,032.0 kg",
+        "600.0 kg lauter"
+       ],
+       [
+        "End of boil",
+        "474.8 hL",
+        "14.0 P",
+        "7,011.9 kg",
+        "20.1 kg boil"
+       ],
+       [
+        "Cold wort in FV",
+        "462.5 hL",
+        "14.0 P",
+        "6,830.2 kg",
+        "181.7 kg whirlpool and cooling"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Brewhouse yield is 6,830.2 / 7,632.0 = 89.5 %. The split is where it gets useful. The lauter accounts for 7.9 % of the charged extract, the boil for 0.3 % and the whirlpool plus cooler for 2.4 %. A half-point drop next month now has an address. If the lauter share rises, look at the mill, the bed and the sparge. If the whirlpool share rises, look at trub volume, the hop load and how hard the last of the wort is being pulled off the cone."
+    },
+    {
+     "p": "The 12.3 hL of wort left behind between end of boil and the fermenter is the one most plants never see on a report, because it leaves as wet trub and nobody weighs trub."
+    }
+   ]
+  },
+  {
+   "h2": "The traps that make the split lie",
+   "blocks": [
+    {
+     "p": "**Hot volumes.** Kettle level at the end of boil is read at close to 100 C. Water at that temperature is about 4.2 % less dense than at 20 C, so the dip overstates the volume. Read 474.8 hL as 494.5 hL hot, forget to correct it and the kettle appears to hold 7,303.4 kg of extract, more than went into it. Extract cannot be created in a kettle. When a stage gains extract, a reading is wrong."
+    },
+    {
+     "p": "**One gravity per stage.** A kettle full sample taken before the vessel is mixed can be a full point off. Take it after a recirculation or at a fixed point in the fill."
+    },
+    {
+     "p": "**Flow meters nobody has proved.** A wort meter drifting 1 % will move the whirlpool loss by more than the loss itself. Prove meters against a calibrated vessel on a schedule. Record the date next to the number."
+    },
+    {
+     "p": "**Weak worts and recovered water.** If last runnings or trub press liquor go back into the next brew, the extract is not lost, it is moved. Count it in the brew that receives it. Otherwise the yields of both brews are wrong in opposite directions."
+    },
+    {
+     "p": "**Lot analysis that is not the lot.** Using a supplier average instead of the certificate for the malt actually milled puts a wobble of a point or more into the charged figure. The lauter takes the blame."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is not a high yield. Good is a split where the four stages add up to the charged extract every brew, where any gain is flagged as a measurement error before anyone discusses it. Each loss sits next to the person who can move it. A brewer who can say the lauter lost 600 kg on Tuesday because the bed set at 40 minutes has something to fix. A brewer told the yield was 89.5 % has a number to defend."
+    },
+    {
+     "p": "Beer365 does this from the systems you already run. It reads the intake weigher, the lot certificates and the brewhouse meters into one record per brew, converts every stage to extract at 20 C and shows the loss by stage, with each figure citing the batch and the reading behind it."
+    }
+   ]
+  }
+ ]
+}

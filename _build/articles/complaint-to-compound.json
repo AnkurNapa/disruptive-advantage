@@ -1,0 +1,137 @@
+{
+ "slug": "complaint-to-compound",
+ "uc_id": 99,
+ "area": "quality",
+ "title": "Turning a consumer's 'it tastes funny' into a compound you can test for",
+ "standfirst": "Consumers do not write in diacetyl or trans-2-nonenal. They write butter, cardboard and skunk. An off flavour library translates their words into a short list of compounds, causes and lab tests.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The complaint is data, just in the wrong language",
+   "blocks": [
+    {
+     "p": "A complaint arrives at consumer care as one line of free text. Tastes like popcorn. Smells like a wet box. Bit of a rotten egg thing. Whoever reads it first decides, often in seconds, whether it goes to quality as a possible defect or gets a voucher and a polite reply."
+    },
+    {
+     "p": "That triage is where the value leaks. A real process fault spread across forty complaints looks like forty unrelated grumbles if nobody translates the words into chemistry. A library does that translation the same way every time, so the trend appears before the trade calls."
+    }
+   ]
+  },
+  {
+   "h2": "What goes in the library",
+   "blocks": [
+    {
+     "p": "Each entry links the words people use to the compound, its flavour threshold, the likely causes in your process and the test that confirms or kills it. The core list is short and well documented in brewing science."
+    },
+    {
+     "table": {
+      "head": [
+       "Words people use",
+       "Compound",
+       "Threshold in beer",
+       "Usual cause"
+      ],
+      "rows": [
+       [
+        "Butter, butterscotch, popcorn",
+        "Diacetyl",
+        "about 0.1 mg/L",
+        "Short diacetyl rest, early yeast removal, Pediococcus"
+       ],
+       [
+        "Green apple, grassy",
+        "Acetaldehyde",
+        "about 10 mg/L",
+        "Premature yeast removal, oxygen pick up"
+       ],
+       [
+        "Rotten egg, drains",
+        "Hydrogen sulphide",
+        "5 µg/L changes aroma, 100 µg/L is a clear fault",
+        "Stressed or under aerated yeast"
+       ],
+       [
+        "Sweetcorn, cooked veg",
+        "DMS",
+        "low, beer range 0 to 25 µg/L",
+        "SMM not boiled off, DMSO reduced by yeast, bacteria"
+       ],
+       [
+        "Cardboard, papery, stale",
+        "trans-2-nonenal",
+        "very low",
+        "Lipid oxidation, high packaged oxygen, age"
+       ],
+       [
+        "Skunk, cat, weed",
+        "MBT (3-methyl-2-butene-1-thiol)",
+        "very low",
+        "Light strike on iso-alpha acids in clear or green glass"
+       ],
+       [
+        "Clove, medicinal, smoky",
+        "4-vinyl guaiacol, chlorophenols",
+        "low",
+        "Wild yeast, chlorine sanitiser residue"
+       ],
+       [
+        "Vinegar, sour",
+        "Acetic and lactic acid",
+        "varies",
+        "Acetobacter in draught, lactic bacteria"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Then add your own panel's vocabulary. Every brewery has words that mean something only inside its walls. If your panel says 'catty' and consumers say 'blackcurrant', both belong in the same entry."
+    }
+   ]
+  },
+  {
+   "h2": "Matching a complaint to an entry",
+   "blocks": [
+    {
+     "p": "Matching is not magic. You score each complaint against each entry on the words it contains, then rank. The useful output is the top two or three candidates with the test that separates them, not a single confident answer."
+    },
+    {
+     "eq": {
+      "label": "Share of complaints per defect family",
+      "code": "Share % = complaints matched to the family / complaints in the period x 100",
+      "note": "Count by brand, pack and production week, not only by month received."
+     }
+    },
+    {
+     "p": "Say a hypothetical brewery receives 60 taste complaints in a quarter. Matching gives 21 to cardboard or stale, 14 to butter, 9 to skunk, 6 to sulphur and 10 that do not match anything. Stale is 21 / 60 = 35 %, butter 23.3 %, skunk 15 %, sulphur 10 % and unmatched 16.7 %. The total adds back to 60."
+    },
+    {
+     "p": "The 9 skunk complaints are worth a look at pack type straight away. If they all sit on a green glass SKU, that is light strike and the conversation is about shelf placement and pack, not the brewhouse. The 14 butter complaints get split by production week. If 11 of them trace to two weeks of production, that is a process signal, not noise."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the match lie",
+   "blocks": [
+    {
+     "ul": [
+      "One word, two compounds. Sour can mean infection or simply a bitter, dry beer to someone used to sweeter brands. Always check the reference sample before calling an infection.",
+      "Age hides inside every entry. Without a purchase date or best before code, stale complaints cannot be separated from trade storage. Say so in the report rather than guessing.",
+      "The unmatched pile. If it grows, your library is missing a word, usually a regional one. Read it monthly and add entries.",
+      "Matching without a retained sample. A match is a hypothesis. The retained sample from the same batch, tasted by a trained panel or tested for the compound, is the evidence."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Every complaint is matched within a day and carries a ranked list of candidates, the batch it came from and the confirming test. Quality reviews trends by defect family and production week every week. The panel's vocabulary and the consumer's vocabulary sit in one library that someone owns and updates."
+    },
+    {
+     "p": "Beer365 holds that library, reads complaints and lab results from your systems and resolves each complaint to the batch where it can. The answer names the compound, the cause it suspects and the evidence it used, so the quality head checks the reasoning rather than redoing it."
+    }
+   ]
+  }
+ ]
+}

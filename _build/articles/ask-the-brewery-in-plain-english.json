@@ -1,0 +1,111 @@
+{
+ "slug": "ask-the-brewery-in-plain-english",
+ "uc_id": 170,
+ "area": "layer",
+ "title": "Asking the brewery a question in plain English, without SQL",
+ "standfirst": "A language model will answer any brewing question you type. Whether the answer is right depends almost entirely on the data underneath and the definitions it was given.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The easy part and the hard part",
+   "blocks": [
+    {
+     "p": "A head brewer should be able to type which beer earned the most per tank day last quarter and get an answer, without waiting a week for someone who writes SQL. The language part of that is now easy. Current models will turn the sentence into a query in a second and write the answer back in neat prose."
+    },
+    {
+     "p": "The hard part is everything the sentence does not say. Which quarter, calendar or financial? Tank days from the plan or from the cellar log? Earned meaning revenue, gross margin or contribution? Bright tank time in or out? A model will pick an answer to each of those silently and then present the result with complete confidence. The first answer is usually correct for some brewery. It is not always correct for yours."
+    }
+   ]
+  },
+  {
+   "h2": "One question, three right answers",
+   "blocks": [
+    {
+     "p": "Say someone asks how much lager the brewery made in March. The records hold three honest answers."
+    },
+    {
+     "table": {
+      "head": [
+       "Definition",
+       "Where it lives",
+       "Lager, March (hL)"
+      ],
+      "rows": [
+       [
+        "Cast wort into fermenters",
+        "Brewhouse records",
+        "1,200"
+       ],
+       [
+        "Packaged",
+        "Packaging run records",
+        "1,104"
+       ],
+       [
+        "Sold",
+        "Sales ledger",
+        "1,050"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The brewer means 1,200. The packaging lead means 1,104. The finance director means 1,050. The gap between the first two is an 8 percent loss, the gap to the third is stock and timing. An assistant that answers 1,104 without saying which number it chose has not answered the question. It has answered one of three. The person reading it may act on the wrong one."
+    },
+    {
+     "p": "Tank days hide the same trap. Ask which beer earned the most per tank day and the answer changes depending on whether tank days come from the plan or from the actual occupancy in the cellar log. A lager planned at 20 days that ran 23 earns 13 percent less per actual day than the plan says. A model working from the plan will rank it too high and say so politely."
+    },
+    {
+     "p": "The fix is not a cleverer model. It is a shaped data layer where made, packaged and sold are separate, named measures with written definitions. The assistant must say which one it used."
+    }
+   ]
+  },
+  {
+   "h2": "What has to be in place first",
+   "blocks": [
+    {
+     "ul": [
+      "**One record per batch,** with times and identities reconciled across the ERP, historian, LIMS and spreadsheets. Without this, the model joins the wrong rows fluently.",
+      "**Named measures with definitions.** Yield, loss, contribution and tank day each defined once in writing and used by every answer.",
+      "**Citations.** Every answer lists the batches and records it rests on, so a brewer can open them and check.",
+      "**The query, visible.** The person asking can see what was actually computed, even if they never read it.",
+      "**A test set.** Twenty or thirty questions with known answers from your own records, re-run whenever anything changes."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "Questions to put under every answer",
+   "blocks": [
+    {
+     "p": "Even with a good layer underneath, the habit that protects you is asking the follow-up. These work on any assistant:"
+    },
+    {
+     "ul": [
+      "List the assumptions this answer depends on. Say which came from my data and which came from you.",
+      "What single piece of evidence would flip this answer?",
+      "You ranked by one measure. Rank again by the resource I actually run out of. Show where the order changes.",
+      "How many observations does each number rest on? Over what period?"
+     ]
+    },
+    {
+     "p": "Most bad answers fall over at the second question. A good assistant answers all four without being defensive."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a brewer asking a question at the tank on a phone and getting an answer that names its definition, cites its batches and admits what it could not see. When the data cannot answer, it says so instead of guessing. This sits on the hold list for a reason: it is only worth building once the shaped layer exists."
+    },
+    {
+     "p": "It also needs a way to say no. Some questions cannot be answered from the records a brewery keeps. Whether warm storage in the trade made a defect worse cannot be judged without distributor temperature data. An assistant that says so plainly is more useful than one that fills the gap with a plausible paragraph."
+    },
+    {
+     "p": "Beer365 is being built in that order. The record comes first. Plain English questions sit on top of it, with every answer citing the batches it came from."
+    }
+   ]
+  }
+ ]
+}

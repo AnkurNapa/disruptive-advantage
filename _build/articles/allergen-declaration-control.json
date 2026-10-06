@@ -1,0 +1,81 @@
+{
+ "slug": "allergen-declaration-control",
+ "uc_id": 215,
+ "area": "quality",
+ "title": "Allergen declarations start in the recipe, not the artwork",
+ "standfirst": "Every allergen line on a beer label is a claim about the recipe, the processing aids and sometimes the yeast. If those three are not joined to the artwork, the label is a guess that happens to be right.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why beer is not exempt",
+   "blocks": [
+    {
+     "p": "Beer escapes a lot of food labelling. In the EU, for example, drinks above 1.2 % alcohol do not need a full ingredients list or a nutrition panel. Allergens are different. They must still be declared. A missed allergen is a recall. It is also the kind regulators publish."
+    },
+    {
+     "p": "The allergens that matter for most breweries are few and well known: cereals containing gluten, sulphites above the declaration limit and milk where lactose goes into a sweet stout. Then come the specials: nuts, honey, fruit or spice in seasonal releases, each with its own cross contact story through shared tanks and hoses."
+    }
+   ]
+  },
+  {
+   "h2": "The three records that have to meet",
+   "blocks": [
+    {
+     "ul": [
+      "The recipe and batch record: every grain, adjunct, flavouring and processing aid that went in. Not the standard recipe, the one actually brewed.",
+      "The allergen matrix: for each material, which allergens it carries, whether processing removes them and what each target market requires.",
+      "The artwork: what is printed, for which market, in which version."
+     ]
+    },
+    {
+     "p": "Processing aids are the usual blind spot. They are added by the cellar, not the brewer. They rarely appear in the recipe. Isinglass is a good example. In the EU, fish gelatine or isinglass used as a fining agent in beer is specifically exempted from the fish allergen declaration. Other markets may treat it differently. The matrix has to say which rule applies where."
+    }
+   ]
+  },
+  {
+   "h2": "Sulphites: the one you have to measure",
+   "blocks": [
+    {
+     "p": "Sulphite declaration in the EU is triggered above 10 mg/L expressed as total SO2. Yeast produces sulphur dioxide during fermentation on its own. Some lager strains make a meaningful amount. Some breweries also add metabisulphite in maturation for flavour stability. So the label decision depends on a lab number, not just on the recipe."
+    },
+    {
+     "eq": {
+      "label": "SO2 delivered by a sodium metabisulphite addition",
+      "code": "SO2 (mg/L) = Na2S2O5 dose (mg/L) x (2 x 64.07 / 190.11) = dose x 0.674",
+      "note": "For potassium metabisulphite, K2S2O5, the factor is 2 x 64.07 / 222.32 = 0.576."
+     }
+    },
+    {
+     "p": "Say a hypothetical lager gets 2 g/hL of sodium metabisulphite in maturation. That is 20 mg/L of salt, which delivers 20 x 0.674 = 13.5 mg/L of SO2. Add the 4 mg/L the yeast made and the beer could carry about 17.5 mg/L total before any losses. That is over 10. The label must declare sulphites. The release test must confirm the actual number."
+    },
+    {
+     "p": "Turn it around. A beer is not exempt just because nobody added anything. With no addition and a yeast that leaves 4 to 6 mg/L, there is no declaration. But a strain change or a stressed fermentation can push yeast SO2 up. That is why the check belongs on every batch release, not on the recipe sheet once a year."
+    }
+   ]
+  },
+  {
+   "h2": "Traps",
+   "blocks": [
+    {
+     "ul": [
+      "Gluten free claims. Removing gluten with an enzyme and testing below a limit is a recognised route in some markets. Others will not let a barley beer say gluten free at all. They require different wording. Check each market separately. Keep the test reports with the batch.",
+      "Shared kit. A peanut butter stout through the same bright tank and filler as the core lager needs a validated clean and a record of it, or the next beer inherits the risk.",
+      "The flavour supplier changes recipe. Your matrix is only as current as the last specification you received. Ask for change notifications and record the specification version.",
+      "Market added, matrix not updated. A beer exported to a new country with different allergen rules carries the old declarations until someone updates both the matrix and the artwork."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "For any packaging run you can show the batch record, the materials in it with their allergen status, the measured sulphite where it matters and the artwork version for that market, all agreeing. When a supplier changes a specification, you can list every product and every market affected in one query."
+    },
+    {
+     "p": "Beer365 keeps the allergen matrix next to the batch record and the artwork register, reading recipes and lab results from your systems. For any pack it answers whether the declaration matches the beer, citing the batch, the materials and the test."
+    }
+   ]
+  }
+ ]
+}

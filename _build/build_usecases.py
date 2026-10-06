@@ -24,6 +24,7 @@ head = re.sub(r'<meta content="[^"]*" property="og:title"/>', f'<meta content="{
 head = re.sub(r'<meta content="[^"]*" property="og:description"/>', f'<meta content="{DESC}" property="og:description"/>', head)
 head = head.replace('https://ankurnapa.github.io/disruptive-advantage/"', 'https://ankurnapa.github.io/disruptive-advantage/use-cases.html"')
 head = head.replace('class="p-index"', 'class="p-index p-uc"')
+head = head.replace('<a href="use-cases.html">Use cases</a>', '<a aria-current="page" href="use-cases.html">Use cases</a>', 1)
 
 chips = '<button class="chip is-on" type="button" data-area="all" aria-pressed="true">Everything</button>' + "".join(
     f'<button class="chip" type="button" data-area="{k}" aria-pressed="false">{E(n)}</button>' for k, n, _, _ in AREAS)

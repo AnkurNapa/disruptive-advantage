@@ -1,0 +1,136 @@
+{
+ "slug": "coa-versus-reality",
+ "uc_id": 2,
+ "area": "raw",
+ "title": "Is your malt supplier's certificate telling the truth?",
+ "standfirst": "A certificate of analysis is a claim, not a measurement you took. Pair every COA with your own lab result and the gap starts to show up in money.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The certificate is the supplier's number",
+   "blocks": [
+    {
+     "p": "Every malt lot arrives with a certificate of analysis. Extract, moisture, colour, protein, friability, fine-coarse difference. It gets checked against the spec, signed and filed. Most of the time nobody compares it with what the brewery's own lab found on the same lot, because the two numbers live in different places. The COA is a PDF in a purchasing folder. The intake result is a line in the lab book."
+    },
+    {
+     "p": "That gap matters because you pay for extract, not for kilograms. A malt that is two points short on extract is a price rise the invoice never mentions. You will not see it at goods receipt. You will see it weeks later as a brewhouse yield that drifts down. By then the lot is gone and the conversation with the supplier is an argument about memory."
+    },
+    {
+     "p": "The question is simple. For each lot, does the supplier's number agree with yours? If it does not, which way does it lean?"
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where it lives",
+   "blocks": [
+    {
+     "p": "You need two records joined on the lot number: the COA values as received and your own intake analysis. The parameters worth pairing are the ones that move cost or process:"
+    },
+    {
+     "ul": [
+      "Extract on a fine grind dry basis, with the fine-coarse difference",
+      "Moisture, because it converts dry extract into what you actually bought",
+      "Total protein and soluble nitrogen, which feed straight into FAN and haze",
+      "Colour, friability and homogeneity, which show up at the mill and in the kettle"
+     ]
+    },
+    {
+     "p": "Extract and moisture together give the number that carries the money. The supplier quotes extract on a dry basis. You buy malt as-is."
+    },
+    {
+     "eq": {
+      "label": "Extract you actually bought",
+      "code": "As-is coarse extract % = (fine grind dry extract % - fine-coarse difference) x (1 - moisture % / 100)",
+      "note": "Use the same basis on both sides before you compare anything."
+     }
+    },
+    {
+     "eq": {
+      "label": "What a kilogram of extract really costs",
+      "code": "Cost per kg extract = malt price per kg / (as-is extract % / 100)"
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a 100 tonne lot of pale malt at Rs 45 per kg. To keep the arithmetic clean, compare fine grind extract on both sides. The COA reads 81.0% dry extract at 4.0% moisture. Your lab reads 79.5% dry at 4.6% moisture."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "COA",
+       "Your lab"
+      ],
+      "rows": [
+       [
+        "Dry extract %",
+        "81.0",
+        "79.5"
+       ],
+       [
+        "Moisture %",
+        "4.0",
+        "4.6"
+       ],
+       [
+        "As-is extract %",
+        "77.76",
+        "75.84"
+       ],
+       [
+        "Cost per kg extract (Rs)",
+        "57.87",
+        "59.33"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "On the lot, that is 100,000 kg x (77.76 - 75.84) / 100, which is about 1,917 kg of extract you paid for and did not get. At Rs 59.33 per kg of extract, roughly Rs 1.14 lakh on one delivery. The effective price went up by about 2.5% and nobody raised a purchase order for it."
+    },
+    {
+     "p": "One lot is not a pattern. Lab methods differ, samples differ and a single disagreement can be noise. The useful view is the running difference across every lot from that supplier."
+    },
+    {
+     "eq": {
+      "label": "Supplier bias",
+      "code": "Bias = mean of (your result - COA value) across the last n lots, per parameter",
+      "note": "Treat it as real once the mean difference is more than about twice its own standard error (SD / square root of n)."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "The traps that make the comparison lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Different bases.** Dry versus as-is, fine versus coarse, EBC versus another method. Most false alarms are a basis mismatch, so convert before you compare.",
+      "**Moisture drift in storage.** Malt picks up moisture in a humid silo. A lot tested a month after arrival is not the lot on the certificate. Test at intake and record the date.",
+      "**Sampling.** One grab from the top of a truck does not represent 25 tonnes. Use a probe and a composite sample, or the disagreement is your sampling, not their malt.",
+      "**Your own lab.** Run a reference malt with every batch of intake tests. If your reference result moves, the bias you think you found belongs to you.",
+      "**Blended lots.** If silos mix lots before anyone tests them, the lot number on the COA no longer means anything. Keep the join at the point where the lot is still whole."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is boring. Each supplier has a bias close to zero on extract and moisture, with a scatter that matches what two competent labs should give on the same sample. When one supplier's mean drifts negative for three or four lots running, the purchasing team hears it from the lab before the brewhouse feels it and the conversation with the supplier starts with paired data rather than a hunch."
+    },
+    {
+     "p": "It also changes how you read the certificate. A supplier whose numbers agree with yours lot after lot earns lighter intake testing. One whose numbers lean always gets the full panel."
+    },
+    {
+     "p": "Beer365 keeps the COA and your intake result on the same lot record, reads both from the systems you already use and shows the running bias per supplier, with each answer citing the lots behind it."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "slug": "live-cost-to-brew",
+ "uc_id": 12,
+ "area": "raw",
+ "title": "What does this beer cost to brew today, not last quarter?",
+ "standfirst": "Standard costs are set once a year and malt prices move every month. A live cost per hectolitre uses today's prices and the losses you actually had.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The standard cost is already out of date",
+   "blocks": [
+    {
+     "p": "Most breweries cost a recipe once, at budget time. Finance takes the bill of materials, multiplies by the agreed price for each material and produces a standard cost per hectolitre that holds for the year. It is a sensible way to run a budget. It is a poor way to make decisions in October."
+    },
+    {
+     "p": "Malt follows the barley harvest. Imported hops follow the exchange rate and the crop. Yeast, enzymes, process aids and CO2 all move. By the third quarter the standard cost can be some distance from what the brew in the kettle is actually costing. Sales are pricing, marketing is planning promotions and the brewer is choosing between recipes on numbers that describe last year."
+    }
+   ]
+  },
+  {
+   "h2": "The calculation",
+   "blocks": [
+    {
+     "p": "Live cost to brew is the same arithmetic as the standard, with two changes. Use current prices. Divide by the beer you actually packaged rather than the wort you planned."
+    },
+    {
+     "eq": {
+      "label": "Material cost per batch",
+      "code": "Material cost = sum over materials of (quantity used x current price per unit)"
+     }
+    },
+    {
+     "eq": {
+      "label": "Live cost per hL packaged",
+      "code": "Cost per hL = material cost per batch / hL of beer packaged from that batch",
+      "note": "Dividing by packaged volume puts every loss from kettle to filler into the cost, which is where it belongs."
+     }
+    },
+    {
+     "p": "Two decisions have to be made once and written down. First, which price: the last purchase price, the replacement price you would pay today or the weighted average of stock on hand. Each answers a different question. Replacement price is right for pricing and recipe choices. Weighted average is right for the accounts. Second, what is in scope: brewing materials only, or packaging, energy and labour too. Start with brewing materials and be explicit about it."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a 50 hL brew of an 11.5 °P lager. At that gravity the cast wort holds about 5,000 L x 1.0463 x 0.115 = 602 kg of extract, which is what 800 kg of malt at 80% extract as-is and 94% brewhouse efficiency would deliver. The recipe at today's prices:"
+    },
+    {
+     "table": {
+      "head": [
+       "Material",
+       "Quantity",
+       "Price INR",
+       "Cost INR"
+      ],
+      "rows": [
+       [
+        "Pale malt",
+        "750 kg",
+        "52 per kg",
+        "39,000"
+       ],
+       [
+        "Munich malt",
+        "50 kg",
+        "70 per kg",
+        "3,500"
+       ],
+       [
+        "Bittering hop pellets",
+        "3.0 kg",
+        "2,800 per kg",
+        "8,400"
+       ],
+       [
+        "Aroma hop pellets",
+        "2.0 kg",
+        "4,200 per kg",
+        "8,400"
+       ],
+       [
+        "Yeast propagation share",
+        "",
+        "",
+        "1,500"
+       ],
+       [
+        "Salts, enzymes and finings",
+        "",
+        "",
+        "1,200"
+       ],
+       [
+        "Total",
+        "",
+        "",
+        "62,000"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The batch packaged 44 hL after losses in fermentation, filtration and packaging. Live cost is 62,000 / 44 = INR 1,409 per hL, or about INR 14.09 per litre of packaged beer."
+    },
+    {
+     "p": "Now pale malt rises from INR 52 to INR 58 a kg. That adds 750 x 6 = INR 4,500 to the batch, which is 4,500 / 44 = INR 102 per hL. The new cost is 66,500 / 44 = INR 1,511 per hL."
+    },
+    {
+     "p": "Compare that with a yield problem. Keep malt at INR 52, but let the batch package only 42 hL. The cost becomes 62,000 / 42 = INR 1,476 per hL. Two extra hectolitres of loss cost nearly two thirds as much as an 11.5% rise in the price of your main malt. Procurement gets the attention. The losses deserve as much."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Recipe quantity versus actual use.** Brewers adjust. Hops are dosed by alpha acid, so a lower-alpha lot means more kilograms for the same bitterness. Use the quantities actually weighed, not the recipe card.",
+      "**Currency on imported hops.** A hop contract priced in another currency changes cost every time the rupee moves. Convert at the current rate.",
+      "**Purchase unit confusion.** Malt bought by the tonne, hops by the kilogram and enzymes by the litre. One unit slip makes a cost ten or a thousand times wrong.",
+      "**Packaged volume taken from the plan.** If packaged hL comes from the schedule rather than the filler counts, losses disappear and the cost looks better than it is.",
+      "**Mixing stock and replacement prices.** Pick one per question and label it."
+     ]
+    },
+    {
+     "p": "Good looks like a cost per hL for every recipe that updates when a price or a yield changes, shown next to the standard, with the gap explained as price, usage or loss. Then sales, finance and the brewhouse are arguing over the same number."
+    },
+    {
+     "p": "Beer365 reads recipes, purchase prices and batch yields from your ERP and brewhouse records into one record, so a cost question is answered with today's prices and the actual batches behind it."
+    }
+   ]
+  }
+ ]
+}

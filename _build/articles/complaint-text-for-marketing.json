@@ -1,0 +1,113 @@
+{
+ "slug": "complaint-text-for-marketing",
+ "uc_id": 135,
+ "area": "market",
+ "title": "What consumer complaints are telling marketing about your beer",
+ "standfirst": "Complaint text is usually read by quality one case at a time. Read together, tagged and tied to pack age, it tells marketing where the brand experience is actually breaking.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Complaints are the most honest research you have",
+   "blocks": [
+    {
+     "p": "Nobody writes to a brewery to say the beer was exactly as expected. Complaints are what people say when the beer they drank did not match the promise on the label. That makes them uncomfortable reading and very useful reading. They are unprompted, specific and written in the drinker's own words."
+    },
+    {
+     "p": "In most breweries complaints go to quality. Quality investigates each one, closes it and moves on. That is the right first step. But nobody reads the whole pile as a set. Nobody tells marketing what the pile says. So the brand team spends money on research to learn what drinkers think, while hundreds of drinkers have already said it in writing."
+    }
+   ]
+  },
+  {
+   "h2": "Turning free text into something countable",
+   "blocks": [
+    {
+     "p": "The work is tagging. Each complaint gets a theme from a short, fixed list, plus the SKU, pack, region, channel and the batch code if the drinker gave one. Language models are good at a first pass of this, including complaints written in regional languages or in mixed language, but a person should check a sample every month."
+    },
+    {
+     "ul": [
+      "Taste: stale, different from usual, too bitter, sour, metallic",
+      "Light damage: skunky smell, mostly from beer in clear or green glass left in sunlight",
+      "Condition: flat, too gassy, poor foam",
+      "Pack: dented can, leaking crown, scuffed bottle, label",
+      "Availability and price"
+     ]
+    },
+    {
+     "eq": {
+      "label": "Complaint rate",
+      "code": "Complaints per million litres = complaints in period / litres sold in period (millions)",
+      "note": "Compare rates, never raw counts. A brand that doubles volume will double complaints with no change in quality."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery sold 4.5 million litres in a quarter and received 180 complaints. The rate is 180 / 4.5 = 40 complaints per million litres. Tagged, they split like this."
+    },
+    {
+     "table": {
+      "head": [
+       "Theme",
+       "Complaints"
+      ],
+      "rows": [
+       [
+        "Tastes stale or different",
+        "64"
+       ],
+       [
+        "Flat or poor foam",
+        "41"
+       ],
+       [
+        "Pack damage",
+        "28"
+       ],
+       [
+        "Other",
+        "25"
+       ],
+       [
+        "Skunky smell",
+        "22"
+       ],
+       [
+        "Total",
+        "180"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Of the 64 stale complaints, 50 included a readable batch code. When those are joined to pack date, 38 of the 50 were for beer more than 90 days past packaging. That changes the story. The drinker says the beer tastes different from usual. Marketing might hear a recipe change or a brand problem. The data says it is the same beer, older. The fix is stock rotation and the trade channel, not reformulation or a new campaign."
+    },
+    {
+     "p": "The 22 skunky complaints tell a similar story. Light-struck flavour forms when light breaks down hop bitter compounds in the beer. It happens within minutes in clear glass and not much slower in green, because neither filters the wavelengths that do the damage. Brown glass and cans protect the beer; clear and green do not. If those complaints cluster around a few outlets that chill bottles in a sunlit window display, that is a merchandising conversation."
+    }
+   ]
+  },
+  {
+   "h2": "Traps and what good looks like",
+   "blocks": [
+    {
+     "ul": [
+      "**One drinker, many messages.** A single unhappy person who writes on three channels is one complaint. Deduplicate before counting.",
+      "**No batch code.** Without the code you cannot tie text to pack age or batch. Make it easy for care teams to ask for it, with a picture of where it is printed.",
+      "**Social posts mixed with formal complaints.** They are different populations. Keep them in separate counts and compare their themes.",
+      "**Reading taste problems as brand problems.** Stale, flat and skunky are usually supply chain or handling issues. Check age and route before changing the message.",
+      "**Small numbers.** Three complaints in a region is an anecdote. Watch the rate over several months."
+     ]
+    },
+    {
+     "p": "Good looks like a monthly page that marketing and quality read together: complaint rate by brand and pack, themes over time and the share explained by pack age or route. Marketing learns where the promise is being broken. Quality learns which issues drinkers actually notice."
+    },
+    {
+     "p": "Beer365 keeps each complaint next to the batch, pack date and route it came from, read from your care and production systems, so a question about what drinkers are saying is answered with the batches behind the words."
+    }
+   ]
+  }
+ ]
+}

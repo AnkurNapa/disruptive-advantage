@@ -1,0 +1,401 @@
+{
+ "slug": "how-beer-ai-vendors-prove-value",
+ "title": "How beer AI vendors prove value, and how to test the claim",
+ "subtitle": "We checked how 116 beer AI companies justify their savings, then wrote the ten questions a brewery should ask any of them, us included.",
+ "description": "How 116 beer AI companies justify savings claims: who publishes prices, methods and guarantees, plus ten questions to ask any vendor before you sign.",
+ "keywords": [
+  "beer AI ROI",
+  "brewery software savings",
+  "brewery AI vendors",
+  "AI business case brewery",
+  "vendor due diligence"
+ ],
+ "date": "2026-10-06",
+ "summary": [
+  "Of 95 companies selling AI or data tools to breweries, 13 publish a price and 49 put the price behind a sales call.",
+  "50 of the 116 companies checked make a quantified claim, but only about 5 explain properly how a saving is worked out.",
+  "Only 3 tie their price to the result: GEA, TeepTrak and Waterleau.",
+  "Independent validation is rarer still: 1 vendor, Augury, has a third-party Forrester study with benefits cut 10 to 30 percent for risk.",
+  "A claim is only as good as its baseline, so the ten questions in this paper start there."
+ ],
+ "sections": [
+  {
+   "h2": "The question behind every quote",
+   "blocks": [
+    {
+     "p": "Every brewery that has sat through a software demo has heard a version of the same line. Up to 30 percent less of something, up to 25 percent more of something else. The plant director nods. The CFO writes it down. The head brewer, who has watched a fermenter run two degrees warm for a week because a solenoid stuck, quietly divides it by ten."
+    },
+    {
+     "p": "That reflex is healthy, but it is not a method. So we asked a narrower question: when a brewery says \"how can you claim you will save this much?\", how do the companies selling AI and data tools into beer actually answer it?"
+    },
+    {
+     "p": "On 24 September 2026 we checked the public websites of the 116 beer companies that the Beverage AI Radar had at shipping or pilot stage. For each one we recorded whether it publishes a price, offers a calculator, makes a quantified claim, explains its method and shares any risk. Every claim quoted here carries the URL it was seen at. Where a site did not load, the record leans on trade press. We say so at the end."
+    },
+    {
+     "p": "This paper is fair to the vendors in it. Most of them sell good products. The point is not that their numbers are wrong. It is that a brewery usually has no way to tell."
+    }
+   ]
+  },
+  {
+   "h2": "What 116 beer AI companies show",
+   "blocks": [
+    {
+     "stat": {
+      "value": "13 of 95",
+      "label": "beer AI sellers publish a price"
+     }
+    },
+    {
+     "table": {
+      "head": [
+       "Of 116 beer companies checked",
+       "Count"
+      ],
+      "rows": [
+       [
+        "Sell to breweries (the rest are brewers or brands)",
+        "95"
+       ],
+       [
+        "Publish real prices",
+        "13"
+       ],
+       [
+        "Prices on request",
+        "49"
+       ],
+       [
+        "Offer an ROI or savings calculator",
+        "14"
+       ],
+       [
+        "Explain any part of how savings are worked out",
+        "23"
+       ],
+       [
+        "Explain it properly: inputs, costs deducted, a conservative case",
+        "about 5"
+       ],
+       [
+        "Make a quantified claim at all",
+        "50"
+       ],
+       [
+        "Offer a guarantee, pilot or trial",
+        "22"
+       ],
+       [
+        "Tie the price to the result",
+        "3"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The short version: almost nobody shows their working. Fifty companies put a number in front of the buyer. About five show how they got it. Most of the rest put a headline percentage on the homepage and the price behind a call."
+    },
+    {
+     "stat": {
+      "value": "about 5 of 116",
+      "label": "explain a saving properly, with inputs, costs deducted and a conservative case"
+     }
+    }
+   ]
+  },
+  {
+   "h2": "Five ways vendors justify value",
+   "blocks": [
+    {
+     "p": "Read enough vendor pages and the claims sort into five patterns. They are listed here from weakest to strongest, by how much a brewery can check."
+    },
+    {
+     "table": {
+      "head": [
+       "Pattern",
+       "What you get",
+       "Named examples"
+      ],
+      "rows": [
+       [
+        "1. Headline percentage",
+        "A big number, no baseline, no formula, no plant",
+        "DFx, Spectramatics"
+       ],
+       [
+        "2. Named case study",
+        "A real brewery, one number, no stated baseline period",
+        "The 5th Ingredient (Beer30), Sennos, Samsara"
+       ],
+       [
+        "3. Calculator",
+        "Black box or transparent, depending on the vendor",
+        "BarTrack, Pluto7 (black box); Samsara, Brewlytics, Peerox, L2L (transparent)"
+       ],
+       [
+        "4. Independent validation",
+        "A third party builds the case and cuts it for risk",
+        "Augury (Forrester TEI)"
+       ],
+       [
+        "5. Shared risk",
+        "Price tied to the outcome",
+        "GEA, TeepTrak, Waterleau; Shipsy close behind"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "**Headline percentages.** The most common pattern carries the biggest numbers. DFx claims it can \"reduce product waste by up to 84%\" and deliver \"energy savings of up to 25%\" (dfxtech.co.uk). Spectramatics cites \"savings of up to 30% in enzyme cost\" and \"increased brewhouse capacity by 25% at some customers\" (spectramatics.com/solutions/siba-real-time-brewing-monitoring/). To be fair to Spectramatics, it does name the mechanism: dosing enzyme from real-time in-mash activity data and shortening the mash. What neither gives is a baseline or a formula, so a buyer cannot tell what \"up to\" covered."
+    },
+    {
+     "p": "**Named case studies.** More credible, still thin on method. The 5th Ingredient has the best brewery library: Pelican Brewing with a \"$550k increase in annual sales\", Frog Alley with \"1,000 BBLs increase in production per year\", Your Mates with \"$100k saved per year (AUD)\" and Penn Cove with task management cut from 4 to 5 hours a day to 4 to 5 hours a week (the5thingredient.com/case-studies/). Sennos reports Tarboro Brewing saving about USD 40,000 a year in batch losses and Denali Brewing gaining 8 to 9 percent effective fermentation capacity (sennos.com/resource/). Sennos is the closest to showing its arithmetic: Tarboro values each batch at USD 2,000 to 4,000 of raw materials. Denali's gain is framed as one avoidable tank-day across 20 tanks. Samsara reports Glazer's Beer & Beverage cutting its at-fault accident rate by 60 percent (samsara.com/customers/glazers-beer-beverage). All of these are customer-reported, without a stated baseline period."
+    },
+    {
+     "p": "**Calculators.** Some are black boxes. BarTrack's savings calculator takes taps, days open, kegs a month and pint price, but does not show its waste assumption (bartrack.beer/resources/savings-calculator). Pluto7's takes revenue, COGS and inventory value and returns an ROI without its formula (pluto7.com/roi-calculator/). The transparent ones are far more persuasive. Samsara's safety calculator nets off its own licence and install cost, models months of ramp-up and shows a conservative case beside the base case (samsara.com/products/cameras/roi-calculator). Brewlytics' mug club calculator separates new visits from visits that would have happened anyway, then gives a break-even and a sensitivity table (brewlytics.ai/tools/mug-club-roi-calculator). Peerox and L2L make the buyer enter their own downtime, cost per hour and target (peerox.de/maddox/mehrwertrechner/, l2l.com/downtime-cost-calculator). L2L's improvement benchmarks come from its own deployments, which it states."
+    },
+    {
+     "p": "**Independent validation.** Only Augury has it. A Forrester Total Economic Impact study built on interviews with four decision makers and a composite organisation cuts benefits by 10 to 30 percent for risk, discounts three years at 10 percent and arrives at 310 percent ROI (tei.forrester.com/go/Augury/Machine-and-Process-Health/). It is the gold standard. It also costs money to commission, which is why so few do it."
+    },
+    {
+     "p": "**Shared risk.** Free trials are common and prove little. Three vendors go further. GEA sells a paid Brewhouse Performance Boost audit, guarantees agreed performance indicators after the upgrade and refunds all or part of the audit fee if the brewery buys the upgrade (gea.com/en/products/brewery-systems/brewhouse-performance-boost/). TeepTrak runs a 60-day pilot the customer pays nothing for unless it finds at least 10 percent in hidden losses (teeptrak.com/en/). Waterleau designs, funds and runs wastewater plants for a pay-per-drop fee, as at Brouwerij Martens (waterleau.com/en/services/capex-free-financing). Shipsy sits just below: a CXO-ready ROI model signed off before a two to three week pilot (shipsy.ai)."
+    }
+   ]
+  },
+  {
+   "h2": "What the market charges, where it says",
+   "blocks": [
+    {
+     "p": "Only 13 of the 95 sellers publish a price. Those that do mostly sell per unit and per month, with a cheaper rate for a longer commitment. These are the figures as recorded on 24 September 2026."
+    },
+    {
+     "table": {
+      "head": [
+       "Vendor",
+       "Published price",
+       "Unit"
+      ],
+      "rows": [
+       [
+        "Evocon",
+        "EUR 189 to 319 on one year; EUR 159 to 269 on three",
+        "Per machine per month"
+       ],
+       [
+        "The 5th Ingredient (Beer30)",
+        "USD 118 to 313",
+        "Per month, by volume and bundle"
+       ],
+       [
+        "BarTrack",
+        "USD 587.25 per sensor plus USD 9.99",
+        "Sensor once; per line per month"
+       ],
+       [
+        "MaintainX",
+        "USD 0 to 65 (annual billing)",
+        "Per user per month"
+       ],
+       [
+        "Easybeer",
+        "EUR 19 to 59; Platinium from EUR 99",
+        "Per month"
+       ],
+       [
+        "Brewlytics",
+        "Free; Pro USD 99 plus a per-customer fee",
+        "Per month"
+       ],
+       [
+        "Arryved",
+        "From USD 99.99 for 1 to 9 devices",
+        "Per month"
+       ],
+       [
+        "GoTab",
+        "USD 15, 99 or 229",
+        "Per month"
+       ],
+       [
+        "Routific",
+        "Free to 100 orders; USD 150 for 101 to 1,000",
+        "Per month"
+       ],
+       [
+        "Brewfather",
+        "Free; about USD 29.99 or 49.99",
+        "Per year"
+       ],
+       [
+        "Pubinno",
+        "USD 500 baseline (third-party report)",
+        "Per tap per year"
+       ],
+       [
+        "Block One Automation",
+        "USD 120K to 350K installed",
+        "Per system"
+       ],
+       [
+        "Zap Data Hub",
+        "Add-ons only; base plan not shown",
+        "Per month"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Most of these are craft and taproom tools. For plant-scale systems the price is almost always on request, which is where a business case matters most and where a buyer sees least."
+    }
+   ]
+  },
+  {
+   "h2": "Ten questions to ask any vendor before you sign",
+   "blocks": [
+    {
+     "p": "None of these need a data scientist in the room. They need someone who knows the plant and is willing to ask twice."
+    },
+    {
+     "ul": [
+      "1. What is the formula? Every saving should reduce to something like volume times improvement times value. If the vendor cannot write it on one line, the number is a guess.",
+      "2. Whose baseline? Ask which months, from which records. Then ask who signs it off before go-live. A saving with no agreed starting point cannot be proved later.",
+      "3. How is lost beer valued? At what it costs to make, or at its selling price? The second can double the figure without anything changing on the floor.",
+      "4. Is it adjusted for volume? A busy summer makes energy per hectolitre look better on its own. The comparison has to be per hectolitre, per case or per brew.",
+      "5. Is your fee deducted? Samsara nets off its own licence and install cost. Ask every vendor to do the same. The cloud bill belongs in it too.",
+      "6. What happens in year one? Systems take months to go live. A business case that counts a full saving from month one is optimistic by design.",
+      "7. What does the conservative case look like? Ask for the number after a cut for risk, the way the Augury Forrester study cuts 10 to 30 percent.",
+      "8. Which named brewery, over which period? A case study without a baseline period cannot be compared with anything.",
+      "9. Who signs the result? The vendor, the brewery or someone independent? Your own plant controller is the cheapest independent signer you have.",
+      "10. What do you risk if it does not work? A trial costs the vendor little. A refund, a guarantee or a fee tied to the result, like GEA, TeepTrak or Waterleau, costs them something."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "How Beer365 answers the same ten questions",
+   "blocks": [
+    {
+     "p": "Beer365 is the beer intelligence software Disruptive Advantage builds on Microsoft Azure and Fabric. It would be odd to publish these questions and not answer them ourselves."
+    },
+    {
+     "p": "Each saving is your volume, times the improvement, times what it is worth. There are five levers. The improvements are planning assumptions, not results from a named plant. You can replace any of them with your own number."
+    },
+    {
+     "table": {
+      "head": [
+       "Lever",
+       "Formula",
+       "Planning assumption"
+      ],
+      "rows": [
+       [
+        "Beer loss",
+        "hL a year x points of loss recovered x brewing cost per hL",
+        "One point recovered"
+       ],
+       [
+        "Extract",
+        "hL a year x malt cost per hL x points gained / efficiency today",
+        "One point of brewhouse efficiency"
+       ],
+       [
+        "Energy",
+        "hL a year x energy cost per hL x share saved",
+        "Five percent of power and steam"
+       ],
+       [
+        "Dumped batches",
+        "hL a year x share no longer dumped x brewing cost per hL",
+        "0.2 percent of volume"
+       ],
+       [
+        "Reporting",
+        "Hours spent compiling reports by hand x what those hours cost",
+        "One person's reporting time"
+       ]
+      ]
+     }
+    },
+    {
+     "table": {
+      "head": [
+       "Question",
+       "Beer365 answer"
+      ],
+      "rows": [
+       [
+        "Formula",
+        "The five formulas above, published on the website"
+       ],
+       [
+        "Baseline",
+        "The first month runs on your records only; the starting point is signed off with you"
+       ],
+       [
+        "Value of lost beer",
+        "Brewing cost, not selling price"
+       ],
+       [
+        "Volume",
+        "Monthly reports of loss, extract and energy against the baseline, in hL, cases and money, adjusted for volume"
+       ],
+       [
+        "Fee and ramp-up",
+        "Year one counts half the saving; larger plants assume three quarters of the improvements, the largest half"
+       ],
+       [
+        "Conservative case",
+        "Any published result is a signed saving over a stated period, less 25 percent for risk"
+       ],
+       [
+        "Who signs",
+        "Monthly statements signed by your plant controller, not by us"
+       ],
+       [
+        "Not counted",
+        "Lost sales in sold-out months, faster complaint answers, smaller recalls, water and packaging on beer no longer lost"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Every figure in those statements traces back to your brew sheets, dips, counts, meters and excise register. The extract lever is a good example of why that matters. Each malt lot arrives with its own lab value. Comparing every brew against it tells you whether a short brew was the malt, the mill gap or the sparge, which is a different conversation from \"efficiency was down this month\"."
+    }
+   ]
+  },
+  {
+   "h2": "Where we are behind and what to take from it",
+   "blocks": [
+    {
+     "p": "Being fair to the market means being fair about ourselves. On method, Beer365 sits with the small group that shows its working. On proof, we are behind. We have not yet published a named brewery result. Our calculator covers the brewhouse; it does not yet net off our own fee the way Samsara's does. Sennos and The 5th Ingredient have case libraries we do not. GEA, TeepTrak and Waterleau put money on the outcome in a way most software vendors, ourselves included, do not yet."
+    },
+    {
+     "p": "For a brewery the practical lesson is simpler than any vendor's pitch. The number on the homepage is the least useful thing on it. What matters is the baseline, the formula and who signs the result. Ask the ten questions. A good vendor will answer most of them without flinching. Treat a vendor who cannot answer the first two as a demo rather than a business case."
+    },
+    {
+     "p": "The best test of all costs nothing. Before any system goes in, write down this month's loss, extract and energy per hectolitre from your own records and have the plant controller sign it. Every vendor, us included, can then be measured against the same line."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "Beer AI ROI Claims KB, research of 116 beer companies' public websites, 24 September 2026 (vault: Beer AI ROI Claims KB/Beer AI - How Vendors Prove Value.md, data/beer_roi_claims.json, companies/*.md)",
+  "DFx Technology claims: https://www.dfxtech.co.uk",
+  "Spectramatics claims: https://spectramatics.com/solutions/siba-real-time-brewing-monitoring/",
+  "The 5th Ingredient case studies: https://the5thingredient.com/case-studies/ and pricing: https://the5thingredient.com/pricing/",
+  "Sennos case studies: https://sennos.com/resource/sennosystem-at-tarboro-brewing-company/ and https://sennos.com/resource/denali-brewing-company-turning-fermentation-data-into-capacity-gains/",
+  "Samsara, Glazer's case: https://www.samsara.com/customers/glazers-beer-beverage and ROI calculator: https://www.samsara.com/products/cameras/roi-calculator",
+  "BarTrack savings calculator: https://www.bartrack.beer/resources/savings-calculator and price via Micro Matic: https://www.micromatic.com/en-us/bartrack-beverage-sensor-2-product/p-JJ4ZJrHRHEmic2bTMRtZ3Q",
+  "Pluto7 ROI calculator: https://pluto7.com/roi-calculator/",
+  "Brewlytics mug club ROI calculator: https://brewlytics.ai/tools/mug-club-roi-calculator",
+  "Peerox value calculator: https://peerox.de/maddox/mehrwertrechner/",
+  "L2L downtime cost calculator: https://www.l2l.com/downtime-cost-calculator",
+  "Augury Forrester TEI study: https://tei.forrester.com/go/Augury/Machine-and-Process-Health/?lang=en-us",
+  "GEA Brewhouse Performance Boost: https://www.gea.com/en/products/brewery-systems/brewhouse-performance-boost/",
+  "TeepTrak pilot offer: https://teeptrak.com/en/",
+  "Waterleau capex-free financing: https://www.waterleau.com/en/services/capex-free-financing",
+  "Shipsy engagement model: https://www.shipsy.ai/",
+  "Evocon pricing: https://www.evocon.com/pricing; MaintainX pricing: https://www.getmaintainx.com/pricing; Arryved pricing: https://www.arryved.com/pricing; Easybeer: https://www.easybeer.fr/; Pubinno (third-party report): https://usmanufacturingreport.com/article/pubinno/",
+  "Caveat: some sites did not load during research (zymoscope.com redirects elsewhere; binarybeer, iwort and pubinno failed), so those records lean on trade press. The Haber and Quantiphi case studies are not from breweries.",
+  "Beer365 savings method: Disruptive Advantage, How the Savings Are Calculated"
+ ]
+}

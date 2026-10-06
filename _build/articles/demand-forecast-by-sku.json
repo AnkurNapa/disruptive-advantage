@@ -1,0 +1,126 @@
+{
+ "slug": "demand-forecast-by-sku",
+ "uc_id": 119,
+ "area": "market",
+ "title": "Forecasting beer demand by SKU and channel, with the lead time in mind",
+ "standfirst": "A beer forecast is only useful if it reaches further than your brewing lead time. Here is how to build one by SKU and channel and how to tell if it is any good.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The forecast has to beat the tank",
+   "blocks": [
+    {
+     "p": "A lager decided on Monday is not on a truck on Friday. Brewing, fermentation, maturation, filtration and packaging take weeks. The tank you need may already be full. So the demand forecast that matters is the one that looks past your brewing lead time. A forecast for next week is interesting. A forecast for five weeks out is the one that fills the brew plan."
+    },
+    {
+     "p": "That is why a single total sales number is useless to the brewhouse. The brewer needs to know how much of which beer, in which pack, for which channel, by when. Keg for on-trade, cans for modern retail and the taproom each move to different rhythms. Add them together and the rhythms cancel out, which makes the total look smooth and the plan look easy right up to the week a pack runs out."
+    }
+   ]
+  },
+  {
+   "h2": "What to feed it",
+   "blocks": [
+    {
+     "p": "The base is sales history at SKU, channel and week level, ideally two years or more so each season has been seen at least twice. On top of that the calendar matters more in beer than in most categories."
+    },
+    {
+     "ul": [
+      "Summer and the weather. Warm weeks lift volume, particularly lager and cans.",
+      "Festivals, long weekends and big sporting events, each tagged by date.",
+      "Dry days, where sales are zero by law. They must be marked so the model does not learn that demand collapsed.",
+      "Promotions and price changes, so the model does not mistake a discount for growth.",
+      "Distribution changes, such as a new chain listing or a lost account."
+     ]
+    },
+    {
+     "p": "One trap deserves its own line. If a SKU was out of stock, sales that week understate demand. History is what you sold, not what people wanted. Flag stock-out weeks and either exclude them or adjust for them, or the forecast will learn to under-supply the very beers that run out."
+    }
+   ]
+  },
+  {
+   "h2": "Measure accuracy in a way the brewer believes",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Weighted absolute percentage error",
+      "code": "WAPE % = sum of |actual - forecast| / sum of actual x 100"
+     }
+    },
+    {
+     "eq": {
+      "label": "Bias",
+      "code": "Bias % = (sum of forecast - sum of actual) / sum of actual x 100",
+      "note": "Positive bias means you over-forecast and carry stock. Negative means you run out."
+     }
+    },
+    {
+     "p": "Say a brewery forecasts one week for four SKUs, in hL."
+    },
+    {
+     "table": {
+      "head": [
+       "SKU and channel",
+       "Forecast hL",
+       "Actual hL",
+       "Absolute error hL"
+      ],
+      "rows": [
+       [
+        "Lager, keg, on-trade",
+        "120",
+        "132",
+        "12"
+       ],
+       [
+        "Lager, can, retail",
+        "200",
+        "188",
+        "12"
+       ],
+       [
+        "IPA, keg, on-trade",
+        "40",
+        "29",
+        "11"
+       ],
+       [
+        "Wheat, can, retail",
+        "60",
+        "63",
+        "3"
+       ],
+       [
+        "Total",
+        "420",
+        "412",
+        "38"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "WAPE is 38 / 412 = 9.2%. Bias is (420 - 412) / 412 = +1.9%. Both look fine. Now look at the IPA alone: an error of 11 hL on 29 hL actual is 38%. The aggregate number is carried by the big lager lines and hides the small SKU that is actually hard to plan. That IPA is also the beer whose hop aroma fades fastest on the shelf, so over-forecasting it is not a cheap mistake. Always report accuracy at the level you brew and pack, not only in total."
+    }
+   ]
+  },
+  {
+   "h2": "Traps and what good looks like",
+   "blocks": [
+    {
+     "ul": [
+      "**Forecasting sell-in when the market moves on depletion.** Orders from distributors are lumpy and follow their own stock decisions. Where you can see depletion, use it.",
+      "**Overriding without a record.** Sales teams know things the history does not. Let them adjust, but log every override so you can see later whether it helped.",
+      "**A point number with no range.** A forecast of 120 hL means little without knowing whether the realistic range is 110 to 130 or 80 to 160. The range decides how much safety stock to brew.",
+      "**New SKUs.** A beer with eight weeks of history cannot be forecast from its own past. Borrow the pattern of a similar beer and say so."
+     ]
+    },
+    {
+     "p": "Good looks like a weekly forecast at SKU and channel, published with its range, reaching beyond the longest brewing lead time, with accuracy and bias tracked per line and reviewed jointly by sales and the brewhouse. The value is less in the clever model and more in both teams arguing over the same number."
+    },
+    {
+     "p": "Beer365 reads sales, stock and the brew plan from your existing systems into one record, so a forecast question comes back alongside the tanks and batches that would have to fill it."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "slug": "finding-the-water-leak",
+ "uc_id": 84,
+ "area": "plant",
+ "title": "Which CIP set or hose is losing the water? Map it meter by meter",
+ "standfirst": "Water to beer ratio tells you the site is thirsty. It does not tell you where. Area meters, CIP records and a night flow test usually do.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why the site total is not enough",
+   "blocks": [
+    {
+     "p": "Every brewery tracks water in hectolitres per hectolitre of beer. It is a good headline and a poor diagnostic. When it drifts up, the site total cannot tell you whether the cause is a final rinse running twice as long as the recipe, a pasteuriser make-up valve stuck open or a hose left running on the cellar floor since the morning shift."
+    },
+    {
+     "p": "Water costs you twice: once to buy and treat it, again to send it to effluent. The second cost is easy to forget and often the larger one."
+    }
+   ]
+  },
+  {
+   "h2": "Build the balance first",
+   "blocks": [
+    {
+     "p": "Start with the site incomer and every area meter you have: brewhouse, cellars, CIP sets, packaging, utilities, the canteen. Read them all at the same time, daily at minimum and hourly if the meters log. Then do the arithmetic nobody likes doing."
+    },
+    {
+     "eq": {
+      "label": "Unaccounted water",
+      "code": "Unaccounted (m³) = site incomer - sum of area meters",
+      "note": "Express it as a percentage of the incomer and trend it daily."
+     }
+    },
+    {
+     "eq": {
+      "label": "CIP rinse variance",
+      "code": "Variance (m³) = metered rinse volume - recipe rinse volume, per cycle, per circuit"
+     }
+    },
+    {
+     "p": "The second equation needs the CIP system's own records: which circuit ran, which vessel, which step, how long. Most CIP controllers log this already. Join it to the CIP supply meter by timestamp and each cycle gets a water cost."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say the incomer reads 1,200 m³ for the day and the area meters add up to 1,050 m³. That is 150 m³ unaccounted, 12.5 percent. Too big to be meter error alone, so something unmetered is drawing."
+    },
+    {
+     "p": "Next, a night flow test. Between 01:00 and 05:00 on a non-production night nothing should draw except known users. If the incomer shows 6 m³/h through those hours, that is 24 m³ over the four hours with nothing running. A 25 mm hose left open at 30 litres a minute is 1.8 m³/h. Three of them would explain most of it."
+    },
+    {
+     "p": "Then the CIP records. Suppose the fermenter final rinse recipe calls for 2.0 m³ and the meter shows 3.1 m³ on one circuit, four times a day. That is 4.4 m³ a day from one circuit, usually from a rinse that runs to drain until conductivity clears instead of to a fixed volume, or a return pump that cannot keep up so the step is extended."
+    },
+    {
+     "table": {
+      "head": [
+       "Source",
+       "Evidence",
+       "Water per day"
+      ],
+      "rows": [
+       [
+        "Hoses open overnight",
+        "Night flow 6 m³/h for 4 h",
+        "24 m³"
+       ],
+       [
+        "Fermenter circuit final rinse",
+        "1.1 m³ over recipe x 4 cycles",
+        "4.4 m³"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The IBD hygiene notes ask for every CIP hose to be numbered and registered. Most breweries do it for hygiene and stop there. Do it for water too: record which hose is connected to which station. A running hose becomes a named hose. A hose that turns up in the leak list every week is a hose that needs a trigger gun or a new home."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Meters nobody checked.** An area meter reading 8 percent low creates a phantom leak. Prove the meters against each other with a known volume, such as a tank fill, before you go hunting.",
+      "**Totaliser resets and units.** Some meters read litres, some m³, some roll over at a fixed count. A reset on one meter looks like a flood.",
+      "**Recovery tanks overflowing.** A CIP rinse recovery tank sent to drain on high level looks like normal use in the CIP log and like loss in the balance.",
+      "**Comparing days that are not alike.** A day with three brews and a filler changeover is not a fair comparison with a day of maintenance. Normalise by production or compare like days."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a daily balance with unaccounted water under a few percent, a night flow number that is close to zero, a CIP cycle list with water per cycle against the recipe plus a hose register with locations. The question then answers itself in a sentence: circuit 3 final rinse, or hose 14 in cellar two."
+    },
+    {
+     "p": "Beer365 brings the meter readings and the CIP log into one record, so each litre of variance points to a circuit, a cycle and a time."
+    }
+   ]
+  }
+ ]
+}

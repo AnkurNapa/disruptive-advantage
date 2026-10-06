@@ -1,0 +1,127 @@
+{
+ "slug": "water-treatment-cost-per-hl",
+ "uc_id": 180,
+ "area": "raw",
+ "title": "What does correcting your brewing liquor cost per hectolitre?",
+ "standfirst": "Salts and acid look like small change on the purchase ledger. Worked through the ion balance per hectolitre, they become a cost you can see, compare and argue about.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "A cost hidden in the consumables line",
+   "blocks": [
+    {
+     "p": "Water treatment chemicals usually sit in a general consumables account. Gypsum, calcium chloride and food-grade acid get bought by the bag and the drum. Nobody asks what they cost per hectolitre of beer. Meanwhile the doses were set years ago for a water analysis that may no longer be true and some brews get a bit more because the brewer on that shift prefers it."
+    },
+    {
+     "p": "There are two reasons to know the number. It tells you whether your treatment is sensible against the alternatives, such as running more of the liquor through reverse osmosis. It also tells you when dosing has drifted away from what the chemistry actually needs, which is a quality question as much as a money one."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure",
+   "blocks": [
+    {
+     "ul": [
+      "**Incoming water analysis:** bicarbonate, calcium, magnesium, sodium, chloride, sulphate",
+      "**Target ion profile** for each beer family, written down",
+      "**Actual doses per brew:** grams of each salt and millilitres of acid, against the litres of liquor treated",
+      "**Purchase prices** per kilogram or litre, landed",
+      "**Liquor volume per hectolitre of beer,** from your own mash and sparge records"
+     ]
+    },
+    {
+     "p": "The chemistry is fixed by molecular weight. Each salt carries a known fraction of the ion you want. The rest comes along whether you want it or not."
+    },
+    {
+     "eq": {
+      "label": "Salt needed for a target ion addition",
+      "code": "Salt (mg/L) = ion target (mg/L) / (ion mass in formula / formula weight of salt)",
+      "note": "Calcium is 40.08/172.17 of gypsum dihydrate and 40.08/147.01 of calcium chloride dihydrate."
+     }
+    },
+    {
+     "eq": {
+      "label": "Alkalinity removed by acid",
+      "code": "RA removed (mg/L as CaCO3) = acid dose (mL per m3) x acid density x (%w/w / 100) x 50 / (MW / valence)",
+      "note": "For 88% lactic acid this works out at about 0.586 mg/L as CaCO3 per mL/m3."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say the brewer wants to add 50 mg/L calcium from gypsum, 30 mg/L calcium from calcium chloride and remove 100 mg/L of residual alkalinity with 88% lactic acid. Prices, for example: gypsum Rs 30 per kg, calcium chloride Rs 60 per kg, lactic acid Rs 250 per litre."
+    },
+    {
+     "table": {
+      "head": [
+       "Addition",
+       "Dose per hL of liquor",
+       "Side effect",
+       "Cost per hL (Rs)"
+      ],
+      "rows": [
+       [
+        "Gypsum for 50 mg/L Ca",
+        "21.5 g",
+        "adds 120 mg/L sulphate",
+        "0.64"
+       ],
+       [
+        "Calcium chloride for 30 mg/L Ca",
+        "11.0 g",
+        "adds 53 mg/L chloride",
+        "0.66"
+       ],
+       [
+        "88% lactic for 100 mg/L RA",
+        "17.1 mL",
+        "adds lactate",
+        "4.27"
+       ],
+       [
+        "Total",
+        "",
+        "",
+        "5.57"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The acid is three quarters of the cost. That is typical when bicarbonate is high and it is the first place to look when the number seems large. If, say, your brewhouse uses 1.3 hL of treated liquor per hL of cast wort, the treatment costs about Rs 7.24 per hL of wort before any losses downstream."
+    },
+    {
+     "p": "The side effects belong in the record too. The additions alone bring chloride and sulphate in at about 1 to 2.3, before counting what the source water already carries. That is a flavour decision, not just a cost one. The usual target band is between 1 to 1.5 and 1.5 to 1."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Anhydrous versus dihydrate.** Calcium chloride is sold in both forms and the calcium content differs. Check which one is in the store before trusting any dose.",
+      "**Acid strength.** An acid drum labelled 80% used at an 88% dose under-acidifies by about a tenth.",
+      "**Dosing the wrong volume.** Salts dosed per brew, not per litre of liquor, change concentration whenever the brew length changes.",
+      "**Counting only salts.** Reverse osmosis has membrane, power and reject water costs. If you compare treatment routes, compare all of them per hectolitre.",
+      "**Assuming the water is constant.** The right dose this month is not the right dose after the source changes. Cost per hL will move with it."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a cost per hectolitre for water treatment that sits on the same report as malt and hops, worked from actual doses, not from the purchase ledger divided by output. Each beer family has a target ion profile and the dose follows the incoming analysis rather than habit."
+    },
+    {
+     "p": "Beer365 joins the water analysis, the dosing record and the prices in one record, reads them from the systems you already keep and shows the cost per hectolitre with the brews it was calculated from."
+    }
+   ]
+  }
+ ]
+}

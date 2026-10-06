@@ -1,0 +1,112 @@
+[
+ {
+  "id": 74,
+  "title": "Refrigeration plant efficiency",
+  "section": "G. Utilities, energy and maintenance",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is the ammonia plant getting worse?",
+  "area": "plant",
+  "area_name": "Energy, utilities and plant"
+ },
+ {
+  "id": 78,
+  "title": "Peak demand and tariff shaping",
+  "section": "G. Utilities, energy and maintenance",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Can I move load off peak tariff?",
+  "area": "plant",
+  "area_name": "Energy, utilities and plant"
+ },
+ {
+  "id": 84,
+  "title": "Water loss hotspot mapping",
+  "section": "H. Water, waste and by-products",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Which CIP or hose is the leak?",
+  "area": "plant",
+  "area_name": "Energy, utilities and plant"
+ },
+ {
+  "id": 190,
+  "title": "Nitrogen and mixed gas use",
+  "section": "T. Process gases, flow, heat and cold (Module 3, units 3.6 to 3.10)",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is nitrogen use matched to the dispense need?",
+  "area": "plant",
+  "area_name": "Energy, utilities and plant"
+ },
+ {
+  "id": 118,
+  "title": "Stock cover versus forecast",
+  "section": "K. Warehouse, distribution and cold chain",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Where will I run out next month?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 120,
+  "title": "Revenue per hectolitre by channel",
+  "section": "L. Sales",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Which channel actually pays?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 121,
+  "title": "Taproom mix and pour analysis",
+  "section": "L. Sales",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "What is the taproom really selling?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 128,
+  "title": "Key account profitability",
+  "section": "L. Sales",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Which big customer is a loss leader?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 132,
+  "title": "Regional demand mapping",
+  "section": "M. Marketing, brand and consumer",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Where does this brand actually work?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ },
+ {
+  "id": 137,
+  "title": "Seasonality aligned calendar",
+  "section": "M. Marketing, brand and consumer",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "When should each brand shout?",
+  "area": "market",
+  "area_name": "Supply chain, sales and marketing"
+ }
+]

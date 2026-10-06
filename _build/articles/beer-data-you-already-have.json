@@ -1,0 +1,175 @@
+{
+ "slug": "beer-data-you-already-have",
+ "uc_id": null,
+ "area": "layer",
+ "title": "The beer data your brewery already has and does not use",
+ "standfirst": "Most breweries do not need more data to start. Brew sheets, lab books, the historian, the ERP, the excise register and sales files already hold the answers. They just never meet.",
+ "description": "The beer data a brewery already has: brew sheets, lab, historian, ERP, excise and sales records, what each one answers and how to join them by batch.",
+ "keywords": [
+  "brewery data sources",
+  "beer production data",
+  "brewery data you already have",
+  "brew sheet data",
+  "brewery excise data reconciliation"
+ ],
+ "read_min": 6,
+ "sections": [
+  {
+   "h2": "What data does a brewery already produce?",
+   "blocks": [
+    {
+     "p": "A working brewery produces more data than most data projects ever use. Every brew leaves a brew sheet. Every fermenter has a gravity log. The lab records every analysis. The PLCs log every temperature and valve. The ERP records every malt delivery, every cost and every stock movement. The excise register records every hectolitre that leaves under bond. Sales and distributors send volumes by account. Maintenance logs every work order."
+    },
+    {
+     "p": "The problem is not quantity. It is that each record was written for its own job and never designed to meet the others. The brew sheet uses the brew number. The cellar uses the tank and a fermentation number. The filler uses a lot code. The ERP uses a material batch. The excise register uses a removal document. The beer is the same. The keys are not."
+    },
+    {
+     "p": "Most of the brewing actually happened in that mess. Reading it is the skill. Before buying any new system, it is worth listing what is already there and what each source could answer if it were joined to the others."
+    }
+   ]
+  },
+  {
+   "h2": "The brewery data sources and what each can answer",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Source",
+       "Where it usually lives",
+       "What it can answer once joined by batch"
+      ],
+      "rows": [
+       [
+        "Brew sheets",
+        "Paper, spreadsheets, brewhouse automation reports",
+        "Brewhouse yield per brew, mash and lauter times, knockout gravity and volume against target"
+       ],
+       [
+        "Fermentation and cellar logs",
+        "Whiteboards, spreadsheets, historian",
+        "Fermentation time per beer and yeast generation, tank days, transfer losses"
+       ],
+       [
+        "Lab and LIMS results",
+        "Lab books, LIMS, spreadsheets",
+        "Results against specification, drift before failure, which raw material lots affect quality"
+       ],
+       [
+        "Process historian",
+        "The automation system's historian",
+        "Temperature against profile, minutes out of range, CIP and utility performance, equipment health"
+       ],
+       [
+        "ERP",
+        "SAP, Dynamics 365, Tally or similar",
+        "Material cost per brew, stock, supplier lots, true cost per packaged hectolitre"
+       ],
+       [
+        "Excise and duty registers",
+        "Bonded warehouse records, returns to the authority",
+        "Removals against packaged volume, unexplained differences, duty per hectolitre"
+       ],
+       [
+        "Packaging line records",
+        "Filler and seamer PLCs, line logbooks",
+        "OEE, stoppages by cause, fill level and seam rejects by lot"
+       ],
+       [
+        "Sales and distributor data",
+        "Invoices, distributor files, e-commerce",
+        "Demand by SKU and channel, stock cover, revenue per hectolitre"
+       ],
+       [
+        "Maintenance records",
+        "CMMS or work order spreadsheets",
+        "Failure history per asset, maintenance cost per hectolitre, links between breakdowns and lost runs"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The right-hand column is the point. None of those answers come from one source. Brewhouse yield needs the brew sheet and the malt certificate from the ERP. True cost per hectolitre needs the ERP, the loss by stage and the packaged volume. Each answer is a join."
+    },
+    {
+     "p": "Then there are the sources nobody lists. Energy and water meters, often read by hand once a week, which give energy and water per hectolitre once matched to production. Sensory panel sheets, which show drift in a beer long before a customer notices. Complaint emails and call notes, which can be traced to a packaging lot if the lot code was asked for. Supplier certificates of analysis for malt and hops, which explain more brewhouse variation than most people expect. Shift handover notes, which record the things that never made it into a system: the pump that sounded wrong, the tank that was slow to cool. None of these are glamorous. All of them are already paid for."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example: excise volume against packaged volume",
+   "blocks": [
+    {
+     "p": "The excise register is the most underused data in many breweries. It is kept carefully because the law requires it, then filed. Yet it is an independent count of beer leaving the brewery, which makes it an excellent check on everything upstream."
+    },
+    {
+     "p": "Say a brewery packaged 10,000 hL in a month according to the filler counts. The excise register shows 9,850 hL removed on duty. Bonded stock of packaged beer rose by 120 hL over the month."
+    },
+    {
+     "eq": {
+      "label": "Unexplained difference",
+      "code": "difference = packaged - removed on duty - increase in bonded stock = 10,000 - 9,850 - 120 = 30 hL",
+      "note": "30 / 10,000 = 0.3 percent of packaged volume."
+     }
+    },
+    {
+     "p": "Thirty hectolitres is small. It may have an innocent answer: breakage, samples, a pallet counted twice. But it has to have an answer, because the excise authority may ask for one. Tracked monthly by SKU and pack, the same sum shows which line or pack format carries the gap. Run it against the brewhouse and cellar records and the brewery has a full loss chain from cast wort to duty paid."
+    },
+    {
+     "p": "The traps are the usual ones. Filler counts are in units and must be converted to hectolitres with the declared pack volume, not the nominal one. Removals may be dated by document while stock is dated by count day. Returned and destroyed beer may sit in a separate register. Agree the rules once and write them down."
+    },
+    {
+     "p": "Not every source deserves the same effort. Rank them by how many questions they help answer. The brew sheet and the packaging lot record usually come first because they carry the keys. The lab comes next because quality questions depend on it. The historian matters most for fermentation and equipment questions, but only once the batch keys exist to attach its readings to."
+    }
+   ]
+  },
+  {
+   "h2": "How to start using the data a brewery already has",
+   "blocks": [
+    {
+     "ul": [
+      "**List every source** that touches a batch, with its owner, format, update frequency and the key it uses.",
+      "**Map the keys** between brew number, fermentation number, packaging lot, ERP batch and excise document. This mapping is the most valuable table in the brewery.",
+      "**Digitise selectively.** Type up six months of the paper records needed for the first question, not ten years of everything.",
+      "**Keep the source untouched.** Read from the systems as they are. Clean and join in a separate layer so the original is always there to check.",
+      "**Answer one question end to end** before adding sources: loss by stage, fermentation time or cost per hectolitre."
+     ]
+    },
+    {
+     "p": "This is work brewers are well placed to lead. A data engineer can join two tables. Only someone who has stood in the cellar knows that tank 9 was re-numbered after the 2021 expansion, or that the night shift writes gravity in specific gravity while days write °Plato. Those details decide whether the join is right."
+    },
+    {
+     "p": "What good looks like is quiet. Every packaged lot traces back to its brews. The excise difference is known each month and explained. The lab result for any batch is one click from its fermentation curve. Nobody bought a new system to get there."
+    }
+   ]
+  },
+  {
+   "h2": "Where AI fits once the data is joined",
+   "blocks": [
+    {
+     "p": "Once these sources meet in one batch record, the AI work most breweries want becomes possible. Fermentation forecasts train on cellar logs joined to yeast and lab data. Equipment models train on historian data joined to maintenance history. A GenAI assistant can answer 'which brews used malt lot 4471? How did they ferment?' with the batches cited, because the join exists. Without the join, each of those projects starts by rebuilding it, usually badly and usually more than once."
+    },
+    {
+     "p": "Beer365 starts from exactly this point. It reads the brew sheets, lab results, historian, ERP, excise and sales data a brewery already holds, joins them into one batch record inside the brewery's own Microsoft tenant and answers questions with the batch records cited."
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "What data does a brewery collect?",
+   "a": "Brew sheets, fermentation and cellar logs, lab results, process historian readings, ERP cost and stock records, excise and duty registers, packaging line records, sales and distributor data and maintenance records. Most of it is kept. Little of it is joined."
+  },
+  {
+   "q": "How do you join brewery data from different systems?",
+   "a": "By mapping the keys each system uses: brew number, fermentation or tank number, packaging lot, ERP batch and excise document. Once that mapping exists, each record can be linked to the same batch."
+  },
+  {
+   "q": "How do you reconcile excise volume with packaged beer?",
+   "a": "Compare packaged volume with volume removed on duty plus the change in bonded stock over the same period. Any remaining difference should be explained by breakage, samples, returns or counting errors. Track it by SKU and pack."
+  },
+  {
+   "q": "Does a brewery need new software to use its data?",
+   "a": "Usually not to start. The first questions can be answered by reading existing systems and paper records, mapping their keys and joining them by batch. New systems are easier to justify once the gaps are known."
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "slug": "mash-ph-residual-alkalinity",
+ "uc_id": 24,
+ "area": "brewhouse",
+ "title": "Is your mash chemistry where you think it is?",
+ "standfirst": "Mash pH is set by the water, the grist and the additions together. Predict it from residual alkalinity, measure it the same way every time and the gap between the two tells you what moved.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why a tenth of a pH unit is worth chasing",
+   "blocks": [
+    {
+     "p": "Mash pH steers almost everything in the brewhouse. Enzyme activity, extract, run-off speed, colour pick-up, the tannin and silica you pull from the husk, hop utilisation in the kettle and the way the beer tastes at the end. Alkaline worts give poor saccharification, slow run-off, darker colour and an astringent finish. Every brewer knows this. Fewer can say what their mash pH was on last Tuesday's brew and why."
+    },
+    {
+     "p": "The usual pattern is a pH reading taken when someone remembers, logged without a temperature and compared with nothing. When it drifts, the response is more acid, with no record of whether the water or the grist moved."
+    },
+    {
+     "p": "The question is whether your mash is where your water treatment says it should be. If not, which input changed."
+    }
+   ]
+  },
+  {
+   "h2": "Predict first, then measure",
+   "blocks": [
+    {
+     "p": "Residual alkalinity is the bridge between the water report and the mash. It is the bicarbonate left over after calcium and magnesium have reacted with malt phosphates and released acidity."
+    },
+    {
+     "eq": {
+      "label": "Residual alkalinity",
+      "code": "RA (mg/L as CaCO3) = HCO3 x 50/61 - Ca x 50/20/3.5 - Mg x 50/12.2/7",
+      "note": "Divide by 17.85 for German degrees (dH). Acid additions subtract further."
+     }
+    },
+    {
+     "p": "The Kolbach rule of thumb connects it to pH: for a 12 Plato wort, a change of 10 dH in residual alkalinity moves knock-out wort pH by about 0.3 in the opposite direction. That is about 0.03 pH per dH. It is not a full mash pH model, because the grist has its own acidity and buffering, but it tells you the direction and size of the change your water is making."
+    },
+    {
+     "p": "The reference data in brewing texts show how strong the calcium effect is. Liquor with 50 ppm calcium gave a wort pH of about 5.51 before the boil. With 350 ppm calcium the same wort came in at 5.10."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say the brewing liquor carries 220 mg/L bicarbonate, 40 mg/L calcium and 12 mg/L magnesium."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Before treatment",
+       "After adding 60 mg/L Ca"
+      ],
+      "rows": [
+       [
+        "Calcium (mg/L)",
+        "40",
+        "100"
+       ],
+       [
+        "RA as CaCO3 (mg/L)",
+        "144.7",
+        "101.9"
+       ],
+       [
+        "RA (dH)",
+        "8.1",
+        "5.7"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Adding 60 mg/L calcium cuts residual alkalinity by about 2.4 dH. By Kolbach that pulls the wort pH down by roughly 0.07. For a pale lager that is a useful step, but not the whole job, which is why most breweries with water like this also use acid or partial reverse osmosis."
+    },
+    {
+     "p": "Now compare with what you measure. If the predicted change was 0.07 down and the measured mash pH did not move, either the dose did not go in, the water changed, the grist is buffering harder than usual or the pH meter is wrong. Each of those has a different fix."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Temperature.** pH read in a hot mash sample is lower than the same sample cooled to room temperature. Automatic temperature compensation corrects the electrode, not the sample's chemistry. Pick one temperature, usually room temperature and record it.",
+      "**Electrode care.** A meter calibrated weekly with old buffers can be off by more than the effect you are looking for. Calibrate daily with fresh buffers that bracket the reading.",
+      "**Sample timing.** pH moves in the first minutes after mash-in. A sample at five minutes and one at fifteen are not the same measurement.",
+      "**Water analysis out of date.** Residual alkalinity from last year's report predicts last year's mash.",
+      "**Grist changes.** More crystal or roasted malt adds acidity. A darker brew will read lower for reasons that have nothing to do with water."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a predicted and a measured mash pH on every brew, side by side, with the residual alkalinity, salt and acid doses and grist beside them. When the two diverge by more than about 0.05, someone looks at why before adding more acid. Over a few months you learn your own grist's buffering and the prediction gets sharper."
+    },
+    {
+     "p": "Beer365 keeps the water analysis, the additions and the mash pH readings on the same brew record, reads them from the systems you already keep and answers with the brews and analyses it used."
+    }
+   ]
+  }
+ ]
+}

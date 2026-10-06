@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ankurnapa.github.io/disruptive-advantage/sitemap.xml

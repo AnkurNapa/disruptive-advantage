@@ -1,0 +1,121 @@
+{
+ "slug": "keg-return-cycle",
+ "uc_id": 117,
+ "area": "market",
+ "title": "How long is a keg out of circulation and what does it cost you?",
+ "standfirst": "A keg sitting empty in a bar cellar is capital doing nothing. Measuring the cycle from fill to return tells you how big your fleet really needs to be.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The fleet you own is bigger than the fleet you use",
+   "blocks": [
+    {
+     "p": "A keg spends very little of its life full of beer on a tap. It gets washed, filled, stored, shipped, stacked in a cellar, tapped, emptied, left in a corner, collected on the next delivery and trucked back. The IBD packaging notes put the rule of thumb at three to eight kegs in circulation for every keg on dispense. That range is wide for a reason. Where you sit in it depends almost entirely on how fast empties come home."
+    },
+    {
+     "p": "Every extra week in the cycle is a week of kegs you had to buy and are not using. For a brewery with draught at its core, the keg fleet is one of the larger assets on the balance sheet that nobody on the brewing side ever looks at."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure",
+   "blocks": [
+    {
+     "p": "You need two events per keg: when it was filled (or dispatched) and when it came back. That means every keg needs an identity, usually a barcode or RFID tag, scanned at filling and at receipt of empties. Without per-keg scans you are estimating the cycle from totals, which can only ever give you an average."
+    },
+    {
+     "eq": {
+      "label": "Cycle time",
+      "code": "Cycle time (days) = date returned empty - date filled, per keg trip"
+     }
+    },
+    {
+     "eq": {
+      "label": "Turns per year",
+      "code": "Turns per year = 365 / median cycle time (days)"
+     }
+    },
+    {
+     "eq": {
+      "label": "Fleet needed",
+      "code": "Kegs needed = kegs filled per week x cycle time (weeks) + kegs in washing, filling and full stock",
+      "note": "This is the floor. Add a buffer for peaks and losses."
+     }
+    },
+    {
+     "p": "Report the median and the spread by channel, distributor and outlet. The average hides the kegs that matter most."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery fills 600 x 30 L kegs a week, which is 180 hL of draught. The median keg comes back 42 days after filling, so six weeks. Another week's worth of kegs is always somewhere between the washer and the cold store."
+    },
+    {
+     "table": {
+      "head": [
+       "Measure",
+       "Median cycle 42 days",
+       "Median cycle 35 days"
+      ],
+      "rows": [
+       [
+        "Kegs in trade and transit",
+        "600 x 6 = 3,600",
+        "600 x 5 = 3,000"
+       ],
+       [
+        "Kegs in washing, filling and full stock",
+        "600",
+        "600"
+       ],
+       [
+        "Working fleet needed",
+        "4,200",
+        "3,600"
+       ],
+       [
+        "Turns per year",
+        "365 / 42 = 8.7",
+        "365 / 35 = 10.4"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Taking one week out of the cycle frees 600 kegs. At, say, INR 9,000 a keg that is INR 5,400,000 of capital the brewery either does not need to spend on new kegs or can put to work on more draught volume. The beer did not change. The collection habits did."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that flatter the number",
+   "blocks": [
+    {
+     "ul": [
+      "**Lost kegs vanish from the average.** A keg that never comes back never closes a cycle, so it never appears in the cycle time. The fleet looks fast while it quietly shrinks. Track open trips older than a set age, say 120 days, as their own list.",
+      "**Depot is not outlet.** If the scan happens when kegs reach a distributor depot, you are measuring the brewery to depot leg only. The slow part is usually the outlet cellar.",
+      "**Mean versus median.** A few kegs left in a seasonal bar all winter drag the mean out. Use the median for the fleet maths and the tail for chasing.",
+      "**Event and loan kegs.** Kegs sent to festivals or lent to another site follow a different pattern. Tag them separately.",
+      "**Missed scans.** A keg scanned out but not in looks lost. A keg scanned in twice looks fast. Check scan rates per site before trusting any cycle number."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good keg management means every keg has a known location within a few days, the median cycle is stable and the long tail is a named list of outlets that someone is calling. The sales team knows which accounts hoard empties, because those accounts often also have slow rate of sale and the beer on their taps is older than you would like."
+    },
+    {
+     "p": "That last point is where draught quality and keg logistics meet. A slow keg in the cellar is also an old pint in a customer's glass."
+    },
+    {
+     "p": "Beer365 joins keg scans to the dispatch and the batch that filled them, from your existing keg tracking and ERP data, so cycle time can be read by outlet and every open trip traces back to the beer that went out in it."
+    }
+   ]
+  }
+ ]
+}

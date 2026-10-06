@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>How to approach brewery data and AI on AWS if you already run there | Beer365</title>
+<meta content="Brewery data and AI on AWS: S3, AWS IoT SiteWise and Amazon Bedrock for a brewery, plus how Microsoft Fabric reads the same S3 data without copying it." name="description"/>
+<link href="https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-on-aws.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="How to approach brewery data and AI on AWS if you already run there | Beer365" property="og:title"/>
+<meta content="Brewery data and AI on AWS: S3, AWS IoT SiteWise and Amazon Bedrock for a brewery, plus how Microsoft Fabric reads the same S3 data without copying it." property="og:description"/>
+<meta content="https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-on-aws.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#1D4354" name="theme-color"/>
+<link rel="icon" href="assets/beer365-mark.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/site.css" rel="stylesheet"/>
+<link href="assets/theme.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to approach brewery data and AI on AWS if you already run there", "description": "Brewery data and AI on AWS: S3, AWS IoT SiteWise and Amazon Bedrock for a brewery, plus how Microsoft Fabric reads the same S3 data without copying it.", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Person", "name": "Ankur Napa", "jobTitle": "Growth Officer, Beverage R&D", "sameAs": ["https://www.linkedin.com/in/ankur-napa"]}, "publisher": {"@type": "Organization", "name": "Beer365", "url": "https://ankurnapa.github.io/disruptive-advantage/", "logo": "https://ankurnapa.github.io/disruptive-advantage/assets/beer365-logo.svg", "parentOrganization": {"@type": "Organization", "name": "Disruptive Advantage"}}, "mainEntityOfPage": "https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-on-aws.html", "keywords": "brewery data on AWS, AWS for breweries, AWS IoT SiteWise brewery, Amazon Bedrock brewery, brewery analytics AWS S3", "articleSection": "Across the whole brewery"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a brewery use AWS for data and AI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Amazon S3 can hold brewery data, AWS IoT SiteWise can collect and model equipment data from the floor and Amazon Bedrock Knowledge Bases can answer questions over batch records with citations. The brewery still has to build the batch record and agree definitions."}}, {"@type": "Question", "name": "Does Microsoft Fabric work with Amazon S3?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Fabric supports OneLake shortcuts to Amazon S3 that give read-only access to bucket data without copying it. Fabric can cache shortcut files for 1 to 28 days to reduce egress. It can also reach network-restricted buckets through an on-premises data gateway."}}, {"@type": "Question", "name": "Do we need to move our brewery data from AWS to Azure to use Beer365?", "acceptedAnswer": {"@type": "Answer", "text": "No. Beer365 runs on Azure and Microsoft Fabric but can read data in Amazon S3 through OneLake shortcuts, which point at the data without copying it."}}, {"@type": "Question", "name": "What is AWS IoT SiteWise used for in food and beverage?", "acceptedAnswer": {"@type": "Answer", "text": "AWS documents it for collecting, storing, organising and monitoring industrial equipment data, including food and beverage examples such as refrigeration monitoring across sites. It also computes metrics such as OEE and mean time between failures."}}]}</script>
+<meta content="https://ankurnapa.github.io/disruptive-advantage/og/article-brewery-data-on-aws.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="https://ankurnapa.github.io/disruptive-advantage/og/article-brewery-data-on-aws.jpg" name="twitter:image"/>
+</head>
+<body class="p-article-brewhouse-efficiency p-art">
+<a class="skip" href="#main">Skip to content</a>
+<header class="hdr">
+<a aria-label="Beer365, home" class="logo" href="index.html">
+<img src="assets/beer365-logo.svg" alt="Beer365" width="165" height="40">
+</a>
+<button aria-controls="sitenav" aria-expanded="false" aria-label="Open menu" class="burger" id="menu" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+</button>
+<nav aria-label="Main" id="sitenav">
+<a href="use-cases.html">Use cases</a>
+<a href="solutions.html">Solutions</a>
+<a href="features.html">Features</a>
+<a href="case-studies.html">Case Studies</a>
+<a href="roi.html">Calculator</a>
+<a href="pricing.html">Pricing</a>
+<a href="about.html">About</a>
+<a aria-current="page" href="articles.html">Articles</a>
+<a class="btn nav-cta" href="contact.html">Book a free demo</a>
+</nav>
+<a class="btn sm hdr-cta" href="contact.html">Book a free demo</a>
+</header>
+<main id="main">
+<div class="crumb"><div class="wrap"><a href="articles.html">Articles</a>  /  Across the whole brewery</div></div>
+<section class="phero">
+<div class="wrap">
+<span class="topic">Across the whole brewery</span>
+<h1>How to approach brewery data and AI on AWS if you already run there</h1>
+<p class="std">If your brewery already runs on AWS, there is no reason to move to get value from its data. The hard work is the same on every cloud: one batch record and agreed definitions.</p>
+<div class="hmeta"><span>By Ankur Napa</span><span>6 min read</span><span>30 September 2026</span></div>
+<figure class="ahero"><img src="assets/photos/layer.jpg" alt="" width="1200" height="700"></figure>
+</div>
+</section>
+<section>
+<div class="wrap article">
+<aside class="side">
+<p class="blocklabel">On this page</p>
+<ol><li><a href="#s1">Should a brewery on AWS move clouds to do data and AI?</a></li><li><a href="#s2">How a brewery should approach data and AI on AWS</a></li><li><a href="#s3">The part no AWS service does for you</a></li><li><a href="#s4">Can Microsoft Fabric read brewery data stored on AWS?</a></li><li><a href="#s5">A worked example: move summaries across clouds, not streams</a></li><li><a href="#faq">Questions people ask</a></li></ol>
+<div class="sidecta"><p>Want this answered from your own records?</p><a class="btn sm" href="contact.html?produce=beer&amp;ask=I%20read%20your%20article%20%22How%20to%20approach%20brewery%20data%20and%20AI%20on%20AWS%20if%20you%20already%20run%20there%22%20and%20would%20like%20to%20talk%20about%20it%20for%20our%20brewery.">Book a free demo</a></div>
+</aside>
+<div class="prose"><h2 id="s1">Should a brewery on AWS move clouds to do data and AI?</h2><p>No. A brewery that already runs its ERP, historian exports or e-commerce on Amazon Web Services can build its brewery data and AI work on AWS. The cloud is rarely the reason a brewery&#x27;s numbers disagree. The reason is that the brew number in the brewhouse log, the tank number in the cellar and the lot code on the filler were never mapped to each other. That problem travels with you to any provider.</p><p>I will be plain about where I stand. Beer365 runs on Microsoft Azure and Microsoft Fabric inside the brewery&#x27;s own Microsoft tenant. That does not make AWS the wrong place for a brewery&#x27;s data. It means this article covers two things: how a brewery on AWS should approach its own data and AI, then how a Fabric-based tool can read that data where it sits.</p><h2 id="s2">How a brewery should approach data and AI on AWS</h2><p>The building blocks on AWS map cleanly onto a brewery. These are the services I would look at first, described the way AWS documents them.</p><div class="scrollx"><table class="deftable"><thead><tr><th>Brewery need</th><th>AWS service</th><th>What it does for the brewery</th></tr></thead><tbody><tr><td>One place for raw and shaped data</td><td>Amazon S3</td><td>Object storage for ERP extracts, lab files, historian exports and the shaped batch tables, ideally in an open table format such as Delta or Iceberg</td></tr><tr><td>Equipment and process data from the floor</td><td>AWS IoT SiteWise</td><td>Collects, stores, organises and monitors industrial equipment data. Asset models describe fermenters, compressors and fillers. Its edge gateway reads OPC UA servers on site</td></tr><tr><td>Plant metrics</td><td>AWS IoT SiteWise</td><td>Computes metrics such as overall equipment effectiveness and mean time between failures from the asset data</td></tr><tr><td>GenAI over batch records and SOPs</td><td>Amazon Bedrock Knowledge Bases</td><td>Retrieval augmented generation over your documents, with citations so the source can be checked</td></tr></tbody></table></div><p>AWS IoT SiteWise is worth a closer look for the floor. Its documentation lists food and beverage as a use case, with examples like monitoring refrigeration across sites. It keeps recent equipment data in a hot tier for live monitoring, moves older data to a warm tier for analysis and can put cold history in your own S3 bucket. A single SiteWise Edge gateway can connect up to 100 OPC UA servers, which covers most breweries&#x27; automation estate.</p><p>Model the plant before you collect it. A SiteWise asset model for a fermenter should carry the tags that matter to a brewer: jacket temperature, top and bottom probes, pressure, the gravity readings from the lab. If the asset hierarchy mirrors the actual cellar, the cellar manager can find tank 12 without learning a tag naming scheme written in 2009.</p><p>Pick the first use on AWS the same way you would anywhere: by the money. For a brewery running ammonia refrigeration around the clock, SiteWise alarms on compressor discharge temperature and motor current are a cheap first step, because the data already exists in the PLC and the cost of a failed compressor in July is easy to write down. For a brewery short of fermenter space, a fermentation time forecast trained on gravity readings in S3 frees tank days. For a quality team buried in paperwork, a Bedrock knowledge base over deviation reports and SOPs gives them search with sources. Each of these can be built entirely on AWS by a team that knows it.</p><h2 id="s3">The part no AWS service does for you</h2><p>None of those services know that a brewery packages one fermentation into three SKUs over two days, or that a blend draws from two tanks with different brew numbers. That mapping is brewery knowledge. On AWS, as anywhere, it becomes a batch record: one row per brew joining brewhouse, cellar, packaging and lab, kept as a table in S3 with a written definition for each measure.</p><ul class="caps"><li><strong>Brewed, packaged and sold volume</strong> must be three separate measures with names, or every loss figure will be argued about.</li><li><strong>Times</strong> must be in one time zone. Historians often log UTC while brew sheets are in local time.</li><li><strong>Units</strong> must be explicit: hectolitres or litres, °Plato or specific gravity, never both in one column.</li><li><strong>Calibration records</strong> must sit beside the sensor data, because a probe reading 0.8 °C high will train a model to be wrong.</li></ul><p>With that record in place, Bedrock Knowledge Bases can answer questions over batch records and SOPs with citations. Equipment models can train on SiteWise history joined to maintenance logs. Without it, both will produce confident answers about the wrong batch.</p><p>Whichever services you choose, keep the shaped tables in an open format such as Delta or Iceberg in S3. They are still ordinary files in S3. The format keeps the batch record readable by other engines later, including Microsoft Fabric, without an export job sitting in the middle that someone has to maintain.</p><h2 id="s4">Can Microsoft Fabric read brewery data stored on AWS?</h2><p>Yes. Microsoft Fabric supports OneLake shortcuts to Amazon S3. A shortcut is a pointer, so the data stays in your bucket and is not copied. Microsoft documents S3 shortcuts as read-only access to data in any file format. If the data is a Delta table, it can appear as a table in a Fabric lakehouse, queryable through Spark and the SQL endpoint.</p><p>A few details matter for a brewery&#x27;s security and cloud bill. Fabric can cache files read through S3 shortcuts, with a retention period you set between 1 and 28 days, to reduce egress costs from cross-cloud reads. Files larger than 1 GB are not cached. For buckets behind a firewall or VPC, Fabric can connect through an on-premises data gateway. Microsoft also documents Microsoft Entra service principal authentication for S3 shortcuts, which avoids managing AWS access keys.</p><p>To be clear about the trade-off: a brewery happy on AWS can build all of this on AWS. Reading S3 from Fabric makes sense when the brewery also uses Power BI or Microsoft 365, when a group company standardises on Microsoft or when a Fabric-based tool needs to work on the data without anyone migrating it. Cross-cloud reads still have a network cost on the AWS side, so the shape of what crosses matters, as the next example shows.</p><h2 id="s5">A worked example: move summaries across clouds, not streams</h2><p>Say a brewery&#x27;s historian exports to S3 come to 2 GB a day of raw tag readings. The batch summary for the same day, with gravity stages, peak temperatures and minutes out of profile per tank, is 20 MB.</p><div class="eq"><b>Share of bytes read across clouds</b><code>summary / raw = 20 MB / 2,000 MB = 1 percent</code><p style="font-size:15px;color:var(--mid)">Read the summary through the shortcut. Leave the raw stream on AWS for engineers who need it.</p></div><p>Pointing a cross-cloud report at the summary instead of the raw stream means reading one hundredth of the data every refresh. The shaping happens on AWS, next to the data. Only the shaped table crosses. That is good practice whichever direction the data flows.</p><p>Beer365 can work this way for a brewery on AWS. It reads the shaped tables in S3 through Fabric shortcuts, builds the one batch record inside the brewery&#x27;s own Microsoft tenant and answers questions with the batch records cited. The data stays where the brewery put it.</p><h2 id="faq">Questions people ask</h2><div class="afq"><h3>Can a brewery use AWS for data and AI?</h3><p>Yes. Amazon S3 can hold brewery data, AWS IoT SiteWise can collect and model equipment data from the floor and Amazon Bedrock Knowledge Bases can answer questions over batch records with citations. The brewery still has to build the batch record and agree definitions.</p></div><div class="afq"><h3>Does Microsoft Fabric work with Amazon S3?</h3><p>Yes. Fabric supports OneLake shortcuts to Amazon S3 that give read-only access to bucket data without copying it. Fabric can cache shortcut files for 1 to 28 days to reduce egress. It can also reach network-restricted buckets through an on-premises data gateway.</p></div><div class="afq"><h3>Do we need to move our brewery data from AWS to Azure to use Beer365?</h3><p>No. Beer365 runs on Azure and Microsoft Fabric but can read data in Amazon S3 through OneLake shortcuts, which point at the data without copying it.</p></div><div class="afq"><h3>What is AWS IoT SiteWise used for in food and beverage?</h3><p>AWS documents it for collecting, storing, organising and monitoring industrial equipment data, including food and beverage examples such as refrigeration monitoring across sites. It also computes metrics such as OEE and mean time between failures.</p></div>
+<p class="ucline">This article answers one of the <a href="use-cases.html#layer">across the whole brewery questions</a> Beer365 is built for.</p>
+<div class="author"><img src="assets/beer365-mark.svg" alt="" width="48" height="48"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
+</div>
+</div>
+</section>
+<section class="tinted">
+<div class="wrap">
+<div class="xhead"><div><p class="kicker">Keep reading</p><h2>More on across the whole brewery</h2></div><a class="btn ghost" href="articles.html">All articles</a></div>
+<div class="acards"><a class="acard" href="article-ai-in-brewing.html" data-area="layer"><img class="cimg" src="assets/photos/layer.jpg" alt="" width="1200" height="700" loading="lazy"><span class="topic">Across the whole brewery</span><h3>Where AI in brewing earns its keep across the whole brewery</h3><p>AI in brewing works when it answers a question someone on the floor or in finance already asks. It fails when it starts with the model instead of the batch.</p><span class="ameta">5 Oct 2026 · 6 min read</span></a><a class="acard" href="article-beer-data-you-already-have.html" data-area="layer"><img class="cimg" src="assets/photos/layer.jpg" alt="" width="1200" height="700" loading="lazy"><span class="topic">Across the whole brewery</span><h3>The beer data your brewery already has and does not use</h3><p>Most breweries do not need more data to start. Brew sheets, lab books, the historian, the ERP, the excise register and sales files already hold the answers. They just never meet.</p><span class="ameta">2 Oct 2026 · 6 min read</span></a><a class="acard" href="article-brewery-data-on-google-cloud.html" data-area="layer"><img class="cimg" src="assets/photos/layer.jpg" alt="" width="1200" height="700" loading="lazy"><span class="topic">Across the whole brewery</span><h3>How to approach brewery data and AI on Google Cloud</h3><p>BigQuery is a fine home for brewery data. What it cannot do for you is decide which brew number, tank and packaging lot belong together. That part is still the brewery&#x27;s job.</p><span class="ameta">27 Sep 2026 · 6 min read</span></a></div>
+</div>
+</section>
+<section class="talk">
+<div class="wrap inner">
+<div><h2>Bring one week of <span>brew sheets</span></h2><p>We will show you where the beer went, on a call, before anyone signs anything.</p></div>
+<div class="talk-acts"><a class="btn" href="contact.html?produce=beer&amp;ask=I%20read%20your%20article%20%22How%20to%20approach%20brewery%20data%20and%20AI%20on%20AWS%20if%20you%20already%20run%20there%22%20and%20would%20like%20to%20talk%20about%20it%20for%20our%20brewery.">Book a free demo</a></div>
+</div>
+</section>
+</main>
+<footer class="ftr">
+<div class="fcols">
+<div>
+<img src="assets/beer365-logo.svg" alt="Beer365" width="165" height="40">
+<p style="max-width:30ch">Intelligence for the whole beer business. Built by Disruptive Advantage.</p>
+</div>
+<div><h5>Beer365</h5><a href="use-cases.html">Use cases</a><br/><a href="features.html">Features</a><br/><a href="roi.html">Calculator</a><br/><a href="pricing.html">Pricing</a><br/><a href="resources.html">Resources</a></div>
+<div>
+<h5>Company</h5>
+<a href="about.html">About</a><br/><a href="case-studies.html">Case Studies</a><br/>
+<a href="articles.html">Articles</a><br/><a href="careers.html">Careers</a>
+</div>
+<div>
+<h5>Contact</h5>
+<p>Level 14, 275 Alfred Street<br/>North Sydney NSW 2060</p>
+<p>9th Block Jayanagar<br/>Bangalore 560041</p>
+<a href="mailto:info@disruptive-advantage.com" style="display:inline-block">info@disruptive-advantage.com</a>
+</div>
+</div>
+<div class="base">
+<span>© 2026 Disruptive Advantage · <a href="credits.html">Photo credits</a></span>
+<span class="places"><span>Microsoft Partner</span><span>North Sydney</span><span>Bangalore</span></span>
+</div>
+</footer>
+<script defer="" src="assets/site.js"></script>
+</body>
+</html>

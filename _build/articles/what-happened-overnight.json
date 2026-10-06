@@ -1,0 +1,88 @@
+{
+ "slug": "what-happened-overnight",
+ "uc_id": 171,
+ "area": "layer",
+ "title": "What happened overnight that you should know about by seven",
+ "standfirst": "A morning brief is only useful if it lists the exceptions, puts a number on each and points to the record behind it. Everything that went to plan can stay off the page.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The walk round the plant, on one screen",
+   "blocks": [
+    {
+     "p": "Most plant managers start the day the same way. A walk past the fermenters, a look at the packaging board, a word with the night shift lead, a glance at the lab sheet. It works. It takes an hour and it depends on the night shift remembering to mention the thing that matters."
+    },
+    {
+     "p": "A daily brief is that walk, written down before you arrive. The test of a good one is simple. Could the plant manager read it in two minutes and know which three things to chase first? If the answer is a twelve page PDF of every KPI, it has failed, however accurate it is."
+    }
+   ]
+  },
+  {
+   "h2": "What belongs in it",
+   "blocks": [
+    {
+     "ul": [
+      "**Fermentations off their expected curve,** by tank, with the gravity drop expected and the drop seen.",
+      "**Temperature excursions** on fermenters, bright tanks and the cold store, with how long and how far.",
+      "**Lab results out of specification,** and any result that was requested and not run.",
+      "**Packaging performance** against plan, with logged downtime set against the time actually lost.",
+      "**Cleaning cycles** that failed or were cut short.",
+      "**Stock** of any material that fell below its cover days overnight."
+     ]
+    },
+    {
+     "p": "Everything is ranked by money or risk, not by department. Nothing that went to plan appears. Every line cites the tank, batch, time and source record."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say the night shift runs 22:00 to 06:00. Two lines in the brief come from simple arithmetic on records the plant already keeps."
+    },
+    {
+     "p": "**A slow fermenter.** A lager in one tank sat at 8.1 °P at 22:00. Its own previous batches dropped about 0.6 °P across the same eight hours at this stage. This morning it reads 8.0 °P, a drop of 0.1. It is fermenting at about a sixth of its expected rate. The brief flags it, shows the curve against the last five batches of the same beer and notes the yeast generation."
+    },
+    {
+     "p": "**The can line.** The plan was 48,000 cans at a rated 6,000 an hour across the eight hour shift. The line made 39,600, which is 82.5 percent of plan."
+    },
+    {
+     "eq": {
+      "label": "Time lost that nobody logged",
+      "code": "Unlogged loss (min) = shift minutes - (cans made / rated cans per minute) - logged downtime = 480 - (39,600 / 100) - 72 = 12",
+      "note": "Small stops and speed loss usually live in this gap."
+     }
+    },
+    {
+     "p": "The line ran the equivalent of 396 minutes at rated speed. The shift logged 72 minutes of downtime, which explains most of the 84 minutes lost. The other 12 minutes went somewhere nobody wrote down. One night is not a pattern. Twelve unexplained minutes every night for a month is. The brief is where you would first notice it."
+    }
+   ]
+  },
+  {
+   "h2": "Traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Reporting everything.** A brief that shows 200 green numbers trains people to skim. They skim past the one red one.",
+      "**Fixed thresholds for every beer.** A lager and an ale do not ferment at the same rate. Compare each tank to its own beer's history, not to a plant-wide limit.",
+      "**Clocks that disagree.** If the historian and the ERP use different time zones, overnight is not the same eight hours in both. Reconcile time before writing a single line.",
+      "**Claims without a source.** A line that says a ferment is slow, with no tank, batch or reading, is a rumour. Every line should open to the record behind it.",
+      "**Silence that means two things.** An empty section must say whether nothing happened or whether the data did not arrive."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is one screen, ready before the morning meeting, with five to ten lines ranked by money or risk, each citing its record. When a feed is missing, the brief says so at the top. Over a month the brief should get shorter, because the things it keeps reporting get fixed."
+    },
+    {
+     "p": "It needs live feeds from the historian, LIMS, packaging and stores, which is why it waits behind the reconciliation work. Beer365 writes the brief from those feeds once they are joined into one record per batch. Every line cites the batch and reading behind it."
+    }
+   ]
+  }
+ ]
+}

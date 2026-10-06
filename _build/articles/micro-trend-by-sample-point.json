@@ -1,0 +1,119 @@
+{
+ "slug": "micro-trend-by-sample-point",
+ "uc_id": 93,
+ "area": "quality",
+ "title": "Where does your plant get dirty first? Your micro plates already know",
+ "standfirst": "Micro results arrive days after the beer has moved on, so a single plate rarely changes a decision. Trended by sample point, they show where contamination starts and which clean is not holding.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The plate always arrives late",
+   "blocks": [
+    {
+     "p": "Brewery micro is slow by nature. Anaerobic plates for beer spoilers incubate for days. A forcing sample sits at 25 to 30 °C for four to six weeks. By the time a positive shows, the batch it came from may already be in trade. That is why individual results rarely stop anything."
+    },
+    {
+     "p": "The value is in the pattern. Thirteen weeks of plates from the same points tell you far more than this morning's plate ever will. A plant does not get dirty everywhere at once. One point goes first, usually the same one. The others follow over days or weeks. If you can see which point leads, you can clean it before the rest catch up."
+    }
+   ]
+  },
+  {
+   "h2": "What to collect",
+   "blocks": [
+    {
+     "p": "Each result needs four things attached: the sample point, the time, the result and the last clean of that point. Most labs record the first three. The fourth sits in the CIP system and rarely gets joined."
+    },
+    {
+     "ul": [
+      "Sample points from wort cooler outlet through fermenters, bright beer tanks, filler bowl and post fill pack.",
+      "Rinse water, process gas and crowns, because anything that touches beer is a sample point.",
+      "Swab and bioluminescence results after cleaning, which come back in minutes.",
+      "CIP records for each circuit: time, temperature, concentration and flow."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "The measure",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Positive rate per sample point",
+      "code": "Positive rate % = positive samples at the point / samples tested at the point x 100",
+      "note": "Calculate per point per week. Also split it by days since that point's last clean."
+     }
+    },
+    {
+     "p": "Say a hypothetical brewery tests five points weekly over a quarter, 13 weeks, so 13 samples per point. Results for beer spoilers:"
+    },
+    {
+     "table": {
+      "head": [
+       "Sample point",
+       "Positives of 13",
+       "Positive rate"
+      ],
+      "rows": [
+       [
+        "Bright beer tank outlet",
+        "1",
+        "7.7 %"
+       ],
+       [
+        "Filler feed line",
+        "2",
+        "15.4 %"
+       ],
+       [
+        "Filler bowl",
+        "5",
+        "38.5 %"
+       ],
+       [
+        "Post fill, before pasteuriser",
+        "3",
+        "23.1 %"
+       ],
+       [
+        "Rinser water",
+        "1",
+        "7.7 %"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The filler bowl leads. Now sort the same positives by days since the filler's last full clean. If four of the five bowl positives fell on day five or later of a seven day cycle, the clean itself works. It just does not last a week. The fix might be a mid week clean, not a new chemical."
+    },
+    {
+     "p": "Timing adds the second clue. If bowl positives appear first and post fill positives follow a few days later, the bowl is feeding the pack. If post fill positives appear on days the bowl is clean, look at crowns, rinser water or the process gas filter instead. Gas in contact with beer should pass a sterile filter of about 0.25 µm at the point of use. A tired filter cartridge is an easy thing to miss."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that hide the leading point",
+   "blocks": [
+    {
+     "ul": [
+      "Sampling only after a clean. Results always look good straight after CIP. Spread samples across the cycle or you will never see the decay.",
+      "Pooling points. One positive at a combined filler sample tells you nothing about which head or valve is harbouring the bug.",
+      "Ignoring dead legs. A branch longer than about 1.5 pipe diameters, or CIP flow below about 2 m/s, will not clean properly and will keep reseeding the line.",
+      "Treating a negative as clean. A plate can only grow what the medium and conditions allow. Slow spoilers need the right medium and the full incubation.",
+      "Changing the method mid quarter. A new medium or incubation time changes the positive rate without the plant changing."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "A weekly view of positive rate by point, with days since clean on the same chart. The quality and packaging leads agree which point leads and what the cleaning interval for it should be. Plating effort moves towards the points that matter, rather than being spread evenly by habit."
+    },
+    {
+     "p": "Beer365 joins LIMS micro results to CIP records and the batches each point touched, from your existing systems. It shows which point leads and how long each clean holds, with every claim tied to the results and batches behind it."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+ "slug": "returns-and-breakage",
+ "uc_id": 116,
+ "area": "market",
+ "title": "What comes back from trade and what it is trying to tell you",
+ "standfirst": "Returns are usually booked as a credit note and forgotten. Read by reason, route and batch, they are one of the cheapest diagnostic feeds a brewery has.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "A credit note is not an answer",
+   "blocks": [
+    {
+     "p": "Every brewery has a returns log. Most of them are a finance artefact: a list of credit notes, a reason picked from a drop-down by whoever was holding the handheld, a total at month end. Finance cares that the credit was valid. Nobody downstream asks why the beer came back."
+    },
+    {
+     "p": "That is a waste, because a returned case has travelled the whole chain. It went through packaging, the warehouse, a truck, a distributor and an outlet before someone decided they did not want it. The reason it came back points at one of those links. Breakage on a particular route points at loading or the transporter. Near-expiry returns point at FEFO or over-supply. Taste complaints point back to a batch. The log already holds the clues. It just needs to be read by someone other than the person issuing the credit."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure",
+   "blocks": [
+    {
+     "p": "Start with the returns log joined to dispatch, so every return carries the route, the customer, the SKU, the pack format and ideally the lot. Then normalise. Raw counts mislead because your biggest customers will always return the most."
+    },
+    {
+     "eq": {
+      "label": "Return rate",
+      "code": "Return rate % = cases returned / cases dispatched x 100, by reason, SKU, route and customer"
+     }
+    },
+    {
+     "eq": {
+      "label": "Breakage rate",
+      "code": "Breakage per 1,000 cases = cases returned broken / (cases dispatched / 1,000)",
+      "note": "Run it per route and per transporter. Breakage is a handling signal, not a product signal."
+     }
+    },
+    {
+     "p": "For draught add one more measure that bottle and can people never think about: the weight of every keg that comes back. A keg returning with beer still in it is a return of a different kind. Either the outlet could not sell it before it went off or it was pulled because it tasted wrong. Kegs coming back heavy from one outlet are an early warning on that account."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery dispatches 40,000 cases in a month and logs 260 cases of returns. Split by reason it looks like this."
+    },
+    {
+     "table": {
+      "head": [
+       "Reason",
+       "Cases",
+       "Share of returns"
+      ],
+      "rows": [
+       [
+        "Broken in transit",
+        "110",
+        "42%"
+       ],
+       [
+        "Near or past best-before",
+        "70",
+        "27%"
+       ],
+       [
+        "Wrong delivery",
+        "35",
+        "13%"
+       ],
+       [
+        "Quality complaint",
+        "30",
+        "12%"
+       ],
+       [
+        "Damaged outer packaging",
+        "15",
+        "6%"
+       ],
+       [
+        "Total",
+        "260",
+        "100%"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The headline return rate is 260 / 40,000 = 0.65%, which on its own tells you very little. Breakage is 110 / 40 = 2.75 cases per 1,000 shipped. Now split breakage by route. If one route carries a third of the volume but two thirds of the breakage, you have found a loading pattern, a road or a transporter. That is a conversation for logistics this week, not a line in the month-end pack."
+    },
+    {
+     "p": "The 70 near-expiry cases belong in the FEFO review. The 30 quality cases belong with QA, with a lot number attached, or they are just anecdotes."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that hide the real reason",
+   "blocks": [
+    {
+     "ul": [
+      "**The first reason on the list.** If the default reason code is the first item in the drop-down, it will be the most common reason in your data. Check how the code is chosen before you trust the split.",
+      "**Other.** A reason code called Other that holds more than a small slice of returns is a sign the list does not match reality. Read a sample of the free text and add the codes people actually need.",
+      "**Credits without inspection.** If returns are credited on the driver's word and never opened, quality complaints and breakage get mixed up. Inspect a sample at the depot.",
+      "**Late booking.** Returns logged weeks after they physically arrived can land in the wrong month and against the wrong lot. Book them on arrival.",
+      "**Empties and full returns in one log.** Empty bottles, crates and kegs coming back are a different flow. Keep them apart or your return rate becomes meaningless."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "In a good returns process every case that comes back has a reason someone trusts, a lot number and a route. Breakage is tracked per route and transporter and goes into the transport contract review. Near-expiry returns feed the FEFO conversation. Quality returns sit next to consumer complaints for the same lot. Heavy kegs trigger a visit to the outlet before the account goes quiet."
+    },
+    {
+     "p": "The goal is not a low return rate for its own sake. It is knowing, for each reason, which link in the chain owns it."
+    },
+    {
+     "p": "Beer365 keeps the return, the dispatch it reverses and the batch it came from in one record, reading from your warehouse and sales systems, so a question about returns comes back with the routes and lots behind it."
+    }
+   ]
+  }
+ ]
+}

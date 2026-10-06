@@ -1,170 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Yield and capacity calculator | Beer365</title>
-<meta name="description" content="Work out what a point of brewhouse efficiency, a day of tank time and an hour of downtime are actually worth in your plant, in your own currency.">
-<link rel="canonical" href="https://ankurnapa.github.io/disruptive-advantage/roi.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yield and capacity calculator | Beer365">
-<meta property="og:description" content="Work out what a point of brewhouse efficiency, a day of tank time and an hour of downtime are actually worth in your plant.">
-<meta property="og:url" content="https://ankurnapa.github.io/disruptive-advantage/roi.html">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0C2027">
-<link rel="icon" href="assets/beer365-mark.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/theme.css">
+<meta content="Work out what a point of brewhouse efficiency, a day of tank time and an hour of downtime are actually worth in your plant, in your own currency." name="description"/>
+<link href="https://ankurnapa.github.io/disruptive-advantage/roi.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Yield and capacity calculator | Beer365" property="og:title"/>
+<meta content="Work out what a point of brewhouse efficiency, a day of tank time and an hour of downtime are actually worth in your plant." property="og:description"/>
+<meta content="https://ankurnapa.github.io/disruptive-advantage/roi.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="#0C2027" name="theme-color"/>
+<link href="assets/beer365-mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/site.css" rel="stylesheet"/>
+<link href="assets/theme.css" rel="stylesheet"/>
+<meta content="https://ankurnapa.github.io/disruptive-advantage/og/roi.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="https://ankurnapa.github.io/disruptive-advantage/og/roi.jpg" name="twitter:image"/>
 </head>
 <body class="p-roi">
 <a class="skip" href="#main">Skip to content</a>
 <header class="hdr">
-  <a class="logo" href="index.html" aria-label="Beer365, home">
-    <img src="assets/beer365-logo.svg" alt="Beer365" width="165" height="40">
-  </a>
-  <button class="burger" type="button" id="menu" aria-expanded="false" aria-controls="sitenav" aria-label="Open menu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-  </button>
-  <nav id="sitenav" aria-label="Main">
-      <a href="beer.html">Beer365</a>
+<a aria-label="Beer365, home" class="logo" href="index.html">
+<img alt="Beer365" height="40" src="assets/beer365-logo.svg" width="165"/>
+</a>
+<button aria-controls="sitenav" aria-expanded="false" aria-label="Open menu" class="burger" id="menu" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+</button>
+<nav aria-label="Main" id="sitenav">
+<a href="use-cases.html">Use cases</a>
 <a href="solutions.html">Solutions</a>
-      <a href="features.html">Features</a>
-      <a href="case-studies.html">Case Studies</a>
-      <a href="roi.html" aria-current="page">Calculator</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="articles.html">Articles</a>
-    <a class="btn nav-cta" href="contact.html">Book a free demo</a>
-  </nav>
-  <a class="btn sm hdr-cta" href="contact.html">Book a free demo</a>
+<a href="features.html">Features</a>
+<a href="case-studies.html">Case Studies</a>
+<a aria-current="page" href="roi.html">Calculator</a>
+<a href="pricing.html">Pricing</a>
+<a href="about.html">About</a>
+<a href="articles.html">Articles</a>
+<a class="btn nav-cta" href="contact.html">Book a free demo</a>
+</nav>
+<a class="btn sm hdr-cta" href="contact.html">Book a free demo</a>
 </header>
 <main id="main">
-
 <section class="phero">
-  <div class="wrap">
-    <p class="kicker">Calculator</p>
-    <h1>What a point of efficiency is actually worth</h1>
-    <p class="std">Four numbers move money in a brewhouse: how much extract you recover, how long a tank is tied up, how much energy a hectolitre costs you, and how often the line stops. Put your own figures in and see what each one is worth a year. Nothing is sent anywhere and nothing is stored.</p>
-  </div>
+<div class="wrap">
+<p class="kicker">Calculator</p>
+<h1>What a point of efficiency is actually worth</h1>
+<p class="std">Four numbers move money in a brewhouse: how much extract you recover, how long a tank is tied up, how much energy a hectolitre costs you, and how often the line stops. Put your own figures in and see what each one is worth a year. Nothing is sent anywhere and nothing is stored.</p>
+</div>
 </section>
-
 <section>
-  <div class="wrap">
-    <form class="calc" id="calc" novalidate>
-
-      <div class="calc-in">
-        <div class="calc-group">
-          <h3>Your plant</h3>
-          <div class="fieldrow">
-            <label for="cur">Currency</label>
-            <select id="cur">
-              <option value="$">Dollars</option><option value="&#8364;">Euro</option>
-              <option value="&#163;">Pounds</option><option value="&#8377;">Rupees</option>
-              <option value="R">Rand</option>
-            </select>
-          </div>
-          <div class="fieldrow">
-            <label for="vol">Annual packaged volume, hectolitres</label>
-            <input type="number" id="vol" value="45000" min="0" step="100" inputmode="numeric">
-          </div>
-          <div class="fieldrow">
-            <label for="margin">Gross margin per hectolitre packaged</label>
-            <input type="number" id="margin" value="90" min="0" step="1" inputmode="numeric">
-          </div>
-        </div>
-
-        <div class="calc-group">
-          <h3>Extract recovery</h3>
-          <p class="hint">Brewhouse efficiency is the extract you recover in the fermenter against the extract you mashed in. Malt required scales as one over that figure, so the saving is real malt, not a projection.</p>
-          <div class="fieldrow">
-            <label for="malt">Annual malt and adjunct spend</label>
-            <input type="number" id="malt" value="1350000" min="0" step="1000" inputmode="numeric">
-          </div>
-          <div class="fieldrow two-up-f">
-            <span><label for="bhe">Brewhouse efficiency now, per cent</label>
-            <input type="number" id="bhe" value="74" min="40" max="95" step="0.5" inputmode="decimal"></span>
-            <span><label for="bhet">Where you think it should sit</label>
-            <input type="number" id="bhet" value="78" min="40" max="95" step="0.5" inputmode="decimal"></span>
-          </div>
-        </div>
-
-        <div class="calc-group">
-          <h3>Tank time</h3>
-          <p class="hint">Capacity released is only worth money if you can sell it, so this is shown separately and never added to the headline recovery.</p>
-          <div class="fieldrow two-up-f">
-            <span><label for="td">Average tank days per batch</label>
-            <input type="number" id="td" value="14" min="1" step="0.5" inputmode="decimal"></span>
-            <span><label for="tdt">Target tank days</label>
-            <input type="number" id="tdt" value="13" min="1" step="0.5" inputmode="decimal"></span>
-          </div>
-        </div>
-
-        <div class="calc-group">
-          <h3>Energy and downtime</h3>
-          <div class="fieldrow two-up-f">
-            <span><label for="en">Energy cost per hectolitre</label>
-            <input type="number" id="en" value="7.5" min="0" step="0.1" inputmode="decimal"></span>
-            <span><label for="ensave">Reduction you think is available, per cent</label>
-            <input type="number" id="ensave" value="8" min="0" max="40" step="1" inputmode="numeric"></span>
-          </div>
-          <div class="fieldrow two-up-f">
-            <span><label for="lost">Batches lost or reworked a year</label>
-            <input type="number" id="lost" value="6" min="0" step="1" inputmode="numeric"></span>
-            <span><label for="bsize">Batch size, hectolitres</label>
-            <input type="number" id="bsize" value="120" min="1" step="1" inputmode="numeric"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="calc-out" aria-live="polite">
-        <div class="out-stick">
-        <div class="out-head"><span class="live-dot" aria-hidden="true"></span><b>Annual recovery</b></div>
-        <p class="out-total"><span id="total">0</span></p>
-        <p class="out-sub">a year, on the figures you entered</p>
-
-        <dl class="out-lines">
-          <div><dt>Extract recovered</dt><dd id="oMalt">0</dd></div>
-          <div><dt>Energy</dt><dd id="oEnergy">0</dd></div>
-          <div><dt>Batches not lost</dt><dd id="oLost">0</dd></div>
-        </dl>
-
-        <div class="out-cap">
-          <span class="cap-label">Capacity released</span>
-          <b id="oCap">0 hL</b>
-          <span class="cap-note">worth <span id="oCapVal">0</span> a year if you can sell it. Not counted above.</span>
-        </div>
-
-        <div class="out-pay">
-          <span class="cap-label">Assessment payback</span>
-          <b id="oPay">&mdash;</b>
-          <span class="cap-note">against the fixed assessment fee on our pricing page.</span>
-        </div>
-
-        <a class="btn" id="roiCta" href="contact.html?produce=beer">Check this against my plant data</a>
-        <p class="out-fine">An estimate from your own inputs, not a promise. It uses standard brewing extract relationships and assumes the efficiency, energy and tank figures you entered are achievable in your plant. We would test that against your real data before anyone signs anything.</p>
-        </div>
-      </div>
-
-    </form>
-  </div>
+<div class="wrap">
+<form class="calc" id="calc" novalidate="">
+<div class="calc-in">
+<div class="calc-group">
+<h3>Your plant</h3>
+<div class="fieldrow">
+<label for="cur">Currency</label>
+<select id="cur">
+<option value="$">Dollars</option><option value="€">Euro</option>
+<option value="£">Pounds</option><option value="₹">Rupees</option>
+<option value="R">Rand</option>
+</select>
+</div>
+<div class="fieldrow">
+<label for="vol">Annual packaged volume, hectolitres</label>
+<input id="vol" inputmode="numeric" min="0" step="100" type="number" value="45000"/>
+</div>
+<div class="fieldrow">
+<label for="margin">Gross margin per hectolitre packaged</label>
+<input id="margin" inputmode="numeric" min="0" step="1" type="number" value="90"/>
+</div>
+</div>
+<div class="calc-group">
+<h3>Extract recovery</h3>
+<p class="hint">Brewhouse efficiency is the extract you recover in the fermenter against the extract you mashed in. Malt required scales as one over that figure, so the saving is real malt, not a projection.</p>
+<div class="fieldrow">
+<label for="malt">Annual malt and adjunct spend</label>
+<input id="malt" inputmode="numeric" min="0" step="1000" type="number" value="1350000"/>
+</div>
+<div class="fieldrow two-up-f">
+<span><label for="bhe">Brewhouse efficiency now, per cent</label>
+<input id="bhe" inputmode="decimal" max="95" min="40" step="0.5" type="number" value="74"/></span>
+<span><label for="bhet">Where you think it should sit</label>
+<input id="bhet" inputmode="decimal" max="95" min="40" step="0.5" type="number" value="78"/></span>
+</div>
+</div>
+<div class="calc-group">
+<h3>Tank time</h3>
+<p class="hint">Capacity released is only worth money if you can sell it, so this is shown separately and never added to the headline recovery.</p>
+<div class="fieldrow two-up-f">
+<span><label for="td">Average tank days per batch</label>
+<input id="td" inputmode="decimal" min="1" step="0.5" type="number" value="14"/></span>
+<span><label for="tdt">Target tank days</label>
+<input id="tdt" inputmode="decimal" min="1" step="0.5" type="number" value="13"/></span>
+</div>
+</div>
+<div class="calc-group">
+<h3>Energy and downtime</h3>
+<div class="fieldrow two-up-f">
+<span><label for="en">Energy cost per hectolitre</label>
+<input id="en" inputmode="decimal" min="0" step="0.1" type="number" value="7.5"/></span>
+<span><label for="ensave">Reduction you think is available, per cent</label>
+<input id="ensave" inputmode="numeric" max="40" min="0" step="1" type="number" value="8"/></span>
+</div>
+<div class="fieldrow two-up-f">
+<span><label for="lost">Batches lost or reworked a year</label>
+<input id="lost" inputmode="numeric" min="0" step="1" type="number" value="6"/></span>
+<span><label for="bsize">Batch size, hectolitres</label>
+<input id="bsize" inputmode="numeric" min="1" step="1" type="number" value="120"/></span>
+</div>
+</div>
+</div>
+<div aria-live="polite" class="calc-out">
+<div class="out-stick">
+<div class="out-head"><span aria-hidden="true" class="live-dot"></span><b>Annual recovery</b></div>
+<p class="out-total"><span id="total">0</span></p>
+<p class="out-sub">a year, on the figures you entered</p>
+<dl class="out-lines">
+<div><dt>Extract recovered</dt><dd id="oMalt">0</dd></div>
+<div><dt>Energy</dt><dd id="oEnergy">0</dd></div>
+<div><dt>Batches not lost</dt><dd id="oLost">0</dd></div>
+</dl>
+<div class="out-cap">
+<span class="cap-label">Capacity released</span>
+<b id="oCap">0 hL</b>
+<span class="cap-note">worth <span id="oCapVal">0</span> a year if you can sell it. Not counted above.</span>
+</div>
+<div class="out-pay">
+<span class="cap-label">Assessment payback</span>
+<b id="oPay">—</b>
+<span class="cap-note">against the fixed assessment fee on our pricing page.</span>
+</div>
+<a class="btn" href="contact.html?produce=beer" id="roiCta">Check this against my plant data</a>
+<p class="out-fine">An estimate from your own inputs, not a promise. It uses standard brewing extract relationships and assumes the efficiency, energy and tank figures you entered are achievable in your plant. We would test that against your real data before anyone signs anything.</p>
+</div>
+</div>
+</form>
+</div>
 </section>
-
 <section class="ctastrip">
-  <div class="wrap inner">
-    <div>
-      <h3>Now find out which of those four your plant is actually losing.</h3>
-      <p>The calculator uses the numbers you believe. The assessment uses the numbers your plant produces, which are usually not the same, and that gap is the whole point.</p>
-    </div>
-    <div class="acts">
-      <a class="btn" href="contact.html">Book a free demo</a>
-      <a class="btn ghost" href="pricing.html">See pricing</a>
-    </div>
-  </div>
+<div class="wrap inner">
+<div>
+<h3>Now find out which of those four your plant is actually losing.</h3>
+<p>The calculator uses the numbers you believe. The assessment uses the numbers your plant produces, which are usually not the same, and that gap is the whole point.</p>
+</div>
+<div class="acts">
+<a class="btn" href="contact.html">Book a free demo</a>
+<a class="btn ghost" href="pricing.html">See pricing</a>
+</div>
+</div>
 </section>
-
 <script>
 (function(){
   var f = document.getElementById('calc'); if (!f) return;
@@ -231,33 +219,29 @@
 </script>
 </main>
 <footer class="ftr">
-  <div class="fcols">
-    <div>
-      <img src="assets/beer365-logo.svg" alt="Beer365" width="165" height="40">
-      <p style="max-width:30ch">Intelligence for the whole beer business. Built by Disruptive Advantage.</p>
-    </div>
-    <div>
-      <h5>Solutions</h5>
-      <a href="beer.html">Breweries</a><br><a href="solutions.html">Distilleries</a><br>
-      <a href="solutions.html">Wineries and cideries</a><br><a href="features.html">Features</a>
-    </div>
-    <div>
-      <h5>Company</h5>
-      <a href="about.html">About</a><br><a href="case-studies.html">Case Studies</a><br>
-      <a href="articles.html">Articles</a><br><a href="careers.html">Careers</a>
-    </div>
-    <div>
-      <h5>Contact</h5>
-      <p>Level 14, 275 Alfred Street<br>North Sydney NSW 2060</p>
-      <p>9th Block Jayanagar<br>Bangalore 560041</p>
-      <a href="mailto:info@disruptive-advantage.com" style="display:inline-block">info@disruptive-advantage.com</a>
-    </div>
-  </div>
-  <div class="base">
-    <span>&copy; 2026 Disruptive Advantage</span>
-    <span class="places"><span>Microsoft Partner</span><span>North Sydney</span><span>Bangalore</span></span>
-  </div>
+<div class="fcols">
+<div>
+<img alt="Beer365" height="40" src="assets/beer365-logo.svg" width="165"/>
+<p style="max-width:30ch">Intelligence for the whole beer business. Built by Disruptive Advantage.</p>
+</div>
+<div><h5>Beer365</h5><a href="use-cases.html">Use cases</a><br/><a href="features.html">Features</a><br/><a href="roi.html">Calculator</a><br/><a href="pricing.html">Pricing</a><br/><a href="resources.html">Resources</a></div>
+<div>
+<h5>Company</h5>
+<a href="about.html">About</a><br/><a href="case-studies.html">Case Studies</a><br/>
+<a href="articles.html">Articles</a><br/><a href="careers.html">Careers</a>
+</div>
+<div>
+<h5>Contact</h5>
+<p>Level 14, 275 Alfred Street<br/>North Sydney NSW 2060</p>
+<p>9th Block Jayanagar<br/>Bangalore 560041</p>
+<a href="mailto:info@disruptive-advantage.com" style="display:inline-block">info@disruptive-advantage.com</a>
+</div>
+</div>
+<div class="base">
+<span>© 2026 Disruptive Advantage · <a href="credits.html">Photo credits</a></span>
+<span class="places"><span>Microsoft Partner</span><span>North Sydney</span><span>Bangalore</span></span>
+</div>
 </footer>
-<script src="assets/site.js" defer></script>
+<script defer="" src="assets/site.js"></script>
 </body>
 </html>

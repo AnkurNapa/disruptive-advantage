@@ -1,0 +1,121 @@
+{
+ "slug": "hop-utilisation-actual-versus-model",
+ "uc_id": 30,
+ "area": "brewhouse",
+ "title": "Is your bitterness landing where the hop model says it will?",
+ "standfirst": "Every hop calculation assumes a utilisation figure. Measure the real one from your own IBU results and you find out what the kettle, the whirlpool and the cellar are doing to your alpha acids.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The utilisation number is usually a guess from a textbook",
+   "blocks": [
+    {
+     "p": "Hop additions are calculated backwards from a target bitterness. Target IBU, alpha acid content and an assumed utilisation give you kilograms of hops. The assumed utilisation is often a single figure typed into a spreadsheet when the recipe was written. Pellets in the kettle typically land around 25 to 30%. Nobody revisits it."
+    },
+    {
+     "p": "Hops are expensive and alpha acid prices move every crop year. If your real utilisation is a few points different from the assumption, you are either overshooting bitterness and wasting hops or undershooting and drifting off the brand. Both show up in the lab, brew after brew, if anyone compares the result with the plan."
+    }
+   ]
+  },
+  {
+   "h2": "Measured utilisation",
+   "blocks": [
+    {
+     "p": "One IBU is close to 1 mg of iso-alpha acid per litre of beer. That lets you work back from the bitterness result to the share of the alpha acid that made it into the finished beer."
+    },
+    {
+     "eq": {
+      "label": "Measured hop utilisation",
+      "code": "Utilisation % = IBU x finished beer volume (L) / (hop mass (g) x alpha acid % / 100 x 1,000) x 100",
+      "note": "IBU in mg/L. Leave out any post-fermentation iso extract, which has its own yield."
+     }
+    },
+    {
+     "p": "Use the finished volume that the bitterness was measured in, not the kettle volume and the alpha acid figure of the hop lot actually used, measured as close to the brew date as you can."
+    }
+   ]
+  },
+  {
+   "h2": "What the model expects",
+   "blocks": [
+    {
+     "p": "A good model separates the chemistry from the losses. Alpha acids isomerise in the boil and the iso-alpha acids slowly degrade. A first-order kinetic model at boiling temperature and wort pH 5.2 uses two rate constants: about 0.0125 per minute for isomerisation and 0.0031 per minute for degradation."
+    },
+    {
+     "eq": {
+      "label": "Isomerised share in water",
+      "code": "% iso (aqueous) = k1 x 100 x (exp(-k1 x t) - exp(-k2 x t)) / (k2 - k1)",
+      "note": "t = boil minutes + hot wort stand + half the cooling time while still hot. Peak is about 63% at around 149 minutes."
+     }
+    },
+    {
+     "eq": {
+      "label": "Gravity correction",
+      "code": "% iso (wort) = % iso (aqueous) x exp(-8.72 x (SG - 1))"
+     }
+    },
+    {
+     "p": "Say a bittering addition sees 60 minutes of boil and a 20 minute whirlpool stand, so t is 80. The aqueous figure is about 54.9%. At 12 Plato the specific gravity is 1.0483, so the wort figure is 54.9 x exp(-8.72 x 0.0483), about 36.0%. That is what the chemistry allows in the kettle."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example and what the gap means",
+   "blocks": [
+    {
+     "p": "The brew uses 30 kg of pellets at 10.0% alpha, so 3,000 g of alpha acid. The finished beer is 400 hL at 22 IBU, which is 40,000 L x 22 mg/L, or 880 g of iso-alpha acid. Measured utilisation is 880 / 3,000, about 29.3%."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Utilisation"
+      ],
+      "rows": [
+       [
+        "Kinetic model, kettle (t = 80 min, 12 P)",
+        "36.0%"
+       ],
+       [
+        "Measured in finished beer",
+        "29.3%"
+       ],
+       [
+        "Gap",
+        "6.7 points"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The gap is not an error in the model. It is the losses after the kettle: iso-alpha acids stuck to trub, carried out on the yeast and taken by the filter. Track that gap per brew and it becomes a measure of your process. If it widens, something downstream changed: more trub carried over, a different yeast generation, a new filter aid."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Old alpha values.** Alpha acid falls in storage, faster in warm stores. A certificate value from harvest overstates what goes in months later.",
+      "**IBU is not pure iso-alpha.** The spectrophotometric method picks up other bitter compounds, especially from older hops. Treat the 1 IBU to 1 mg/L link as close, not exact.",
+      "**Hop rate effects.** Higher hopping rates convert a lower share of alpha. A utilisation measured on a lightly hopped lager does not transfer to a heavily hopped ale.",
+      "**Volume basis.** Kettle volume, cast volume and finished volume differ. Use the volume the IBU was measured in.",
+      "**Mixed hop products.** Iso extracts added after fermentation have their own yields of 70 to 85%. Lump them in and the kettle utilisation looks better than it is."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a measured utilisation per brew, plotted against the model's kettle figure, with the hop lot and its alpha age on every point. Recipes use the measured figure for that beer family, updated each quarter, so hop additions follow your plant rather than a textbook."
+    },
+    {
+     "p": "Beer365 joins hop additions, hop lot analyses and finished beer bitterness on one brew record, reads them from your existing systems and shows the utilisation with the brews it was computed from."
+    }
+   ]
+  }
+ ]
+}

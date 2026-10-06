@@ -1,0 +1,126 @@
+{
+ "slug": "knockout-losses-in-money",
+ "uc_id": 31,
+ "area": "brewhouse",
+ "title": "What do your whirlpool and trub losses cost a year?",
+ "standfirst": "A couple of percent of wort left behind at knock-out sounds like nothing. Corrected for temperature and counted in kilograms of extract over a year, it is one of the larger numbers in the brewhouse.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The loss everyone accepts",
+   "blocks": [
+    {
+     "p": "Between the end of the boil and the fermenter, wort disappears. Some stays in the trub cone in the whirlpool, some in the hopback or the hop strainer, some in pipework and the plate cooler. Every brewer knows this happens. Very few know how much it is per brew, because the two volumes that would tell them are measured at different temperatures by different instruments and are rarely put side by side."
+    },
+    {
+     "p": "The loss feels small because it is quoted as a percentage. Expressed as extract and multiplied by a year of brews, it becomes a figure a finance director will recognise."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure",
+   "blocks": [
+    {
+     "ul": [
+      "**Cast wort volume** at the end of the boil, with its temperature",
+      "**Fermenter volume** after knock-out, with its temperature",
+      "**Wort gravity** at knock-out",
+      "**Trub handling:** whether trub wort is recovered to the next mash and how much",
+      "**Hop product** used, because whole hops in a hopback hold back far more wort than pellets"
+     ]
+    },
+    {
+     "p": "Both volumes must be on the same temperature basis before you subtract them. Hot wort at 100 C takes up about 4% more space than the same wort at 20 C. Ignore that and the loss can look three times its real size."
+    },
+    {
+     "eq": {
+      "label": "Volume at 20 C",
+      "code": "V20 = V at temperature T x density of water at T / density of water at 20 C",
+      "note": "Water at 100 C is 0.95834 kg/L, at 20 C 0.99820 kg/L, at 10 C 0.99970 kg/L."
+     }
+    },
+    {
+     "eq": {
+      "label": "Knock-out loss",
+      "code": "Loss (hL at 20 C) = cast volume at 20 C - fermenter volume at 20 C"
+     }
+    },
+    {
+     "eq": {
+      "label": "Extract lost",
+      "code": "Extract lost (kg) = loss (L) x SG(Plato) x 0.99820 x Plato / 100"
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brew casts 420 hL at 100 C and 12.0 Plato. The fermenter receives 395 hL at 10 C."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Value"
+      ],
+      "rows": [
+       [
+        "Cast volume at 20 C",
+        "420 x 0.95834 / 0.99820 = 403.2 hL"
+       ],
+       [
+        "Fermenter volume at 20 C",
+        "395 x 0.99970 / 0.99820 = 395.6 hL"
+       ],
+       [
+        "Loss",
+        "7.6 hL, 1.9% of cast"
+       ],
+       [
+        "Extract lost per brew",
+        "764 L x 1.04831 x 0.99820 x 0.12 = about 96 kg"
+       ],
+       [
+        "Extract lost per year at 3,000 brews",
+        "about 288 tonnes"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "What that is worth depends on where your plant is constrained. If the brewhouse has spare capacity, value the loss at the cost of extract. At, say, Rs 60 per kg of extract that is about Rs 1.73 crore a year. If the brewhouse is the bottleneck and every hectolitre would sell, the lost wort is lost beer. The value is the margin on 7.6 hL multiplied by 3,000 brews. The same physical loss can be worth very different sums."
+    },
+    {
+     "p": "For a sense of scale, a common planning default is trub at about 1% of whirlpool volume. A hot wort centrifuge loses around 0.2 to 0.3%. A hopback with whole hops holds wort in the hop bed and sparging recovers about 0.5 L per kg of hops. Your own figure sits somewhere among these and the trend matters more than the absolute."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Uncorrected volumes.** The single biggest error. Correct both volumes to 20 C every time.",
+      "**Dipsticks and flow meters that disagree.** A kettle dipstick calibrated cold reads differently on a boiling wort with a rolling surface. Calibrate the flow meter on the knock-out line and trust one instrument.",
+      "**Water chase.** Many brewhouses push the last wort out with water. That adds volume to the fermenter and hides the loss while diluting the gravity. Record the chase volume.",
+      "**Trub recovery counted twice.** If trub wort goes back to the next mash, the extract is partly recovered. Count it once, in the brew that receives it.",
+      "**Averages only.** A monthly average hides the brews where the whirlpool cone collapsed or the stand ran long. Look per brew."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a knock-out loss per brew on a 20 C basis, shown in hectolitres and in kilograms of extract, with a yearly value next to it that finance agrees with. Outliers are visible the same day. The trend tells you whether a change in hop product, whirlpool stand time or trub recovery is paying back."
+    },
+    {
+     "p": "Beer365 computes the loss from the cast and fermenter records you already have, applies the temperature correction once and the same way and cites the brews behind each number."
+    }
+   ]
+  }
+ ]
+}

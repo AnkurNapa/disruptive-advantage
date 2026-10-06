@@ -1,0 +1,115 @@
+{
+ "slug": "water-ratio-on-track",
+ "uc_id": 154,
+ "area": "business",
+ "title": "Are you on track for your water ratio target this year?",
+ "standfirst": "A water target is set as one number for the year. Whether you will hit it depends on what is left to brew. The ratio you need for the rest of the year is often tighter than it looks.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "A target that gets harder every month you miss it",
+   "blocks": [
+    {
+     "p": "Most breweries now carry a water target, usually written as hectolitres of water used per hectolitre of beer. It sits in the sustainability report, in the plant scorecard and increasingly in the questions that large retail customers send every year. It is easy to report. It is harder to steer."
+    },
+    {
+     "p": "The trouble is that the annual ratio is a weighted average. If the first half of the year runs above target, the second half has to run below it to compensate, by more than people expect. A plant manager looking at a monthly ratio that is improving can feel on track while the year is already lost."
+    },
+    {
+     "p": "For the brewer this is not an abstract ESG number. Every hectolitre of water drawn is also a hectolitre that has to be treated, often heated or chilled and then sent to effluent treatment. Water that is not used is cost that never appears. That makes the ratio one of the few sustainability measures that finance and the brewhouse can agree on."
+    }
+   ]
+  },
+  {
+   "h2": "The calculation",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Water ratio",
+      "code": "Water ratio (hL/hL) = total water intake (hL) / beer produced (hL)"
+     }
+    },
+    {
+     "eq": {
+      "label": "Ratio needed for the rest of the year",
+      "code": "Required ratio = (target ratio x full-year production plan - water used to date) / production still to come",
+      "note": "This is the number to put on the plant board, not the year-to-date ratio."
+     }
+    },
+    {
+     "p": "Two definitions must be fixed before anything else. The numerator: is it all water entering the site, including borewell, municipal and tanker water, or only metered process water? The denominator: beer brewed, beer packaged or beer sold? Each gives a different ratio. Pick the definition your target was set on, write it down and do not change it mid-year."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery's target for the year is 4.0 hL/hL. After six months it has produced 180,000 hL of beer and drawn 792,000 hL of water."
+    },
+    {
+     "table": {
+      "head": [
+       "Measure",
+       "Calculation",
+       "Result"
+      ],
+      "rows": [
+       [
+        "Ratio to date",
+        "792,000 / 180,000",
+        "4.40 hL/hL"
+       ],
+       [
+        "Full-year production plan",
+        "180,000 + 220,000",
+        "400,000 hL"
+       ],
+       [
+        "Water allowed for the year",
+        "4.0 x 400,000",
+        "1,600,000 hL"
+       ],
+       [
+        "Water left for the second half",
+        "1,600,000 - 792,000",
+        "808,000 hL"
+       ],
+       [
+        "Ratio needed in the second half",
+        "808,000 / 220,000",
+        "3.67 hL/hL"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The year-to-date number says 4.4 against a target of 4.0, which sounds like a gap of 0.4. The real gap is that the plant has to run at 3.67 for six months, which is 0.73 below where it has been running. That is a different conversation. It may need real projects, such as recovering final rinse water from CIP or fixing the bottle washer's fresh water make-up, rather than a reminder to close hoses."
+    },
+    {
+     "p": "If second-half production falls short of plan, the required ratio gets tighter still, because water used for cleaning and utilities does not fall in step with volume."
+    }
+   ]
+  },
+  {
+   "h2": "Traps and what good looks like",
+   "blocks": [
+    {
+     "ul": [
+      "**Estimated meter readings.** A meter that was read by estimate for three months makes the ratio smooth and wrong. Flag estimated readings in the data.",
+      "**Unmetered sources.** Borewells and tanker deliveries are often outside the main meter. Leave them out and the ratio flatters you.",
+      "**Low-volume months.** Cleaning, utilities and site use carry on whether you brew or not. A quiet month inflates the ratio without anyone using water badly. Look at the absolute water use as well as the ratio.",
+      "**Summer cooling.** Cooling towers and refrigeration lose more water in hot months. Compare with the same month last year, not the month before.",
+      "**Recycled water counted twice.** Water recovered and reused should not be counted again as intake. Agree the rule once."
+     ]
+    },
+    {
+     "p": "Good looks like a monthly view with three numbers side by side: the month's ratio, the year-to-date ratio and the ratio still needed to land the target. Behind them sits water use by area, so when the required ratio tightens someone can see whether the brewhouse, packaging or utilities is where the next hectolitre has to come from."
+    },
+    {
+     "p": "Beer365 reads meter data and production volumes from your existing plant systems into one record, so progress against the water target is answered on the agreed definition with the areas and days behind the number."
+    }
+   ]
+  }
+ ]
+}

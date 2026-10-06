@@ -1,0 +1,89 @@
+{
+ "slug": "which-instrument-is-lying",
+ "uc_id": 204,
+ "area": "plant",
+ "title": "Which instrument is lying to you and since when?",
+ "standfirst": "Fixed calibration intervals assume every sensor drifts at the same pace. They do not. The cross-checks your lab already runs show which instrument is drifting and when it will cross its tolerance.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "A drifting sensor costs more than a broken one",
+   "blocks": [
+    {
+     "p": "A broken sensor announces itself. It reads zero, or full scale, or throws an alarm. A drifting sensor keeps reading something plausible, a little off, every day, while operators and control loops trust it. That is the expensive kind. The control loop does exactly what it was told, with great precision, towards the wrong number."
+    },
+    {
+     "p": "Take an inline extract meter on a high gravity blending line. If it reads 0.2 °P high, the controller dilutes until the meter says 11.5 °P and the beer actually leaves at 11.3. Alcohol follows extract, so the final ABV drifts down towards the bottom of the label tolerance. Nobody sees it until a release result or a market sample does. The reverse error gives away extract in every hectolitre."
+    }
+   ]
+  },
+  {
+   "h2": "What data you already have",
+   "blocks": [
+    {
+     "p": "Most plants already cross-check their key inline instruments against the lab, even if nobody calls it drift tracking."
+    },
+    {
+     "ul": [
+      "Inline extract or density against the lab density meter on the same sample.",
+      "Inline dissolved oxygen against a portable meter at the same point.",
+      "Inline CO2 against the lab or a handheld meter.",
+      "Temperature probes against a reference thermometer during routine checks.",
+      "Flow meters against tank level change over a transfer."
+     ]
+    },
+    {
+     "p": "Each paired reading is a calibration point you did not have to schedule. The calibration history adds the date of each adjustment. Join the two and you can see every instrument's bias over time."
+    }
+   ]
+  },
+  {
+   "h2": "Measuring drift",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Bias on one paired check",
+      "code": "Bias = inline reading - reference reading",
+      "note": "Use the weekly mean of several pairs, not a single pair, so sampling noise does not look like drift."
+     }
+    },
+    {
+     "eq": {
+      "label": "Weeks until the tolerance is crossed",
+      "code": "Weeks remaining = (tolerance - current bias) / drift rate per week"
+     }
+    },
+    {
+     "p": "Say a hypothetical inline extract meter was calibrated at the start of the month. Weekly mean bias against the lab reads 0.02, 0.05, 0.07, 0.11 and 0.14 °P. The bias grows by (0.14 - 0.02) / 4 = 0.03 °P a week. With a tolerance of 0.20 °P, there are (0.20 - 0.14) / 0.03 = 2 weeks left before it is out. If the fixed schedule says the next calibration is in eight weeks, the instrument will spend six of them out of tolerance."
+    },
+    {
+     "p": "Another meter on the same schedule might show a bias wandering between minus 0.02 and plus 0.03 with no trend. That one could safely go longer between calibrations. Interval by evidence, not by calendar. Over a year, moving calibration effort from the stable meters to the drifting ones usually costs no extra hours. It just puts them where they are needed."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that hide drift",
+   "blocks": [
+    {
+     "ul": [
+      "The reference is drifting too. A lab instrument out of calibration makes the inline meter look fine or broken at random. Check the reference against its own standard and against other labs. Inter-laboratory schemes use a Z score, (lab result - grand mean) / standard deviation. A value within plus or minus 2 counts as in control.",
+      "Pairs that are not really pairs. A sample taken five minutes after the inline reading, at a different point, compares two different beers.",
+      "Tolerance tighter than the method. If the lab method's own reproducibility is close to your tolerance, you cannot tell drift from noise. Know the method's repeatability before you set the limit.",
+      "Adjusting without recording. If an operator nudges an offset and nobody logs it, the bias history jumps and the trend breaks."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Every critical instrument has a bias chart from routine cross-checks, a tolerance and a predicted date for crossing it. Calibration work is scheduled from that prediction. Stable instruments get longer intervals. Drifters get more attention or get replaced. When a batch result surprises you, the first question, was the meter right that day, has an answer."
+    },
+    {
+     "p": "Beer365 joins inline readings, lab cross-checks and calibration history from your historian and LIMS. For each instrument it shows the bias trend and the batches measured while it was outside tolerance, so you know which product the lie touched."
+    }
+   ]
+  }
+ ]
+}

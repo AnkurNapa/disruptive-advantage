@@ -1,0 +1,112 @@
+[
+ {
+  "id": 66,
+  "title": "Label and artwork compliance",
+  "section": "F. Packaging",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is what is printed legally correct for that market?",
+  "area": "packaging",
+  "area_name": "Packaging"
+ },
+ {
+  "id": 99,
+  "title": "Off flavour library and matching",
+  "section": "I. Quality, laboratory and sensory",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "What does this complaint most likely mean?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 102,
+  "title": "Root cause copilot with refutation",
+  "section": "J. Traceability, complaints, recall and CAPA",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "What caused it, and what did not?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 210,
+  "title": "GMP assessment scoring",
+  "section": "V. Food safety, hygiene and hygienic design (Module 3, Hygiene 1 to 5)",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Where does the plant fail a GMP walk?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 214,
+  "title": "Product security and tamper exposure",
+  "section": "V. Food safety, hygiene and hygienic design (Module 3, Hygiene 1 to 5)",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Where could someone interfere with product?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 215,
+  "title": "Allergen and declaration control",
+  "section": "V. Food safety, hygiene and hygienic design (Module 3, Hygiene 1 to 5)",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Is every label legally correct for its market?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 91,
+  "title": "Panel drift and taster performance",
+  "section": "I. Quality, laboratory and sensory",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is my sensory panel still calibrated?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 93,
+  "title": "Micro trend by sample point",
+  "section": "I. Quality, laboratory and sensory",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Where does the plant get dirty first?",
+  "area": "quality",
+  "area_name": "Quality, safety and traceability"
+ },
+ {
+  "id": 86,
+  "title": "Spent grain, trub and yeast value",
+  "section": "H. Water, waste and by-products",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Am I giving away a sellable by-product?",
+  "area": "plant",
+  "area_name": "Energy, utilities and plant"
+ },
+ {
+  "id": 204,
+  "title": "Sensor drift and calibration intervals",
+  "section": "U. Materials, instrumentation and control (Module 3, units 3.11 and 3.12)",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Which instrument is lying to me?",
+  "area": "plant",
+  "area_name": "Energy, utilities and plant"
+ }
+]

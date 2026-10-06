@@ -1,4 +1,4 @@
-"""Builds beer.html (run: python3 _build/build_beer.py), the beer intelligence landing page, from the shared shell.
+"""Builds index.html, the Beer365 home page (run: python3 _build/build_beer.py), the beer intelligence landing page, from the shared shell.
 
 Every claim on the page comes from somewhere already written down:
   savings method, proof protocol, POC timeline  -> vault Brewforce-Partner/content_*.py
@@ -37,12 +37,7 @@ head = re.sub(r"<title>.*?</title>", f"<title>{TITLE}</title>", head, flags=re.S
 head = re.sub(r'<meta content="[^"]*" name="description"/>', f'<meta content="{DESC}" name="description"/>', head)
 head = re.sub(r'<meta content="[^"]*" property="og:title"/>', f'<meta content="{TITLE}" property="og:title"/>', head)
 head = re.sub(r'<meta content="[^"]*" property="og:description"/>', f'<meta content="{DESC}" property="og:description"/>', head)
-head = head.replace('href="https://ankurnapa.github.io/disruptive-advantage/" rel="canonical"',
-                    'href="https://ankurnapa.github.io/disruptive-advantage/beer.html" rel="canonical"')
-head = head.replace('content="https://ankurnapa.github.io/disruptive-advantage/" property="og:url"',
-                    'content="https://ankurnapa.github.io/disruptive-advantage/beer.html" property="og:url"')
 head = head.replace('class="p-index"', 'class="p-index p-beer"')
-head = head.replace('<a href="beer.html">Beer365</a>', '<a aria-current="page" href="beer.html">Beer365</a>', 1)
 
 idx = open(os.path.join(SITE, "index.html")).read()
 panel = re.search(r'<figure[^>]*class="live"[^>]*>.*?</figure>', idx, flags=re.S).group(0)
@@ -76,7 +71,7 @@ def week(w, h, get):
 def area_card(a):
     k, n, d, _ = a
     qs = "".join(f"<li>{u['q']}</li>" for u in examples(a))
-    return (f'<a class="area" href="use-cases.html#{k}"><span class="an">{len(cases(a))} questions</span>'
+    return (f'<a class="area" href="use-cases.html#{k}"><img class="aimg" src="assets/photos/{k}.jpg" alt="" width="1200" height="700" loading="lazy"><span class="an">{len(cases(a))} questions</span>'
             f'<h3>{n}</h3><p>{d}</p><ul>{qs}</ul><span class="more">See all {len(cases(a))}</span></a>')
 
 
@@ -161,9 +156,9 @@ MAIN = f'''<main id="main">
 <section class="tinted">
  <div class="wrap">
  <div class="xhead"><div><p class="kicker">Proof of concept</p><h2>Twenty weeks from your spreadsheets to signed savings</h2>
- <p class="std">It starts from the Excel records you already keep, across the brewhouse, cellar and every packaging line. Your head brewer and packing lead give about two hours a week.</p></div></div>
+ <p class="std">The first two weeks are the fixed-price assessment on our <a href="pricing.html">pricing page</a>. It works from the Excel records you already keep, across the brewhouse, cellar and every packaging line, and your head brewer and packing lead give about two hours a week.</p></div></div>
  <div class="weeks">
- {week("1 to 2", "Connect your records", "Every measurement checked, an error band on each figure, and a list of any meter that needs fixing.")}
+ {week("1 to 2", "Assessment: connect your records", "Every measurement checked, an error band on each figure, a list of any meter that needs fixing, and a fixed scope and price for the rest.")}
  {week("3 to 6", "Baseline month", "A signed baseline and agreed values per unit.")}
  {week("7 to 8", "Leak review with your team", "The three biggest leaks, by stage and by line.")}
  {week("9 to 20", "Fix, track and sign off", "Three signed monthly statements.")}
@@ -245,5 +240,6 @@ MAIN = f'''<main id="main">
 </main>
 <div class="stickcta" id="stickcta" hidden><span>Find the beer your brewery loses</span><a class="btn sm" href="{contact("I would like a free demo of beer intelligence on our own brew sheets.")}">Book a free demo</a></div>'''
 
-open(os.path.join(SITE, "beer.html"), "w").write(head + MAIN + foot)
-print("beer.html", N_ALL, N_BEER, N_SHIP, N_NONE)
+# Beer365 is the whole site now, so this page is the home page (2026-10-06).
+open(os.path.join(SITE, "index.html"), "w").write(head + MAIN + foot)
+print("index.html", N_ALL, N_BEER, N_SHIP, N_NONE)

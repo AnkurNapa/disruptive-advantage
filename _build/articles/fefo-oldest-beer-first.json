@@ -1,0 +1,159 @@
+{
+ "slug": "fefo-oldest-beer-first",
+ "uc_id": 111,
+ "area": "market",
+ "title": "Are you shipping the oldest beer first, or just the nearest pallet?",
+ "standfirst": "FEFO is a rule everyone signs up to and few warehouses can prove. Here is how to measure it from dispatch records and why the answer decides how fresh your beer is on the shelf.",
+ "read_min": 5,
+ "sections": [
+  {
+   "h2": "Why the oldest pallet matters",
+   "blocks": [
+    {
+     "p": "Beer does not improve in a warehouse. Hop aroma fades, oxidation creeps in and the lager that tasted clean at release starts to taste of cardboard and honey. The brewer did the work at packaging. From that moment freshness is a logistics problem."
+    },
+    {
+     "p": "First expired, first out (FEFO) is the rule that protects it. The pallet with the nearest best-before date leaves first. Every warehouse SOP says so. On a busy Friday with a truck waiting the forklift driver picks the pallet nearest the dock door, which is usually the one that came off the line yesterday. Nobody is being careless. The newest stock is simply in the way."
+    },
+    {
+     "p": "The cost shows up later and somewhere else. Old stock gets stranded at the back of the rack, crosses the point where a retail buyer will still accept it and ends up as a write-off or a deep discount. Meanwhile the outlet that got the fresh pallet never knew it was lucky."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where it lives",
+   "blocks": [
+    {
+     "p": "You need two records joined on lot: stock on hand by lot with its pack date and best-before date. The second is dispatch lines that say which lot actually left. If your warehouse system records dispatch at SKU level only, stop there. You cannot measure FEFO without the lot on the dispatch line. Fixing that capture is the first job."
+    },
+    {
+     "p": "With both in place, three numbers carry most of the story."
+    },
+    {
+     "eq": {
+      "label": "FEFO adherence",
+      "code": "FEFO % = dispatch lines that took the oldest released lot of that SKU / all dispatch lines x 100",
+      "note": "Released means passed QA and not on hold. Held stock is not available, so it cannot count as skipped."
+     }
+    },
+    {
+     "eq": {
+      "label": "Age at dispatch",
+      "code": "Age at dispatch (days) = dispatch date - pack date, weighted by cases shipped",
+      "note": "Track the median and the 90th percentile, not just the average."
+     }
+    },
+    {
+     "eq": {
+      "label": "Remaining life at dispatch",
+      "code": "Remaining life % = (best-before date - dispatch date) / (best-before date - pack date) x 100"
+     }
+    },
+    {
+     "p": "Use best-before rather than pack date to rank lots. That is the E in FEFO. A pasteurised can and an unpasteurised keg of the same beer can carry very different shelf lives, so the oldest by pack date is not always the first to expire."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery depot ships 500 dispatch lines of its core lager in a month. For each line we check whether a released lot with an earlier best-before was sitting in the warehouse at the time of the pick."
+    },
+    {
+     "table": {
+      "head": [
+       "Measure",
+       "Value"
+      ],
+      "rows": [
+       [
+        "Dispatch lines in the month",
+        "500"
+       ],
+       [
+        "Lines that took the oldest released lot",
+        "430"
+       ],
+       [
+        "FEFO adherence",
+        "430 / 500 = 86%"
+       ],
+       [
+        "Lines that skipped an older lot",
+        "70"
+       ],
+       [
+        "Cases on those 70 lines",
+        "1,050"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "86% sounds respectable until you look at what the 70 skipped lines left behind. In this example they leave 300 cases of one lot ageing at the back of a rack. If that lot passes the point where buyers will take it and the cost of goods is INR 900 a case, the write-off is 300 x 900 = INR 270,000. One forklift habit, one month."
+    },
+    {
+     "p": "Add an ageing view of the stock itself, bucketed by days since pack, so you can see the problem forming before it becomes a write-off."
+    },
+    {
+     "table": {
+      "head": [
+       "Days since pack",
+       "Share of lager stock"
+      ],
+      "rows": [
+       [
+        "0 to 30",
+        "62%"
+       ],
+       [
+        "31 to 60",
+        "24%"
+       ],
+       [
+        "61 to 90",
+        "9%"
+       ],
+       [
+        "Over 90",
+        "5%"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The over-90 bucket is the one to chase every week. It should be close to empty in a healthy warehouse."
+    }
+   ]
+  },
+  {
+   "h2": "The traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Mixed pallets.** A pallet built from two lots gets booked as one. The dispatch line then claims a lot that only half the cases belong to.",
+      "**Returns re-entering stock.** Beer that comes back from trade gets put away with today's date instead of its original pack date. It looks fresh on paper and it is not.",
+      "**Holds counted as available.** If a lot is on QA hold, skipping it is correct. Count it as available and the adherence number punishes the warehouse for following the rules.",
+      "**Customer-specific lots.** Some chains want one lot per delivery or a minimum remaining life. Those picks are legitimate exceptions. Code them as exceptions rather than letting them dilute the score.",
+      "**Depot transfers.** A transfer between depots resets nothing about the beer's age. Carry pack date through every move or the second depot starts from zero."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "A good FEFO report is boring. Adherence sits high and steady, every exception carries a reason code, the over-90 bucket is a handful of pallets with a name next to each one and remaining life at dispatch is stable week to week. When it moves, someone asks why on the same day, not at the quarterly write-off review."
+    },
+    {
+     "p": "The bigger win is a conversation between warehouse and brewing. When the brewer can see that a lager spends three weeks in the depot before it reaches a bar, the release date and the production plan start to change. That is where freshness is actually managed."
+    },
+    {
+     "p": "Beer365 joins the lot record from packaging to the dispatch line, so the FEFO question is answered from one record that reads from your existing warehouse and ERP systems. Every flagged pick points back to the batch it came from."
+    }
+   ]
+  }
+ ]
+}

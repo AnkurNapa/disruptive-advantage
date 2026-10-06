@@ -1,0 +1,145 @@
+{
+ "slug": "price-pack-ladder",
+ "uc_id": 125,
+ "area": "market",
+ "title": "Is your pack price ladder designed or accidental?",
+ "standfirst": "Most beer price ladders were built one launch at a time. Lining every pack up on price per litre and margin per litre shows quickly whether the ladder makes sense to a shopper and to the brewery.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "How ladders become accidental",
+   "blocks": [
+    {
+     "p": "Nobody sits down and designs a broken price ladder. It happens one decision at a time. The 650 ml bottle was priced years ago. The 500 ml can came in to match a competitor. The 4-pack was priced by a retailer promotion that never went away. Duty changed twice. Each decision made sense on the day. Put them side by side and the ladder may be telling shoppers to buy the pack you least want them to buy."
+    },
+    {
+     "p": "Price pack architecture is the discipline of looking at the whole range at once: every pack format, its price per litre to the shopper and its margin per litre to the brewery."
+    }
+   ]
+  },
+  {
+   "h2": "The two tests",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Shopper test",
+      "code": "Price per litre = shelf price / pack volume in litres"
+     }
+    },
+    {
+     "eq": {
+      "label": "Brewery test",
+      "code": "Margin per litre = (net revenue per pack - liquid cost - packaging cost) / pack volume in litres",
+      "note": "Net revenue is after duty, tax and trade margin. Use the same basis for every pack."
+     }
+    },
+    {
+     "p": "A coherent ladder usually has a clear logic. Single small packs carry the highest price per litre because the shopper pays for convenience. Larger formats and multipacks offer a lower price per litre as a reward for buying more. Draught sits on its own ladder in the on-trade. When a step goes the wrong way, ask whether it was a choice."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery sells one lager in four retail packs at these shelf prices."
+    },
+    {
+     "table": {
+      "head": [
+       "Pack",
+       "Shelf price INR",
+       "Volume L",
+       "Price per litre INR"
+      ],
+      "rows": [
+       [
+        "330 ml can",
+        "120",
+        "0.33",
+        "363.6"
+       ],
+       [
+        "4 x 330 ml can",
+        "440",
+        "1.32",
+        "333.3"
+       ],
+       [
+        "500 ml can",
+        "160",
+        "0.50",
+        "320.0"
+       ],
+       [
+        "650 ml bottle",
+        "190",
+        "0.65",
+        "292.3"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The 4-pack is cheaper per litre than single 330 ml cans, which is right. But it is dearer per litre than the single 500 ml can. A shopper who does the arithmetic buys three 500 ml cans, gets more beer and pays INR 480 instead of INR 440 for 1.5 L rather than 1.32 L. The multipack, which costs more to make and was meant to be the value pack, is not the value pack."
+    },
+    {
+     "p": "Now the brewery test on two of the packs. Say liquid cost is INR 60 per litre, a 330 ml can and end cost INR 14, a 500 ml can and end cost INR 17 and net revenue to the brewery is INR 52 for the 330 ml can and INR 70 for the 500 ml can."
+    },
+    {
+     "table": {
+      "head": [
+       "Pack",
+       "Net revenue",
+       "Liquid",
+       "Pack",
+       "Margin",
+       "Margin per litre"
+      ],
+      "rows": [
+       [
+        "330 ml can",
+        "52.0",
+        "19.8",
+        "14.0",
+        "18.2",
+        "55.2"
+       ],
+       [
+        "500 ml can",
+        "70.0",
+        "30.0",
+        "17.0",
+        "23.0",
+        "46.0"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The bigger can earns more per unit and less per litre. If the 500 ml can is also the shopper's best deal, volume will drift into the pack that earns the brewery the least per litre. That might be a deliberate volume play. If nobody can say it was, the ladder is accidental."
+    }
+   ]
+  },
+  {
+   "h2": "Traps and what good looks like",
+   "blocks": [
+    {
+     "ul": [
+      "**Comparing on different bases.** Shelf prices include duty and retailer margin. Margins must be computed on net revenue. Mixing the two produces nonsense.",
+      "**Duty by strength or pack.** Where duty depends on alcohol content or pack size, two packs of the same beer can carry different duty per litre. Recompute after every duty change.",
+      "**Promotions as permanent prices.** A promotional price that has run for a year is the real price. Use what was actually charged, not the list.",
+      "**Packaging cost frozen at standard.** Can and glass prices move. A margin ladder built on last year's standard cost may already be wrong.",
+      "**Ignoring volume.** A broken step on a pack that sells 1% of volume matters less than a small gap on the pack that sells half."
+     ]
+    },
+    {
+     "p": "Good looks like one table, reviewed whenever a price, duty rate or packaging cost changes, with every pack on price per litre and margin per litre and a written reason for any step that runs against the logic."
+    },
+    {
+     "p": "Beer365 reads prices, volumes and costs from your sales and finance systems into one record, so the ladder can be rebuilt on actual selling prices and current costs whenever the question is asked."
+    }
+   ]
+  }
+ ]
+}

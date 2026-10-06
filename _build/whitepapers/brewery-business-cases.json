@@ -1,0 +1,227 @@
+{
+ "slug": "brewery-business-cases",
+ "title": "Brewery business cases: what one batch record is worth at four sizes",
+ "subtitle": "Modelled savings for a 50,000 to 1,000,000 hL brewery, with every assumption on the page and a conservative case beside the base case.",
+ "description": "Modelled brewery business cases at four sizes: beer loss, extract, energy, dumped batches and reporting savings, with assumptions and a conservative case.",
+ "keywords": [
+  "brewery business case",
+  "brewery ROI",
+  "beer loss savings",
+  "brewhouse efficiency savings",
+  "brewery data investment"
+ ],
+ "date": "2026-10-06",
+ "kind": "Business cases",
+ "summary": [
+  "A 150,000 hL regional brewery models at INR 65.6 lakh a year once live.",
+  "At 1,000,000 hL the model gives INR 242.0 lakh a year, even with half the improvement assumed for smaller plants.",
+  "Beer loss and extract are most of the value at every size; reporting time is the smallest line.",
+  "If only half of each improvement happens, every figure halves, and the three-year value still covers a substantial cost.",
+  "These are planning figures from published assumptions, not results from a named brewery."
+ ],
+ "sections": [
+  {
+   "h2": "Read this first",
+   "blocks": [
+    {
+     "p": "These are modelled business cases, not customer results. Beer365 has no signed customer saving to publish yet, and we will not dress a model up as one. What a finance director can do with this page is check the arithmetic, replace any assumption with their own and see what the investment has to clear."
+    },
+    {
+     "p": "Money is in Indian rupees because the cost assumptions come from Indian brewing costs. One lakh is 100,000. The method works in any currency: swap the three cost figures for your own."
+    }
+   ]
+  },
+  {
+   "h2": "The assumptions",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Input",
+       "Value",
+       "Why"
+      ],
+      "rows": [
+       [
+        "Brewing cost of beer",
+        "INR 2,000 per hL",
+        "Malt, adjunct, hops, energy and water. Lost beer is valued at cost, not selling price."
+       ],
+       [
+        "Malt and adjunct cost",
+        "INR 608 per hL",
+        "16 kg of grist per hL at INR 38 per kg."
+       ],
+       [
+        "Energy cost",
+        "INR 200 per hL",
+        "About 10 kWh of power at INR 8 and 120 MJ of steam at INR 1."
+       ],
+       [
+        "Beer loss recovered",
+        "1 point (0.75 above 280,000 hL, 0.5 above 600,000 hL)",
+        "Larger plants already run tighter."
+       ],
+       [
+        "Brewhouse efficiency gained",
+        "1 point on a 95 percent base (scaled the same way)",
+        "Each brew compared with the malt's lab value."
+       ],
+       [
+        "Energy saved",
+        "5 percent (4 percent above 600,000 hL)",
+        "Power and steam tracked by area against the best day."
+       ],
+       [
+        "Dumped batches avoided",
+        "0.2 percent of volume (0.15 and 0.1 for larger plants)",
+        "Fermentation drift caught early."
+       ],
+       [
+        "Reporting time",
+        "INR 5 to 10 lakh a year",
+        "Manual daily, weekly and month-end packs."
+       ],
+       [
+        "Year one",
+        "Half the annual saving",
+        "The system goes live during the year."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h2": "The four cases",
+   "blocks": [
+    {
+     "p": "Annual savings once live, in INR lakh. The three-year figure counts half a year's saving in year one and full savings in years two and three. The conservative column assumes only half of every improvement happens."
+    },
+    {
+     "table": {
+      "head": [
+       "Volume a year",
+       "Beer loss",
+       "Extract",
+       "Energy",
+       "Dumped",
+       "Reporting",
+       "Total a year"
+      ],
+      "rows": [
+       [
+        "50,000 hL",
+        "10.0",
+        "3.2",
+        "5.0",
+        "2.0",
+        "5.0",
+        "25.2"
+       ],
+       [
+        "150,000 hL",
+        "30.0",
+        "9.6",
+        "15.0",
+        "6.0",
+        "5.0",
+        "65.6"
+       ],
+       [
+        "500,000 hL",
+        "75.0",
+        "24.0",
+        "50.0",
+        "15.0",
+        "8.0",
+        "172.0"
+       ],
+       [
+        "1,000,000 hL",
+        "100.0",
+        "32.0",
+        "80.0",
+        "20.0",
+        "10.0",
+        "242.0"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "And what each is worth over three years, in INR lakh:"
+    },
+    {
+     "table": {
+      "head": [
+       "Volume a year",
+       "Brewery",
+       "A year once live",
+       "Three years",
+       "Three years, conservative"
+      ],
+      "rows": [
+       [
+        "50,000 hL",
+        "Craft production brewery",
+        "25.2",
+        "63.0",
+        "31.5"
+       ],
+       [
+        "150,000 hL",
+        "Regional brewery",
+        "65.6",
+        "164.0",
+        "82.0"
+       ],
+       [
+        "500,000 hL",
+        "Large regional plant",
+        "172.0",
+        "430.0",
+        "215.0"
+       ],
+       [
+        "1,000,000 hL",
+        "National brand plant",
+        "242.0",
+        "605.0",
+        "302.5"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h2": "How to read the cases",
+   "blocks": [
+    {
+     "ul": [
+      "Beer loss and extract carry most of the value at every size, because they scale with volume and are valued at real cost.",
+      "Energy matters more as plants grow, but large plants already meter better, so the assumed share falls.",
+      "Reporting time is the smallest line and the most certain one: the reports either build themselves or they do not.",
+      "The break-even question is simple: if the full three-year cost of the system, Microsoft bills included, is below the conservative three-year figure, it pays back even if half of what we assume never happens."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "How a modelled figure becomes a real one",
+   "blocks": [
+    {
+     "p": "In the assessment the first month runs on your own records and we sign the starting point off with you. Every month after that, loss, extract and energy are counted against that baseline, in hectolitres and in money, adjusted for volume, and signed by your plant controller. Only those signed figures are ever called savings. When we publish a result, it is a signed saving over a stated period, less 25 percent for risk."
+    },
+    {
+     "p": "To run these numbers on your own brewery, use the readiness workbook or the calculator on this site."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "Savings method and constants: Beer365 savings method (vault Brewforce-Partner/pricing.py), September 2026",
+  "Brewing cost basis: Indian brewing input costs as used in the savings method"
+ ]
+}

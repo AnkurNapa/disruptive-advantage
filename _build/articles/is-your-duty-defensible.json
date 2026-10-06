@@ -1,0 +1,129 @@
+{
+ "slug": "is-your-duty-defensible",
+ "uc_id": 144,
+ "area": "business",
+ "title": "Is your duty calculation defensible line by line?",
+ "standfirst": "A duty return is only as good as the stock reconciliation behind it. Here is how to build one that an excise officer can follow from the tank to the gate.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why this one skips the ROI debate",
+   "blocks": [
+    {
+     "p": "Most data projects in a brewery have to argue for their budget. Duty does not. It is mandatory, it is usually the largest single cost line after materials and the penalties for getting it wrong are not measured in hectolitres. The question is not whether to reconcile duty. It is whether the reconciliation you already do would survive someone asking how you got each number."
+    },
+    {
+     "p": "Rules differ a great deal by jurisdiction. Some charge on litres of alcohol, some on bulk litres, some band by strength or brewery size. Indian state excise varies state to state. Confirm your own rules before trusting any rate. What follows is the reconciliation that sits underneath all of them."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where it lives",
+   "blocks": [
+    {
+     "ul": [
+      "Opening and closing stock in bond, by product and pack, from the stock ledger and a physical count.",
+      "Volume packaged into bond, from packaging run records.",
+      "Volume removed from bond, from dispatch documents and gate passes. This is usually the point at which duty becomes payable.",
+      "Losses in bond with evidence: breakage, destroyed beer, QA rejects, returns. Most authorities will want a record for each.",
+      "Strength: the declared ABV on the label and the measured ABV from the lab, by batch.",
+      "Fill volume: nominal pack size against the measured average fill."
+     ]
+    },
+    {
+     "eq": {
+      "label": "Bond reconciliation",
+      "code": "Expected closing (L) = opening (L) + packaged into bond (L) - removed (L) - evidenced losses (L)",
+      "note": "Any gap between expected and counted closing stock must be explained before the return is filed."
+     }
+    },
+    {
+     "eq": {
+      "label": "Litres of alcohol",
+      "code": "LoA = volume (L) x ABV % / 100",
+      "note": "Use the ABV your rules require: declared, measured or banded."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery reconciles one month of a single 5.0 percent lager."
+    },
+    {
+     "table": {
+      "head": [
+       "Line",
+       "Litres"
+      ],
+      "rows": [
+       [
+        "Opening stock in bond",
+        "18,000"
+       ],
+       [
+        "Packaged into bond",
+        "240,000"
+       ],
+       [
+        "Removed from bond",
+        "236,500"
+       ],
+       [
+        "Evidenced losses in bond",
+        "1,200"
+       ],
+       [
+        "Expected closing stock",
+        "20,300"
+       ],
+       [
+        "Counted closing stock",
+        "19,850"
+       ],
+       [
+        "Unexplained gap",
+        "450"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The 450 litres is the number an officer will ask about. It may be breakage nobody recorded, a pallet dispatched on a gate pass that never reached the ledger or a count error. Until it is explained, the return rests on an assumption."
+    },
+    {
+     "p": "Now strength. The 236,500 litres removed at a declared 5.0 percent is 11,825 litres of alcohol. If the lab average across those batches was 5.2 percent, the same volume holds 12,298 litres of alcohol, a difference of 473. Whether that matters depends on whether your rules charge on declared or measured strength and what tolerance they allow. Either way, you want to find out before the officer does."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Counting packs, not litres.** A 330 ml can filled to an average of 333 ml carries about 0.9 percent more beer than the pack count says. Duty on nominal volume and stock on actual volume will never reconcile.",
+      "**Losses without evidence.** A loss you cannot document is, for duty purposes, usually beer that left. Record breakage and destruction at the time, with a witness if your rules need one.",
+      "**Dates that disagree.** Dispatch dated by the ERP at invoice, the gate pass dated at the gate. A truck that leaves at 11:50 pm on the last day of the month can land in two periods.",
+      "**Editable history.** If the duty ledger can be overwritten, it cannot be defended. Keep duty and stock transactions append only, with corrections as new entries."
+     ]
+    },
+    {
+     "p": "One habit helps more than any tool: reconcile monthly, not at the year end. A 450 litre gap explained the week it appears takes an hour. Twelve of them found together in an audit take a month and usually some of the evidence has gone."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a monthly reconciliation where the unexplained gap is small, explained in writing and trending down. Every removal traces to a dispatch document. Every loss traces to an evidence record. Measured strength sits inside the declared tolerance batch after batch. Someone looks at the one that does not."
+    },
+    {
+     "p": "Beer365 builds this reconciliation from packaging, dispatch and lab records you already hold, one record per batch, so each line of the return points back to the batches and documents that produced it."
+    }
+   ]
+  }
+ ]
+}

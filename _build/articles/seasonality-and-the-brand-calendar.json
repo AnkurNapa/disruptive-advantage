@@ -1,0 +1,120 @@
+{
+ "slug": "seasonality-and-the-brand-calendar",
+ "uc_id": 137,
+ "area": "market",
+ "title": "Plan when each brand should shout from its own measured lift",
+ "standfirst": "Festivals, holidays and match days lift some brands and not others. Measure each brand's own lift per event, count how often you have seen it. Then plan the calendar backwards from the tank.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why one calendar for every brand is wrong",
+   "blocks": [
+    {
+     "p": "Most marketing calendars are built around the big dates: summer, the festival season, year end, the cricket. Every brand gets a push at the same time. Some of those pushes land on weeks when the brand would have sold anyway. Others land when the brand's drinkers are doing something else. A few land when the brewery cannot make enough beer to meet them."
+    },
+    {
+     "p": "The question is narrower than the calendar. For each brand, which dates genuinely lift it, by how much and on how much evidence?"
+    },
+    {
+     "p": "Different beers really do behave differently. A light lager and a strong stout are not drunk on the same occasions, by the same people or in the same weather. A calendar that ignores that spends money shouting for a brand on a day its drinkers were already buying it, or on a day they were never going to."
+    }
+   ]
+  },
+  {
+   "h2": "Split the sales into parts",
+   "blocks": [
+    {
+     "p": "Take daily sales for each brand and split them into three pieces: a baseline that moves with the season, a day-of-week effect and an event effect for the days on your calendar of holidays, festivals, dry days and local events."
+    },
+    {
+     "eq": {
+      "label": "Event lift",
+      "code": "Lift % = (actual sales - expected sales without the event) / expected sales x 100",
+      "note": "Expected sales = baseline for that week x day-of-week factor."
+     }
+    },
+    {
+     "p": "Average the lift for each event type and write down how many occurrences it is based on. A lift built on fewer than five occurrences is thin. Report it, but do not build a budget on it."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a wheat beer's expected Saturday sales at this time of year are 40 hL. On four festival Saturdays across the last two years it averaged 52 hL. Lift is (52 - 40) / 40 = 30 percent, from four occurrences. Interesting but thin."
+    },
+    {
+     "p": "Now the supply side. If the brand needs 3 weeks in tank, 2 days to package and a week to reach the trade, the beer for that festival has to be brewed about four and a half weeks ahead. A campaign that lifts demand 30 percent with no extra brew planned only moves the stock-out forward."
+    },
+    {
+     "table": {
+      "head": [
+       "Event type",
+       "Occurrences",
+       "Average lift",
+       "Evidence"
+      ],
+      "rows": [
+       [
+        "Festival Saturdays",
+        "4",
+        "+30%",
+        "Thin"
+       ],
+       [
+        "Long weekends",
+        "9",
+        "+18%",
+        "Usable"
+       ],
+       [
+        "Day before a dry day",
+        "12",
+        "+25%",
+        "Usable"
+       ],
+       [
+        "Dry day",
+        "12",
+        "-100% on-trade",
+        "Usable"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The dry day row is the obvious one. The row before it matters more: demand pulled forward, not created. A promotion on the day before a dry day may simply move sales by a day."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Moving dates.** Festivals on the lunar calendar shift by weeks from year to year. Map events by their actual date each year, not by month.",
+      "**Promotions inside the lift.** If the brand was on promotion during last year's festival, part of the lift was the price cut. Separate promoted and unpromoted occurrences.",
+      "**Stock-outs capping the peak.** A festival week where the brand ran out shows the stock, not the demand. Flag those days.",
+      "**Weather.** A hot week and a holiday together will be read as a holiday effect. Add temperature to the baseline if you have it.",
+      "**Pull-forward and payback.** A big week followed by a quiet one is not a lift of the full size. Measure the week after too."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a per-brand calendar: each event type with its lift, the number of occurrences and a thin flag, plus the brew-by date for each push. Marketing chooses where to shout from evidence. Brewing sees the date it has to brew by, weeks before the posters go up."
+    },
+    {
+     "p": "Refresh it after every event. Each new festival adds an occurrence. A thin lift becomes usable or falls away. After two or three years the calendar is built from your own drinkers, not from what everyone assumes about the season."
+    },
+    {
+     "p": "Beer365 holds the sales history, the event calendar and the brew plan in one record, so each brand's lift comes with the dates it was measured on and the batches that would supply the next one."
+    }
+   ]
+  }
+ ]
+}

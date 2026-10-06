@@ -1,0 +1,114 @@
+{
+ "slug": "contract-brewing-tank-days",
+ "uc_id": 145,
+ "area": "business",
+ "title": "Is the contract work paying for its tank days?",
+ "standfirst": "A contract brew can look profitable per hectolitre and still lose money per tank day. Here is how to price it against the one thing you cannot buy more of.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why per hectolitre is the wrong lens",
+   "blocks": [
+    {
+     "p": "Contract brewing gets sold to the board as free money. The tanks were sitting there, the brand owner pays per hectolitre, the fee covers your costs with something left over. All true. It is also how a brewery ends up with its best fermenters full of someone else's lager in the month its own wheat beer runs out."
+    },
+    {
+     "p": "The contract invoice is written in hectolitres. Your constraint is written in tank days. A fermenter can only hold one batch at a time and every day it holds a contract lager is a day it cannot hold anything else. So the honest question is not whether the fee beats the cost. It is whether the contribution per tank day beats what your own beer would have earned in the same tank."
+    },
+    {
+     "p": "When the cellar has idle capacity, almost any positive contribution is worth taking. When the cellar is full, the contract has to compete with your own range for every day it occupies. Most contract pricing I have seen was set in the first situation and never revisited in the second."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where it lives",
+   "blocks": [
+    {
+     "ul": [
+      "Contract revenue per batch, from the agreement and the invoices, not the quote.",
+      "Variable cost you carry: utilities, CIP chemicals, packaging labour, consumables and any materials the brand owner does not supply.",
+      "Tank occupancy as a date interval per batch, fermenter and bright tank, from the cellar log or MES. Include cleaning and turnaround, because the tank is not free until it is clean.",
+      "Volume brewed against volume delivered. If the fee is per hectolitre packaged, every litre lost is your loss.",
+      "The same contribution per tank day for your own beers, for comparison."
+     ]
+    },
+    {
+     "eq": {
+      "label": "Contribution per tank day",
+      "code": "Contribution per tank day = (contract revenue - variable cost you carry) / tank days occupied (FV + BBT + turnaround)",
+      "note": "Compute the same figure for your own beers so the two numbers are comparable."
+     }
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a mid-size brewery takes on a 100 hL contract lager. The fee is INR 3,000 per hL packaged and the variable cost the brewery carries is INR 1,400 per hL. Contribution is INR 1,600 per hL, so INR 160,000 per batch. The agreed specification holds the beer for 21 days across fermenter and bright tank."
+    },
+    {
+     "table": {
+      "head": [
+       "Beer",
+       "Contribution per batch (INR)",
+       "Tank days",
+       "INR per tank day"
+      ],
+      "rows": [
+       [
+        "Contract lager, as planned",
+        "160,000",
+        "21",
+        "7,619"
+       ],
+       [
+        "Contract lager, as actually run",
+        "160,000",
+        "24",
+        "6,667"
+       ],
+       [
+        "Own ale, 100 hL",
+        "320,000",
+        "10",
+        "32,000"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The contract looks fine on its own. Against the house ale, which earns INR 3,200 per hL over ten tank days, it earns less than a quarter as much for every day it sits in the tank. If the ale is selling everything it can make, each contract batch costs the brewery roughly INR 24,000 per tank day in ale it did not brew."
+    },
+    {
+     "p": "The second row is the one that usually goes unnoticed. The brand owner's lagering spec ran three days longer than planned because their yeast was slower than ours. Nobody changed the fee. Contribution per tank day fell by an eighth without a single invoice changing."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Counting only fermenter days.** Bright tank time, CIP and the gap waiting for a packaging slot are all occupancy. If the tank is not available, it is occupied.",
+      "**Fee per hL packaged, losses per hL brewed.** Brew 105 hL to deliver 100 and the five hectolitres of materials and energy come out of your contribution.",
+      "**Changeover costs hidden in overhead.** A dedicated yeast strain, an extra propagation, a full caustic and acid clean before your own beer goes back in. Put them on the contract batch.",
+      "**Averaging across the year.** Contract work in a quiet month and the same contract in peak season are different decisions. Compare by month.",
+      "**Treating your own beer as unlimited.** The opportunity cost is only real if you could have sold the extra own-brand beer. If demand would not take it, the contract contribution is the right number to judge it by."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good looks like a single table, refreshed monthly, with every product in the cellar ranked by contribution per tank day, contract and own brands side by side. The contract price gets reviewed when the cellar fills up, not when the agreement expires. And the specification in the agreement names the tank days it assumes, so an overrun becomes a conversation instead of a quiet loss."
+    },
+    {
+     "p": "Beer365 builds that table from the cellar log, the invoices and the tank occupancy you already keep, one record per batch. Every figure in it points back to the batches that produced it. The decision on price is still yours."
+    }
+   ]
+  }
+ ]
+}

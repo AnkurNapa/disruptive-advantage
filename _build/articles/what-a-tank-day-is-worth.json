@@ -1,0 +1,115 @@
+{
+ "slug": "what-a-tank-day-is-worth",
+ "uc_id": 147,
+ "area": "business",
+ "title": "A tank day is worth more than the interest on the beer in it",
+ "standfirst": "Finance sees beer in tank as working capital. The bigger number is the capacity it blocks. Here is how to put a rupee value on one fermenter day.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The only thing you cannot buy more of",
+   "blocks": [
+    {
+     "p": "Malt can be ordered. Cans can be ordered. A second shift can be rostered. A fermenter takes a capex approval, a supplier slot, a foundation and most of a year. In the short run, tank days are the one input a brewery cannot buy more of, which makes them the right unit for a lot of decisions that currently get made in hectolitres."
+    },
+    {
+     "p": "Ask a plant director what a tank day is worth and you usually get one of two answers. Finance gives the carrying cost of the stock in the tank. Production says it depends. Both are right. The second answer is the one with the money in it."
+    }
+   ]
+  },
+  {
+   "h2": "Two numbers, not one",
+   "blocks": [
+    {
+     "p": "There are two separate values hiding in a tank day and they should never be added together without thinking."
+    },
+    {
+     "eq": {
+      "label": "Carrying cost of beer in tank",
+      "code": "Carrying cost (INR) = cost of materials in tank (INR) x annual cost of capital x days in tank / 365",
+      "note": "Duty is usually not yet paid on beer in bond, so leave it out unless your rules differ."
+     }
+    },
+    {
+     "eq": {
+      "label": "Capacity value of a tank day",
+      "code": "Capacity value (INR per tank day) = contribution per batch (INR) / tank days the batch occupies",
+      "note": "Only real when the tank is the constraint and the extra beer would sell."
+     }
+    },
+    {
+     "p": "Contribution per batch is net selling price less variable cost, multiplied by the volume you actually package. Tank days run from filling the fermenter to the tank being clean and free again, bright tank included if that is also tight."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery runs two beers in 40 hL batches. The lager earns INR 4,000 per hL of contribution and holds its tank for 20 days, including the cold rest. The ale earns INR 3,600 per hL and is out in 9."
+    },
+    {
+     "table": {
+      "head": [
+       "Beer",
+       "Contribution per batch (INR)",
+       "Tank days",
+       "INR per tank day"
+      ],
+      "rows": [
+       [
+        "Lager",
+        "160,000",
+        "20",
+        "8,000"
+       ],
+       [
+        "Ale",
+        "144,000",
+        "9",
+        "16,000"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Now the carrying cost. If the lager has INR 1,200 per hL of materials in it, the tank holds INR 48,000 of stock. At a 12 percent cost of capital over 20 days, that is 48,000 x 0.12 x 20 / 365, about INR 316 for the whole batch, or roughly INR 16 per tank day."
+    },
+    {
+     "p": "So the interest on the beer is about INR 16 a day. The capacity is worth INR 8,000 to 16,000 a day, if the cellar is full and the beer sells. The interest is a rounding error. The capacity is the money."
+    },
+    {
+     "p": "Scale it. Say the brewery brews 160 batches a year and a better diacetyl check frees one tank day on each. That is 160 tank days. Valued at the lager rate they are worth INR 1,280,000, but only if every freed day turns into beer that is sold. If one day in five becomes sold volume, the honest figure is INR 256,000. Put the smaller number in the business case."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Using the planned tank days.** A batch planned at 20 days that runs 23 because the yeast is on its seventh generation earns per actual day, not per planned day. Use occupancy intervals from the cellar log.",
+      "**Valuing a day the market will not take.** If the extra beer would sit in the cold store, the capacity value is zero and only the carrying cost is real.",
+      "**Ignoring which tanks can do what.** If only three fermenters hold lagering temperature, a lager day and an ale day are not interchangeable. Value each tank group separately.",
+      "**Forgetting the turnaround.** CIP and the wait for a packaging slot are tank days too. A tank that is full of nothing is still occupied.",
+      "**Mixing the two values.** Adding carrying cost to capacity value counts the same day twice in a business case. Pick the one that applies to the decision."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "A good cellar plan carries one number per beer: contribution per tank day, calculated from actual occupancy and refreshed every month. It decides which beer gets the next free fermenter when demand exceeds tank time. It also prices the cost of every overrun, so a three day hold on a slow ferment shows up as rupees on the morning report instead of a note in the shift log."
+    },
+    {
+     "p": "It also changes the fermenter conversation with the board. A new tank is worth what its days would earn at the margin, not what the busiest month felt like."
+    },
+    {
+     "p": "Beer365 calculates contribution per tank day from the occupancy and sales records a brewery already keeps, one record per batch. Each figure cites the batches behind it."
+    }
+   ]
+  }
+ ]
+}

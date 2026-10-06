@@ -1,0 +1,117 @@
+{
+ "slug": "fermentation-versus-its-plan",
+ "uc_id": 35,
+ "area": "cellar",
+ "title": "Is this tank following the plan written for it",
+ "standfirst": "Comparing a fermenter with its neighbours tells you it is different. Comparing it with its own process order tells you whether it is wrong, by how much and from when.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The neighbour comparison trap",
+   "blocks": [
+    {
+     "p": "When a beer goes wrong, the first chart anyone draws is every fermenter from that week on one axis. One curve looks odd and everyone nods. The trouble is that the tanks were brewed on different days, pitched with different yeast generations and often scheduled for different beers. Different is not the same as wrong."
+    },
+    {
+     "p": "Every fermenter already has a better comparison sitting in the ERP: the process order that planned it. It says when the tank should be pitched, how long primary should run, when the temperature should rise, how long the rest lasts and when the crash starts. That plan is the standard the tank is supposed to meet. Hold the tank to it."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure",
+   "blocks": [
+    {
+     "p": "Two kinds of deviation matter. They answer different questions."
+    },
+    {
+     "p": "**Milestone timing.** Each planned phase change has an actual counterpart in the historian: pitch, start of free rise, start of the rest, end of the rest, crash onset, transfer. The deviation is simply actual minus planned, in hours. A crash that starts early is a decision someone made. A transfer that starts late is usually a tank queue."
+    },
+    {
+     "p": "**Temperature integral.** Between milestones, the beer should sit on the planned temperature. A tank that runs warm for a day does something to ester and fusel formation that no single reading shows."
+    },
+    {
+     "eq": {
+      "label": "Temperature deviation over a phase",
+      "code": "Degree-hours = sum(|T_actual - T_plan| x interval hours), over the phase",
+      "note": "Use the historian interval, for example 5 minutes = 0.0833 h. Report warm and cold separately if they matter differently."
+     }
+    },
+    {
+     "p": "Gravity belongs on the same chart. Plot measured gravity against the planned attenuation path for that beer, so a slow ferment shows as a gap from day two rather than a surprise at day six."
+    }
+   ]
+  },
+  {
+   "h2": "A worked tank",
+   "blocks": [
+    {
+     "p": "Say a lager process order plans pitching at 9 C, a free rise to 13 C from hour 72, a rest until hour 168 and a crash to 0 C after that. The historian for one tank shows three things."
+    },
+    {
+     "table": {
+      "head": [
+       "Check",
+       "Plan",
+       "Actual",
+       "Deviation"
+      ],
+      "rows": [
+       [
+        "Primary temperature",
+        "9.0 C",
+        "10.5 C for 18 h",
+        "27 degree-hours warm"
+       ],
+       [
+        "Free rise start",
+        "hour 72",
+        "hour 70",
+        "2 h early"
+       ],
+       [
+        "Crash onset",
+        "hour 168",
+        "hour 138",
+        "30 h early"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "1.5 C warm for 18 h is 27 degree-hours. Two hours early on the free rise is noise. Thirty hours early on the crash is the finding. On a neighbour chart this tank might look a bit short. Against its own plan it is a rest cut by close to a third of its 96 planned hours. The question becomes who decided and why."
+    }
+   ]
+  },
+  {
+   "h2": "What makes the comparison lie",
+   "blocks": [
+    {
+     "p": "**Clocks that do not agree.** Historians often store UTC. ERP systems often store local time with no offset written down. In India that is a 5 h 30 min gap, which is enough to make a punctual tank look badly early or late. Some historian clocks also drift by minutes. Reconcile the clocks before you measure a single deviation."
+    },
+    {
+     "p": "**Plans edited after the fact.** If the process order can be changed once the tank is running, the plan stops being a standard. Keep the plan as released and record any change as a change, with a time and a name."
+    },
+    {
+     "p": "**Which probe.** A tall fermenter has more than one temperature probe and they disagree, especially during a crash. Decide which one is the control reading and use that one consistently."
+    },
+    {
+     "p": "**Sparse gravity.** Two gravity readings a day leave plenty of room. Mark them as points, do not draw them as a smooth line that suggests more data than exists."
+    },
+    {
+     "p": "**A plan that was never realistic.** If every tank of a beer misses the plan in the same direction, the problem is the plan or the capacity behind it, not the cellar team."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is every running tank shown against its own plan, with milestone deviations in hours and temperature deviations in degree-hours, on one reconciled clock. Small deviations stay quiet. Large ones arrive while the beer is still in the tank, when something can still be done about them."
+    },
+    {
+     "p": "Beer365 reads the process orders and the historian into one record per tank, reconciles the clocks and lays the actual curve over the planned one. Each deviation it reports cites the batch, the plan line and the historian readings behind it."
+    }
+   ]
+  }
+ ]
+}

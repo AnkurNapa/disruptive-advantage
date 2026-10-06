@@ -1,0 +1,129 @@
+{
+ "slug": "supplier-scorecard-by-lot",
+ "uc_id": 4,
+ "area": "raw",
+ "title": "Which supplier is quietly the expensive one?",
+ "standfirst": "The cheapest price per tonne is not the cheapest extract in the fermenter. Score suppliers lot by lot on what reached the wort, not on what was invoiced.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Price per tonne is the wrong scoreboard",
+   "blocks": [
+    {
+     "p": "Purchasing ranks suppliers on price, delivery and paperwork. The brewhouse ranks them on how the malt behaved. Those two rankings rarely meet in one place, so the supplier who wins the tender is often not the one who wins on cost per hectolitre."
+    },
+    {
+     "p": "A malt that is Rs 2 a kilogram cheaper can still cost more if it carries less extract, mills badly, runs off slowly or gets one lot in ten rejected at intake. None of that is on the invoice. All of it is in your own records, spread across the goods receipt, the lab book and the brew sheets."
+    },
+    {
+     "p": "A supplier scorecard by lot pulls those together. Every lot gets traced from delivery to the brews that used it. The supplier is judged on the outcome."
+    }
+   ]
+  },
+  {
+   "h2": "What to join",
+   "blocks": [
+    {
+     "ul": [
+      "**Purchases:** lot number, supplier, tonnes, landed price including freight and duty",
+      "**Intake lab:** extract, moisture and the rest of the panel, plus accept or reject",
+      "**Silo and brew records:** which lot went into which brew and in what share",
+      "**Brewhouse outcome:** extract recovered in the fermenter for each brew, so you have brewhouse efficiency against that lot",
+      "**Rejections and claims:** lots refused, returned or accepted under concession and what that cost in handling and downtime"
+     ]
+    },
+    {
+     "p": "The silo link is the hard part. If lots are blended before anyone records the split, you can only score the blend. Fix the recording before you trust the scorecard."
+    }
+   ]
+  },
+  {
+   "h2": "The number that ranks them",
+   "blocks": [
+    {
+     "p": "Bring every supplier to the same unit: the cost of one kilogram of extract that actually reached the fermenter."
+    },
+    {
+     "eq": {
+      "label": "Cost per kg of extract delivered to wort",
+      "code": "Cost per kg wort extract = landed price per kg / ((as-is extract % / 100) x (brewhouse efficiency % / 100))",
+      "note": "Brewhouse efficiency here is measured on the brews that used that supplier's lots."
+     }
+    },
+    {
+     "p": "Say supplier A sells at Rs 44 per kg, the malt averages 75.5% as-is extract and your brewhouse recovers 93% of it on A's lots. Supplier B sells at Rs 46, averages 78.0% and recovers at 96%, because it mills cleaner and runs off faster."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Supplier A",
+       "Supplier B"
+      ],
+      "rows": [
+       [
+        "Landed price (Rs/kg)",
+        "44.00",
+        "46.00"
+       ],
+       [
+        "As-is extract %",
+        "75.5",
+        "78.0"
+       ],
+       [
+        "Brewhouse efficiency %",
+        "93",
+        "96"
+       ],
+       [
+        "Extract in wort per kg malt (kg)",
+        "0.702",
+        "0.749"
+       ],
+       [
+        "Cost per kg wort extract (Rs)",
+        "62.66",
+        "61.43"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The cheaper malt is about Rs 1.23 dearer per kilogram of extract in the fermenter. Across thousands of tonnes a year, that gap compounds quietly in the yield report while the price comparison keeps telling everyone A is the bargain."
+    },
+    {
+     "p": "Then add the rejection cost per tonne delivered. If one of A's lots in ten is refused, the handling, retesting and the scramble for replacement malt belong on A's line, spread across the tonnes A did deliver."
+    }
+   ]
+  },
+  {
+   "h2": "Where the scorecard lies",
+   "blocks": [
+    {
+     "ul": [
+      "**Confounding.** If supplier B only ever goes into the newer brewhouse or the easier recipe, B gets credit for the kit. Compare within the same brewhouse and recipe family, or adjust for them.",
+      "**Small samples.** Three lots is a story, not a score. Show the lot count next to every number and do not rank a supplier on fewer than you would accept in a lab method check.",
+      "**Lagging data.** A lot may still be in the silo when you score it. Score only finished lots, or show the open ones separately.",
+      "**Price that is not landed.** Ex-works price hides freight, duty and the cost of a slow unloading. Use landed cost or the cheap supplier wins by accounting.",
+      "**Brewhouse efficiency on a bad basis.** If the efficiency figure mixes hot and cold volumes, every supplier inherits the error. Get that number right first."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "A good scorecard is one table per material: supplier, lots delivered, lots rejected, mean extract versus contract, brewhouse efficiency achieved and cost per kilogram of wort extract, with each figure clickable down to the lots. It is reviewed before the tender, not after the complaint."
+    },
+    {
+     "p": "The goal is not to punish a supplier. It is to have a conversation about outcomes with numbers both sides can check. Most suppliers respond well to their own lot data put in front of them."
+    },
+    {
+     "p": "Beer365 builds this from one record per lot, reading purchases, intake results and brew sheets from your existing systems and every supplier figure cites the batches it came from."
+    }
+   ]
+  }
+ ]
+}

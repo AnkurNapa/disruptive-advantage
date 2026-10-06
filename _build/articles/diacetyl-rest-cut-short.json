@@ -1,0 +1,117 @@
+{
+ "slug": "diacetyl-rest-cut-short",
+ "uc_id": 36,
+ "area": "cellar",
+ "title": "Did anyone cut the diacetyl rest short to free a tank",
+ "standfirst": "A short rest leaves no mark on the release sheet. It shows up weeks later as butter in the glass. The evidence sits in three systems that rarely meet: the plan, the historian and the shift log.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why rests get cut",
+   "blocks": [
+    {
+     "p": "Nobody cuts a diacetyl rest because they do not care about the beer. They cut it because a fermenter is out of service with a jacket leak, the brew deck is filling and the cellar supervisor has a tank that looks finished. The free diacetyl reading passed. Crashing a day early solves today's problem."
+    },
+    {
+     "p": "The problem it creates is chemical. Yeast makes alpha-acetolactate during fermentation and leaks it into the beer. Outside the cell it turns into diacetyl slowly. Only live, warm yeast takes the diacetyl back up. Crash before the precursor has converted and the yeast drops out with the job half done. The rest of the conversion happens later, in the bright tank or the package, where there is no yeast left to clean it up. Diacetyl's flavour threshold is around 0.08 to 0.10 mg/L, so it does not take much."
+    }
+   ]
+  },
+  {
+   "h2": "Three records, one finding",
+   "blocks": [
+    {
+     "p": "Proving a cut rest needs three things lined up on one clock:"
+    },
+    {
+     "ul": [
+      "The process order, which states when the rest was planned to end.",
+      "The historian, which shows when the temperature setpoint actually dropped and the beer followed it.",
+      "The shift log, which is where the reason lives, if it was written down at all."
+     ]
+    },
+    {
+     "p": "Write down the rule for crash onset before you look at any tank, so the answer does not depend on who reads the chart. For example: crash onset is the first time the setpoint falls more than 1 C below the rest setpoint and the measured temperature follows it for at least 30 minutes."
+    },
+    {
+     "eq": {
+      "label": "Rest shortfall",
+      "code": "Shortfall (h) = planned rest end - actual crash onset, both in the same time zone",
+      "note": "Positive means the rest was cut short."
+     }
+    },
+    {
+     "p": "The lab result completes it. Free diacetyl only measures what has already converted. A forced total VDK test heats the sample to convert the remaining precursor first, so it shows what the beer will become. A rest that passed on free diacetyl and failed on forced total is the signature of a crash that came too early."
+    }
+   ]
+  },
+  {
+   "h2": "A worked case",
+   "blocks": [
+    {
+     "p": "Say the process order plans the rest on FV-4 to end at 08:30 IST on 12 March. The historian, which stores UTC, shows the setpoint dropping at 21:40 UTC on 10 March and the beer following. Converted, that is 03:10 IST on 11 March."
+    },
+    {
+     "p": "Shortfall: from 03:10 on 11 March to 08:30 on 12 March is 29 h 20 min. Read the historian time as if it were IST and you get 34 h 50 min instead, wrong by the 5 h 30 min offset. Either way the rest was cut, but only one number survives a challenge."
+    },
+    {
+     "table": {
+      "head": [
+       "Record",
+       "What it says"
+      ],
+      "rows": [
+       [
+        "Process order",
+        "Rest ends 12 March 08:30 IST"
+       ],
+       [
+        "Historian",
+        "Crash onset 11 March 03:10 IST"
+       ],
+       [
+        "Lab, end of fermentation",
+        "Free diacetyl 0.07 mg/L, pass. Forced total VDK 0.28 mg/L against 0.10, fail"
+       ],
+       [
+        "Shift log",
+        "FV-4 crashed early, FV-6 out of service, brewhouse needs a tank"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "None of the four records is wrong. Read alone, none of them is a finding either. Together they say the rest was cut by 29 h 20 min for a capacity reason and the lab caught it, but nobody acted on the forced result."
+    }
+   ]
+  },
+  {
+   "h2": "Traps",
+   "blocks": [
+    {
+     "p": "**Time zones and drift.** The 5 h 30 min offset above is the obvious one. A historian clock running a few minutes fast is the quiet one. Correct both before you compute anything."
+    },
+    {
+     "p": "**Setpoint is not temperature.** An operator can lower the setpoint while the glycol is busy elsewhere and the beer barely moves for hours. Use the rule that requires the beer to follow."
+    },
+    {
+     "p": "**The shift log as free text.** The reason is usually one line in a spreadsheet with no tank field. Search it by date and tank number. Expect spelling variations."
+    },
+    {
+     "p": "**Release samples that only test free diacetyl.** If the bright tank release test carries free diacetyl only, a cut rest can pass every gate on its way to the filler."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a list, every week, of tanks whose crash started before the planned rest end, with the shortfall in hours, the forced VDK beside it and the reason from the log. Not to blame a supervisor who was solving a real problem, but so the capacity decision is made in the open, with the quality cost on the same page."
+    },
+    {
+     "p": "Beer365 joins the process order, historian and shift log into one record per tank on a reconciled clock, applies a crash rule you set and shows each shortfall with the batch, the readings and the log line it came from."
+    }
+   ]
+  }
+ ]
+}

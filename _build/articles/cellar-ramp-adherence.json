@@ -1,0 +1,119 @@
+{
+ "slug": "cellar-ramp-adherence",
+ "uc_id": 41,
+ "area": "cellar",
+ "title": "Are the cellar temperature ramps actually being followed",
+ "standfirst": "A ramp can fail in two places: the setpoint nobody loaded, or the glycol that could not keep up. They look the same on a temperature chart and need opposite fixes.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Two lines, not one",
+   "blocks": [
+    {
+     "p": "Most cellar charts show one line: the beer temperature. When a crash takes two days instead of one, the line shows it, but not why. Was the step loaded late? Did someone hold the setpoint to save glycol for another tank? Or was the setpoint right and the jacket simply could not pull the heat out?"
+    },
+    {
+     "p": "The historian already has the answer, because it records the setpoint as well as the measured value. Put three lines on the chart: the plan from the process order, the setpoint the controller was given and the temperature the beer actually reached. The gap between the first two is a people and procedure question. The gap between the last two is an engineering one."
+    }
+   ]
+  },
+  {
+   "h2": "Free rise and ramps, measured",
+   "blocks": [
+    {
+     "p": "A free rise is the step where cooling is backed off and fermentation heat is allowed to lift the beer to its rest temperature. The plan sets when it starts and the ceiling it must not pass. A ramp is a controlled change, usually the crash, with a planned rate."
+    },
+    {
+     "eq": {
+      "label": "Actual ramp rate",
+      "code": "Rate (C per h) = (T at ramp start - T at ramp end) / hours between them",
+      "note": "Define start and end by the plan's temperatures, not by when someone noticed."
+     }
+    },
+    {
+     "eq": {
+      "label": "Time in band",
+      "code": "In band % = intervals where |T_actual - T_setpoint| <= band / all intervals in the step x 100",
+      "note": "Use the controller's own deadband as the band."
+     }
+    },
+    {
+     "p": "The band should come from the control loop, not from taste. A typical fermenter loop might run a setpoint of 14 C with a deadband of 1.5 %, which is plus or minus 0.21 C. If the beer spends most of a hold outside that, the valve is either hunting or the tank is fighting for glycol."
+    },
+    {
+     "p": "For a free rise, check three things: it started when planned, it did not overshoot the ceiling and it reached the rest temperature in the planned window."
+    }
+   ]
+  },
+  {
+   "h2": "A worked crash",
+   "blocks": [
+    {
+     "p": "Say the plan crashes a lager from 13 C to 0 C at 0.5 C per hour, which is 26 hours. The historian shows two different stories on two tanks."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Tank A",
+       "Tank B"
+      ],
+      "rows": [
+       [
+        "Setpoint reached 0 C after",
+        "26 h",
+        "40 h"
+       ],
+       [
+        "Beer reached 0 C after",
+        "46 h",
+        "42 h"
+       ],
+       [
+        "Actual rate",
+        "0.28 C per h",
+        "0.31 C per h"
+       ],
+       [
+        "Where the delay sits",
+        "Beer lagged the setpoint by 20 h",
+        "Setpoint was 14 h behind plan"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Both tanks took far longer than 26 hours: 13 / 46 = 0.28 C per hour for tank A and 13 / 42 = 0.31 C per hour for tank B. On a single-line chart they look like the same failure. They are not. Tank A had the right setpoint and could not follow it, so look at glycol supply temperature, how many tanks were crashing at the same time and the state of the jacket. Tank B was given its setpoint late, so look at the shift and the step that loads it."
+    }
+   ]
+  },
+  {
+   "h2": "Traps",
+   "blocks": [
+    {
+     "p": "**Probe position.** Tall fermenters have top, middle and bottom probes. During a crash they disagree, because the cooled beer sinks. Below about 4 C, where water is densest, that convection weakens and the tank can stratify. Pick the control probe and say which one you used."
+    },
+    {
+     "p": "**Setpoint written by a recipe, overwritten by hand.** If the historian only stores the final setpoint, a manual override looks like the plan. Log setpoint changes with the source: recipe step or operator."
+    },
+    {
+     "p": "**Shared glycol.** Ramps fail in clusters when several tanks crash together on one glycol loop. Judging each tank alone blames the cellar for a capacity limit."
+    },
+    {
+     "p": "**A band chosen to pass.** Widen the band and every tank looks compliant. Use the deadband the controller actually runs."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a ramp report that separates the two failures. Late or missing setpoints go to the cellar lead as a procedure item. Setpoints the beer could not follow go to engineering as a capacity item, with the number of tanks that were pulling on the loop at the time. Free rises are checked for start time and ceiling, every tank, every week."
+    },
+    {
+     "p": "Beer365 reads the process order and the historian setpoint and process values into one record per tank, so plan, setpoint and actual sit on one chart. Each ramp result cites the batch and the readings behind it."
+    }
+   ]
+  }
+ ]
+}

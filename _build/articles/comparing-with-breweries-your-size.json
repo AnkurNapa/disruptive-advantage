@@ -1,0 +1,104 @@
+{
+ "slug": "comparing-with-breweries-your-size",
+ "uc_id": 167,
+ "area": "layer",
+ "title": "How do you compare with breweries your size, honestly?",
+ "standfirst": "Every brewer wants a peer benchmark. Most benchmarks compare numbers that were never defined the same way. Here is what a fair comparison needs. It is also why we will not sell one yet.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The question everyone asks first",
+   "blocks": [
+    {
+     "p": "Show a plant director their own numbers and the next question is almost always the same. Is that good? Compared with whom? It is a fair question. A brewhouse efficiency or a water ratio means little in isolation. It only becomes a decision when you know where it sits against breweries running similar kit at similar scale."
+    },
+    {
+     "p": "The honest answer is that most peer comparisons in brewing are not comparisons. They line up numbers that were measured at different points, with different definitions, by people who were each doing their best with their own systems. The chart looks precise. The ranking on it can be noise."
+    }
+   ]
+  },
+  {
+   "h2": "What a fair comparison needs",
+   "blocks": [
+    {
+     "ul": [
+      "**A small set of metrics, defined to the letter.** Brewhouse yield, revenue per hL, gross margin, water to beer ratio and one process measure is enough. Each needs a written definition: what is in the numerator, what is in the denominator and where each is measured.",
+      "**Enough peers to mean something and to protect them.** At least five breweries in any comparison, so no single brewery can be picked out of the result.",
+      "**Like with like.** Size band, product mix and pack mix. A keg-heavy brewery and a can-heavy one will never share a cost per hL.",
+      "**Data drawn from records, not surveys.** A number typed into a form is a number someone remembered. A number computed from batch records can be checked."
+     ]
+    },
+    {
+     "p": "Anonymity matters more than it sounds. A brewery will only share honest numbers if it is sure nobody can work backwards to its margin. That means minimum group sizes, no single metric shown for a group smaller than five and a written agreement on how the data may be used. Without that trust, the numbers that come in are the flattering ones."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example of the definitions war",
+   "blocks": [
+    {
+     "p": "Say one brewery uses 520,000 hL of water in a year and packages 100,000 hL of beer. Its water to beer ratio is 5.20. A second brewery, identical in every way, divides by beer in bright tank instead, 102,000 hL. It reports 5.10. Neither is lying. They just measured beer at different points."
+    },
+    {
+     "p": "Gross margin is worse. Say a brewery sells at INR 10,000 per hL including duty, pays INR 4,000 per hL of duty and makes the beer for INR 3,600 per hL."
+    },
+    {
+     "table": {
+      "head": [
+       "Definition",
+       "Calculation",
+       "Gross margin"
+      ],
+      "rows": [
+       [
+        "Revenue before duty is deducted",
+        "(10,000 - 3,600) / 10,000",
+        "64%"
+       ],
+       [
+        "Revenue net of duty",
+        "(6,000 - 3,600) / 6,000",
+        "40%"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Same brewery, same beer, same month. Put one brewery's 64 percent next to another's 40 percent on a peer chart and you have produced a ranking that says nothing at all about who runs the better business."
+    },
+    {
+     "p": "Brewhouse yield has the same problem in a quieter form. One brewery measures extract in the fermenter, another at kettle full, a third at knockout. Some correct the fermenter volume for temperature and some do not. Some count syrup and adjuncts in the extract charged and some leave them out. Every one of those choices moves the figure by a point or more, which is often bigger than the real gap between two well run brewhouses."
+    }
+   ]
+  },
+  {
+   "h2": "Why we refuse to sell a score today",
+   "blocks": [
+    {
+     "p": "A benchmark is a network. It is only worth something once enough breweries contribute data on identical definitions. Before that, selling a peer score is selling a promise. So we do not."
+    },
+    {
+     "p": "What you can do now is compare against yourself. Your own history, on definitions you control, is a fair benchmark. A brewhouse yield that moves from one quarter to the next on the same malt and the same mill gap is a real signal. A gap against an anonymous industry figure of unknown origin usually is not."
+    },
+    {
+     "ul": [
+      "Write your definitions down before you compare anything.",
+      "Trend each metric monthly against your own last twelve months.",
+      "When you do see an external figure, ask how it was measured before you react to it."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a peer comparison where every brewery's number was computed by the same code from its own batch records, with the definition printed beside the chart and at least five peers behind every bar. That is achievable. It is not achievable on day one."
+    },
+    {
+     "p": "Beer365 keeps your metrics on written definitions from the start, one record per batch, so that when a peer set exists your numbers can join it without being rebuilt. Until there are enough breweries on the same definitions, it will not show you a score."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "slug": "label-artwork-compliance",
+ "uc_id": 66,
+ "area": "packaging",
+ "title": "Is the label on the line the one legal signed off for that market?",
+ "standfirst": "Most label failures are not design mistakes. They are version mistakes: the right artwork approved for one market, printed for another, or a stale proof still sitting in the printer's folder.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why a label is a quality record",
+   "blocks": [
+    {
+     "p": "A label is the only part of the beer the regulator reads without opening the bottle. It carries the strength, the volume, the allergens, the batch code and whatever warnings that market demands. If any of it is wrong, the beer can be perfect and still be pulled from shelf."
+    },
+    {
+     "p": "The money sits in three places. Relabelling or reworking finished stock, which on a returnable bottle line means stripping and washing. Scrapping printed labels and cartons that can no longer be used. The slower cost is a market authority that now reads every submission you send twice."
+    },
+    {
+     "p": "In my experience the artwork is rarely the problem. The problem is that nobody can say, with evidence, which artwork version is on the reel loaded on labeller two this morning or which market rulebook it was checked against."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where it lives",
+   "blocks": [
+    {
+     "p": "Compliance is a join between three things that usually live in three different places."
+    },
+    {
+     "ul": [
+      "The artwork register: version, market, SKU, approval date, who approved it. Often a shared drive and an email chain.",
+      "The market rule set: mandatory fields, warning text, language, minimum font height, alcohol and fill tolerances. Usually in a regulatory lead's head and one spreadsheet.",
+      "The packaging run record: which label and carton lot was loaded on which run. Sits in the ERP goods issue or the line log, if it is recorded at all."
+     ]
+    },
+    {
+     "p": "The question gets answered only when all three meet on the same run. A label approved in March is no use as evidence if the run in June drew from a reel printed off the January proof."
+    }
+   ]
+  },
+  {
+   "h2": "Checking the declared numbers against the beer",
+   "blocks": [
+    {
+     "p": "Two printed numbers can be checked against the lab every single run: alcohol and contents. Alcohol is the one most often caught out, because brewing variation is real and tolerance bands are narrow."
+    },
+    {
+     "eq": {
+      "label": "Alcohol declaration check",
+      "code": "In tolerance if |measured ABV - declared ABV| <= market tolerance",
+      "note": "In the EU the tolerance for beer is 0.5 % vol up to 5.5 % vol and 1 % vol above 5.5 % vol."
+     }
+    },
+    {
+     "p": "Take a hypothetical lager declared at 5.0 % vol for an EU market. Release results across a month of brews read 4.7, 5.1, 5.3 and 5.6 % vol. The first three sit inside 4.5 to 5.5. The 5.6 is 0.6 above the declaration, so that batch is out, even though it is perfectly good beer. The fix is upstream in high gravity dilution control, but the label check is what finds it."
+    },
+    {
+     "p": "Contents work the same way. Under the EU average quantity system, a 330 ml pack has a tolerable negative error of 3 %, which is 9.9 ml. Any pack under 320.1 ml counts as a defective. The batch average must still meet the declared 330 ml. Your fill height checker and checkweigher records already hold this. They are rarely joined to the label claim."
+    },
+    {
+     "table": {
+      "head": [
+       "Printed field",
+       "Check against",
+       "Source"
+      ],
+      "rows": [
+       [
+        "ABV",
+        "Release alcohol result for the blend",
+        "LIMS"
+       ],
+       [
+        "Contents",
+        "Fill level or checkweigher averages",
+        "Line inspection data"
+       ],
+       [
+        "Batch or date code",
+        "Coder log for the run",
+        "Coder or line log"
+       ],
+       [
+        "Allergen and warning text",
+        "Market rule set, current version",
+        "Regulatory register"
+       ],
+       [
+        "Artwork version",
+        "Approved version for that market",
+        "Artwork register"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h2": "The traps that make a clean report lie",
+   "blocks": [
+    {
+     "ul": [
+      "Shared artwork across markets. One label printed for two countries passes one rulebook and quietly fails the other.",
+      "Rule changes with a grace period. Old stock is legal until a date, then it is not. If the register has no effective date, nobody notices the cliff.",
+      "Approval of the PDF, not the print. Colour shifts and trimmed bleed can push mandatory text below the minimum height on the printed reel.",
+      "The labeller changeover. Half a reel of the previous SKU left on the spindle is the most ordinary way the wrong label reaches a pallet.",
+      "Contract packers. Their run records may not name the label lot at all, which leaves you with a claim you cannot prove."
+     ]
+    },
+    {
+     "p": "None of these are exotic. They are what happens when a correct process runs on three disconnected records and a busy Monday."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is boring. Every packaging run can show, on one line, the artwork version used, the market it was approved for, the rule set version it was checked against and the measured ABV and fill against the declared values. When a market changes a rule, you can list every SKU and every pallet in trade that carries the old text within minutes, not after a week of digging."
+    },
+    {
+     "p": "Beer365 keeps the artwork register, the market rules and the run record in one place, reads from your LIMS and line systems and answers the question for a given run with the batch and the evidence cited. It does not draw your labels. It tells you whether the one on the line is the one you meant."
+    }
+   ]
+  }
+ ]
+}

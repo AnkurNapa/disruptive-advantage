@@ -1,0 +1,89 @@
+{
+ "slug": "root-cause-with-refutation",
+ "uc_id": 102,
+ "area": "quality",
+ "title": "A root cause report should say what did not cause it",
+ "standfirst": "Most investigations name a cause and stop. The stronger report also kills the other suspects with their own evidence and says plainly what the data cannot judge.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why refutation matters more than the answer",
+   "blocks": [
+    {
+     "p": "When a complaint becomes an investigation, everyone arrives with a favourite suspect. Packaging blames the cellar. The cellar blames oxygen pick up on the filler. The lab blames sampling. The first plausible story usually wins, because people are busy and the beer has already shipped."
+    },
+    {
+     "p": "The cost of the wrong story is a CAPA that fixes nothing. You spend money on the filler while the fermenter that caused it keeps doing the same thing. A report that refutes the alternatives is harder to write, but it is the only one that tells you where not to spend."
+    }
+   ]
+  },
+  {
+   "h2": "What data the investigation needs",
+   "blocks": [
+    {
+     "ul": [
+      "Complaints with the date code from the pack.",
+      "The ERP chain: package run to bright beer tank to brews to fermenters.",
+      "LIMS results, including forced tests and repeats that were requested.",
+      "Historian curves for fermentation temperature and packaging oxygen.",
+      "The shift log, which is usually a spreadsheet and is often where the reason lives."
+     ]
+    },
+    {
+     "p": "The first job is the join. A date code like 16MAY26 L2 0938 has to become one package run, one bright tank and the brews blended into it. Clocks differ between systems: the historian may run in UTC, the ERP in local time and the shift log in whatever the operator typed. Reconcile the clocks before you compare any two events, or a crash that started before a rest finished will look like it started after."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a hypothetical brewery receives buttery complaints on one lager. The date code resolves to a bright tank filled from three brews of 400 hL each, from fermenters A, B and C."
+    },
+    {
+     "p": "Fermenter B's plan had the diacetyl rest ending at 08:30 on day six. The historian shows the crash starting 29 hours earlier. Free diacetyl at end of fermentation passed at 0.09 mg/L. Forced total VDK, which converts the alpha-acetolactate precursor still in the beer, read 0.32 mg/L against a 0.10 spec. The repeat was requested and never run."
+    },
+    {
+     "eq": {
+      "label": "Volume weighted total VDK of the blend",
+      "code": "VDK blend = sum(volume x VDK) / sum(volume)",
+      "note": "Use the forced total, not free diacetyl, for a blend that will keep converting in pack."
+     }
+    },
+    {
+     "p": "With A and C at 0.06 mg/L: (400 x 0.06 + 400 x 0.32 + 400 x 0.06) / 1,200 = (24 + 128 + 24) / 1,200 = 0.147 mg/L. That is well over a spec of 0.10 and above the flavour threshold of about 0.1 mg/L. The beer was always going to taste buttery."
+    },
+    {
+     "p": "Now the refutations. Oxidation: packaging oxygen ran in spec through every run and the panel calls the retained sample butter, not papery. Infection: Pediococcus makes diacetyl too, but micro is clean at the tank, the filler bowl and post fill. The defect also follows one fermenter rather than one filler head. Both suspects are dismissed with their own data, which is what lets the CAPA land on the fermenter schedule."
+    },
+    {
+     "p": "The shift log then gives the reason. Another vessel was out of service and the brew deck needed a tank. A human decision, written in one place, by one person."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "Comparing a vessel only to its neighbours. Three fermenters brewed on different days differ for many reasons. Compare each to its own plan.",
+      "Trusting free diacetyl at release. It can pass while the precursor waits to convert in pack.",
+      "Treating silence as a pass. A repeat that was never run is not a result. It is a gap and should be shown as one.",
+      "Hiding what cannot be assessed. If there is no trade temperature record and no purchase date, nobody can say whether warm storage made it worse. Put that on the report as a finding."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "A good report has three short lists: confirmed cause with evidence, refuted causes with the evidence that kills them and questions the data cannot answer. Each line cites the batch, the vessel and the record. Someone who was not in the room can follow it in ten minutes and argue with it."
+    },
+    {
+     "p": "Beer365 builds that report from one record of the batch, reading from your ERP, LIMS, historian and shift logs. It proposes the cause, tries to refute the alternatives and lists what it could not judge, with every claim pointing to the batch data behind it. The brewer still decides. The legwork is done."
+    }
+   ]
+  }
+ ]
+}

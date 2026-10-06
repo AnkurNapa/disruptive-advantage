@@ -1,0 +1,112 @@
+[
+ {
+  "id": 2,
+  "title": "COA versus reality",
+  "section": "A. Raw materials and inbound supply",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is the supplier's certificate telling the truth?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 4,
+  "title": "Supplier scorecard by lot",
+  "section": "A. Raw materials and inbound supply",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Which supplier is quietly the expensive one?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 7,
+  "title": "Water source seasonal shift",
+  "section": "A. Raw materials and inbound supply",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Has my liquor changed under me this season?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 8,
+  "title": "Packaging material lot to defect",
+  "section": "A. Raw materials and inbound supply",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Do these cans or crowns leak more than the last lot?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 175,
+  "title": "FAN versus fermentation performance",
+  "section": "R. Wort composition and materials (Module 1)",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is my wort feeding the yeast properly?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 180,
+  "title": "Water treatment cost and ion balance",
+  "section": "R. Wort composition and materials (Module 1)",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "What does correcting my liquor cost per hL?",
+  "area": "raw",
+  "area_name": "Raw materials and recipe"
+ },
+ {
+  "id": 21,
+  "title": "Brewhouse yield per brew and trend",
+  "section": "C. Brewhouse, milling to wort cooling",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Am I getting the extract I paid for?",
+  "area": "brewhouse",
+  "area_name": "Brewhouse"
+ },
+ {
+  "id": 24,
+  "title": "Mash pH and residual alkalinity",
+  "section": "C. Brewhouse, milling to wort cooling",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is my mash chemistry where I think it is?",
+  "area": "brewhouse",
+  "area_name": "Brewhouse"
+ },
+ {
+  "id": 30,
+  "title": "Hop utilisation, actual versus model",
+  "section": "C. Brewhouse, milling to wort cooling",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "Is my bitterness landing where the model says?",
+  "area": "brewhouse",
+  "area_name": "Brewhouse"
+ },
+ {
+  "id": 31,
+  "title": "Whirlpool and trub loss in money",
+  "section": "C. Brewhouse, milling to wort cooling",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "What do those knock-out losses cost a year?",
+  "area": "brewhouse",
+  "area_name": "Brewhouse"
+ }
+]

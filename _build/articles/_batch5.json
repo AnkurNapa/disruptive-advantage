@@ -1,0 +1,112 @@
+[
+ {
+  "id": 145,
+  "title": "Contract brewing profitability",
+  "section": "N. Finance, costing and duty",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Is the contract work paying for its tank days?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ },
+ {
+  "id": 147,
+  "title": "Cash tied to tank days",
+  "section": "N. Finance, costing and duty",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "What is a tank day worth to me?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ },
+ {
+  "id": 164,
+  "title": "Tribal knowledge capture",
+  "section": "P. People, shifts and knowledge",
+  "when": "NOW",
+  "gate": "HOLD",
+  "conf": "strong",
+  "q": "What leaves when the head brewer leaves?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ },
+ {
+  "id": 144,
+  "title": "Excise and duty reconciliation",
+  "section": "N. Finance, costing and duty",
+  "when": "NEXT",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Is my duty calculation defensible?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ },
+ {
+  "id": 141,
+  "title": "True COGS per hL by brand and pack",
+  "section": "N. Finance, costing and duty",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "moderate",
+  "q": "What does each beer cost, honestly?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ },
+ {
+  "id": 142,
+  "title": "Yield loss in money, tank to trade",
+  "section": "N. Finance, costing and duty",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "moderate",
+  "q": "What are my losses worth in a year?",
+  "area": "business",
+  "area_name": "Finance, duty, ESG and people"
+ },
+ {
+  "id": 172,
+  "title": "Clock and identity reconciliation",
+  "section": "Q. The layer itself, and the network",
+  "when": "NOW",
+  "gate": "PASS",
+  "conf": "strong",
+  "q": "Do these four systems agree on time and batch?",
+  "area": "layer",
+  "area_name": "Across the whole brewery"
+ },
+ {
+  "id": 167,
+  "title": "The Brewery Score",
+  "section": "Q. The layer itself, and the network",
+  "when": "LATER",
+  "gate": "REFUSE",
+  "conf": "strong",
+  "q": "How do I compare with breweries my size?",
+  "area": "layer",
+  "area_name": "Across the whole brewery"
+ },
+ {
+  "id": 170,
+  "title": "Ask the brewery in plain English",
+  "section": "Q. The layer itself, and the network",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "Answer a brewer's question without SQL",
+  "area": "layer",
+  "area_name": "Across the whole brewery"
+ },
+ {
+  "id": 171,
+  "title": "Automatic daily brief",
+  "section": "Q. The layer itself, and the network",
+  "when": "NEXT",
+  "gate": "HOLD",
+  "conf": "moderate",
+  "q": "What happened overnight that I should know?",
+  "area": "layer",
+  "area_name": "Across the whole brewery"
+ }
+]

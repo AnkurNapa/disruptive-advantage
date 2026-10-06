@@ -1,0 +1,115 @@
+{
+ "slug": "tamper-exposure-map",
+ "uc_id": 214,
+ "area": "quality",
+ "title": "Mapping where someone could get at your beer",
+ "standfirst": "HACCP is built for accidents. Tampering is deliberate. The same step by step discipline, applied to every point where product is open to a person, shows where a brewery is exposed.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why accident thinking misses this",
+   "blocks": [
+    {
+     "p": "A HACCP plan asks what could go wrong at each step by chance: a coolant leak, detergent left after CIP, a broken bottle at the filler. It does not ask who might do it on purpose. Tampering can come from an unhappy employee, a contractor, a visitor or an extortionist outside the gate. The motive differs. The question is the same: where can someone reach the product without being seen?"
+    },
+    {
+     "p": "The cost is not just one batch. A credible tampering threat can force a market withdrawal on a brand regardless of whether anything was actually added. Due diligence is the legal defence here: showing you took every reasonable step. That defence needs a written exposure assessment, not a feeling that the site is secure."
+    }
+   ]
+  },
+  {
+   "h2": "Where beer is open to a person",
+   "blocks": [
+    {
+     "p": "Walk the process flow diagram and mark every point where product, or something that touches product, can be reached by hand. In a brewery the list is longer than most people expect."
+    },
+    {
+     "ul": [
+      "Brewhouse additions: hop dosing, salts, finings and any manual adjunct tip.",
+      "Sample cocks on fermenters and bright beer tanks.",
+      "Dosing stations for stabilisers, colour or syrup, especially manual ones.",
+      "Filler bowl access during changeover and the crown or closure hopper.",
+      "Keg filling and returned keg handling.",
+      "Chemical and processing aid stores, which reach product through CIP and dosing.",
+      "Packaging material stores: crowns, cans and ends that will touch beer."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "Scoring each point",
+   "blocks": [
+    {
+     "p": "Use the same risk levels HACCP uses, adapted for intent. For each exposure point, score how easy access is and how bad the outcome would be, on a simple 1 to 3 scale."
+    },
+    {
+     "eq": {
+      "label": "Exposure score per point",
+      "code": "Exposure = access (1 to 3) x consequence (1 to 3)",
+      "note": "Access: 1 locked and logged, 2 restricted area but no log, 3 open to anyone on site. Consequence: 1 single pack, 2 one tank or run, 3 a blend reaching many packs."
+     }
+    },
+    {
+     "p": "Take a hypothetical brewery. The bright beer tank sample cocks sit in a cellar with badge access but no record of who opened a cock: access 2. A bright tank feeds a whole packaging run: consequence 3. Score 6. The crown hopper at the filler is in the open packaging hall, reachable by anyone who walks past: access 3. It feeds every bottle in the run: consequence 3. Score 9. The hop dosing station is locked and the key is signed out: access 1. Anything added there is boiled: consequence 2. Score 2."
+    },
+    {
+     "table": {
+      "head": [
+       "Exposure point",
+       "Access",
+       "Consequence",
+       "Score"
+      ],
+      "rows": [
+       [
+        "Crown hopper at filler",
+        "3",
+        "3",
+        "9"
+       ],
+       [
+        "Bright tank sample cocks",
+        "2",
+        "3",
+        "6"
+       ],
+       [
+        "Hop dosing station",
+        "1",
+        "2",
+        "2"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Anything at 6 or above gets a control: a lid with a seal, a locked cabinet, a camera on the point or a log of every access. Where possible, design the exposure out entirely. A closed crown feed from a locked store removes the open hopper rather than guarding it."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "Assessing only the perimeter. Fences and gates are the easy part. Most exposure is inside, during normal work.",
+      "Forgetting the contractors. Shutdown weeks bring many people onto site with tools and little supervision.",
+      "Seals nobody checks. A tamper seal on a dosing tank is only a control if someone records that it was intact before use.",
+      "No way to tell trade from plant. When a foreign object turns up, you need to show whether it entered during manufacture or in trade. For a pasteurised product, an enzyme test helps. If an insect found in the pack still has active enzymes, it did not go through the pasteuriser."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "A written exposure register covering every point on the process flow, scored and reviewed at least once a year and after any plant modification. Each high score has a named control and evidence that the control is checked. When a threat or a complaint arrives, you can show the regulator exactly what was in place on that day."
+    },
+    {
+     "p": "Beer365 keeps the register against your process flow, links each point to the batches it touched and pulls access and seal check records where your systems hold them. If a question comes, the answer cites the point, the control and the batch."
+    }
+   ]
+  }
+ ]
+}

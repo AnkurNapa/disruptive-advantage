@@ -1,0 +1,123 @@
+{
+ "slug": "taproom-events-worth-repeating",
+ "uc_id": 138,
+ "area": "market",
+ "title": "Which taproom events are worth repeating?",
+ "standfirst": "A packed room is not proof an event paid. Compare each event night with the nights it should be compared with, count the full cost and the answer is often a surprise.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Busy is not the same as worth it",
+   "blocks": [
+    {
+     "p": "Every taproom has a favourite event. The live band night, the tap takeover, the quiz. It feels like the best night of the month because the room is full and the staff are run off their feet. Whether it made any money is a different question. It is rarely asked properly."
+    },
+    {
+     "p": "The common mistake is to compare the event night with an average night. Event nights are usually Fridays and Saturdays, which are the busiest nights anyway. An average weekday makes any weekend event look like a triumph. The real question is how much better the event night was than the same night would have been without the event, after paying for the event."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure",
+   "blocks": [
+    {
+     "p": "You need POS sales by day with cost of goods, footfall or covers. You also need an honest list of what each event cost. Then build a baseline from comparable nights: the same weekday over the previous eight weeks, excluding dry days, festivals, big match nights and other events."
+    },
+    {
+     "eq": {
+      "label": "Contribution lift",
+      "code": "Lift = event night contribution - baseline contribution for the same weekday",
+      "note": "Contribution is revenue minus cost of goods. Use it, not revenue, because events often come with discounts and free pours."
+     }
+    },
+    {
+     "eq": {
+      "label": "Event return",
+      "code": "Net return = lift - event cost; return per rupee = net return / event cost"
+     }
+    },
+    {
+     "p": "Event cost should include everything the event caused: the performer or host, sound hire, promotion, prizes and free beer at cost and the extra staff hours. If it would not have been spent without the event, it belongs in the cost."
+    },
+    {
+     "p": "Footfall matters as much as the till. If covers rise but contribution per cover falls, the event brought people who drank less or drank discounted beer. That can still be worth it for a quiet night. It is rarely worth it on a night that would have been full anyway. Keep covers and contribution per cover next to the lift so you can see which kind of night you bought."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a taproom runs a Thursday quiz and a Saturday live band. It compares each with its own weekday baseline."
+    },
+    {
+     "table": {
+      "head": [
+       "Measure, INR",
+       "Thursday quiz",
+       "Saturday band"
+      ],
+      "rows": [
+       [
+        "Baseline contribution, same weekday",
+        "38,000",
+        "64,000"
+       ],
+       [
+        "Event night contribution",
+        "61,000",
+        "72,000"
+       ],
+       [
+        "Lift",
+        "23,000",
+        "8,000"
+       ],
+       [
+        "Event cost",
+        "10,000",
+        "38,000"
+       ],
+       [
+        "Net return",
+        "13,000",
+        "-30,000"
+       ],
+       [
+        "Return per rupee spent",
+        "1.3",
+        "-0.8"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The quiz cost INR 10,000: a host at 6,000, promotion at 2,500 and prize pints at 1,500 cost of goods. It turned a slow Thursday into a good one. The band night was the busiest night of the month and lost money, because Saturday was already full and the band mostly replaced customers who would have come anyway, while costing INR 30,000 for the band and 8,000 for sound."
+    },
+    {
+     "p": "That does not mean cancel the band. It might bring new drinkers who come back on other nights. But that is a claim to test, not to assume."
+    }
+   ]
+  },
+  {
+   "h2": "Traps and what good looks like",
+   "blocks": [
+    {
+     "ul": [
+      "**Cannibalisation.** If Friday drops every week there is a Thursday quiz, some of the lift moved rather than grew. Check the days either side.",
+      "**Weather and sport.** A rainy evening or a big cricket match on a screen can move a night more than any event. Note them.",
+      "**Revenue not contribution.** A tap takeover that sells guest beer at thin margin can raise revenue and lower contribution.",
+      "**Too few nights.** One event night against one baseline is noise. Judge a format over several runs.",
+      "**Ignoring what follows.** If you capture new customers at events, through a loyalty sign-up or a booking, track how many return in the next month. That is the strongest case for an event that breaks even on the night."
+     ]
+    },
+    {
+     "p": "Good looks like a simple event log: date, format, full cost, lift against a proper baseline and repeat visits where you can track them. After a few months the pattern is clear. Some formats fill quiet nights and pay. Some fill nights that were already full. The calendar should follow the numbers rather than the atmosphere."
+    },
+    {
+     "p": "Beer365 reads POS, footfall and event costs from your taproom systems into one record, so the question of which events to repeat is answered against real baselines with the beers sold on the night."
+    }
+   ]
+  }
+ ]
+}

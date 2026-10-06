@@ -1,0 +1,100 @@
+{
+ "slug": "packaging-shelf-life-away",
+ "uc_id": 61,
+ "area": "packaging",
+ "title": "Are you packaging shelf life away with every fill",
+ "standfirst": "Oxygen picked up at the filler does no visible harm on the day. It turns up months later as cardboard in the glass. Total package oxygen is the number that catches it early.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The fault you cannot taste yet",
+   "blocks": [
+    {
+     "p": "Beer leaves the filler tasting exactly as it should. The damage oxygen does is slow: it feeds the staling reactions that build trans-2-nonenal, the papery, cardboard note with a flavour threshold of about 0.1 parts per billion. By the time a consumer tastes it, the beer has been in trade for months and the packaging run is long forgotten."
+    },
+    {
+     "p": "That delay is why oxygen is a packaging number, not a sensory one. Every microgram that enters at the filler is shelf life spent before the beer leaves the plant. A brewery that ships to hot markets with long routes to shelf has less of it to spend."
+    }
+   ]
+  },
+  {
+   "h2": "What to measure and where",
+   "blocks": [
+    {
+     "p": "Oxygen enters along the way, so measure it along the way:"
+    },
+    {
+     "ul": [
+      "Dissolved oxygen in the bright beer tank, before the beer reaches the filler.",
+      "Dissolved oxygen at the filler bowl or inlet, to see what the transfer added.",
+      "Total package oxygen on filled containers, from a package analyser, by filler head."
+     ]
+    },
+    {
+     "p": "Total package oxygen, TPO, adds the oxygen dissolved in the beer to the oxygen trapped in the headspace, expressed per litre of beer. The headspace part is easy to underestimate because the volume is small. The gas laws say otherwise."
+    },
+    {
+     "eq": {
+      "label": "Headspace oxygen per litre of beer",
+      "code": "HSO (ug/L) = pO2 (Pa) x V_headspace (L) x 32,000 / (8.314 x T (K) x V_beer (L))",
+      "note": "From n = pV / RT, with 32 g/mol for oxygen."
+     }
+    },
+    {
+     "eq": {
+      "label": "Total package oxygen",
+      "code": "TPO (ug/L, = ppb) = DO in beer (ug/L) + HSO (ug/L)"
+     }
+    },
+    {
+     "p": "A widely used target for total in-package oxygen is below 200 ppb. Many brewers aim well under that. Pick your own figure by beer and by market, write it down and measure against it."
+    }
+   ]
+  },
+  {
+   "h2": "A worked bottle",
+   "blocks": [
+    {
+     "p": "Say a 330 mL bottle has 15 mL of headspace at 20 C (293.15 K). The package analyser reads dissolved oxygen of 40 ppb and a headspace oxygen partial pressure of 1.0 mbar, which is 100 Pa."
+    },
+    {
+     "p": "HSO = 100 x 0.015 x 32,000 / (8.314 x 293.15 x 0.330) = 48,000 / 804.3 = 59.7 ppb. TPO = 40 + 59.7 = 99.7 ppb."
+    },
+    {
+     "p": "Now a head with poor pre-evacuation leaves 2.5 mbar of oxygen in the headspace. HSO becomes 120,000 / 804.3 = 149.2 ppb and TPO 189.2 ppb, with the dissolved oxygen unchanged. The beer in the bowl was fine. The container was not. That is why TPO has to be read by head, not only as a line average."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that hide oxygen",
+   "blocks": [
+    {
+     "p": "**Averages across heads.** A line average of 110 ppb can hide two heads at 250 ppb. Rotate samples through every head on a schedule and chart them by head number."
+    },
+    {
+     "p": "**When the sample is read.** Oxygen moves between headspace and beer after filling. Some closures scavenge it over days. Read at a fixed time after filling every time. Otherwise the trend is a sampling artefact."
+    },
+    {
+     "p": "**Units.** ppb, ug/L and mg/L appear side by side on lab sheets. 0.2 mg/L is 200 ppb. One misplaced decimal is a factor of a thousand."
+    },
+    {
+     "p": "**Meter calibration.** Package analysers and inline DO sensors drift. A zero that has wandered by 10 ppb makes a good line look marginal and a marginal line look good. Record the calibration date next to the reading."
+    },
+    {
+     "p": "**Starting high.** If the bright tank is already high, the filler gets blamed for oxygen it did not add. That is why the chain starts at the tank."
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a TPO trend by line and by head, with tank and bowl dissolved oxygen alongside, so a rise can be placed at the tank, the transfer or the filler within a shift. Heads that drift get maintenance before they get complaints. Runs above your limit get flagged while the stock is still in the warehouse."
+    },
+    {
+     "p": "Beer365 reads the package analyser, the inline sensors and the packaging runs into one record, computes TPO by head and run and shows each result with the batch, the tank and the readings it came from."
+    }
+   ]
+  }
+ ]
+}

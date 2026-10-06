@@ -1,0 +1,123 @@
+{
+ "slug": "gmp-walk-scoring",
+ "uc_id": 210,
+ "area": "quality",
+ "title": "Where your plant fails a GMP walk while the total says it passes",
+ "standfirst": "A GMP assessment is a long list of yes or no questions. Scored properly by section and tracked over time, it shows which part of the plant keeps failing and which fixes never stuck.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why GMP is not a paperwork exercise",
+   "blocks": [
+    {
+     "p": "Good manufacturing practice sits underneath HACCP. HACCP finds the critical control points. GMP is everything else that keeps a plant clean enough for those controls to work: drains, doors, lighting, pest control, handwashing, training and the recall procedure. Codex Alimentarius sets the expectation plainly. People have the right to expect the food they eat to be safe and suitable."
+    },
+    {
+     "p": "Beer is forgiving in one way. Its low pH, alcohol and hop compounds mean pathogens cannot grow in it, so the microbial worry is spoilage. It is unforgiving in others. Broken glass, detergent residue and glycol leaking through a plate heat exchanger are all real hazards. The glycol one has already cost a brewer a national recall. A GMP walk is where you find the conditions for those before they find you."
+    }
+   ]
+  },
+  {
+   "h2": "What the assessment covers",
+   "blocks": [
+    {
+     "p": "The classic structure has eight sections, each a list of compliance questions answered yes or no."
+    },
+    {
+     "table": {
+      "head": [
+       "Section",
+       "Examples of what is checked"
+      ],
+      "rows": [
+       [
+        "a. Raw materials QA",
+        "Specifications, receipt checks, storage"
+       ],
+       [
+        "b. Plant design and facilities",
+        "Floors drain, overhead fixtures do not drip, lights protected, chemicals locked away, handwash has hot and cold water"
+       ],
+       [
+        "c. Control of production",
+        "Raw separated from finished, potable water and steam, recall procedure, records kept longer than shelf life"
+       ],
+       [
+        "d. Maintenance and sanitation",
+        "No flaking paint or metal shards, approved sanitisers, pest control"
+       ],
+       [
+        "e. Personal hygiene",
+        "Illness reporting, no jewellery, no eating in production areas"
+       ],
+       [
+        "f. Transport",
+        "Cleanable, separates food from non-food"
+       ],
+       [
+        "g. Product information",
+        "Clear lot code, legible labelling"
+       ],
+       [
+        "h. Training",
+        "Needs analysis, effectiveness checked, programme reviewed"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h2": "How to score it so it means something",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Section compliance",
+      "code": "Section score % = items answered YES / items applicable x 100",
+      "note": "Items marked not applicable leave the denominator. Do not count them as passes."
+     }
+    },
+    {
+     "p": "The overall score is the least useful number on the sheet. A plant can score well overall while one section quietly fails every walk. Score each section, then track two more things over time."
+    },
+    {
+     "ul": [
+      "Repeat findings: a NO on the same item at the same location on consecutive walks. This is the measure of whether corrective actions actually closed.",
+      "Days open: how long each NO stays open before it is verified closed, not just signed off."
+     ]
+    },
+    {
+     "p": "Take a hypothetical walk. Section b has 26 items, 2 not applicable, so 24 apply. 18 are YES, giving 18 / 24 = 75 %. Section e has 10 items, all applicable, 9 YES, so 90 %. Section d has 12 applicable items, 10 YES, so 83.3 %. Across these three sections the plant scores (18 + 9 + 10) / (24 + 10 + 12) = 37 / 46 = 80.4 %. That number sounds fine."
+    },
+    {
+     "p": "Now look at the six NOs in section b. Four of them are the same items as the last walk: a drain in the packaging hall that pools, two unprotected lights over the filler and a ceiling area above the bright beer tanks with condensate. Four of six are repeats. The overall score said 80 %. The repeat rate in plant design says the fixes from last quarter did not happen."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that flatter the score",
+   "blocks": [
+    {
+     "ul": [
+      "Walking the same route every time. Auditors follow the corridor. The space behind the keg washer only gets seen when someone decides it should.",
+      "Signing off a NO when the work order is raised, not when the fix is verified.",
+      "Changing the checklist between walks. Adding or removing items moves the score without anything on the floor changing. Keep version history.",
+      "Counting not applicable as YES. It inflates every section with nothing behind it.",
+      "Scoring by memory at the desk afterwards. Photos and the exact location matter for the repeat count."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Each walk produces section scores, a list of NOs with a location and photo. Each NO gets an owner and a due date. The quality head sees, across a year, which sections fail repeatedly and in which part of the plant. A NO only closes when someone verifies it on the floor. When an external auditor arrives, the history is already there."
+    },
+    {
+     "p": "Beer365 stores the checklist, every walk and every finding against its location, reads maintenance work orders from your systems and shows which items repeat and which closures never held. It does the counting so the walk can be about looking."
+    }
+   ]
+  }
+ ]
+}

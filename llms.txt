@@ -1,0 +1,91 @@
+# Beer365
+
+> Beer365 is beer intelligence for the whole beer business, built by Disruptive Advantage on Microsoft Azure and Microsoft Fabric inside the brewery's own tenant. It joins brewhouse, cellar, packaging, quality, supply chain, sales and finance data into one batch record, with dashboards, a digital twin and a generative AI copilot whose answers cite the batch and tag they came from.
+
+## Key pages
+- [Home](https://ankurnapa.github.io/disruptive-advantage/): what Beer365 does, how savings are counted and proved
+- [Every question Beer365 answers](https://ankurnapa.github.io/disruptive-advantage/use-cases.html): 221 brewery use cases by area
+- [Calculator](https://ankurnapa.github.io/disruptive-advantage/roi.html): brewhouse savings from your own figures
+- [Pricing](https://ankurnapa.github.io/disruptive-advantage/pricing.html)
+- [Contact](https://ankurnapa.github.io/disruptive-advantage/contact.html)
+
+## Guides
+- [Where AI in brewing earns its keep across the whole brewery](https://ankurnapa.github.io/disruptive-advantage/article-ai-in-brewing.html): AI in brewing, department by department: where machine learning and GenAI pay back in a brewery, the data each needs and the traps that make it lie.
+- [The beer data your brewery already has and does not use](https://ankurnapa.github.io/disruptive-advantage/article-beer-data-you-already-have.html): The beer data a brewery already has: brew sheets, lab, historian, ERP, excise and sales records, what each one answers and how to join them by batch.
+- [How to approach brewery data and AI on AWS if you already run there](https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-on-aws.html): Brewery data and AI on AWS: S3, AWS IoT SiteWise and Amazon Bedrock for a brewery, plus how Microsoft Fabric reads the same S3 data without copying it.
+- [How to approach brewery data and AI on Google Cloud](https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-on-google-cloud.html): Brewery data and AI on Google Cloud (GCP): BigQuery, BigQuery ML and grounded GenAI for breweries, plus how Microsoft Fabric reads it without a migration.
+- [Building a brewery data platform on Microsoft Azure and Microsoft Fabric](https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-platform-azure-fabric.html): How to build a brewery data platform on Microsoft Azure and Microsoft Fabric: ERP, historian, lab and sales data in OneLake, one batch record, secured.
+- [Brewery data strategy, a staged plan for where to start](https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-strategy.html): A brewery data strategy in stages: which question to start with, how to build one batch record and when dashboards, ML and GenAI earn their place.
+- [What a brewery digital twin is and what it is not](https://ankurnapa.github.io/disruptive-advantage/article-brewery-digital-twin.html): What a brewery digital twin is and is not: a live model of tanks, lines and batches fed by plant data, not a 3D render with no data behind it.
+- [Generative AI for breweries, grounded in batch records with citations](https://ankurnapa.github.io/disruptive-advantage/article-generative-ai-for-breweries.html): Generative AI for breweries: how a GenAI copilot grounded in batch records answers with citations, plus where it should never be used on the brewery floor.
+- [The Power BI dashboards a brewery actually needs, role by role](https://ankurnapa.github.io/disruptive-advantage/article-power-bi-for-breweries.html): Power BI for breweries by role: the dashboards head brewers, packaging, quality, supply chain, sales and finance use, with the measures behind them.
+- [Predictive maintenance in a brewery, from compressors to fillers](https://ankurnapa.github.io/disruptive-advantage/article-predictive-maintenance-brewery.html): Predictive maintenance for breweries: where machine learning helps on pumps, ammonia compressors and fillers, the data it needs and the traps to avoid.
+
+## White papers and business cases
+- [Brewery business cases: what one batch record is worth at four sizes](https://ankurnapa.github.io/disruptive-advantage/whitepaper-brewery-business-cases.html): Modelled brewery business cases at four sizes: beer loss, extract, energy, dumped batches and reporting savings, with assumptions and a conservative case. PDF: https://ankurnapa.github.io/disruptive-advantage/downloads/brewery-business-cases.pdf
+- [How beer AI vendors prove value, and how to test the claim](https://ankurnapa.github.io/disruptive-advantage/whitepaper-how-beer-ai-vendors-prove-value.html): How 116 beer AI companies justify savings claims: who publishes prices, methods and guarantees, plus ten questions to ask any vendor before you sign. PDF: https://ankurnapa.github.io/disruptive-advantage/downloads/how-beer-ai-vendors-prove-value.pdf
+- [The state of AI and data in beer, 2026](https://ankurnapa.github.io/disruptive-advantage/whitepaper-state-of-beer-ai-2026.html): 276 beer companies in an open dataset, counted by AI maturity, theme and country: where AI is shipping, where it is hype and where the gaps are. PDF: https://ankurnapa.github.io/disruptive-advantage/downloads/state-of-beer-ai-2026.pdf
+- [Beer365 readiness workbook (Excel)](https://ankurnapa.github.io/disruptive-advantage/downloads/Beer365-Readiness-Workbook.xlsx)
+- [Resources](https://ankurnapa.github.io/disruptive-advantage/resources.html)
+
+## Articles
+- [Is your malt supplier's certificate telling the truth?](https://ankurnapa.github.io/disruptive-advantage/article-coa-versus-reality.html)
+- [Are you getting the extract you paid for, brew by brew?](https://ankurnapa.github.io/disruptive-advantage/article-brewhouse-yield-per-brew.html)
+- [If one brew is bad, how much beer is affected](https://ankurnapa.github.io/disruptive-advantage/article-blend-exposure.html)
+- [Can you resolve any date code to a tank in minutes](https://ankurnapa.github.io/disruptive-advantage/article-date-code-to-tank.html)
+- [Allergen declarations start in the recipe, not the artwork](https://ankurnapa.github.io/disruptive-advantage/article-allergen-declaration-control.html)
+- [How to tell whether your ammonia plant is getting worse](https://ankurnapa.github.io/disruptive-advantage/article-ammonia-plant-cop-drift.html)
+- [What consumer complaints are telling marketing about your beer](https://ankurnapa.github.io/disruptive-advantage/article-complaint-text-for-marketing.html)
+- [Is the contract work paying for its tank days?](https://ankurnapa.github.io/disruptive-advantage/article-contract-brewing-tank-days.html)
+- [Asking the brewery a question in plain English, without SQL](https://ankurnapa.github.io/disruptive-advantage/article-ask-the-brewery-in-plain-english.html)
+- [Is your wort feeding the yeast properly?](https://ankurnapa.github.io/disruptive-advantage/article-fan-versus-fermentation.html)
+- [Is your bitterness landing where the hop model says it will?](https://ankurnapa.github.io/disruptive-advantage/article-hop-utilisation-actual-versus-model.html)
+- [Choosing the blend that hits spec with the most room to spare](https://ankurnapa.github.io/disruptive-advantage/article-blend-lowest-risk.html)
+- [How many free millilitres is your filler giving away](https://ankurnapa.github.io/disruptive-advantage/article-fill-level-giveaway.html)
+- [Turning a consumer's 'it tastes funny' into a compound you can test for](https://ankurnapa.github.io/disruptive-advantage/article-complaint-to-compound.html)
+- [Are your spent grain, trub and yeast worth more than you are paid for them?](https://ankurnapa.github.io/disruptive-advantage/article-by-product-value.html)
+- [Forecasting beer demand by SKU and channel, with the lead time in mind](https://ankurnapa.github.io/disruptive-advantage/article-demand-forecast-by-sku.html)
+- [Is your duty calculation defensible line by line?](https://ankurnapa.github.io/disruptive-advantage/article-is-your-duty-defensible.html)
+- [How do you compare with breweries your size, honestly?](https://ankurnapa.github.io/disruptive-advantage/article-comparing-with-breweries-your-size.html)
+- [What does this beer cost to brew today, not last quarter?](https://ankurnapa.github.io/disruptive-advantage/article-live-cost-to-brew.html)
+- [What do your whirlpool and trub losses cost a year?](https://ankurnapa.github.io/disruptive-advantage/article-knockout-losses-in-money.html)
+- [How much beer dies in cones, heels and transfers](https://ankurnapa.github.io/disruptive-advantage/article-cellar-beer-loss.html)
+- [Is the label on the line the one legal signed off for that market?](https://ankurnapa.github.io/disruptive-advantage/article-label-artwork-compliance.html)
+- [Where your plant fails a GMP walk while the total says it passes](https://ankurnapa.github.io/disruptive-advantage/article-gmp-walk-scoring.html)
+- [Which CIP set or hose is losing the water? Map it meter by meter](https://ankurnapa.github.io/disruptive-advantage/article-finding-the-water-leak.html)
+- [Are you shipping the oldest beer first, or just the nearest pallet?](https://ankurnapa.github.io/disruptive-advantage/article-fefo-oldest-beer-first.html)
+- [What your losses from tank to trade are worth in a year](https://ankurnapa.github.io/disruptive-advantage/article-losses-worth-in-a-year.html)
+- [Do your four systems agree on what time it was and which batch?](https://ankurnapa.github.io/disruptive-advantage/article-four-clocks-one-batch.html)
+- [Do these crowns or can ends leak more than the last lot?](https://ankurnapa.github.io/disruptive-advantage/article-packaging-lot-to-defect.html)
+- [Is your mash chemistry where you think it is?](https://ankurnapa.github.io/disruptive-advantage/article-mash-ph-residual-alkalinity.html)
+- [Are the cellar temperature ramps actually being followed](https://ankurnapa.github.io/disruptive-advantage/article-cellar-ramp-adherence.html)
+- [Are you packaging shelf life away with every fill](https://ankurnapa.github.io/disruptive-advantage/article-packaging-shelf-life-away.html)
+- [Where does your plant get dirty first? Your micro plates already know](https://ankurnapa.github.io/disruptive-advantage/article-micro-trend-by-sample-point.html)
+- [Which brewery loads can you actually move off the peak tariff?](https://ankurnapa.github.io/disruptive-advantage/article-moving-load-off-peak.html)
+- [How long is a keg out of circulation and what does it cost you?](https://ankurnapa.github.io/disruptive-advantage/article-keg-return-cycle.html)
+- [What each beer really costs per hectolitre, by brand and pack](https://ankurnapa.github.io/disruptive-advantage/article-true-cogs-per-hl.html)
+- [What happened overnight that you should know about by seven](https://ankurnapa.github.io/disruptive-advantage/article-what-happened-overnight.html)
+- [Which supplier is quietly the expensive one?](https://ankurnapa.github.io/disruptive-advantage/article-supplier-scorecard-by-lot.html)
+- [Where the extract goes between the mill and the fermenter](https://ankurnapa.github.io/disruptive-advantage/article-where-the-extract-goes.html)
+- [Did anyone cut the diacetyl rest short to free a tank](https://ankurnapa.github.io/disruptive-advantage/article-diacetyl-rest-cut-short.html)
+- [A root cause report should say what did not cause it](https://ankurnapa.github.io/disruptive-advantage/article-root-cause-with-refutation.html)
+- [Is your nitrogen use matched to what the beer actually needs?](https://ankurnapa.github.io/disruptive-advantage/article-nitrogen-use-versus-need.html)
+- [Counting the cost to serve shows which big customer is a loss leader](https://ankurnapa.github.io/disruptive-advantage/article-key-account-cost-to-serve.html)
+- [Are you on track for your water ratio target this year?](https://ankurnapa.github.io/disruptive-advantage/article-water-ratio-on-track.html)
+- [Has your brewing liquor changed under you this season?](https://ankurnapa.github.io/disruptive-advantage/article-water-seasonal-shift.html)
+- [Is this tank following the plan written for it](https://ankurnapa.github.io/disruptive-advantage/article-fermentation-versus-its-plan.html)
+- [Is your sensory panel still calibrated, or just still turning up?](https://ankurnapa.github.io/disruptive-advantage/article-sensory-panel-drift.html)
+- [Which instrument is lying to you and since when?](https://ankurnapa.github.io/disruptive-advantage/article-which-instrument-is-lying.html)
+- [Spotting the outlets that are about to stop ordering](https://ankurnapa.github.io/disruptive-advantage/article-outlets-about-to-stop-ordering.html)
+- [A tank day is worth more than the interest on the beer in it](https://ankurnapa.github.io/disruptive-advantage/article-what-a-tank-day-is-worth.html)
+- [What does correcting your brewing liquor cost per hectolitre?](https://ankurnapa.github.io/disruptive-advantage/article-water-treatment-cost-per-hl.html)
+- [Mapping where someone could get at your beer](https://ankurnapa.github.io/disruptive-advantage/article-tamper-exposure-map.html)
+- [Is your pack price ladder designed or accidental?](https://ankurnapa.github.io/disruptive-advantage/article-price-pack-ladder.html)
+- [What leaves the brewery when the head brewer leaves](https://ankurnapa.github.io/disruptive-advantage/article-when-the-head-brewer-leaves.html)
+- [What comes back from trade and what it is trying to tell you](https://ankurnapa.github.io/disruptive-advantage/article-returns-and-breakage.html)
+- [Contribution per hectolitre shows which sales channel actually pays](https://ankurnapa.github.io/disruptive-advantage/article-revenue-per-hectolitre-by-channel.html)
+- [Plan when each brand should shout from its own measured lift](https://ankurnapa.github.io/disruptive-advantage/article-seasonality-and-the-brand-calendar.html)
+- [Stock cover against lead time shows where you will run out next](https://ankurnapa.github.io/disruptive-advantage/article-stock-cover-versus-forecast.html)
+- [Which taproom events are worth repeating?](https://ankurnapa.github.io/disruptive-advantage/article-taproom-events-worth-repeating.html)
+- [What the taproom is really selling, in litres, pours and keg yield](https://ankurnapa.github.io/disruptive-advantage/article-what-the-taproom-really-sells.html)
+- [Rate of sale by region shows where a brand actually works](https://ankurnapa.github.io/disruptive-advantage/article-where-a-brand-works.html)

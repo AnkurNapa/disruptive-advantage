@@ -1,0 +1,122 @@
+{
+ "slug": "revenue-per-hectolitre-by-channel",
+ "uc_id": 120,
+ "area": "market",
+ "title": "Contribution per hectolitre shows which sales channel actually pays",
+ "standfirst": "Revenue by channel flatters the channel with the biggest invoices. Put every channel on a per hectolitre basis, take out what it costs to serve. The ranking often changes.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why the usual report misleads",
+   "blocks": [
+    {
+     "p": "The monthly sales pack shows revenue by channel. The off-trade line is the biggest, so it gets the attention. The taproom line is small, so it gets treated as a marketing expense. Neither conclusion survives a per hectolitre view."
+    },
+    {
+     "p": "A brewery sells the same liquid into very different routes. A pint in the taproom, a 30 litre keg to a bar, a case of cans to a distributor. Each has its own price, its own packaging and its own cost to get the beer to the person drinking it. Comparing them on total revenue is comparing a 500 ml pour with a pallet."
+    }
+   ]
+  },
+  {
+   "h2": "The calculation",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Net revenue per hectolitre",
+      "code": "Net revenue/hL = (gross invoice - duty - discounts - rebates - returns) / hL sold"
+     }
+    },
+    {
+     "eq": {
+      "label": "Contribution per hectolitre",
+      "code": "Contribution/hL = net revenue/hL - liquid cost/hL - channel cost/hL",
+      "note": "Channel cost covers packaging, freight, keg fleet, serving labour and pour loss, whatever that route alone consumes."
+     }
+    },
+    {
+     "p": "Volume has to be in hectolitres for every channel. A case of 24 x 330 ml is 7.92 litres, or 0.0792 hL. A 30 litre keg is 0.3 hL. A 500 ml taproom pour is 0.005 hL. Get the conversion wrong once and the whole table is fiction."
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Take a hypothetical brewery with three channels over a quarter. Liquid cost is the same everywhere, say INR 6,000 per hL. Net revenue and channel costs differ."
+    },
+    {
+     "table": {
+      "head": [
+       "Channel",
+       "Volume (hL)",
+       "Net revenue/hL (INR)",
+       "Channel cost/hL (INR)",
+       "Contribution/hL (INR)",
+       "Contribution (INR)"
+      ],
+      "rows": [
+       [
+        "Taproom",
+        "300",
+        "52,000",
+        "18,000",
+        "28,000",
+        "8,400,000"
+       ],
+       [
+        "Kegs to bars",
+        "2,500",
+        "24,000",
+        "4,000",
+        "14,000",
+        "35,000,000"
+       ],
+       [
+        "Cans to distributors",
+        "4,000",
+        "30,000",
+        "12,000",
+        "12,000",
+        "48,000,000"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Cans bring in the most revenue and the most total contribution. Per hectolitre, though, the taproom earns twice what kegs do and more than twice what cans do. Kegs earn more per hectolitre than cans despite the lower price, because the keg goes back into the fleet and the can does not."
+    },
+    {
+     "p": "That changes the questions. Not which channel to grow, but which hectolitre to sell next. If a tank of beer could go either to cans or to bars, each hectolitre steered to kegs is worth INR 2,000 more. If the taproom is turning drinkers away on Saturdays, the constraint is seating, not beer."
+    },
+    {
+     "p": "The shift does not need to be large to matter. Moving 2 percent of a 10,000 hL year, 200 hL, from cans to kegs at INR 2,000 more per hL is INR 400,000 of contribution with no extra brewing at all. Whether the bars can take it is a sales question. Whether it is worth asking is now a number."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Duty treated differently by channel.** If one channel's revenue is booked gross of duty and another net, the comparison is broken before it starts. Strip duty out everywhere.",
+      "**Rebates booked late.** Volume rebates and promotional support often land in a later month or at year end. Accrue them to the month of the sale or the off-trade looks better than it is.",
+      "**Keg deposits as revenue.** A deposit is a liability, not a sale. Leaving it in revenue inflates the keg channel until the kegs come back.",
+      "**Comps and staff beer in the taproom.** Free pours are volume with no revenue. Count them, or taproom revenue per hectolitre is overstated by the amount nobody rang up.",
+      "**Shared costs forced onto a channel.** Brewhouse overheads do not belong in channel cost. Use only what the route itself consumes, or the cheapest channel to allocate to always looks worst."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is one table, refreshed monthly: volume in hL, net revenue per hL and contribution per hL for each channel and each major SKU within it. Finance agrees the definitions once. The definitions are the hard part. The arithmetic is a spreadsheet."
+    },
+    {
+     "p": "Beer365 reads the invoices and the cost lines from your own systems into one record, so contribution per hectolitre by channel comes with the invoices and batches behind each figure."
+    }
+   ]
+  }
+ ]
+}

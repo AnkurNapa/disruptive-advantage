@@ -1,0 +1,111 @@
+{
+ "slug": "nitrogen-use-versus-need",
+ "uc_id": 190,
+ "area": "plant",
+ "title": "Is your nitrogen use matched to what the beer actually needs?",
+ "standfirst": "Nitrogen and mixed gas are bought by the kilogram and used by habit. A little gas law turns the purchase invoice into a number you can check against every keg filled.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Why it matters",
+   "blocks": [
+    {
+     "p": "Nitrogen does real work in a brewery. It blankets, purges, pushes beer and gives nitrogenated stouts their tight foam. It is also easy to waste, because nobody sees it. Liquid nitrogen arrives at minus 196 °C into a vacuum-insulated tank and boils off slowly even when nothing draws. A membrane generator runs whether or not the cellar needs gas. Blends get chosen once and never revisited."
+    },
+    {
+     "p": "The question is not whether nitrogen use is high. It is whether each use matches the need of the beer it serves."
+    },
+    {
+     "p": "In the beer itself the needs are small and specific. Nitrogen is far less soluble than CO₂, so a nitrogenated beer takes its gas through an injection point before the chiller pump, where turbulence and pressure help it dissolve. Everything else, the blanketing, the purging, the counter-pressure on the filler, is about keeping oxygen out and CO₂ steady. Those uses are where the waste hides."
+    }
+   ]
+  },
+  {
+   "h2": "The mixes and why they differ",
+   "blocks": [
+    {
+     "p": "Mixed gas lets you hold a higher counter-pressure, about 3.5 bar against about 2 bar with pure CO₂, without the beer picking up extra CO₂. The ratio depends on the job. The IBD reference ratios, CO₂ to N₂, are:"
+    },
+    {
+     "table": {
+      "head": [
+       "Application",
+       "CO₂ : N₂"
+      ],
+      "rows": [
+       [
+        "Bright beer tanks",
+        "50 : 50"
+       ],
+       [
+        "Kegging non-nitrogenated beer",
+        "60 : 40"
+       ],
+       [
+        "Kegging nitrogenated beer",
+        "10 : 90"
+       ],
+       [
+        "Keg dispense, non-nitrogenated",
+        "60 : 40"
+       ],
+       [
+        "Keg dispense, nitrogenated",
+        "30 : 70"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "A brewery that runs one blend everywhere, or uses the nitro kegging mix for lagers, is spending nitrogen where it adds nothing. Purity matters too. A membrane unit gives 99.5 percent nitrogen, which is adequate for dispense; pushing it to 99.95 percent cuts output to about a third."
+    }
+   ]
+  },
+  {
+   "h2": "Turn purchases into gas per keg",
+   "blocks": [
+    {
+     "p": "Work out what each keg should use, then compare with what you bought. Boyle and Charles do most of it."
+    },
+    {
+     "eq": {
+      "label": "Gas to pressurise one keg, at standard conditions",
+      "code": "V at STP (L) = keg volume (L) x (gauge pressure + 1.013) / 1.013 x 273.15 / gas temp (K)",
+      "note": "Then N₂ volume = V at STP x N₂ fraction. N₂ mass (g) = N₂ volume / 22.414 x 28."
+     }
+    },
+    {
+     "p": "Say a 50 L keg is filled against 3.5 bar gauge of 60 : 40 mixed gas at 2 °C. Absolute pressure is 4.513 bar. Gas at STP is 50 x 4.513 / 1.013 x 273.15 / 275.15 = 221 L. The nitrogen share is 40 percent, 88.4 L, which is 88.4 / 22.414 x 28 = about 110 g of nitrogen per keg for counter-pressure alone, assuming that gas is vented as the beer goes in."
+    },
+    {
+     "p": "Fill 4,000 kegs in a month and counter-pressure accounts for about 440 kg. Add the purge steps, tank blanketing and dispense, each worked out the same way. If the invoice says 1,600 kg, you have a gap worth chasing."
+    }
+   ]
+  },
+  {
+   "h2": "The traps",
+   "blocks": [
+    {
+     "ul": [
+      "**Boil-off is real.** A liquid tank loses product to ambient heat every day. Read the tank level on a quiet weekend to measure it, then subtract it before blaming the cellar.",
+      "**Leaks on the mixed gas panel.** Fittings on blenders and regulators leak slowly. A pressure-decay test with the panel isolated overnight is cheap and tells you plenty.",
+      "**Purges run on time, not on result.** A purge set to two minutes when an oxygen meter says forty seconds is enough is a purge set by habit.",
+      "**Units.** Suppliers invoice in kg, generators report m³/h, cellar staff talk in bar. Convert everything to kg or to normal m³ before comparing.",
+      "**Safety.** Nitrogen is an asphyxiant with no smell. Any work that changes how it is used or vented needs the confined space and ventilation rules checked first."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a monthly table: nitrogen bought, boil-off, theoretical use by application from kegs filled and tanks blanketed, then the unexplained remainder. Each application shows the blend it uses against the blend it needs. When the remainder grows, the cellar team gets a list of places to look rather than a lecture about gas."
+    },
+    {
+     "p": "Beer365 joins the gas invoices, generator logs and packaging counts in one record, so the nitrogen per keg comes with the fills and the dates behind it."
+    }
+   ]
+  }
+ ]
+}

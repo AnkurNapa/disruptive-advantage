@@ -1,0 +1,487 @@
+{
+ "slug": "state-of-beer-ai-2026",
+ "title": "The state of AI and data in beer, 2026",
+ "subtitle": "We counted 276 companies applying AI and data to beer, by maturity, theme, country and stage of the value chain, to show where the work is and where it is not.",
+ "description": "276 beer companies in an open dataset, counted by AI maturity, theme and country: where AI is shipping, where it is hype and where the gaps are.",
+ "keywords": [
+  "beer AI",
+  "brewery AI 2026",
+  "brewing data",
+  "generative AI brewing",
+  "Beverage AI Radar",
+  "brewery digital transformation"
+ ],
+ "date": "2026-10-06",
+ "summary": [
+  "Of 276 beer companies in the Beverage AI Radar, 124 (45 percent) make an AI claim at shipping, pilot or research stage; 134 (49 percent) make none.",
+  "Process and operations is the most crowded theme with 82 companies, yet 46 of them make no AI claim.",
+  "Sensory and recipe has the highest AI share: 18 of 25 companies, with 7 still at pilot.",
+  "Generative AI shows up in 20 of the 124 AI-claiming companies, mostly in recipes, brand copy and assistants over a brewery's own data.",
+  "The brewhouse and finance are the thinnest stages of the value chain, with 7 AI-claiming companies each."
+ ],
+ "sections": [
+  {
+   "h2": "Why count at all",
+   "blocks": [
+    {
+     "p": "Ask a brewery board what AI is doing in beer and you will hear about the AI-brewed IPA. Ask a head brewer and you will hear about the fermentation sensor that stopped reporting in week two. Both are true. Neither tells you where the real work is."
+    },
+    {
+     "p": "So we counted. The Beverage AI Radar is an open dataset of companies applying AI and data to beer, whisky and wine, published at https://ankurnapa.github.io/beverage-ai-radar/. This paper uses the snapshot generated on 1 October 2026. It holds 1,011 company rows, after leaving out individual people. Of those, 276 work in beer, about 27 percent."
+    },
+    {
+     "p": "A count is not a verdict. It does tell a plant director where the choice is wide, where it is thin and where the claims run ahead of the evidence. That is enough to decide which conversations are worth having first."
+    },
+    {
+     "p": "Each row carries an AI maturity rating, a theme, a country, a short use case and a source. The ratings are judgements from public evidence: a press release, a product page, a case study. A company that says it is \"AI-powered\" with nothing behind it is rated none. Disclosure: the radar is published by the same author as this paper. Disruptive Advantage is one of its 276 beer rows."
+    }
+   ]
+  },
+  {
+   "h2": "How mature is beer AI",
+   "blocks": [
+    {
+     "stat": {
+      "value": "124 of 276",
+      "label": "beer companies make an AI claim at shipping, pilot or research stage"
+     }
+    },
+    {
+     "table": {
+      "head": [
+       "AI maturity",
+       "Beer companies",
+       "Share"
+      ],
+      "rows": [
+       [
+        "Shipping",
+        "99",
+        "36%"
+       ],
+       [
+        "Pilot",
+        "19",
+        "7%"
+       ],
+       [
+        "Research",
+        "6",
+        "2%"
+       ],
+       [
+        "None (no substantiated AI claim)",
+        "134",
+        "49%"
+       ],
+       [
+        "Not yet rated",
+        "18",
+        "7%"
+       ],
+       [
+        "Total",
+        "276",
+        "100%"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The headline is not that beer is behind. It is that half the companies working on beer data make no AI claim at all. That is often fine. Many are ERP, MES, telemetry or point of sale systems. They collect the data that any model would need. Without them there is nothing to train on."
+    },
+    {
+     "p": "The other half is mostly real. 99 companies have something shipping, against 19 at pilot and 6 in research. The pilots cluster in a few places. Seven of the 19 sit in sensory and recipe, five in sales, demand and pricing and three in supply chain. Process and operations, the biggest theme, has just two. That pattern makes sense from the floor. A recipe model can be trialled on one batch with little at stake. A model that changes how a filler runs or when a tank is crashed has to earn the trust of the shift first, so those tools tend to arrive either finished or not at all."
+    },
+    {
+     "p": "Funding tells a quieter story. Only 38 of the 276 beer rows record a funding stage and only 11 a total raised. Most of the companies here appear to be established suppliers, software houses or brewers themselves, not venture-backed AI start-ups. A brewery buying AI in 2026 is more likely to buy it from the company that sold it the filler or the ERP than from a new name."
+    }
+   ]
+  },
+  {
+   "h2": "Crowded themes and empty ones",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Theme",
+       "Companies",
+       "With an AI claim",
+       "AI share"
+      ],
+      "rows": [
+       [
+        "Process & operations",
+        "82",
+        "33",
+        "40%"
+       ],
+       [
+        "Other",
+        "34",
+        "9",
+        "26%"
+       ],
+       [
+        "Sensory & recipe",
+        "25",
+        "18",
+        "72%"
+       ],
+       [
+        "Quality & inspection",
+        "24",
+        "12",
+        "50%"
+       ],
+       [
+        "Supply chain",
+        "24",
+        "8",
+        "33%"
+       ],
+       [
+        "Sales, demand & pricing",
+        "23",
+        "15",
+        "65%"
+       ],
+       [
+        "Agriculture & crop",
+        "23",
+        "12",
+        "52%"
+       ],
+       [
+        "Engineering & equipment",
+        "15",
+        "2",
+        "13%"
+       ],
+       [
+        "ESG & sustainability",
+        "9",
+        "5",
+        "56%"
+       ],
+       [
+        "Consumer & personalisation",
+        "7",
+        "4",
+        "57%"
+       ],
+       [
+        "GenAI & marketing",
+        "4",
+        "3",
+        "75%"
+       ],
+       [
+        "Consulting",
+        "3",
+        "2",
+        "67%"
+       ],
+       [
+        "Compliance & licensing",
+        "2",
+        "1",
+        "50%"
+       ],
+       [
+        "Market data & valuation",
+        "1",
+        "0",
+        "0%"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "**Process and operations is crowded, but mostly with data, not AI.** It holds 82 companies, nearly a third of the beer set. 46 of them make no AI claim. This is where fermentation monitoring, OEE, maintenance and brewery MES live. A plant director shopping here will find plenty of choice and should expect most of it to be good plumbing rather than prediction."
+    },
+    {
+     "p": "**Sensory and recipe is the most AI-heavy theme but the least proven.** 18 of 25 companies claim AI. Seven of those are still pilots. Flavour prediction and recipe design make good headlines. Few of them touch the cost of a hectolitre."
+    },
+    {
+     "p": "**Engineering and equipment is the quietest.** Only 2 of 15 equipment makers claim AI: GEA with brewhouse and fermentation performance analytics; Praj Industries with AI-enabled fermentation and plant engineering. Most of the kit in a brewery is still sold on stainless steel, not software."
+    },
+    {
+     "p": "**Compliance, market data and finance are nearly empty.** Two compliance rows, one market data row. For an industry that pays excise on every hectolitre it sells, that is a striking hole."
+    }
+   ]
+  },
+  {
+   "h2": "Who is doing what, by theme",
+   "blocks": [
+    {
+     "p": "A few representative companies per theme, all with an AI claim in the dataset. Inclusion is not an endorsement. It is where a brewery could start reading."
+    },
+    {
+     "table": {
+      "head": [
+       "Theme",
+       "Representative companies",
+       "Typical use case"
+      ],
+      "rows": [
+       [
+        "Process & operations",
+        "PLAATO, Zymoscope, Evocon, TeepTrak, SymphonyAI, Seeq",
+        "Fermentation monitoring, OEE and micro-stops, line drift detection, golden batch profiling"
+       ],
+       [
+        "Sensory & recipe",
+        "NEC, Deep Liquid, Leuven Institute for Beer Research, Brewfather",
+        "Recipe and flavour prediction, generative recipe and brand copy, brewing assistants"
+       ],
+       [
+        "Quality & inspection",
+        "HEUFT, KHS, Pressco Technology, INTRAVIS",
+        "Deep learning vision inspection of bottles, cans and closures on filling lines"
+       ],
+       [
+        "Agriculture & crop",
+        "Cgrain, ZoomAgri, Inarix, Tenso AI",
+        "Malting barley grading and purity, hop yield and irrigation forecasting"
+       ],
+       [
+        "Sales, demand & pricing",
+        "Heineken, United Breweries, SAPTOOLS, GoTab",
+        "Demand forecasting at SKU and retailer level, sales analytics"
+       ],
+       [
+        "Supply chain",
+        "Yakima Chief Hops, RAMP RFID, Routific, Samsara",
+        "Hop inventory modelling, keg tracking, delivery routing, fleet telematics"
+       ],
+       [
+        "ESG & sustainability",
+        "Waterplan, Ecolibrium, Seedling, Waterleau",
+        "Water risk, refrigeration energy, carbon footprints, wastewater digital twins"
+       ],
+       [
+        "Consumer & personalisation",
+        "Next Glass, Brewlytics.ai, Stravito, BinaryBeer",
+        "Consumption analytics, recommendations, research assistants, smart kegs"
+       ],
+       [
+        "Other",
+        "ORTEC, Wise Systems, Shipsy, VLB Berlin",
+        "Route and load optimisation, distribution, research"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h2": "Where the companies are",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Country",
+       "Beer companies",
+       "With an AI claim"
+      ],
+      "rows": [
+       [
+        "United States",
+        "61",
+        "28"
+       ],
+       [
+        "Germany",
+        "45",
+        "21"
+       ],
+       [
+        "Country not recorded",
+        "41",
+        "15"
+       ],
+       [
+        "India",
+        "15",
+        "8"
+       ],
+       [
+        "United Kingdom",
+        "12",
+        "5"
+       ],
+       [
+        "Japan",
+        "10",
+        "7"
+       ],
+       [
+        "Australia",
+        "9",
+        "6"
+       ],
+       [
+        "Canada",
+        "9",
+        "2"
+       ],
+       [
+        "Czech Republic",
+        "9",
+        "1"
+       ],
+       [
+        "Belgium",
+        "7",
+        "4"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The United States and Germany together hold 106 of the 276 rows and 49 of the 124 AI claims. That split mirrors the industry. The US brings craft brewery software and taproom tools. Germany brings the brewhouse, filling and inspection makers."
+    },
+    {
+     "p": "Japan stands out for its ratio: 7 of 10 Japanese rows claim AI, much of it recipe and planning work by Kirin, Sapporo, Asahi, NEC and Mitsubishi Research Institute. India has 15 rows and 8 AI claims, split between brewers building their own data platforms, such as United Breweries and Bira 91. The rest are suppliers such as Praj Industries, Ecolibrium and Shipsy. The 41 rows with no country recorded are a known gap in the dataset."
+    }
+   ]
+  },
+  {
+   "h2": "Where generative AI shows up",
+   "blocks": [
+    {
+     "stat": {
+      "value": "20 of 124",
+      "label": "AI-claiming beer companies mention generative AI, an LLM or an assistant"
+     }
+    },
+    {
+     "p": "Generative AI is the loudest topic in any boardroom and a small share of what beer companies actually ship. Searching the use case and description of the 124 AI-claiming companies for generative AI, LLMs, chatbots, copilots and retrieval assistants finds 20. They fall into two groups."
+    },
+    {
+     "ul": [
+      "Recipes, labels and brand copy. NEC with Coedo Brewery in Japan, Deep Liquid in Australia, the Atwater Brewery AI IPA built with ChatGPT, Nethergate Brewery's AI pale ale, Data Impact in Vietnam and Olvi Group's disclosed AI marketing content.",
+      "Assistants over a brewery's own data. Brewfather's in-app assistant grounded in the brewer's recipes and equipment, Easybeer's LLM assistant over its brewery ERP, GoTab's natural language analytics over taproom sales, Zap's analytics copilots over ERP data, Propagate Lab's yeast chatbot and the Brewers Association's Barley assistant over technical and regulatory resources."
+     ]
+    },
+    {
+     "p": "The second group is the more useful one for a plant. An assistant that answers \"why was brew 412 short on extract?\" from the brew sheet and the malt certificate is worth more than one that names a beer. It is also harder, because it only works when the records underneath it agree."
+    }
+   ]
+  },
+  {
+   "h2": "Gaps across the beer value chain",
+   "blocks": [
+    {
+     "p": "To map the 124 AI-claiming companies onto the value chain, we tagged each by keywords in its use case and description. A company can land in several stages; 112 of the 124 landed in at least one. Treat the counts as directional."
+    },
+    {
+     "table": {
+      "head": [
+       "Value chain stage",
+       "AI-claiming companies",
+       "Shipping",
+       "Examples"
+      ],
+      "rows": [
+       [
+        "Raw materials",
+        "19",
+        "15",
+        "Cgrain, ZoomAgri, Yakima Chief Hops, seedalive"
+       ],
+       [
+        "Brewhouse",
+        "7",
+        "6",
+        "GEA, Ziemann Holvrieka, Spectramatics, Rockwell Automation"
+       ],
+       [
+        "Cellar and fermentation",
+        "26",
+        "20",
+        "Sennos, PLAATO, Zymoscope, ReFlow Tech"
+       ],
+       [
+        "Packaging",
+        "27",
+        "24",
+        "Sidel, KHS, Evocon, TeepTrak"
+       ],
+       [
+        "Quality",
+        "32",
+        "24",
+        "HEUFT, Pressco Technology, VLB Berlin, Inarix"
+       ],
+       [
+        "Energy and utilities",
+        "23",
+        "17",
+        "iSystems, Ecolibrium, neustrom, Waterleau"
+       ],
+       [
+        "Supply chain",
+        "32",
+        "28",
+        "ORTEC, Descartes, RAMP RFID, Samsara"
+       ],
+       [
+        "Sales",
+        "30",
+        "23",
+        "Heineken, United Breweries, GoTab, VXP Technologies"
+       ],
+       [
+        "Marketing",
+        "14",
+        "8",
+        "NEC, Next Glass, Olvi Group, Stravito"
+       ],
+       [
+        "Finance",
+        "7",
+        "6",
+        "Easybeer, Zap, Waterplan, Ecolibrium"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Three things stand out. The brewhouse, where extract is won or lost every brew, has only 7 AI-claiming companies. Finance has 7 too. Most of those touch cost only on the side of energy, water or carbon. None of the seven is mainly about joining the brew sheet to the excise register to the cost of a hectolitre."
+    },
+    {
+     "p": "Packaging, quality and supply chain are well served, largely by equipment makers and logistics software that already had the sensors. Raw materials is busier than most people expect, mostly with barley grading and hop forecasting for growers and maltsters rather than for brewers."
+    }
+   ]
+  },
+  {
+   "h2": "What this means for a brewery deciding where to start",
+   "blocks": [
+    {
+     "p": "The dataset does not tell a brewery what to buy. It does suggest an order of questions."
+    },
+    {
+     "ul": [
+      "Start where the money is measured, not where the headlines are. Recipe AI has the highest AI share and the most pilots. Loss, extract and energy have the fewest specialists and the clearest value per hectolitre.",
+      "Expect to buy plumbing before prediction. Half the beer companies make no AI claim. Their systems are where your data will come from, so the first project is often getting brew sheets, dips, meters and counts into one record.",
+      "Use packaging and quality as the safe first step if you want proven AI. Vision inspection and line OEE have many shipping vendors and well understood results.",
+      "Treat the brewhouse and finance gap as an opening. Few vendors connect brewing records to cost. A plant that builds that view owns something the market does not yet sell off the shelf.",
+      "Point generative AI at your own records. An assistant over your batch history is useful. One that writes tasting notes is a marketing expense."
+     ]
+    },
+    {
+     "p": "This gap is the one Beer365 is built for. It joins brewhouse, cellar, packaging and finance records into one view of loss, extract and energy, on Microsoft Azure and Fabric. Whatever a brewery chooses, the radar is open. Filter it by your own stage of the value chain and read the sources before you read the pitch."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  "Beverage AI Radar open dataset, snapshot generated 1 October 2026 (dashboard/meta.json): https://ankurnapa.github.io/beverage-ai-radar/",
+  "Counts computed from dashboard/data.json: company rows are those with company_type not equal to individual (1,011); beer rows have beer in vertical or verticals (276).",
+  "AI claim means ai_maturity of shipping, pilot or research. Theme, country and maturity are the dataset's own fields.",
+  "Generative AI and value chain counts are keyword matches on the ai_use_case and short_description fields of the 124 AI-claiming beer companies; a company can match several stages.",
+  "The notable_customers_partners field is empty for all beer rows in this snapshot, so no customer relationships are cited."
+ ]
+}

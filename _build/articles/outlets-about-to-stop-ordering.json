@@ -1,0 +1,120 @@
+{
+ "slug": "outlets-about-to-stop-ordering",
+ "uc_id": 123,
+ "area": "market",
+ "title": "Spotting the outlets that are about to stop ordering",
+ "standfirst": "Bars rarely tell you they are leaving. They just order a little less often, then stop. The warning is already in your order history if you measure each account against its own rhythm.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Accounts fade before they go",
+   "blocks": [
+    {
+     "p": "A bar that switches its tap to a competitor almost never sends an email. The sales rep finds out when the next visit shows a different badge on the font. By then the decision was made weeks ago and the account is expensive to win back."
+    },
+    {
+     "p": "The order history usually saw it coming. Orders get further apart. The keg count drops from four to three. The seasonal beer is dropped and only the core lager is ordered. Each change on its own is easy to explain away. Together they are a pattern. A pattern can be measured for every account every week, which is more than any rep can do from memory."
+    }
+   ]
+  },
+  {
+   "h2": "Signals worth measuring",
+   "blocks": [
+    {
+     "p": "The key idea is to compare each outlet with itself, not with the average outlet. A hotel bar that orders every three weeks is healthy at three weeks. A busy pub that orders twice a week is in trouble at three weeks."
+    },
+    {
+     "eq": {
+      "label": "Order gap ratio",
+      "code": "Gap ratio = days since last order / median days between orders over the last 6 months",
+      "note": "Above 1.5 is worth a look. Above 2 is worth a call."
+     }
+    },
+    {
+     "eq": {
+      "label": "Volume trend",
+      "code": "Volume change % = (volume last 8 weeks - volume previous 8 weeks) / volume previous 8 weeks x 100"
+     }
+    },
+    {
+     "ul": [
+      "**Range narrowing.** The number of SKUs ordered falls. Often the first sign that a tap is being handed to someone else.",
+      "**Kegs returning heavy.** Beer left in returned kegs means slow rate of sale. Slow kegs mean older beer on tap and a worse pint, which feeds the decline.",
+      "**Draught quality findings.** Line cleaning overdue, poor temperature or complaints from a trade quality visit.",
+      "**Payment slipping.** Longer days to pay often runs ahead of a volume drop."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say an outlet has ordered roughly weekly for the past six months, with a median gap of 7 days. Today it is 19 days since its last order."
+    },
+    {
+     "table": {
+      "head": [
+       "Signal",
+       "Calculation",
+       "Result"
+      ],
+      "rows": [
+       [
+        "Order gap ratio",
+        "19 / 7",
+        "2.7"
+       ],
+       [
+        "Volume change",
+        "(48 - 64) / 64 x 100",
+        "-25%"
+       ],
+       [
+        "SKUs ordered",
+        "3 last quarter, 1 this month",
+        "Narrowing"
+       ],
+       [
+        "Returned kegs with beer left",
+        "4 of the last 10",
+        "Slow rate of sale"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Any one of those has an innocent explanation. All four together on the same account is the list a sales manager should see on Monday morning. The reason may be a new competitor, a new bar manager, a quality problem on the line or a cash squeeze. The data cannot tell you which. It tells you where to send someone this week rather than next quarter."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that create false alarms",
+   "blocks": [
+    {
+     "ul": [
+      "**Seasonality.** A hill station bar or a beach shack goes quiet every off-season. Compare with the same weeks last year before flagging it.",
+      "**Dry days and closures.** A run of dry days or a licence renewal can stretch the gap with no change in loyalty. Mark them on the calendar.",
+      "**Sell-in through distributors.** If the outlet buys through a distributor, you may see the distributor's orders, not the outlet's. A gap at the outlet can hide inside a distributor that is still ordering for others.",
+      "**Duplicate or renamed accounts.** An outlet that changed owner or got a new account code looks like a churn and a new win at the same time.",
+      "**One-off event orders.** A wedding or a festival order inflates the baseline and makes every later week look like a decline."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good looks like a short weekly list, not a dashboard of every account. Ten or twenty outlets where the signals agree, each with the reason it was flagged and the rep who owns it. After the visit, the rep records what they found: competitor, quality, price, staff change or nothing. Over a few months that record becomes more valuable than the score, because it tells you which signals actually predict loss in your market."
+    },
+    {
+     "p": "Keep quality in the loop. If the flagged outlets keep turning out to have poor line cleaning, the fix sits with the trade quality team, not with a discount."
+    },
+    {
+     "p": "Beer365 holds order history, keg returns and trade quality visits per outlet in one record, read from your sales and distribution systems, so an at-risk account comes with the evidence behind the flag and the batches it was being served."
+    }
+   ]
+  }
+ ]
+}

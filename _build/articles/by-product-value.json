@@ -1,0 +1,110 @@
+{
+ "slug": "by-product-value",
+ "uc_id": 86,
+ "area": "plant",
+ "title": "Are your spent grain, trub and yeast worth more than you are paid for them?",
+ "standfirst": "By-products leave the brewery by the truckload and are priced by habit. A mass balance and a price per tonne of dry matter show whether the contract still makes sense.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The biggest stream nobody measures",
+   "blocks": [
+    {
+     "p": "Spent grain is the largest solid stream a brewery produces. It leaves every day, usually on a contract signed years ago, often with a farmer or feed trader who has collected it for as long as anyone remembers. It is rarely weighed with the same care as the malt that came in."
+    },
+    {
+     "p": "Surplus yeast and trub get even less attention. Yeast slurry holds beer that has already paid for its raw materials, its energy and its time in a tank. Trub carries wort with it. Both often go to drain or to the grain silo by default, which costs money twice: once in lost product, again in effluent load."
+    }
+   ]
+  },
+  {
+   "h2": "Start with a mass balance",
+   "blocks": [
+    {
+     "p": "You can estimate spent grain from data you already hold: grist weight, malt moisture, extract and brewhouse yield."
+    },
+    {
+     "eq": {
+      "label": "Dry spent grain per brew",
+      "code": "Dry spent grain (kg) = grist (kg) x (1 - moisture) - extract recovered in wort (kg)",
+      "note": "Wet weight = dry spent grain / dry matter fraction leaving the lauter tun or press."
+     }
+    },
+    {
+     "p": "Take a hypothetical brew of 10,000 kg malt at 4.5 % moisture. Dry malt is 10,000 x 0.955 = 9,550 kg. Say the laboratory extract is 80 % on a dry basis, so 7,640 kg is available. The brewhouse recovers 98 % of it: 7,487 kg in the wort. That leaves 9,550 - 7,487 = 2,063 kg of dry solids in the grain. At 22 % dry matter, that is 2,063 / 0.22 = 9,377 kg of wet grain, close to one kilo of wet grain for every kilo of malt."
+    },
+    {
+     "p": "Over 1,200 brews a year that is about 11,250 tonnes of wet grain. Compare that to what your weighbridge says went out. If the two disagree by a lot, either the truck weights are wrong or grain is leaving that nobody is paid for."
+    }
+   ]
+  },
+  {
+   "h2": "Price it on dry matter, not wet weight",
+   "blocks": [
+    {
+     "p": "Grain is sold wet, but its feed value is in the dry matter. A buyer paying more per wet tonne can be paying less for what actually matters."
+    },
+    {
+     "eq": {
+      "label": "Price per tonne of dry matter",
+      "code": "Price per t DM = price per wet tonne / dry matter fraction"
+     }
+    },
+    {
+     "table": {
+      "head": [
+       "Offer",
+       "Price per wet tonne",
+       "Dry matter",
+       "Price per tonne DM"
+      ],
+      "rows": [
+       [
+        "Buyer A",
+        "INR 2,000",
+        "20 %",
+        "INR 10,000"
+       ],
+       [
+        "Buyer B",
+        "INR 2,400",
+        "25 %",
+        "INR 9,600"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "These prices are hypothetical. Buyer B looks better by 400 per tonne on the headline. On dry matter, Buyer A pays more. If you press the grain to 25 % dry matter, Buyer A's rate would be worth 2,500 per wet tonne. Every contract should state dry matter. Every load should have a dry matter test now and then."
+    }
+   ]
+  },
+  {
+   "h2": "Yeast and trub",
+   "blocks": [
+    {
+     "p": "Surplus yeast slurry is mostly beer. Say a hypothetical plant draws 40 hL of surplus slurry a week and about 60 % of that volume is recoverable beer. That is 24 hL a week, about 1,200 hL over a 50 week year, beer that has already been brewed and fermented. Recovery needs care: beer pressed from old yeast can carry autolysis flavours, so it is dosed back at a controlled rate and checked by the panel. Recovered beer may also carry excise questions in some markets, so check before you design the process."
+    },
+    {
+     "p": "What yeast you do not recover can be sold as feed or to extract producers. Hot trub usually goes into spent grain, which is fine, but it carries wort. Weak worts and trub that go to drain show up in the effluent bill instead."
+    }
+   ]
+  },
+  {
+   "h2": "Traps and what good looks like",
+   "blocks": [
+    {
+     "ul": [
+      "Contracts priced per load or per truck. A fuller truck is free grain for the buyer.",
+      "No dry matter clause. A wetter grain pays you for water.",
+      "Weighbridge without a record per batch. You cannot see which brews sent more grain, which also hides poor lautering.",
+      "Silo overflow to drain on a weekend collection gap. It looks like an effluent problem. It is also grain you were never paid for."
+     ]
+    },
+    {
+     "p": "Good is a monthly view of tonnes out, dry matter, price per tonne DM and the mass balance gap, per stream. Beer365 reads brew records, weighbridge tickets and invoices from your systems and puts them in one record, so the next contract renewal starts with numbers rather than habit."
+    }
+   ]
+  }
+ ]
+}

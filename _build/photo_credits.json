@@ -1,0 +1,92 @@
+[
+ {
+  "area": "raw",
+  "file": "assets/photos/raw.jpg",
+  "title": "Fresh hop cones tree",
+  "creator": "Markus Spiske",
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/503188/free-photo-image-beer-hops-brewery"
+ },
+ {
+  "area": "brewhouse",
+  "file": "assets/photos/brewhouse.jpg",
+  "title": "Gin distillery brewery",
+  "creator": null,
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/6041555/photo-image-public-domain-interior-free"
+ },
+ {
+  "area": "cellar",
+  "file": "assets/photos/cellar.jpg",
+  "title": "Free brewery factory photo",
+  "creator": null,
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/5924609/photo-image-public-domain-free-metal"
+ },
+ {
+  "area": "packaging",
+  "file": "assets/photos/packaging.jpg",
+  "title": "Numerous bottles foreground bottles conveyor",
+  "creator": "U.S. National Archives",
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/8802792/photo-image-person-wood-vintage"
+ },
+ {
+  "area": "quality",
+  "file": "assets/photos/quality.jpg",
+  "title": "APS Beamline scientist fixing equipment",
+  "creator": "usdoe",
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/8708739/photo-image-medicine-public-domain-covid-19"
+ },
+ {
+  "area": "plant",
+  "file": "assets/photos/plant.jpg",
+  "title": "labelled section brewhouse showing brewing",
+  "creator": null,
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/13957901/image-paper-technology-wood"
+ },
+ {
+  "area": "market",
+  "file": "assets/photos/market.jpg",
+  "title": "Stack aluminium beer kegs",
+  "creator": null,
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/6041345/photo-image-public-domain-free-metal"
+ },
+ {
+  "area": "business",
+  "file": "assets/photos/business.jpg",
+  "title": "Team Meeting",
+  "creator": "Startup Stock Photos",
+  "source": "stocksnap",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://stocksnap.io/photo/team-meeting-69TMH4ITIE"
+ },
+ {
+  "area": "layer",
+  "file": "assets/photos/layer.jpg",
+  "title": "Free glass beer image",
+  "creator": null,
+  "source": "rawpixel",
+  "license": "cc0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://www.rawpixel.com/image/5927011/photo-image-public-domain-hand-person"
+ }
+]

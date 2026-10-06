@@ -1,0 +1,119 @@
+{
+ "slug": "packaging-lot-to-defect",
+ "uc_id": 8,
+ "area": "raw",
+ "title": "Do these crowns or can ends leak more than the last lot?",
+ "standfirst": "Leakers get blamed on the line, the shift or the supplier, usually by whoever shouts first. Tie every defect to a material lot and the argument gets shorter.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "Every leaker has a lot number, if you kept it",
+   "blocks": [
+    {
+     "p": "A packaging line producing low fills, leakers or flat beer at the crowner or seamer has three suspects. The machine setting, the people running it and the material going through it. On most lines the first two are well recorded. The third is not. The crown or can-end lot number lives on a pallet label that went in the bin at the start of the shift."
+    },
+    {
+     "p": "Without that link, a bad material lot looks like a bad week. The fitters reset the crowner, the shift gets a talking to and the supplier hears about it only when the complaint reaches the trade. If the lot is still on the floor, it keeps leaking."
+    },
+    {
+     "p": "The question here is narrow. Is the defect rate on this material lot higher than on the last one, by more than chance would explain?"
+    }
+   ]
+  },
+  {
+   "h2": "What to record",
+   "blocks": [
+    {
+     "ul": [
+      "**Material lot loaded,** with the time it went into the hopper or end feeder and the time it ran out",
+      "**Line output** for the same window, from the filler or case counter",
+      "**Defects by type:** leakers at the inspector, low fills, crown or seam rejects, gas loss found at the warehouse",
+      "**Machine checks:** crown go/no-go gauge results each shift and after changeover, double-seam tear-down results for cans",
+      "**Shift and line,** so you can separate the lot from the crew"
+     ]
+    },
+    {
+     "p": "The machine checks matter as much as the defect counts. A crown finished at 28.7 mm plus or minus 0.3 mm is in tolerance. If the go/no-go gauge says the crowner was in tolerance and the lot still leaks, the lot is the stronger suspect. For cans, the tear-down measurements of seam length, thickness, body hook and end hook tell you whether the seamer or the end is out."
+    }
+   ]
+  },
+  {
+   "h2": "Comparing two lots properly",
+   "blocks": [
+    {
+     "p": "Defect rates on a modern line are small fractions of a percent, so express them per million and compare them with a test that respects the volume."
+    },
+    {
+     "eq": {
+      "label": "Defect rate per lot",
+      "code": "Defect rate (ppm) = defects attributed to the lot / units packed with the lot x 1,000,000"
+     }
+    },
+    {
+     "eq": {
+      "label": "Two-proportion check",
+      "code": "z = (p2 - p1) / square root of (p x (1 - p) x (1/n1 + 1/n2)), where p = (x1 + x2) / (n1 + n2)",
+      "note": "Above about 2 the difference is unlikely to be chance alone. It says nothing yet about cause."
+     }
+    },
+    {
+     "p": "Say crown lot A ran on 1,200,000 bottles with 540 leakers at the inspector. Lot B ran on 1,150,000 bottles with 920 leakers."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Lot A",
+       "Lot B"
+      ],
+      "rows": [
+       [
+        "Bottles",
+        "1,200,000",
+        "1,150,000"
+       ],
+       [
+        "Leakers",
+        "540",
+        "920"
+       ],
+       [
+        "Rate (ppm)",
+        "450",
+        "800"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Pooled, p is 1,460 / 2,350,000. The z value comes out at about 10.8. That is not noise. Lot B leaks nearly twice as often. Now check whether lot B ran on the same lines and shifts as lot A before calling the supplier."
+    }
+   ]
+  },
+  {
+   "h2": "Where the comparison misleads",
+   "blocks": [
+    {
+     "ul": [
+      "**Confounded timing.** If lot B went in the day after a crowner overhaul, the lot carries the machine's sins. Compare lots that ran under the same gauge results, or split by line and shift.",
+      "**Overlapping lots.** Hoppers are topped up, not emptied. For a while two lots are mixed. Either drop the overlap window or attribute it in proportion.",
+      "**Inspector sensitivity.** A full-bottle inspector reset to a tighter limit finds more leakers on every lot. Log inspector changes with the same care as material changes.",
+      "**Late defects.** Some leakers only show after pasteurisation or after a week stacked in the warehouse. Crown liners flatten under load on stacked pallets without crate protection. Count late defects back to the lot or you undercount the bad one.",
+      "**Glass, not crowns.** A finish defect on the bottle looks like a crown problem at the inspector. If the bottle lot changed too, you have two suspects."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a per-lot defect rate for every crown, can end, bottle and label lot, visible on the line within the shift, with the machine checks for the same window beside it. When a lot runs high, the team can quarantine what is left before the next pallet goes on. The supplier gets a complaint with counts, dates and gauge results attached."
+    },
+    {
+     "p": "Beer365 links material lots, packaging runs and defect counts in one record from the line and quality systems you already have and each answer cites the runs and lots behind the rate."
+    }
+   ]
+  }
+ ]
+}

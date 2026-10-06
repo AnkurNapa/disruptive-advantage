@@ -1,0 +1,126 @@
+{
+ "slug": "true-cogs-per-hl",
+ "uc_id": 141,
+ "area": "business",
+ "title": "What each beer really costs per hectolitre, by brand and pack",
+ "standfirst": "One plant average cost per hectolitre hides which beers carry the others. Here is how to build cost by brand and pack from drivers the brewery already records.",
+ "read_min": 4,
+ "sections": [
+  {
+   "h2": "The average that flatters the lager",
+   "blocks": [
+    {
+     "p": "Most breweries know their cost per hectolitre. Fewer know it per beer. Fewer still know it per beer per pack. The usual method spreads overhead evenly across every hectolitre packaged, which quietly says a lager that holds a fermenter for three weeks costs the same to make as an ale that is out in nine days. It does not."
+    },
+    {
+     "p": "The plant average is not wrong. It is just an answer to a different question. It tells you what the brewery costs to run. It does not tell you which beers and packs are paying for that. That is the question that decides price, range and where to put the next promotion."
+    }
+   ]
+  },
+  {
+   "h2": "What goes into the number",
+   "blocks": [
+    {
+     "eq": {
+      "label": "Cost per hL sold, by brand and pack",
+      "code": "COGS per hL = materials / (1 - loss fraction) + packaging materials + line conversion + cellar overhead + utilities",
+      "note": "Each term per hL of sellable beer. Materials are divided by yield because lost beer still consumed malt and hops."
+     }
+    },
+    {
+     "ul": [
+      "**Materials** from the recipe bill of materials and actual issues, per hL brewed.",
+      "**Loss fraction** from volume at each stage, brewed to sellable, by brand.",
+      "**Packaging materials** per pack: cans, ends, cartons, crowns, labels, keg fleet cost.",
+      "**Line conversion** from line cost per running hour divided by hL per hour for that pack.",
+      "**Cellar overhead** allocated by tank days, not by volume, because tank time is what a long lager consumes.",
+      "**Utilities** from sub-meters where they exist. Where they do not, say so on the report."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "A worked example",
+   "blocks": [
+    {
+     "p": "Say a brewery makes a lager in cans and kegs. Materials cost INR 1,800 per hL brewed and the lager loses 6 percent between brewhouse and sellable beer, so materials per sellable hL are 1,800 / 0.94, about INR 1,915."
+    },
+    {
+     "p": "Cellar overhead runs at INR 2,500 per tank day. The lager holds 20 tank days per 100 hL batch, which is 0.2 tank days per hL, so it carries INR 500 per hL. A nine day ale would carry INR 225. The volume method would have charged both the same."
+    },
+    {
+     "p": "On the packaging side, the can line costs INR 19,800 an hour to run and fills 6,000 cans of 330 ml an hour. That is 1,980 litres, 19.8 hL, so conversion is INR 1,000 per hL. The keg line costs INR 9,000 an hour for 60 kegs of 30 litres, 18 hL, so INR 500 per hL. A hectolitre is about 303 cans. At INR 9 per can with its end and carton share that is INR 2,727 per hL. Keg fleet cost is INR 300 per hL."
+    },
+    {
+     "table": {
+      "head": [
+       "Cost line (INR per hL)",
+       "Lager in can",
+       "Lager in keg"
+      ],
+      "rows": [
+       [
+        "Materials, after 6% loss",
+        "1,915",
+        "1,915"
+       ],
+       [
+        "Packaging materials",
+        "2,727",
+        "300"
+       ],
+       [
+        "Line conversion",
+        "1,000",
+        "500"
+       ],
+       [
+        "Cellar overhead by tank days",
+        "500",
+        "500"
+       ],
+       [
+        "Utilities",
+        "400",
+        "400"
+       ],
+       [
+        "Total",
+        "6,542",
+        "3,615"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The same liquid costs 1.8 times as much in a can as in a keg. That is not a surprise to anyone who runs a canning line. What surprises people is how far both numbers sit from the plant average once the lager stops borrowing the ale's tank days."
+    }
+   ]
+  },
+  {
+   "h2": "Traps that make the number lie",
+   "blocks": [
+    {
+     "ul": [
+      "**Standard cost left standing.** A standard cost set at budget time and never trued up against actual issues will drift with every malt price change.",
+      "**Allocating by volume.** Overhead spread per hL rewards slow beers and punishes fast ones. Use the driver that consumes the resource: tank days for the cellar, line hours for packaging.",
+      "**Losses in overhead.** Lost beer booked to a plant variance account disappears from the brand that lost it.",
+      "**Line speed at nameplate.** Use the speed the line actually ran, including small stops, or the can cost will look better than it is.",
+      "**Duty in or out.** Decide once whether the report is before or after duty. Label it. Mixing the two across brands is the fastest way to lose a finance director's trust."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "What good looks like",
+   "blocks": [
+    {
+     "p": "Good is a cost per hL for every brand and pack, built from actual issues and actual line hours, with each allocation driver stated plainly. It reconciles to the plant total every month, so nobody can argue the parts do not add up. And finance and production agree on it, which is harder than any formula above."
+    },
+    {
+     "p": "Beer365 assembles that cost from the bill of materials, packaging runs and tank occupancy a brewery already records, one record per batch. Every figure cites the batches it came from."
+    }
+   ]
+  }
+ ]
+}
