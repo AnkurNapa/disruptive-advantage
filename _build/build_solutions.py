@@ -34,6 +34,7 @@ MOD_NAME = {"01": "Telemetry", "02": "Digital twin", "03": "Fermentation", "04":
             "06": "Quality", "07": "Energy", "08": "Excise", "09": "Copilot", "10": "Raw materials", "11": "Supply chain and sales",
             "12": "Finance and people"}
 RANK = {"NOW": 0, "NEXT": 1, "LATER": 2}
+APP = {"cellar": "fermentation", "quality": "quality-lab", "packaging": "packaging", "market": "warehouse"}  # demo-data dashboard screens
 
 arts = [json.load(open(f)) for f in sorted(glob.glob(os.path.join(HERE, "articles", "*.json"))) if not os.path.basename(f).startswith("_")]
 
@@ -58,7 +59,7 @@ def section(i, a):
  <div class="acts"><a class="btn" href="contact.html?produce=beer&amp;ask={ask}">Talk about {E(name.lower())}</a></div>
  </div>
  <aside class="sside">
- <img src="assets/photos/{k}.jpg" alt="" width="1200" height="700" loading="lazy">
+ {f'<figure class="sapp"><div class="chrome"><i></i><i></i><i></i><span>Beer365 app</span></div><img src="assets/app/{APP[k]}.jpg" alt="Beer365 app screen for {E(name.lower())}" width="1600" height="1000" loading="lazy"></figure>' if k in APP else f'<img src="assets/photos/{k}.jpg" alt="" width="1200" height="700" loading="lazy">'}
  {f'<p class="blocklabel">Read more</p><ul class="sreads">{reads}</ul>' if reads else ""}
  </aside>
  </div>

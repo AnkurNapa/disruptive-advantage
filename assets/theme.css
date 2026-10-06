@@ -422,3 +422,18 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .sreads a{font-weight:600;font-size:.9375rem;color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
 @media (max-width:980px){.sgrid{grid-template-columns:minmax(0,1fr);gap:28px}.sside{order:-1}}
 @media (max-width:620px){.sfeat{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- the app: real dashboard screens in a browser frame ---------- */
+.chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;background:var(--ink);border-radius:var(--radius) var(--radius) 0 0}
+.chrome i{width:9px;height:9px;border-radius:50%;background:#3a3a36}
+.chrome i:first-child{background:var(--yellow)}
+.chrome span{margin-left:10px;font-family:var(--mono);font-size:.6875rem;color:rgba(255,255,255,.65)}
+.appgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.appgrid figure{margin:0;min-width:0}
+.appgrid img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-top:0;border-radius:0 0 var(--radius) var(--radius);box-shadow:0 24px 50px -28px rgba(10,10,10,.45)}
+.appgrid .appbig{grid-column:1 / -1}
+.appgrid figcaption{font-size:.875rem;color:var(--mid);margin-top:10px}
+.sapp{margin:0 0 22px}
+.sapp img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-top:0;border-radius:0 0 var(--radius) var(--radius)}
+@media (max-width:860px){.appgrid{grid-template-columns:minmax(0,1fr)}}
+.appgrid figure:not(.appbig) img,.sapp img{aspect-ratio:16/10;object-fit:cover;object-position:top}

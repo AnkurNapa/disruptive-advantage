@@ -122,6 +122,20 @@ MAIN = f'''<main id="main">
  </div>
 </section>
 
+<section class="appshow">
+ <div class="wrap">
+ <div class="xhead"><div><p class="kicker">The Beer365 app</p><h2>What your team sees every morning</h2>
+ <p class="std">Screens from the Beer365 brewery dashboard, built on Microsoft Fabric. Shown here on demo data for a 625 hL plant.</p></div>
+ <a class="btn ghost" href="features.html">See all twelve modules</a></div>
+ <div class="appgrid">
+ <figure class="appbig"><div class="chrome"><i></i><i></i><i></i><span>Fermentation cellar</span></div><img src="assets/app/fermentation.jpg" alt="Beer365 fermentation cellar: 32 fermenters with live fill, temperature and state" width="1600" height="1000" loading="lazy"><figcaption>Every fermenter live: fill, state and the tank that needs attention.</figcaption></figure>
+ <figure><div class="chrome"><i></i><i></i><i></i><span>Quality lab</span></div><img src="assets/app/quality-lab.jpg" alt="Beer365 quality gates per batch" width="1600" height="1000" loading="lazy"><figcaption>Quality gates per batch, from OG to micro.</figcaption></figure>
+ <figure><div class="chrome"><i></i><i></i><i></i><span>Packaging</span></div><img src="assets/app/packaging.jpg" alt="Beer365 packaging lines and loss map" width="1600" height="1000" loading="lazy"><figcaption>Lines and the loss map, stage by stage.</figcaption></figure>
+ <figure><div class="chrome"><i></i><i></i><i></i><span>Warehouse</span></div><img src="assets/app/warehouse.jpg" alt="Beer365 raw material and packaging inventory" width="1600" height="1000" loading="lazy"><figcaption>Raw materials and packaging cover against brews.</figcaption></figure>
+ </div>
+ </div>
+</section>
+
 <section class="tinted" id="method">
  <div class="wrap">
  <div class="xhead"><div><p class="kicker">How we count savings</p><h2>Five leaks, five formulas, no black box</h2>
