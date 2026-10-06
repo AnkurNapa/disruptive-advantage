@@ -443,3 +443,80 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .direct{font-size:.9375rem;font-weight:500;margin:0}
 .direct a,.teamcontact a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;font-weight:600;white-space:nowrap}
 .teamcontact{margin:4px 0 18px;font-size:1rem;line-height:1.8}
+
+/* ======================================================================
+   One form system and one icon family, everywhere
+   ====================================================================== */
+:root{--field-h:50px;--field-r:12px;--field-b:#D3CFC2;--ring:0 0 0 4px rgba(245,224,3,.55)}
+/* icons: 24 grid, line, colour from the text */
+.ic{width:20px;height:20px;flex:none;display:inline-block;vertical-align:-4px}
+.ic.sm{width:16px;height:16px;vertical-align:-3px;margin-right:8px;opacity:.85}
+.badge{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
+  background:var(--yellow);color:var(--ink);flex:none}
+.badge .ic{width:22px;height:22px}
+.dark .badge{background:var(--yellow);color:var(--ink)}
+.btn .ic{width:18px;height:18px;margin-right:2px}
+.h4ic{width:18px;height:18px;margin-right:8px;color:var(--gold);vertical-align:-3px}
+/* where the badges sit */
+.area{position:relative}
+.area .badge{position:absolute;left:22px;top:calc((100% * 0) + 0px);transform:translateY(-50%);margin-top:0}
+.area .aimg + .badge{position:relative;left:0;top:0;transform:translateY(-34px);margin:0 0 -26px;box-shadow:0 0 0 5px var(--band)}
+.area:hover .aimg + .badge{box-shadow:0 0 0 5px var(--cream)}
+.solarea .stext .badge{margin-bottom:16px}
+.mcard .badge{width:40px;height:40px;margin-bottom:14px}
+.mcard .badge .ic{width:20px;height:20px}
+.trustg .kpi .badge{margin-bottom:14px}
+.trustg .kpi b{display:block}
+.fdirect a,.direct a,.teamcontact a,.author a{display:inline-flex;align-items:center}
+.p-contact .side h4,.p-contact h4{display:flex;align-items:center}
+
+/* labels and fields */
+.p-contact label,.calc label,.ufield label{display:block;font-size:.875rem;font-weight:600;color:var(--ink);margin-bottom:8px;letter-spacing:0}
+.p-contact input:not([type=checkbox]),.p-contact select,.p-contact textarea,
+.calc input,.calc select,.form input,#ucq,#aq{
+  width:100%;min-height:var(--field-h);padding:0 16px;font:inherit;font-size:1rem;color:var(--ink);
+  background:#fff;border:1.5px solid var(--field-b);border-radius:var(--field-r);box-shadow:none;
+  transition:border-color .15s ease,box-shadow .15s ease}
+.p-contact textarea{min-height:140px;padding:14px 16px;line-height:1.55;resize:vertical}
+.p-contact input:hover,.p-contact select:hover,.p-contact textarea:hover,.calc input:hover,.calc select:hover,.form input:hover,#ucq:hover,#aq:hover{border-color:#B7B2A3}
+.p-contact input:focus,.p-contact select:focus,.p-contact textarea:focus,.calc input:focus,.calc select:focus,.form input:focus,#ucq:focus,#aq:focus{
+  outline:none;border-color:var(--ink);box-shadow:var(--ring)}
+.p-contact input::placeholder,.p-contact textarea::placeholder,.form input::placeholder,#aq::placeholder{color:#9A968A}
+.p-contact input[aria-invalid=true],.p-contact input:user-invalid{border-color:#B00020}
+.calc select,.p-contact select{appearance:none;-webkit-appearance:none;padding-right:44px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A0A0A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:18px}
+.calc input[type=number]{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.p-contact .fields{gap:22px 20px}
+/* choice buttons: equal, one line, a tick when chosen */
+.p-contact .pills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.p-contact .pill{position:relative;min-height:var(--field-h);padding:8px 12px;border:1.5px solid var(--field-b);border-radius:var(--field-r);
+  background:#fff;color:var(--ink);font:inherit;font-size:.875rem;font-weight:600;line-height:1.25;text-align:center;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:6px;transition:border-color .15s ease,background .15s ease}
+.p-contact .pill:hover{border-color:var(--ink)}
+.p-contact .pill .tick{display:none;width:16px;height:16px}
+.p-contact .pill.is-on{background:var(--ink);border-color:var(--ink);color:#fff}
+.p-contact .pill.is-on .tick{display:inline-block;color:var(--yellow)}
+.p-contact .pill:focus-visible{box-shadow:var(--ring);outline:none}
+/* consent */
+.p-contact .consent label{display:flex;gap:10px;align-items:flex-start;font-weight:500;color:var(--mid);font-size:.875rem;margin:0}
+.p-contact input[type=checkbox]{width:18px;height:18px;margin-top:1px;accent-color:var(--ink);flex:none}
+/* submit and the note under it */
+.p-contact button.sub{margin-top:6px;min-width:200px;justify-content:center;border:0;cursor:pointer}
+.formnote{display:flex;align-items:center;gap:0;margin-top:12px;font-size:.8125rem;color:var(--soft)}
+.formnote.is-bad{color:#B00020;font-weight:600}
+/* newsletter: one control, input and button the same height */
+.form{display:flex;gap:8px;align-items:stretch;max-width:520px}
+.form input{flex:1;min-width:0}
+.form .btn{min-height:var(--field-h);padding:0 24px;border-radius:var(--field-r)}
+/* calculator */
+.calc .fieldrow{margin-bottom:18px}
+.calc .two-up-f{gap:16px}
+.calc .calc-group h3{margin-bottom:14px}
+@media (max-width:760px){.p-contact .pills{grid-template-columns:repeat(2,minmax(0,1fr))}.form{flex-direction:column}.form .btn{width:100%}}
+.p-contact .pills{grid-template-columns:repeat(2,minmax(0,1fr))}
+.p-contact .pill{white-space:nowrap}
+.fdirect a{display:flex;align-items:flex-start;gap:0;overflow-wrap:anywhere}
+.fdirect a .ic{margin-top:4px}
+.ftr .fdirect{font-size:.875rem}
+@media (max-width:560px){.p-contact .pill{white-space:normal}}
