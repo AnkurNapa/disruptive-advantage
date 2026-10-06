@@ -400,3 +400,25 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .teamph{margin:28px 0 0;max-width:360px}
 .teamph img{display:block;width:100%;height:auto;border-radius:var(--radius);aspect-ratio:9/10;object-fit:cover}
 .teamph figcaption{font-size:.8125rem;color:var(--soft);margin-top:8px}
+
+/* ---------- solutions: the whole beer business, area by area ---------- */
+.sjump{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.sjump a{font-size:.8125rem;font-weight:600;padding:7px 14px;border:1.5px solid var(--rule);border-radius:var(--pill);color:var(--ink);background:#fff}
+.sjump a:hover{border-color:var(--ink);background:var(--yellow)}
+.solarea{scroll-margin-top:84px}
+.sgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:start}
+.stext h2{margin:8px 0 12px;max-width:22ch}
+.sfeat{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.sfeat li{padding:14px 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:3px}
+.sfeat b{font-weight:700;font-size:.9875rem}
+.sfeat span{font-size:.875rem;color:var(--mid)}
+.smods{margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.smods>span{font-size:.75rem;font-weight:600;color:var(--soft);margin-right:4px}
+.mchip{font-family:var(--mono);font-size:.75rem;padding:4px 10px;border-radius:var(--pill);background:var(--cream);border:1px solid var(--gold);color:var(--ink)}
+.stext .acts{margin-top:26px}
+.sside img{display:block;width:100%;height:auto;aspect-ratio:12/8;object-fit:cover;border-radius:var(--radius);margin-bottom:22px}
+.sreads{list-style:none;padding:0;margin:10px 0 0}
+.sreads li{padding:10px 0;border-bottom:1px solid var(--hair)}
+.sreads a{font-weight:600;font-size:.9375rem;color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+@media (max-width:980px){.sgrid{grid-template-columns:minmax(0,1fr);gap:28px}.sside{order:-1}}
+@media (max-width:620px){.sfeat{grid-template-columns:minmax(0,1fr)}}

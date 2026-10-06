@@ -71,8 +71,8 @@ def week(w, h, get):
 def area_card(a):
     k, n, d, _ = a
     qs = "".join(f"<li>{u['q']}</li>" for u in examples(a))
-    return (f'<a class="area" href="use-cases.html#{k}"><img class="aimg" src="assets/photos/{k}.jpg" alt="" width="1200" height="700" loading="lazy"><span class="an">{len(cases(a))} questions</span>'
-            f'<h3>{n}</h3><p>{d}</p><ul>{qs}</ul><span class="more">See all {len(cases(a))}</span></a>')
+    return (f'<a class="area" href="solutions.html#{k}"><img class="aimg" src="assets/photos/{k}.jpg" alt="" width="1200" height="700" loading="lazy"><span class="an">{len(cases(a))} questions</span>'
+            f'<h3>{n}</h3><p>{d}</p><ul>{qs}</ul><span class="more">See the solution</span></a>')
 
 
 def faq(q, a):
@@ -116,8 +116,8 @@ MAIN = f'''<main id="main">
 <section class="whole">
  <div class="wrap">
  <div class="xhead"><div><p class="kicker">The whole beer business</p><h2>From the malt lot to the excise return</h2>
- <p class="std">Beer365 is not a fermentation sensor or a line dashboard. It is one record of the whole brewery, so it answers {len(UC)} questions across every department: the ones your head brewer asks, and the ones your finance director, packaging lead and sales team ask too.</p></div>
- <a class="btn" href="use-cases.html">See all {len(UC)} questions</a></div>
+ <p class="std">Beer365 is not a fermentation sensor or a line dashboard. It is one record of the whole brewery, so it serves every department: your head brewer, packaging lead, quality team, supply chain, sales and finance work from the same numbers.</p></div>
+ <a class="btn" href="solutions.html">See the full solution</a></div>
  <div class="areas">{"".join(area_card(a) for a in AREAS)}</div>
  </div>
 </section>

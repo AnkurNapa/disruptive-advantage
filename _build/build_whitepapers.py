@@ -117,7 +117,7 @@ def resources(papers):
 <div class="acards">{cards}</div>
 <h2 class="aguide">Also useful</h2>
 <div class="acards">
-<a class="acard" href="use-cases.html"><span class="topic">Use cases</span><h3>Every question Beer365 answers</h3><p>221 questions across the whole beer business, by area and build wave.</p></a>
+<a class="acard" href="solutions.html"><span class="topic">Solutions</span><h3>Beer365 across the whole beer business</h3><p>Raw materials to finance, area by area: what it does, the questions it answers and what to read.</p></a>
 <a class="acard" href="articles.html"><span class="topic">Articles</span><h3>Notes from the floor and the model</h3><p>Practitioner articles on beer data, AI and generative AI, from the malt lot to the excise return.</p></a>
 <a class="acard" href="pricing.html"><span class="topic">Pricing</span><h3>What it costs, before you ask</h3><p>The fixed assessment fee and how Microsoft bills you directly.</p></a>
 </div>

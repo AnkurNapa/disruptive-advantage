@@ -159,7 +159,7 @@ def article_page(a, arts):
 <div class="sidecta"><p>Want this answered from your own records?</p><a class="btn sm" href="contact.html?produce=beer&amp;ask={ask}">Book a free demo</a></div>
 </aside>
 <div class="prose">{body}
-<p class="ucline">This article answers one of the <a href="use-cases.html#{E(a["area"])}">{E(area_name.lower())} questions</a> Beer365 is built for.</p>
+<p class="ucline">Part of the Beer365 solution for <a href="solutions.html#{E(a["area"])}">{E(area_name.lower())}</a>.</p>
 <div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
 </div>
 </div>
@@ -287,7 +287,7 @@ def site_files(arts):
              "chain, sales and finance data into one batch record, with dashboards, a digital twin and a generative AI "
              "copilot whose answers cite the batch and tag they came from.", "",
              "## Key pages", f"- [Home]({BASE}): what Beer365 does, how savings are counted and proved",
-             f"- [Every question Beer365 answers]({BASE}use-cases.html): 221 brewery use cases by area",
+             f"- [Solutions]({BASE}solutions.html): Beer365 across the whole beer business, area by area",
              f"- [Calculator]({BASE}roi.html): brewhouse savings from your own figures",
              f"- [Pricing]({BASE}pricing.html)", f"- [Contact]({BASE}contact.html)", "", "## Guides"]
     lines += [f"- [{a['title']}]({BASE}article-{a['slug']}.html): {a.get('description') or a['standfirst']}" for a in arts if a["pillar"]]

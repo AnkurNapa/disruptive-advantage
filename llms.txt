@@ -4,7 +4,7 @@
 
 ## Key pages
 - [Home](https://ankurnapa.github.io/disruptive-advantage/): what Beer365 does, how savings are counted and proved
-- [Every question Beer365 answers](https://ankurnapa.github.io/disruptive-advantage/use-cases.html): 221 brewery use cases by area
+- [Solutions](https://ankurnapa.github.io/disruptive-advantage/solutions.html): Beer365 across the whole beer business, area by area
 - [Calculator](https://ankurnapa.github.io/disruptive-advantage/roi.html): brewhouse savings from your own figures
 - [Pricing](https://ankurnapa.github.io/disruptive-advantage/pricing.html)
 - [Contact](https://ankurnapa.github.io/disruptive-advantage/contact.html)
