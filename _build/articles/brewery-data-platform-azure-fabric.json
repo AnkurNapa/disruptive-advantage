@@ -2,143 +2,100 @@
  "slug": "brewery-data-platform-azure-fabric",
  "uc_id": null,
  "area": "layer",
- "title": "Building a brewery data platform on Microsoft Azure and Microsoft Fabric",
- "standfirst": "A brewery data platform on Azure and Fabric is mostly plumbing and definitions. Get the batch key and the routes right and the dashboards and AI become the easy part.",
- "description": "How to build a brewery data platform on Microsoft Azure and Microsoft Fabric: ERP, historian, lab and sales data in OneLake, one batch record, secured.",
+ "title": "A brewery data platform on Azure and Microsoft Fabric, run in your tenant",
+ "standfirst": "A brewery data platform is worth what it answers. Beer365 delivers one batch record on Azure and Microsoft Fabric inside your own tenant, without replacing a single system you run today.",
+ "description": "Brewery data platform on Azure and Microsoft Fabric: one batch record across brewhouse, cellar, packaging and finance, delivered in your own tenant.",
  "keywords": [
   "brewery data platform",
   "Microsoft Fabric for breweries",
   "Azure brewery analytics",
-  "OneLake brewery data",
-  "brewery data lakehouse"
+  "brewery data on Azure",
+  "OneLake brewery data"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
-   "h2": "What is a brewery data platform on Azure and Fabric?",
+   "h2": "What a brewery data platform is for",
    "blocks": [
     {
-     "p": "A brewery data platform is the place where every system's records about a batch end up joined: brewhouse, cellar, packaging, lab, maintenance, ERP, sales and duty. On Microsoft Azure and Microsoft Fabric, that place is OneLake, the single data lake that every Fabric engine reads directly. Spark notebooks, the SQL endpoint, Power BI and the real-time engine all work on the same copy instead of each keeping its own."
+     "p": "The questions that cost a brewery money cross systems. Beer loss needs cast volume from the brewhouse, transfers from the cellar, counts from the filler and removals from the excise register. Fermentation time needs historian readings, yeast records and lab results. Cost per packaged hectolitre needs all of that plus the ERP."
     },
     {
-     "p": "The reason this matters in a brewery is simple. The questions that cost money cross systems. Beer loss needs brewhouse cast volume, cellar transfers, packaging counts and the duty register. Fermentation time needs historian readings, yeast records and the lab. A platform that keeps those in separate tools forces someone to rebuild the join in Excel every month. I have been that someone. The spreadsheet was called LOSSES_FINAL_v3. It was the most trusted number in the building because nobody else could reproduce it."
+     "p": "In most breweries one person rebuilds that join in Excel every month. We have seen a spreadsheet called LOSSES_FINAL_v3 become the most trusted number in the building, because nobody else could reproduce it. When its owner goes on leave, the number goes with them. That person is not the problem. They are doing a job the systems never did."
     },
     {
-     "p": "The goal of the platform is to make that join once, write down the rules and let everyone read the same answer."
+     "p": "A data platform exists to make that join once, under written rules, so everyone reads the same answer. That is the whole job. A platform that lands twenty sources before anyone uses one number is a storage bill with a project plan attached."
     }
    ]
   },
   {
-   "h2": "How brewery data gets into Microsoft Fabric",
+   "h2": "What changes once the batch record exists",
    "blocks": [
     {
-     "p": "Fabric gives a brewery several routes in. The right one depends on the source. Choosing the route per source, rather than forcing everything through one pipeline, is most of the design work."
-    },
-    {
-     "table": {
-      "head": [
-       "Brewery source",
-       "Typical system",
-       "Route into Fabric"
-      ],
-      "rows": [
-       [
-        "ERP: recipes, goods receipts, costs, stock",
-        "SQL Server, Azure SQL, Dynamics 365",
-        "Database mirroring into Delta tables, or Link to Fabric for Dataverse"
-       ],
-       [
-        "Process historian and PLC tags",
-        "OPC UA servers, Azure IoT Hub, Event Hubs",
-        "Eventstream into an Eventhouse for time-series queries"
-       ],
-       [
-        "Lab and LIMS exports",
-        "CSV or Excel drops",
-        "Shortcut with file transformation into Delta tables"
-       ],
-       [
-        "Brew sheets and SOPs",
-        "SharePoint or OneDrive",
-        "OneDrive and SharePoint shortcuts"
-       ],
-       [
-        "Data held on other clouds",
-        "Amazon S3, Google Cloud Storage",
-        "Shortcuts that read in place without copying"
-       ],
-       [
-        "Sales and distributor files",
-        "Portals, email attachments, CSV",
-        "Pipelines or dataflows on a schedule"
-       ]
-      ]
-     }
-    },
-    {
-     "p": "Shortcuts deserve a word. A shortcut is a pointer in OneLake to data stored somewhere else, so the data appears local but is not copied. When the source updates, the change is visible through the shortcut. For a brewery that already keeps lab files in one place and ERP extracts in another, this means the platform can start reading before anyone migrates anything."
-    },
-    {
-     "p": "Two practical points save weeks. First, decide the time zone for every timestamp on day one, because historians often log UTC while brew sheets use local time. A shift boundary error then moves readings into the wrong batch. Second, land data in the brewery's units with the unit in the column name, such as volume_hl or gravity_plato. Converting later is easy. Guessing later which column was litres is not."
-    }
-   ]
-  },
-  {
-   "h2": "A worked example: why historian data needs its own engine",
-   "blocks": [
-    {
-     "p": "Say a brewery logs 400 historian tags: fermenter temperatures and pressures, glycol supply and return, CIP conductivity, compressor currents, filler speeds. Each tag records once a second."
-    },
-    {
-     "eq": {
-      "label": "Historian readings per day",
-      "code": "rows per day = tags x seconds per day = 400 x 86,400 = 34,560,000",
-      "note": "Over a year that is 34,560,000 x 365 = 12,614,400,000 readings."
-     }
-    },
-    {
-     "p": "Twelve and a half billion rows a year is not a problem for the right engine. It is a problem if someone imports it into a Power BI model or a spreadsheet. In Fabric the time-series data belongs in an Eventhouse, which is built for high-volume event and telemetry analysis and is queried with KQL. Its Real-Time Dashboards refresh as data arrives. Activator can send a notification when a rule fires, such as a fermenter running 1 °C above its profile for 30 minutes."
-    },
-    {
-     "p": "The batch record then holds the summary, not the raw stream: the time at each gravity stage, the peak temperature, the minutes out of profile. Cellar and quality teams read the summary. The raw readings stay in the Eventhouse for whoever needs to look closer."
-    }
-   ]
-  },
-  {
-   "h2": "Shaping the data: one batch record and a governed model",
-   "blocks": [
-    {
-     "p": "Landing data is the easy half. The hard half is the batch record: one row per brew, with the brewhouse, cellar, packaging and lab facts joined by a key everyone agrees on. Most breweries have three keys, the brew number, the fermentation number on the tank and the packaging lot. Mapping them once, including blends and split packaging runs, is the most valuable work on the whole platform."
+     "p": "On Microsoft Azure and Microsoft Fabric, a brewery's data can sit in one place inside its own tenant, with Power BI, the analytics and the copilot all reading the same copy. The plant does not notice the platform. It notices what people stop arguing about."
     },
     {
      "ul": [
-      "**Bronze:** raw copies or shortcuts, exactly as the source wrote them.",
-      "**Silver:** cleaned tables with consistent units, times in one time zone and batch keys mapped.",
-      "**Gold:** the batch record, loss by stage, cost per hectolitre and the other measures people actually ask for, each with a written definition."
+      "**Loss by stage.** The cellar sees that tank bottoms on one beer account for most of its loss, with the batches listed.",
+      "**Tank days.** Minutes out of fermentation profile per tank and a predicted free date, instead of raw historian readings nobody opens.",
+      "**Cost per packaged hectolitre.** Finance sees extract, energy, water and beer loss in the cost, not materials alone.",
+      "**Quality against process.** A dissolved oxygen result at the filler sits next to the transfer and the tank it came from.",
+      "**Excise.** Packaged volume reconciled against removals on duty every month, by SKU and pack."
      ]
     },
     {
-     "p": "Power BI reads the gold layer through a semantic model in Direct Lake mode, which reads Delta tables in OneLake without a scheduled import. The same governed model is what a Fabric data agent queries when someone asks a question in plain English, so the dashboard and the chat answer come from one definition of packaged volume, not two."
+     "p": "The historian is a good example of why this matters. A brewery logging a few hundred tags once a second produces billions of readings a year. Nobody in the cellar wants them. They want the summary per batch: how long each stage took, the peak temperature, the minutes out of profile. The raw readings stay where they are for whoever needs to look closer. Beer365 puts the summary on the batch record, where the cellar manager and the quality head both read it."
     },
     {
-     "p": "Machine learning sits on the same layers. A fermentation time model trains on silver tables of gravity readings joined to yeast generation and pitch rate, in a Fabric notebook and writes its forecast back as a column in the batch record. The cellar manager never opens the notebook. They see a predicted terminal date next to each tank in the report they already use. Keeping models inside the platform, rather than in a separate tool with its own copy of the data, means the forecast is always built on the same definitions as the report beside it."
+     "p": "Alerts land with a named person. If a fermenter runs 1 °C above its profile for 30 minutes, the cellar manager hears about it during the shift rather than in Friday's report. The decision is still theirs. They just get to make it while it still matters."
     }
    ]
   },
   {
-   "h2": "Security, tenancy and what good looks like",
+   "h2": "What good looks like",
    "blocks": [
     {
-     "p": "On Fabric the data stays in the brewery's own Microsoft tenant, under the brewery's own Microsoft Entra identities. OneLake security can apply row-level and column-level rules that hold across engines, so a site brewer sees their own site's tanks whether they use a report or a notebook. Cost data can be hidden from roles that do not need it. Setting these rules in OneLake rather than only in each report is what stops a clever user reading round them."
+     "p": "A good brewery data platform looks dull from the outside. The cellar report and the finance pack agree. A new question, such as loss by malt supplier, takes days rather than a project. The historian, the ERP and the LIMS are still the systems of record. Nobody had to replace them."
     },
     {
-     "p": "Build it in stages. Start with two sources that answer one question, such as brewhouse records and packaging counts for beer loss. Prove the batch key on those. Add the lab next, then the historian summaries, then cost. Each stage should end with a number the plant uses in a meeting. A platform that lands twenty sources before anyone uses one number is a storage bill, not a data platform."
+     "p": "Security follows your own rules. The data stays in your Microsoft tenant under your own Microsoft Entra identities. A site brewer sees their own site's tanks. Cost data stays with the roles that need it. Those rules hold whether someone opens a report or asks the copilot a question."
     },
     {
-     "p": "A good brewery data platform on Azure and Fabric looks dull from the outside. Numbers agree between the cellar report and the finance pack. A new question takes days, not a project. The historian, the ERP and the lab are still the systems of record. Nobody had to replace them. When it goes wrong, it is usually because the batch key was skipped to get a dashboard out early."
+     "p": "When a platform goes wrong it is nearly always the same story. The key that links brew number, fermentation number and packaging lot was skipped to get a dashboard out early. Blends and split packaging runs were left for later. Everything built on top inherits the gap, so every number is right until someone checks it against the cellar log."
+    }
+   ]
+  },
+  {
+   "h2": "Questions to ask any provider before you buy a data platform",
+   "blocks": [
+    {
+     "ul": [
+      "**Does it run in our tenant or yours?** That decides who owns the data on the day the contract ends.",
+      "**Do we have to replace the ERP, LIMS or historian?** For analytics you should not.",
+      "**Does anything write back to SCADA or the PLCs?** It should not.",
+      "**Who maps the batch keys and can we see the mapping?** Ask specifically about blends and split packaging runs.",
+      "**Which question gets answered first and by when?** A platform with no first question has no finish line.",
+      "**What will Fabric capacity cost each year?** In writing, separate from the fees.",
+      "**Who signs off that the number is right?** Someone in your finance team should, against a baseline agreed before work starts."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "How Beer365 delivers it on Azure and Fabric",
+   "blocks": [
+    {
+     "p": "Beer365 is beer intelligence for the whole beer business, built by Disruptive Advantage on Microsoft Azure and Microsoft Fabric. It reads from Excel, the ERP, SCADA, the historian and the LIMS. It joins brewhouse, cellar, packaging, quality, plant, supply chain, sales and finance into one batch record. On that record sit Power BI pages by role, a live digital twin and analytics on yield, loss, energy and quality. A generative AI copilot answers questions with the batch and tag cited."
     },
     {
-     "p": "Beer365 is built on exactly this stack. It runs on Azure and Fabric inside your own tenant, reads from the systems you already have, builds the one batch record and answers questions with the batch records cited."
+     "ul": [
+      "**Assessment, two weeks, fixed price.** We map your systems, the keys each one uses and the first question worth answering. We size the Fabric capacity you will need.",
+      "**Proof of concept, 20 weeks.** The batch record runs on your data for that question, against a baseline signed at the start. Your plant controller signs a statement each month.",
+      "**Live.** More sources and more roles join the same record. Nothing already built has to be rebuilt."
+     ]
+    },
+    {
+     "p": "Your IT team provides the tenant, the Fabric capacity, read-only access to the source systems and a named contact. You own every report, model and record."
     }
    ]
   }
@@ -146,19 +103,19 @@
  "faq": [
   {
    "q": "Is Microsoft Fabric suitable for a brewery?",
-   "a": "Yes, for breweries that want ERP, historian, lab and sales data in one place. Fabric covers batch data through lakehouses and warehouses, time-series data through Eventhouse and reporting through Power BI, all on one copy of the data in OneLake."
+   "a": "Yes. It holds batch data, high-frequency historian readings and Power BI reports on one copy of the data inside your own tenant. Beer365 is built on it for that reason."
   },
   {
-   "q": "How does historian data get into Microsoft Fabric?",
-   "a": "Usually through an Eventstream from a source such as Azure IoT Hub, Event Hubs or Kafka into an Eventhouse, where it is queried with KQL. A summary per batch then moves into the lakehouse for reporting."
+   "q": "Do we have to replace our ERP or LIMS?",
+   "a": "No. Beer365 reads from them. They stay the systems of record and nothing is written back."
   },
   {
-   "q": "Do we have to replace our ERP or LIMS to use Fabric?",
-   "a": "No. Fabric reads from existing systems through mirroring, shortcuts, pipelines and file transformations. The ERP, historian and LIMS stay the systems of record."
+   "q": "Where is our data stored?",
+   "a": "In OneLake inside your own Microsoft tenant, under your own Microsoft Entra identities. It does not sit in a Disruptive Advantage account."
   },
   {
-   "q": "Where is the brewery's data stored on Fabric?",
-   "a": "In OneLake inside the brewery's own Microsoft tenant, secured with its own Microsoft Entra identities. Row-level and column-level rules can be set in OneLake security so they apply across Fabric engines."
+   "q": "What does our IT team need to provide?",
+   "a": "A Microsoft tenant with Fabric capacity, read-only access to the source systems and a named contact. The assessment confirms the capacity size and its cost before you commit."
   }
  ]
 }

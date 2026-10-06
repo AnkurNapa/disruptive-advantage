@@ -2,9 +2,9 @@
  "slug": "brewery-digital-twin",
  "uc_id": null,
  "area": "layer",
- "title": "What a brewery digital twin is and what it is not",
+ "title": "A brewery digital twin that knows what is in every tank",
  "standfirst": "A brewery digital twin is a live model of the plant fed by its own records. A 3D render of tanks with no data behind it is a screensaver, however good it looks.",
- "description": "What a brewery digital twin is and is not: a live model of tanks, lines and batches fed by plant data, not a 3D render with no data behind it.",
+ "description": "Brewery digital twin delivered live: what is in every tank, when it will be free and what is running late, fed by your own records inside your tenant.",
  "keywords": [
   "brewery digital twin",
   "digital twin brewing",
@@ -12,19 +12,19 @@
   "brewery simulation",
   "fermentation digital twin"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
-   "h2": "What is a brewery digital twin?",
+   "h2": "What a brewery digital twin is",
    "blocks": [
     {
-     "p": "A brewery digital twin is a model of the brewery that stays in step with the real plant because it is fed by the plant's own records. At any moment it can say what is in each vessel, where it came from, how it is behaving against its plan and what is likely to happen next. The state comes from data: historian readings, brew sheets, lab results, packaging runs, the ERP. The behaviour comes from rules a brewer would recognise: fermentation slows as gravity falls, a bright tank cannot be filled while it is being cleaned, a filler cannot package beer that has not been released."
+     "p": "A brewery digital twin is a model of the brewery that stays in step with the real plant because it is fed by the plant's own records. At any moment it can say what is in each vessel, where it came from, how it is behaving against its plan and what is likely to happen next. The state comes from data: historian readings, brew sheets, lab results, packaging runs, the ERP. The behaviour comes from rules a brewer would recognise. Fermentation slows as gravity falls. A bright tank cannot be filled while it is being cleaned. A filler cannot package beer that has not been released."
     },
     {
-     "p": "The test is whether you can ask it a question and get an answer tied to a real batch. 'What is in FV7? When will it be free?' A twin answers: brew 2417, pale lager, 380 hL, 4.1 °P this morning, predicted terminal in two days, then a diacetyl rest, so free on Friday. If the model cannot answer that, it is not a twin of the brewery. It is a picture of one."
+     "p": "The test is whether you can ask it a question and get an answer tied to a real batch. What is in FV7? When will it be free? A twin answers: brew 2417, pale lager, 380 hL, 6.2 °P this morning, free on Friday once the diacetyl rest and transfer are done. If it cannot answer that, it is not a twin of the brewery. It is a picture of one."
     },
     {
-     "p": "Staying in step is the hard part. A twin is only as current as its slowest feed. Historian readings arrive every second. Lab results arrive when the lab enters them, which might be hours later. Brew sheets on paper arrive when someone types them up. A good twin shows the age of each fact next to it, so the cellar manager knows the gravity is from 06:00 and the VDK result is from yesterday afternoon. Hiding that difference is how a twin loses the brewers' trust in its first month."
+     "p": "Staying in step is the hard part. Historian readings arrive every second. Lab results arrive when the lab enters them, which might be hours later. Paper brew sheets arrive when someone types them up. A good twin shows the age of each fact next to it, so the cellar manager knows the gravity is from 06:00 and the VDK result is from yesterday afternoon. Hiding that difference is how a twin loses the brewers in its first month."
     }
    ]
   },
@@ -33,117 +33,122 @@
    "blocks": [
     {
      "ul": [
-      "**Not a 3D render.** A rotating model of the brewhouse is a nice front end. With no live data behind it, it is a screensaver. The 3D is optional. The data binding is not.",
-      "**Not a simulation on its own.** A process simulation with textbook kinetics and no plant data shows how a brewery like yours might behave. A twin shows how yours does.",
+      "**Not a 3D render.** A rotating model of the brewhouse is a nice front end. With no live data behind it, it is a screensaver. The 3D is optional. The data is not.",
+      "**Not a simulation on its own.** Textbook kinetics with no plant data show how a brewery like yours might behave. A twin shows how yours does.",
       "**Not a replacement for the brewer.** The twin knows a tank is running two degrees warm. It does not know the glycol valve has been sticking since Tuesday, unless someone wrote it down.",
-      "**Not a single software product you install.** It is a batch record, an asset model of the plant and some rules, joined and kept current. Several vendors' tools can form part of it."
+      "**Not a controller.** A twin that reads the plant should not write to it. Valves and setpoints stay with SCADA and the operators."
      ]
     },
     {
-     "p": "I have built a twin with a 3D cellar view and I like it. The first thing visitors look at is the rotating fermenter. The first thing a cellar manager looks at is the column that says which tank is late. That tells you where the value is."
+     "p": "We have built a twin with a 3D cellar view and we like it. The first thing visitors look at is the rotating fermenter. The first thing a cellar manager looks at is the column that says which tank is late. That tells you where the value is."
     }
    ]
   },
   {
-   "h2": "The levels of a brewery twin, from useful to ambitious",
-   "blocks": [
-    {
-     "table": {
-      "head": [
-       "Level",
-       "Question it answers",
-       "What it needs"
-      ],
-      "rows": [
-       [
-        "Descriptive",
-        "What is in each vessel and line right now?",
-        "Batch record linked to vessels, current readings, current lab results"
-       ],
-       [
-        "Diagnostic",
-        "Why did this batch run long or lose volume?",
-        "Full history per batch, deviations, maintenance events, calibration records"
-       ],
-       [
-        "Predictive",
-        "When will this tank be free? Which compressor is degrading?",
-        "Enough past batches or run hours to fit a model and check it"
-       ],
-       [
-        "Prescriptive",
-        "If we hold this batch two days, what happens to the brewing plan?",
-        "Rules for vessel capacity, cleaning, transfers and packaging, plus the plan itself"
-       ]
-      ]
-     }
-    },
-    {
-     "p": "Most breweries get most of the value from the first two levels. Knowing where every hectolitre is, with its history attached, settles arguments that used to take a morning. Prediction and what-if planning come later, once the descriptive layer has been right for long enough that people trust it."
-    }
-   ]
-  },
-  {
-   "h2": "A worked example: predicting when a fermenter is free",
+   "h2": "A worked example: when will FV7 be free?",
    "blocks": [
     {
      "p": "Say FV7 holds 380 hL of lager at 6.2 °P this morning. The expected terminal gravity for this beer is 2.4 °P. Over the last 24 hours gravity fell 1.1 °P."
     },
     {
      "eq": {
-      "label": "Naive days to terminal gravity",
+      "label": "Straight-line days to terminal gravity",
       "code": "days = (current gravity - terminal gravity) / daily drop = (6.2 - 2.4) / 1.1 = 3.8 / 1.1 = 3.5 days",
-      "note": "Straight-line estimate. Useful as a floor, wrong as a forecast."
+      "note": "Useful as a floor. Wrong as a forecast."
      }
     },
     {
-     "p": "Any brewer will tell you the straight line is wrong. Fermentation slows as sugar runs out and yeast settles. The last degree Plato can take as long as the three before it. A useful twin compares FV7's curve with the last ten batches of the same beer on the same yeast generation and fits the shape, not the line. If those batches took 5.5 days to get from 6.2 °P to terminal, the twin says 5.5 days and lists the batches it compared against."
+     "p": "Any brewer will tell you the straight line is wrong. Fermentation slows as sugar runs out and yeast settles. The last degree Plato can take as long as the three before it. A useful twin compares FV7 with the last ten batches of the same beer on the same yeast generation. If those took 5.5 days to get from 6.2 °P to terminal, the twin says 5.5 days and lists the batches it compared against."
     },
     {
-     "p": "Then the twin adds the rules. After terminal gravity, this beer gets a diacetyl rest and a VDK check before cooling. The tank is free when the beer is transferred, not when gravity stops. A twin that forgets the rest frees the tank two days early on paper. The next brew has nowhere to go."
+     "p": "Then it applies the rules. After terminal gravity this beer gets a diacetyl rest and a VDK check before cooling. The tank is free when the beer is transferred, not when gravity stops. A twin that forgets the rest frees the tank two days early on paper. The next brew then has nowhere to go."
     },
     {
-     "p": "The same method works for bright tanks and packaging. If the twin knows each bright tank's volume, the beer's release status and the filler's rate for that SKU, it can predict when the tank will be empty and the next transfer can start. Those predictions are what a planner actually wants from a twin: the next three days of vessel availability, checked against the brewing plan."
+     "table": {
+      "head": [
+       "Level",
+       "Question it answers",
+       "What the plant decides differently"
+      ],
+      "rows": [
+       [
+        "Descriptive",
+        "What is in each vessel and line right now?",
+        "No more morning walk round the cellar with a clipboard"
+       ],
+       [
+        "Diagnostic",
+        "Why did this batch run long or lose volume?",
+        "Which practice to change, with the batches as evidence"
+       ],
+       [
+        "Predictive",
+        "When will this tank be free?",
+        "Whether next week's brewing plan fits the vessels"
+       ],
+       [
+        "What-if",
+        "If we hold this batch two days, what moves?",
+        "Which brew to push and which order to protect"
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Most breweries get most of the value from the first two levels. Prediction and what-if planning earn trust only after the descriptive layer has been right every morning for a while."
     }
    ]
   },
   {
-   "h2": "Where twins go wrong and where to start",
+   "h2": "Questions to ask any provider before you buy a twin",
    "blocks": [
     {
-     "p": "Twins fail in predictable ways. The asset model is built from the P&ID, not from how the plant runs today, so a tank that was re-piped in 2019 shows the old route. Readings are bound to tags without calibration records, so a probe reading high drives every prediction. The team spends a year on the 3D model before the batch record exists. Or the twin is built by a vendor and nobody in the brewery can change a rule when the process changes."
+     "ul": [
+      "**Is every vessel bound to live data and a batch?** Ask to see one tank traced to its brew.",
+      "**Does it show how old each fact is?** Gravity from this morning and a lab result from yesterday are not the same thing.",
+      "**Who changes a rule when your process changes?** If the diacetyl rest drops from 48 to 36 hours, the twin should change the same week.",
+      "**Was it built from the P&ID or from how the plant runs today?** A tank re-piped in 2019 should not show the old route.",
+      "**Does it write to the plant?** It should not.",
+      "**What is in it on the first day?** Separate what is delivered from what is on the roadmap."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "How Beer365 delivers a live brewery digital twin",
+   "blocks": [
+    {
+     "p": "The Beer365 twin reads the same batch record as the Power BI pages and the copilot, inside your own Microsoft Azure and Microsoft Fabric tenant. Vessels and lines are linked to batches from your historian, SCADA, brew sheets, LIMS and ERP. It never writes back to control. When a tank looks wrong, the copilot can answer why, citing the batch and the tag."
     },
     {
-     "p": "Decide early who owns the rules. When the brewery changes a diacetyl rest from 48 to 36 hours, or adds a new bright tank, somebody inside the brewery must be able to change the twin the same week. If every change needs a vendor ticket, the twin drifts away from the plant within a year and people quietly go back to the whiteboard."
+     "ul": [
+      "**Assessment, two weeks, fixed price.** We map the vessels, the records that describe them and the area where tank time costs most, usually the cellar.",
+      "**Proof of concept, 20 weeks.** The descriptive twin runs for that area against a signed baseline, with a monthly statement signed by your plant controller.",
+      "**Live.** Packaging, bright beer and planning join the same twin."
+     ]
     },
     {
-     "p": "Start with the descriptive level for one area, usually the cellar, because tank time is scarce and expensive. Link each vessel to its batch. Show gravity against profile and the predicted free date. Add the transfers and the packaging runs next. Only then add the what-if planning. A twin that knows exactly what is in every tank and is right every morning earns the trust to make predictions."
-    },
-    {
-     "p": "This connects to the whole brewery. The same batch record that drives the cellar view tells packaging what is coming, tells quality which batches are on hold, tells supply chain when beer will be available and tells finance what each hectolitre cost. That is why the batch record comes first and the 3D comes last."
-    },
-    {
-     "p": "Beer365 builds the descriptive and diagnostic layers of a twin on Microsoft Fabric inside your own tenant: the batch record, linked to vessels and lines, read from the systems you already run, with answers that cite the batch."
+     "p": "Your IT team provides the Microsoft tenant with Fabric capacity, read-only access to the source systems and a named contact. You own every report, model and record. The rules belong to you as well."
     }
    ]
   }
  ],
  "faq": [
   {
-   "q": "What is a digital twin in brewing?",
-   "a": "A digital twin of a brewery is a model of the plant kept current by the brewery's own data, so it can say what is in each vessel, how it is behaving against plan and what is likely to happen next, with each answer tied to a real batch."
-  },
-  {
    "q": "Is a 3D model of a brewery a digital twin?",
-   "a": "Not on its own. A 3D model is a way to display a twin. Without live data bound to each vessel and batch, it is a render, not a twin."
+   "a": "Not on its own. A 3D model is one way to display a twin. Without live data bound to each vessel and batch, it is a render."
   },
   {
-   "q": "What data does a brewery digital twin need?",
-   "a": "A batch record linked to vessels and lines, live readings from the historian, lab results, transfers and packaging runs, plus calibration and maintenance records so the twin knows when a reading cannot be trusted."
+   "q": "Does the twin control the plant?",
+   "a": "No. Beer365 reads from SCADA, the historian and your other systems. It never writes back to control."
   },
   {
    "q": "Where should a brewery start with a digital twin?",
-   "a": "In the cellar, at the descriptive level: link every tank to its batch, show gravity against profile and predict when each tank will be free. Add packaging, planning and what-if scenarios once that is trusted."
+   "a": "Usually in the cellar, where tank time is scarce: every tank linked to its batch, gravity against profile and a predicted free date. Packaging and planning come once that is trusted."
+  },
+  {
+   "q": "Can we change the twin's rules ourselves?",
+   "a": "The rules sit in your tenant and belong to you. During the proof of concept we agree who changes them, so a shorter diacetyl rest reaches the twin the week it reaches the cellar."
   }
  ]
 }

@@ -529,3 +529,12 @@ img[width][height]{height:auto}
 .hdr .logo img{height:40px;width:auto}
 @media (max-width:980px){.hdr .logo img{height:32px;width:auto}}
 .frame img{width:100%;height:auto;object-fit:contain}
+.p-art .solbox{margin-top:40px;padding:28px 30px;border-radius:var(--radius);background:var(--ink);color:#fff}
+.p-art .solbox .sbk{font-size:.875rem;font-weight:700;color:var(--yellow);margin-bottom:14px}
+.p-art .solbox ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.p-art .solbox li{font-size:.9375rem;line-height:1.55;color:rgba(255,255,255,.82);padding-left:18px;position:relative}
+.p-art .solbox li::before{content:'';position:absolute;left:0;top:.6em;width:8px;height:3px;background:var(--yellow)}
+.p-art .solbox b{color:#fff}
+.p-art .solbox .sba{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:20px}
+.p-art .solbox .txtlink{color:#fff;text-decoration-color:var(--yellow)}
+@media print{.p-art .solbox{display:none}}

@@ -2,9 +2,9 @@
  "slug": "brewery-data-strategy",
  "uc_id": null,
  "area": "layer",
- "title": "Brewery data strategy, a staged plan for where to start",
- "standfirst": "A brewery data strategy does not start with a platform or an AI pilot. It starts with one question that costs money every week and the batch key that answers it.",
- "description": "A brewery data strategy in stages: which question to start with, how to build one batch record and when dashboards, ML and GenAI earn their place.",
+ "title": "A brewery data strategy that starts with one question worth money",
+ "standfirst": "A brewery data strategy does not start with a platform or an AI pilot. It starts with one question that costs money every week and someone who will sign the answer.",
+ "description": "Brewery data strategy in stages: pick one question worth money, build one batch record, prove it against a signed baseline, then grow from there.",
  "keywords": [
   "brewery data strategy",
   "where to start with brewery data",
@@ -12,7 +12,7 @@
   "brewery data roadmap",
   "beer business analytics plan"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
    "h2": "Why brewery data strategies stall",
@@ -21,84 +21,29 @@
      "p": "Most brewery data strategies stall in one of two places. Some start with the platform: a year of migration, twenty sources landed, no number anyone uses. Others start with the AI pilot: a clever model on one tank's data that impresses in a meeting and never runs again because nobody can feed it. Both skip the dull middle. That middle is the batch record, the definitions and one question the brewery actually argues about."
     },
     {
-     "p": "The brewery data strategy that works is staged. Each stage ends with a number used in a real meeting. Nothing moves to the next stage until the last one is trusted. It is slower in the first month and much faster by the sixth, because nobody has to go back and rebuild the foundations."
+     "p": "Neither failure is anyone's fault. Both are what happens when the plan is written around a tool rather than around the beer."
+    },
+    {
+     "p": "The strategy that works is staged. Each stage ends with a number used in a real meeting. Nothing moves on until the last stage is trusted. It is slower in the first month and much faster by the sixth, because nobody has to go back and rebuild the foundations."
     }
    ]
   },
   {
-   "h2": "Where should a brewery start with data?",
+   "h2": "Where a brewery should start",
    "blocks": [
     {
-     "p": "Start with a question that meets three tests. It costs money every week. Someone senior already asks it. The data to answer it exists, even if it is scattered. Good first questions in a brewery:"
+     "p": "Start with a question that passes three tests. It costs money every week. Someone senior already asks it. The data to answer it exists, even if it is scattered across Excel, the ERP and a lab book. Good first questions in a brewery:"
     },
     {
      "ul": [
-      "**How much beer do we lose? Where?** Brewhouse, cellar, filtration, packaging. Every brewery has a loss number. Few can split it by stage.",
-      "**Why do some fermentations run long?** Tank time is the constraint in many breweries running near capacity.",
+      "**How much beer do we lose and where?** Brewhouse, cellar, filtration, packaging. Every brewery has a loss number. Few can split it by stage.",
+      "**Why do some fermentations run long?** Tank days are the constraint in many breweries running near capacity.",
       "**What stops the filler?** Stoppage codes exist in the PLC. They are rarely summarised by cause and SKU.",
-      "**What does a packaged hectolitre really cost?** Including losses, energy and water, not only materials."
+      "**What does a packaged hectolitre really cost?** Including loss, energy and water, not materials alone."
      ]
     },
     {
-     "p": "Pick one. Not four. The first question is chosen as much for what it forces you to build as for the answer. Beer loss is a good first choice because answering it needs brewhouse, cellar, packaging and duty data joined by batch, which is exactly the foundation everything else needs."
-    },
-    {
-     "p": "If two candidate questions look equally good, choose the one whose answer someone can act on within a month. A loss figure that points to tank bottoms on one beer can change the cellar routine next week. A five-year capacity model, however interesting, will not change anything until next year's budget. Early wins on the floor buy the patience the later stages need."
-    }
-   ]
-  },
-  {
-   "h2": "A staged plan for brewery data",
-   "blocks": [
-    {
-     "table": {
-      "head": [
-       "Stage",
-       "What gets built",
-       "Done when"
-      ],
-      "rows": [
-       [
-        "1. Inventory",
-        "A list of every system and paper record that touches a batch, with owner, format and how often it updates",
-        "The team agrees the list is complete for the first question"
-       ],
-       [
-        "2. One batch record",
-        "Brew number, fermentation number and packaging lot mapped to each other, including blends and split runs",
-        "A brewer can pick any packaged lot and trace it back to its brews"
-       ],
-       [
-        "3. Definitions",
-        "Written definitions for the measures the question needs: brewed, packaged and sold volume, loss by stage, tank days",
-        "Finance and production quote the same number"
-       ],
-       [
-        "4. First dashboards",
-        "One page per role for the first question, from a shared model",
-        "The page is opened in the weekly meeting without a spreadsheet beside it"
-       ],
-       [
-        "5. Machine learning",
-        "Forecasts and anomaly flags as columns in the batch record, such as predicted terminal date",
-        "Predictions are checked against outcomes and the error is known"
-       ],
-       [
-        "6. GenAI",
-        "Plain-English questions over the batch record and documents, answered with citations",
-        "Answers cite batches and say 'not in the records' when they should"
-       ]
-      ]
-     }
-    },
-    {
-     "p": "Stages 2 and 3 are where most of the value is created and where most plans try to save time. Do not. A brewery with a trusted batch record and agreed definitions can answer new questions in days. A brewery without them answers each new question with a new spreadsheet."
-    },
-    {
-     "p": "Notice where AI sits: stages 5 and 6, on top of the record. Machine learning trained on unjoined data learns the mess. A GenAI assistant over unjoined data gives fluent answers about the wrong batch. The order is not caution for its own sake. It is the order in which each layer becomes trustworthy."
-    },
-    {
-     "p": "Paper is not a reason to wait. Many breweries still keep brew sheets and cellar logs on paper or in one spreadsheet per month. Stage 1 lists them like any other source. Stage 2 can start with the last six months typed into a simple template, with the batch keys filled in properly. That is often enough history to answer the first question and to show what a digital brew sheet should capture from then on."
+     "p": "Pick one. Not four. Beer loss is often a good first choice because answering it needs brewhouse, cellar, packaging and excise data joined by batch, which is exactly the foundation every later question needs. If two candidates look equally good, choose the one someone can act on within a month. A loss figure that points to tank bottoms on one beer changes the cellar routine next week. A five-year capacity model changes nothing until next year's budget."
     }
    ]
   },
@@ -106,7 +51,7 @@
    "h2": "A worked example: sizing the first question",
    "blocks": [
     {
-     "p": "Say a brewery casts 100,000 hL of wort a year and its total process loss, from cast wort to packaged beer, is reported as 8 percent. Nobody can say where it goes."
+     "p": "Say a brewery casts 100,000 hL of wort a year and reports total process loss, from cast wort to packaged beer, of 8 percent. Nobody can say where it goes."
     },
     {
      "eq": {
@@ -116,47 +61,78 @@
      }
     },
     {
-     "p": "Splitting that 8,000 hL by stage is the first project. If the cellar accounts for 2 percentage points, that is 2,000 hL, or five brews, lost between fermenter and bright tank. That number tells you whether to look at yeast handling, tank bottoms, transfers or filtration. It also tells finance what one point of loss is worth, which is the sum every later data project gets judged against."
+     "p": "Splitting that 8,000 hL by stage is the first project. If the cellar accounts for 2 percentage points, that is 2,000 hL, or five brews, lost between fermenter and bright tank. That tells the head brewer whether to look at yeast handling, tank bottoms, transfers or filtration. It also tells finance what one point of loss is worth, which is the sum every later project gets judged against."
     },
     {
-     "p": "The trap is the denominator. Some breweries measure loss against cast wort, some against beer in fermenter, some against brewed volume corrected for temperature. Pick one, write it down and never change it without restating the history."
+     "p": "The trap is the denominator. Some breweries measure loss against cast wort, some against beer in fermenter, some against brewed volume corrected for temperature. Pick one, write it down and have finance sign it. That signature is the baseline."
     }
    ]
   },
   {
-   "h2": "Who needs to be involved and what good looks like",
+   "h2": "Who owns what and what good looks like",
    "blocks": [
     {
-     "p": "A brewery data strategy is not an IT project. The head brewer owns the brewing definitions. The packaging lead owns line data and stoppage codes. Quality owns the lab and the specification. Finance owns cost and duty. IT or a partner owns the plumbing. Someone has to own the batch record across all of them. In a mid-sized brewery that is often the person who already maintains the loss spreadsheet. Give them the time and the title."
+     "p": "A brewery data strategy is not an IT project. The head brewer owns the brewing definitions. The packaging lead owns line data and stoppage codes. Quality owns the lab and the specification. Finance owns cost and excise. IT owns access. Someone has to own the batch record across all of them. In a mid-sized brewery that is often the person who already keeps the loss spreadsheet. Give them the time and the title."
     },
     {
-     "p": "Be wary of buying the big piece first. A new MES, a historian upgrade or a data platform licence may all be right eventually, but none of them tells you which batch lost the beer. Spend the first months proving the batch record and one question on the systems you already have. The gaps you hit along the way, such as a filler that does not log stoppage causes, become a precise shopping list instead of a vendor's wish list."
+     "p": "Be wary of buying the big piece first. A new MES, a historian upgrade or a platform licence may all be right eventually, but none of them tells you which batch lost the beer. Prove the batch record and one question on the systems you already have. The gaps you hit, such as a filler that does not log stoppage causes, become a precise shopping list instead of a vendor's wish list."
     },
     {
-     "p": "After six months, a good strategy shows up in small ways. The weekly meeting uses one set of numbers. A new question, such as loss by malt supplier, takes days rather than a project. The brewers trust the cellar page enough to stop keeping their own. Only then is the brewery ready to ask a model to predict anything."
+     "p": "Before you sign with anyone, ask four things. Which number will move and who signs the baseline? What runs in our tenant and what stays with you? What do we own if we stop? Does anything write back to our control systems? If the answers are vague, so is the strategy."
+    }
+   ]
+  },
+  {
+   "h2": "How Beer365 delivers a brewery data strategy",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Stage",
+       "What happens",
+       "Done when"
+      ],
+      "rows": [
+       [
+        "Assessment, two weeks, fixed price",
+        "Your systems, records and keys are listed. One question is chosen and sized in money.",
+        "You agree the question and the baseline it will be measured against"
+       ],
+       [
+        "Proof of concept, 20 weeks",
+        "One batch record answers that question on your data, with written definitions",
+        "Your plant controller has signed a monthly statement against the baseline"
+       ],
+       [
+        "Live",
+        "More questions, roles and sources join the same record",
+        "The weekly meeting runs from one set of numbers"
+       ]
+      ]
+     }
     },
     {
-     "p": "Beer365 is designed around this order. It reads from the systems a brewery already has, builds the one batch record and its definitions inside the brewery's own Microsoft tenant, then answers questions with the batch records cited."
+     "p": "Beer365 is built by Disruptive Advantage and runs inside your own Microsoft Azure and Microsoft Fabric tenant. It reads from Excel, the ERP, SCADA, the historian and the LIMS and never writes back to control. On the batch record sit Power BI pages by role, a live digital twin, analytics on yield, loss, energy and quality and a copilot that cites the batch and the tag. Your IT team provides the Microsoft tenant with Fabric capacity, read-only access to the source systems and a named contact. You own every report, model and record."
     }
    ]
   }
  ],
  "faq": [
   {
-   "q": "Where should a brewery start with data analytics?",
-   "a": "With one question that costs money every week, such as beer loss by stage or fermentation time, plus the batch record needed to answer it. Platforms, dashboards and AI come after the batch record and definitions are trusted."
+   "q": "Where should a brewery start with data?",
+   "a": "With one question that costs money every week, such as beer loss by stage or fermentation time, plus the batch record needed to answer it. Platforms, dashboards and AI come after that record is trusted."
   },
   {
-   "q": "What is a batch record in brewery data?",
-   "a": "One row per brew that joins brewhouse, cellar, packaging and lab facts by mapping the brew number, fermentation number and packaging lot to each other, including blends and split packaging runs."
+   "q": "How long does it take?",
+   "a": "With Beer365, a two-week assessment, then a 20-week proof of concept against a signed baseline. Further questions join the same record once it is live."
   },
   {
-   "q": "When should a brewery use AI or machine learning?",
-   "a": "After it has a trusted batch record and agreed definitions. Models trained on unjoined or inconsistent data learn the inconsistencies. GenAI assistants over them give confident answers about the wrong batch."
+   "q": "Do we need a new MES or data platform first?",
+   "a": "No. Beer365 reads the systems you already run. The proof of concept shows which gaps are real before you buy anything."
   },
   {
-   "q": "How long does a brewery data strategy take?",
-   "a": "The first useful number, such as loss by stage, can usually be produced within weeks once the data is found. A trusted batch record across brewhouse, cellar, packaging and lab typically takes a few months, depending on how much is on paper."
+   "q": "Who should own it inside the brewery?",
+   "a": "Production and finance own the definitions. One named person owns the batch record across departments, often whoever already keeps the loss spreadsheet."
   }
  ]
 }

@@ -2,195 +2,185 @@
  "slug": "power-bi-for-breweries",
  "uc_id": null,
  "area": "layer",
- "title": "The Power BI dashboards a brewery actually needs, role by role",
- "standfirst": "Most brewery dashboards are built for the person who asked for them once. The ones that last answer the question each role asks every morning, from one set of definitions.",
- "description": "Power BI for breweries by role: the dashboards head brewers, packaging, quality, supply chain, sales and finance use, with the measures behind them.",
+ "title": "Power BI for breweries, delivered by role and owned by you",
+ "standfirst": "Your head brewer should not be learning report design. A brewery needs the right numbers in front of each role every morning, agreed once, running in its own tenant.",
+ "description": "Power BI for breweries delivered as a service: role pages for brewing, packaging, quality and finance in your own tenant, with numbers that agree.",
  "keywords": [
   "Power BI for breweries",
   "brewery dashboard",
   "brewery KPI dashboard",
-  "Power BI brewery KPIs",
-  "beer production dashboard"
+  "beer production dashboard",
+  "Power BI brewery KPIs"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
-   "h2": "Why most brewery dashboards stop being opened",
+   "h2": "Why brewery dashboards stop being opened",
    "blocks": [
     {
-     "p": "Power BI for breweries usually starts the same way. Someone senior asks for a production dashboard. An analyst builds forty visuals on one page. It gets opened for a fortnight, then the head brewer goes back to the whiteboard in the cellar office because the whiteboard is right and the dashboard is a day late."
+     "p": "Power BI for breweries usually starts the same way. Someone senior asks for a production dashboard. A report appears with forty visuals on one page. It gets opened for a fortnight. Then the head brewer goes back to the whiteboard in the cellar office, because the whiteboard is right and the dashboard is a day late."
     },
     {
-     "p": "The dashboards that survive share three habits. Each one is built for a role, not a department. Each answers the question that role asks before the morning meeting. Every number on it comes from the same governed definitions as every other dashboard in the building, so the packaging lead and the finance director quote the same packaged volume. The third habit matters most. Two dashboards with two definitions of production do more damage than none."
+     "p": "The software was rarely the problem. The problem is that nobody agreed what the numbers mean. Packaging counts production at the filler. Finance counts it at the excise register. The brewhouse counts cast wort. All three call it production, so the morning meeting spends ten minutes on whose figure is right before anyone talks about beer."
+    },
+    {
+     "p": "A brewery does not need to become a Power BI shop to fix this. What it needs is a set of pages, one per role, that answer the question each person asks before the morning meeting, from definitions that production and finance have both signed. That is something we deliver and run. It is not a course your team has to sit."
     }
    ]
   },
   {
-   "h2": "Which Power BI dashboards does a brewery need?",
+   "h2": "What each role sees and decides differently",
    "blocks": [
     {
-     "p": "This is the set I would build for a mid-sized brewery, one page per role, each with no more than six or seven numbers above the fold."
+     "p": "This is the set we put in front of a mid-sized brewery. Each page carries six or seven numbers at most. Each number clicks through to the batch behind it, then to the tank, then to the readings."
     },
     {
      "table": {
       "head": [
        "Role",
-       "The morning question",
-       "Measures on the page"
+       "What they see each morning",
+       "What they decide differently"
       ],
       "rows": [
        [
         "Head brewer",
-        "Did yesterday's brews hit gravity and volume? Which ones did not?",
-        "Brewhouse yield per brew, cast volume against plan, knockout gravity against target, brews per day"
+        "Extract and knockout gravity against target per brew, cast volume against plan",
+        "Which brews to look into today, before the next mash-in repeats the fault"
        ],
        [
         "Cellar manager",
-        "Which tanks are on time, which are late and what is free next week?",
-        "Gravity curve against profile per tank, predicted terminal date, tank days per beer, free vessel calendar"
+        "Gravity against profile per tank, predicted free date, tank days per beer",
+        "Whether next week's brewing plan fits the vessels that will actually be free"
        ],
        [
         "Packaging lead",
-        "What stopped the lines and why?",
-        "OEE per line, stoppage minutes by cause, packaged volume against plan, fill level and seam results"
+        "OEE per line, stoppage minutes by cause, dissolved oxygen at the filler",
+        "Which fault gets the fitter's time this week"
        ],
        [
         "Quality head",
-        "Is anything drifting before it fails?",
-        "Lab results against spec with control limits, open deviations, sensory panel scores, micro by sample point"
+        "Results against specification, trends drifting before they fail",
+        "Which batch to hold before it ships, not after the complaint"
        ],
        [
         "Supply chain",
-        "Do we have enough of each SKU and its materials?",
-        "Stock cover in weeks by SKU, forecast against actual, malt, hop and packaging material cover"
+        "Stock cover and freshness by SKU, beer in tank by expected release",
+        "What to brew next and which stock to move first"
        ],
        [
         "Sales",
-        "Which accounts and SKUs are moving?",
-        "Volume and revenue per hectolitre by channel, depletions by account, SKU mix"
+        "Volume by outlet and channel, outlets whose orders are falling",
+        "Which accounts to visit before they stop ordering"
        ],
        [
-        "Finance and plant director",
-        "What did a hectolitre cost and where did beer go?",
-        "Cost per packaged hectolitre, beer loss by stage, energy and water per hectolitre, duty paid against packaged"
+        "Finance",
+        "Cost per packaged hectolitre, beer loss by stage, packaged volume against excise removals",
+        "Where the margin went this month, in hectolitres rather than guesses"
        ]
       ]
      }
     },
     {
-     "p": "Notice that the cellar page carries a predicted terminal date. That is where machine learning earns a place on a dashboard: as one honest column next to the tank, not as a separate AI page nobody visits."
-    },
-    {
-     "p": "The plant director's page deserves its own note, because it is where dashboards usually go wrong. The temptation is to put every other page's headline on it. Resist that. A plant director needs the handful of numbers that move money: cost per packaged hectolitre, beer loss by stage, OEE on the bottleneck line, stock cover on the top SKUs, open quality holds. Each one should click through to the role page that explains it. If the director has to ring the cellar to find out why loss went up, the page has failed, however good it looks."
-    },
-    {
-     "p": "What should not be on any of these pages? Vanity totals with no target. Gauges that are always green. Anything nobody in the room can act on this week. A cellar manager cannot change last year's revenue. Give them tank days."
+     "p": "The plant director gets one more page with the handful of numbers that move money: cost per packaged hectolitre, loss by stage, OEE on the bottleneck line, stock cover on the top SKUs, open quality holds. If the director has to ring the cellar to find out why loss went up, the page has failed, however good it looks."
     }
    ]
   },
   {
-   "h2": "A worked example: OEE on the filler",
+   "h2": "A worked example: one shift, two OEE figures",
    "blocks": [
     {
-     "p": "OEE is the packaging lead's main number. It is also the one most often calculated three different ways in the same brewery. Say a can line is planned for an 8-hour shift, 480 minutes. It stops for 60 minutes in total. Its rated speed is 600 cans a minute. It produces 226,800 cans, of which 223,400 pass fill level and seam checks."
-    },
-    {
-     "eq": {
-      "label": "Overall equipment effectiveness",
-      "code": "OEE = availability x performance x quality",
-      "note": "Availability = run time / planned time. Performance = actual output / (rated speed x run time). Quality = good units / total units."
-     }
+     "p": "Say a can line is planned for an 8-hour shift, 480 minutes. It stops for 60 minutes in total, 30 of them for a planned CIP. Rated speed is 600 cans a minute. It makes 226,800 cans, of which 223,400 pass fill level and seam checks."
     },
     {
      "table": {
       "head": [
        "Factor",
-       "Calculation",
-       "Result"
+       "CIP counted as lost time",
+       "CIP taken out of planned time"
       ],
       "rows": [
        [
         "Availability",
-        "420 min / 480 min",
-        "87.5%"
+        "420 / 480 = 87.5%",
+        "420 / 450 = 93.3%"
        ],
        [
         "Performance",
-        "226,800 / (600 x 420) = 226,800 / 252,000",
+        "226,800 / (600 x 420) = 90.0%",
         "90.0%"
        ],
        [
         "Quality",
-        "223,400 / 226,800",
+        "223,400 / 226,800 = 98.5%",
         "98.5%"
        ],
        [
         "OEE",
-        "0.875 x 0.900 x 0.985",
-        "77.6%"
+        "77.6%",
+        "82.7%"
        ]
       ]
      }
     },
     {
-     "p": "A quick check: 223,400 good cans against the 288,000 the line could have made in 480 minutes at rated speed is also 77.6 percent. If your OEE measure does not pass that check, the DAX is wrong."
+     "p": "Both figures are arithmetically correct. If packaging quotes one and finance quotes the other, the meeting loses fifteen minutes and nobody fixes the filler. The cure is not a better chart. It is one written decision, made by the people who own the line and the budget, on whether planned cleaning counts as lost time. Once it is signed, every page in the building uses it and the argument does not come back."
     },
     {
-     "p": "The traps are in the inputs, not the formula. Is a planned CIP inside planned time or outside it? Does a changeover count as a stop? Is rated speed the nameplate or the speed the line was validated at for this SKU? Write the answers down once, put them in the semantic model and every page inherits them."
-    },
-    {
-     "p": "One more check on any OEE page: make sure the line's rated speed is held per SKU. A can line that runs 600 cans a minute on 330 ml may be validated at a lower speed on 500 ml. Using one rated speed for both makes the larger pack look like a performance problem when it is a definition problem."
+     "p": "Most of the real work in a brewery dashboard project is decisions like that one. Rated speed per SKU, because a line validated at 600 cans a minute on 330 ml may run slower on 500 ml. Which loss belongs to which stage. Whether a blend counts as one batch or two. We bring the list of decisions. Your people make them."
     }
    ]
   },
   {
-   "h2": "How to build Power BI for a brewery so the numbers agree",
+   "h2": "Questions to ask any provider before you buy brewery dashboards",
    "blocks": [
     {
      "ul": [
-      "**One semantic model, many reports.** Measures such as packaged volume, beer loss and OEE are defined once in a shared model. Each role's report reads from it. Nobody writes their own version in a report.",
-      "**Brewed, packaged and sold are three measures.** Name them that way. Never let a visual say production.",
-      "**Row-level security by site or area.** Each brewer sees their own tanks. Cost data stays with the roles that need it.",
-      "**Direct Lake on Fabric where the volume is large.** It reads Delta tables in OneLake without a scheduled import, so the cellar page is not a day behind.",
-      "**Raw historian data stays out of the model.** Billions of readings belong in a time-series store. The model gets the per-batch summary."
+      "**Whose tenant does it run in?** If the reports live in the provider's account, you are renting your own numbers.",
+      "**Who signs the definitions?** Production and finance should sign them, not the developer.",
+      "**Can every number click through to a batch?** If it cannot, nobody will trust it the first time it looks odd.",
+      "**How current is each page?** Every page should show when each source last loaded.",
+      "**What will licences and capacity cost each year?** Get that in writing, separate from the project fee.",
+      "**Who changes a page when your process changes?** Ask how long it takes and what it costs.",
+      "**What happens when you leave?** You should keep every report, model and record without a migration."
      ]
-    },
-    {
-     "p": "Two smaller habits help. Put the definition of each measure in its description so it shows when someone hovers over it. Show the time of the last data load on every page, because a brewer who sees 06:10 trusts the page more than one who has to guess."
-    },
-    {
-     "p": "Plan for questions the pages do not answer. Someone will always want brewhouse yield for one beer over one quarter, split by malt lot. With a well-built semantic model, that is a filter or a plain-English question to a data agent reading the same model, not a new report request that waits three weeks."
     }
    ]
   },
   {
-   "h2": "What good looks like",
+   "h2": "How Beer365 delivers Power BI for a brewery",
    "blocks": [
     {
-     "p": "A good brewery dashboard set is boring in the best way. The morning meeting opens the same pages every day. Nobody brings a spreadsheet to argue with the dashboard. When the packaging lead says OEE was 77.6 percent, finance does not reply with 81. When a number looks odd, someone can click from the loss figure to the batch that caused it, then to the tank, then to the readings."
+     "p": "Beer365 is beer intelligence for the whole beer business, built by Disruptive Advantage. It runs inside your own Microsoft Azure and Microsoft Fabric tenant. It reads from the systems you already have, whether that is Excel, the ERP, SCADA, the historian or the LIMS. It never writes back to control. Brewhouse, cellar, packaging, quality, plant, supply chain, sales and finance meet in one batch record. The role pages read from that record, so the head brewer and the finance director quote the same number."
     },
     {
-     "p": "That last step, from the number to the batch behind it, is what Beer365 adds. It builds the governed batch record and semantic model on Microsoft Fabric inside your own tenant, so Power BI pages and plain-English questions return the same numbers, with the batch records cited."
+     "ul": [
+      "**Assessment, two weeks, fixed price.** We look at the roles, the questions they ask and the systems that hold the answers. You see which pages come first and which Microsoft licences you will need.",
+      "**Proof of concept, 20 weeks.** The first pages run on your data against a baseline you sign at the start. Each month your plant controller signs a statement of where the number stands against it.",
+      "**Live.** The pages become the morning meeting. Questions asked of the copilot in plain English return the same numbers, with the batch and tag cited."
+     ]
+    },
+    {
+     "p": "You own every report, model and record. From your IT team we need a Microsoft tenant with Fabric capacity, read-only access to the source systems and one named person who can open doors. Nobody in the brewery has to learn report design."
     }
    ]
   }
  ],
  "faq": [
   {
-   "q": "What KPIs should a brewery track in Power BI?",
-   "a": "It depends on the role. Head brewers track brewhouse yield and knockout gravity, cellar managers track tank days and fermentation against profile, packaging tracks OEE and stoppages, quality tracks results against spec while finance tracks cost per packaged hectolitre and beer loss by stage."
+   "q": "Do we need Power BI licences?",
+   "a": "Yes, in your own name, because Beer365 runs in your own Microsoft tenant. Which licences you need and how much Fabric capacity depend on how many people read the pages. The two-week assessment sets that out with costs before you commit."
   },
   {
-   "q": "How do you calculate OEE for a brewery filler?",
-   "a": "OEE is availability x performance x quality. Availability is run time over planned time, performance is actual output over rated speed times run time, quality is good units over total units. Agree first whether CIP and changeovers count as planned time."
+   "q": "Do our people need to learn Power BI?",
+   "a": "No. They open pages and ask questions. We build and run what sits behind them. If your team wants to build its own reports later, the governed model is yours to build on."
   },
   {
-   "q": "Why do brewery dashboards show different production numbers?",
-   "a": "Usually because brewed, packaged and sold volume are all being called production, or each report defines the measure itself. A single shared semantic model with named, written definitions fixes it."
+   "q": "Who owns the dashboards if we stop working with you?",
+   "a": "You do. Every report, model and record sits in your tenant from the first day. Nothing has to be moved or handed back."
   },
   {
-   "q": "Should a brewery use Power BI Direct Lake?",
-   "a": "If the data sits in Microsoft Fabric and the volumes are large, Direct Lake reads Delta tables in OneLake without a scheduled import, which keeps cellar and packaging pages current. Raw historian streams should still be summarised before they reach the model."
+   "q": "Can Beer365 change settings on our plant?",
+   "a": "No. It reads from your ERP, SCADA, historian, LIMS and spreadsheets. It never writes back to control."
   }
  ]
 }

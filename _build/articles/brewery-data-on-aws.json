@@ -2,151 +2,125 @@
  "slug": "brewery-data-on-aws",
  "uc_id": null,
  "area": "layer",
- "title": "How to approach brewery data and AI on AWS if you already run there",
- "standfirst": "If your brewery already runs on AWS, there is no reason to move to get value from its data. The hard work is the same on every cloud: one batch record and agreed definitions.",
- "description": "Brewery data and AI on AWS: S3, AWS IoT SiteWise and Amazon Bedrock for a brewery, plus how Microsoft Fabric reads the same S3 data without copying it.",
+ "title": "Brewery data on AWS without moving your stack",
+ "standfirst": "If your brewery runs on AWS, you do not have to migrate to get one batch record and answers you can check. Beer365 reads your data where it already sits.",
+ "description": "Brewery data on AWS: Beer365 reads your Amazon S3 data where it sits, joins it into one batch record and leaves your AWS stack exactly as it is today.",
  "keywords": [
   "brewery data on AWS",
   "AWS for breweries",
-  "AWS IoT SiteWise brewery",
-  "Amazon Bedrock brewery",
-  "brewery analytics AWS S3"
+  "Amazon S3 brewery data",
+  "brewery analytics AWS",
+  "Microsoft Fabric and AWS"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
-   "h2": "Should a brewery on AWS move clouds to do data and AI?",
+   "h2": "The cloud is not why the numbers disagree",
    "blocks": [
     {
-     "p": "No. A brewery that already runs its ERP, historian exports or e-commerce on Amazon Web Services can build its brewery data and AI work on AWS. The cloud is rarely the reason a brewery's numbers disagree. The reason is that the brew number in the brewhouse log, the tank number in the cellar and the lot code on the filler were never mapped to each other. That problem travels with you to any provider."
+     "p": "A brewery that runs its ERP, historian exports or e-commerce on Amazon Web Services often hears that it has to change clouds before it can do anything useful with its data. That is rarely true. The numbers disagree because the brew number in the brewhouse log, the tank in the cellar and the lot code on the filler were never mapped to each other. That problem travels with you to any cloud."
     },
     {
-     "p": "I will be plain about where I stand. Beer365 runs on Microsoft Azure and Microsoft Fabric inside the brewery's own Microsoft tenant. That does not make AWS the wrong place for a brewery's data. It means this article covers two things: how a brewery on AWS should approach its own data and AI, then how a Fabric-based tool can read that data where it sits."
+     "p": "Migration also costs a year nobody gets back. Your AWS team has built things that work. A proposal that starts by tearing them up is a proposal about the provider's stack, not about your beer. The question worth asking is narrower: what does the brewery need to see that it cannot see today and where does that data already live?"
+    },
+    {
+     "p": "There is a people question too. The team that runs AWS should not have to learn brewing. The brewers should not have to learn AWS. Someone has to sit between the two who knows what a fermentation number is, why a blend from two tanks breaks a simple join and why the night shift's gravity readings look different from the day shift's. That is the part we bring."
     }
    ]
   },
   {
-   "h2": "How a brewery should approach data and AI on AWS",
+   "h2": "How Beer365 works with a brewery on AWS",
    "blocks": [
     {
-     "p": "The building blocks on AWS map cleanly onto a brewery. These are the services I would look at first, described the way AWS documents them."
-    },
-    {
-     "table": {
-      "head": [
-       "Brewery need",
-       "AWS service",
-       "What it does for the brewery"
-      ],
-      "rows": [
-       [
-        "One place for raw and shaped data",
-        "Amazon S3",
-        "Object storage for ERP extracts, lab files, historian exports and the shaped batch tables, ideally in an open table format such as Delta or Iceberg"
-       ],
-       [
-        "Equipment and process data from the floor",
-        "AWS IoT SiteWise",
-        "Collects, stores, organises and monitors industrial equipment data. Asset models describe fermenters, compressors and fillers. Its edge gateway reads OPC UA servers on site"
-       ],
-       [
-        "Plant metrics",
-        "AWS IoT SiteWise",
-        "Computes metrics such as overall equipment effectiveness and mean time between failures from the asset data"
-       ],
-       [
-        "GenAI over batch records and SOPs",
-        "Amazon Bedrock Knowledge Bases",
-        "Retrieval augmented generation over your documents, with citations so the source can be checked"
-       ]
-      ]
-     }
-    },
-    {
-     "p": "AWS IoT SiteWise is worth a closer look for the floor. Its documentation lists food and beverage as a use case, with examples like monitoring refrigeration across sites. It keeps recent equipment data in a hot tier for live monitoring, moves older data to a warm tier for analysis and can put cold history in your own S3 bucket. A single SiteWise Edge gateway can connect up to 100 OPC UA servers, which covers most breweries' automation estate."
-    },
-    {
-     "p": "Model the plant before you collect it. A SiteWise asset model for a fermenter should carry the tags that matter to a brewer: jacket temperature, top and bottom probes, pressure, the gravity readings from the lab. If the asset hierarchy mirrors the actual cellar, the cellar manager can find tank 12 without learning a tag naming scheme written in 2009."
-    },
-    {
-     "p": "Pick the first use on AWS the same way you would anywhere: by the money. For a brewery running ammonia refrigeration around the clock, SiteWise alarms on compressor discharge temperature and motor current are a cheap first step, because the data already exists in the PLC and the cost of a failed compressor in July is easy to write down. For a brewery short of fermenter space, a fermentation time forecast trained on gravity readings in S3 frees tank days. For a quality team buried in paperwork, a Bedrock knowledge base over deviation reports and SOPs gives them search with sources. Each of these can be built entirely on AWS by a team that knows it."
-    }
-   ]
-  },
-  {
-   "h2": "The part no AWS service does for you",
-   "blocks": [
-    {
-     "p": "None of those services know that a brewery packages one fermentation into three SKUs over two days, or that a blend draws from two tanks with different brew numbers. That mapping is brewery knowledge. On AWS, as anywhere, it becomes a batch record: one row per brew joining brewhouse, cellar, packaging and lab, kept as a table in S3 with a written definition for each measure."
+     "p": "Beer365 runs on Microsoft Azure and Microsoft Fabric inside your own Microsoft tenant. For data in Amazon S3 it uses a OneLake shortcut, which is a read-only pointer to your bucket. The files stay in S3. Nothing is copied by default and nothing is written back."
     },
     {
      "ul": [
-      "**Brewed, packaged and sold volume** must be three separate measures with names, or every loss figure will be argued about.",
-      "**Times** must be in one time zone. Historians often log UTC while brew sheets are in local time.",
-      "**Units** must be explicit: hectolitres or litres, °Plato or specific gravity, never both in one column.",
-      "**Calibration records** must sit beside the sensor data, because a probe reading 0.8 °C high will train a model to be wrong."
+      "**Your stack stays put.** The ERP, the historian exports and anything your team has built on AWS carry on as they are.",
+      "**Equipment history counts too.** If AWS IoT SiteWise already keeps older equipment data in your own S3 bucket, that history can be read the same way.",
+      "**No AWS keys to hand out.** Microsoft supports Microsoft Entra service principal sign-in for S3 shortcuts, so access runs through an identity your IT team controls.",
+      "**Locked-down buckets still work.** Buckets behind a firewall or VPC can be reached through an on-premises data gateway.",
+      "**Cross-cloud reads are kept in check.** Fabric can cache files read from S3 for between 1 and 28 days, which cuts repeated egress. Files over 1 GB are not cached."
      ]
     },
     {
-     "p": "With that record in place, Bedrock Knowledge Bases can answer questions over batch records and SOPs with citations. Equipment models can train on SiteWise history joined to maintenance logs. Without it, both will produce confident answers about the wrong batch."
+     "p": "The batch record, the Power BI pages, the digital twin and the copilot live in your Microsoft tenant. If you already use Microsoft 365, you already have one."
     },
     {
-     "p": "Whichever services you choose, keep the shaped tables in an open format such as Delta or Iceberg in S3. They are still ordinary files in S3. The format keeps the batch record readable by other engines later, including Microsoft Fabric, without an export job sitting in the middle that someone has to maintain."
+     "p": "What crosses between clouds matters more than how. A day of raw historian readings can run to gigabytes. The summary of the same day, with gravity stages, peak temperatures and minutes out of profile per tank, is a small fraction of that. Beer365 reads the shaped data where it can and leaves the raw stream on AWS for the engineers who need it. That keeps the egress line on your AWS bill short."
     }
    ]
   },
   {
-   "h2": "Can Microsoft Fabric read brewery data stored on AWS?",
+   "h2": "What the brewery sees and decides differently",
    "blocks": [
     {
-     "p": "Yes. Microsoft Fabric supports OneLake shortcuts to Amazon S3. A shortcut is a pointer, so the data stays in your bucket and is not copied. Microsoft documents S3 shortcuts as read-only access to data in any file format. If the data is a Delta table, it can appear as a table in a Fabric lakehouse, queryable through Spark and the SQL endpoint."
+     "p": "Once the S3 data meets the rest of the brewery in one batch record, the conversation moves from where the number is to what to do about it."
     },
     {
-     "p": "A few details matter for a brewery's security and cloud bill. Fabric can cache files read through S3 shortcuts, with a retention period you set between 1 and 28 days, to reduce egress costs from cross-cloud reads. Files larger than 1 GB are not cached. For buckets behind a firewall or VPC, Fabric can connect through an on-premises data gateway. Microsoft also documents Microsoft Entra service principal authentication for S3 shortcuts, which avoids managing AWS access keys."
+     "ul": [
+      "The head brewer sees extract per brew next to the malt lot, so a weak lot shows up after two brews rather than ten.",
+      "The cellar manager sees tank days per beer and the date each fermenter will be free.",
+      "Packaging sees OEE and dissolved oxygen by line and SKU, tied to the tank that fed the filler.",
+      "Quality sees results drifting against specification before they fail, with the batch history one click away.",
+      "Finance sees beer loss by stage in hectolitres and money, with the excise register reconciled each month."
+     ]
     },
     {
-     "p": "To be clear about the trade-off: a brewery happy on AWS can build all of this on AWS. Reading S3 from Fabric makes sense when the brewery also uses Power BI or Microsoft 365, when a group company standardises on Microsoft or when a Fabric-based tool needs to work on the data without anyone migrating it. Cross-cloud reads still have a network cost on the AWS side, so the shape of what crosses matters, as the next example shows."
+     "p": "What good looks like is easy to describe. Next quarter your AWS architecture looks the same and your cloud bill barely moves. Your morning meeting does not look the same. It runs from one set of numbers. Nobody brings a spreadsheet to argue with it."
     }
    ]
   },
   {
-   "h2": "A worked example: move summaries across clouds, not streams",
+   "h2": "Questions to ask any provider when you run on AWS",
    "blocks": [
     {
-     "p": "Say a brewery's historian exports to S3 come to 2 GB a day of raw tag readings. The batch summary for the same day, with gravity stages, peak temperatures and minutes out of profile per tank, is 20 MB."
+     "ul": [
+      "**Does the proposal need a migration?** If it does, ask what the brewery gains that reading in place would not give.",
+      "**What crosses between clouds?** Shaped summaries cost far less to read than raw historian streams.",
+      "**Who pays egress and roughly how much?** AWS charges for data leaving it. Get an estimate before you sign.",
+      "**Is access read-only?** Nothing should write to your buckets or your control systems.",
+      "**Whose credentials does it use?** Prefer an identity your IT team controls over long-lived access keys.",
+      "**Where does the batch record live when the contract ends?** It should already be in your tenant."
+     ]
+    }
+   ]
+  },
+  {
+   "h2": "How Beer365 delivers it alongside AWS",
+   "blocks": [
+    {
+     "ul": [
+      "**Assessment, two weeks, fixed price.** We look at what sits in S3, what sits elsewhere and which question is worth answering first. We estimate cross-cloud read costs before you commit.",
+      "**Proof of concept, 20 weeks.** The batch record runs on your data, read in place, against a baseline signed at the start. Your plant controller signs a statement every month.",
+      "**Live.** More sources join the same record. Anything new your team lands in S3 can join it too."
+     ]
     },
     {
-     "eq": {
-      "label": "Share of bytes read across clouds",
-      "code": "summary / raw = 20 MB / 2,000 MB = 1 percent",
-      "note": "Read the summary through the shortcut. Leave the raw stream on AWS for engineers who need it."
-     }
+     "p": "From IT we need read-only access to the relevant buckets, a Microsoft tenant with Fabric capacity and a named contact. You own every report, model and record."
     },
     {
-     "p": "Pointing a cross-cloud report at the summary instead of the raw stream means reading one hundredth of the data every refresh. The shaping happens on AWS, next to the data. Only the shaped table crosses. That is good practice whichever direction the data flows."
-    },
-    {
-     "p": "Beer365 can work this way for a brewery on AWS. It reads the shaped tables in S3 through Fabric shortcuts, builds the one batch record inside the brewery's own Microsoft tenant and answers questions with the batch records cited. The data stays where the brewery put it."
+     "p": "To be straight about it: a brewery with a strong AWS team can build all of this on AWS. Beer365 is for breweries that want the brewing outcome delivered and signed for, rather than a data project to staff."
     }
    ]
   }
  ],
  "faq": [
   {
-   "q": "Can a brewery use AWS for data and AI?",
-   "a": "Yes. Amazon S3 can hold brewery data, AWS IoT SiteWise can collect and model equipment data from the floor and Amazon Bedrock Knowledge Bases can answer questions over batch records with citations. The brewery still has to build the batch record and agree definitions."
+   "q": "Do we have to move off AWS?",
+   "a": "No. Beer365 reads your Amazon S3 data where it sits through a read-only OneLake shortcut. Your AWS stack stays as it is."
   },
   {
-   "q": "Does Microsoft Fabric work with Amazon S3?",
-   "a": "Yes. Fabric supports OneLake shortcuts to Amazon S3 that give read-only access to bucket data without copying it. Fabric can cache shortcut files for 1 to 28 days to reduce egress. It can also reach network-restricted buckets through an on-premises data gateway."
+   "q": "Is our data copied out of S3?",
+   "a": "Not by default. A shortcut points at the files. Fabric can cache files for 1 to 28 days to reduce repeated cross-cloud reads."
   },
   {
-   "q": "Do we need to move our brewery data from AWS to Azure to use Beer365?",
-   "a": "No. Beer365 runs on Azure and Microsoft Fabric but can read data in Amazon S3 through OneLake shortcuts, which point at the data without copying it."
+   "q": "Who pays for cross-cloud reads?",
+   "a": "AWS charges egress to your account. Reading shaped summaries instead of raw streams keeps it small. The assessment estimates the cost before you commit."
   },
   {
-   "q": "What is AWS IoT SiteWise used for in food and beverage?",
-   "a": "AWS documents it for collecting, storing, organising and monitoring industrial equipment data, including food and beverage examples such as refrigeration monitoring across sites. It also computes metrics such as OEE and mean time between failures."
+   "q": "Can our AWS team keep building on AWS?",
+   "a": "Yes. Beer365 only reads. Anything your team builds that lands in S3 can join the batch record later."
   }
  ]
 }

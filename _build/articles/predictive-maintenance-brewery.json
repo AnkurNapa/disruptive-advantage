@@ -2,26 +2,29 @@
  "slug": "predictive-maintenance-brewery",
  "uc_id": null,
  "area": "layer",
- "title": "Predictive maintenance in a brewery, from compressors to fillers",
- "standfirst": "Predictive maintenance in a brewery works on the machines that fail expensively and log plenty of data. It disappoints on machines that failed twice in five years.",
- "description": "Predictive maintenance for breweries: where machine learning helps on pumps, ammonia compressors and fillers, the data it needs and the traps to avoid.",
+ "title": "Predictive maintenance in a brewery, priced in beer and kilowatts",
+ "standfirst": "Predictive maintenance pays on machines that fail expensively and log plenty of data. It disappoints on machines that failed twice in five years.",
+ "description": "Predictive maintenance for breweries: compressors, fillers and pumps flagged before they fail or waste power, read from data you already log.",
  "keywords": [
+  "predictive maintenance for breweries",
   "predictive maintenance brewery",
-  "brewery machine learning maintenance",
   "ammonia compressor monitoring",
   "filler downtime analytics",
   "condition monitoring brewery"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
-   "h2": "What is predictive maintenance in a brewery?",
+   "h2": "The breakdown that happens mid-run",
    "blocks": [
     {
-     "p": "Predictive maintenance in a brewery means using the data a machine already produces to spot it degrading before it fails, so the repair happens on a planned day instead of in the middle of a packaging run. The data is usually there already. Motor current, vibration, discharge temperature, oil pressure, run hours and stoppage codes sit in the PLC, the historian or the maintenance system. What is usually missing is anyone looking at them together until after the breakdown."
+     "p": "A filler that stops in the middle of a packaging run costs more than the repair. Beer waits in the bright tank, the next brew waits for the fermenter it was meant to go into and the overtime bill arrives a week later. Predictive maintenance in a brewery means spotting a machine degrading early enough that the repair happens on a planned day instead."
     },
     {
-     "p": "It is worth being clear about the three things people mean by the term, because they need very different amounts of data."
+     "p": "The data is usually there already. Motor current, vibration, discharge temperature, oil pressure, run hours and stoppage codes sit in the PLC, the historian or the maintenance system. What is missing is anyone looking at them together before the breakdown rather than after it."
+    },
+    {
+     "p": "The term covers three different things. They need very different amounts of history."
     },
     {
      "table": {
@@ -34,43 +37,40 @@
        [
         "Condition limits",
         "Alarms when a reading crosses a set limit, such as bearing temperature",
-        "Live readings and sensible limits. No model"
+        "Live readings and sensible limits"
        ],
        [
         "Anomaly detection",
-        "Flags when a machine behaves unlike its own normal, before any limit is crossed",
-        "Weeks to months of normal running data per machine"
+        "Flags a machine behaving unlike its own normal, before any limit is crossed",
+        "Weeks to months of normal running per machine"
        ],
        [
         "Remaining useful life",
         "Estimates time to failure",
-        "Many recorded failures of the same machine type, with data leading up to each"
+        "Many recorded failures of the same machine type"
        ]
       ]
      }
     },
     {
-     "p": "Most breweries should live in the first two rows. A brewery rarely has enough failures of one compressor model to train a remaining-life model honestly. Anomaly detection on its own normal running is achievable, useful and much easier to check."
+     "p": "Most breweries should live in the first two rows. Very few have enough failures of one compressor model to predict remaining life honestly. Anyone who promises it should be asked how many failures they trained on."
     }
    ]
   },
   {
-   "h2": "Which brewery equipment is worth monitoring?",
+   "h2": "Which machines and what the plant decides differently",
    "blocks": [
     {
      "ul": [
-      "**Ammonia compressors and refrigeration.** They run around the clock and carry the cellar's temperature control. Watch discharge temperature, suction and discharge pressure, oil pressure, motor current and the plant's cooling efficiency. A failure in summer puts every fermenter at risk.",
-      "**Pumps.** Wort, transfer, CIP and glycol pumps. Motor current against flow tells you when an impeller is wearing or a seal is starting to go. Vibration sensors on the larger ones add early warning.",
-      "**Fillers and seamers.** Stoppage codes, fill level rejects and seam check results, by filling valve or seaming head. The pattern often points to one valve long before the line stops.",
-      "**Centrifuges and filters.** Differential pressure, motor load, bowl vibration. These are expensive to repair and slow to replace.",
-      "**Air and CO2 compressors, boilers.** Run hours, load cycles, pressure stability. Less glamorous, equally able to stop the plant."
+      "**Ammonia compressors and refrigeration.** They run around the clock and carry the cellar's temperature control. A failure in summer puts every fermenter at risk. Engineering sees drift weeks ahead and books the service.",
+      "**Fillers and seamers.** Stoppages, fill level rejects and seam results by filling valve or seaming head. The pattern often points to one valve long before the line stops. Packaging fixes that valve at the next changeover.",
+      "**Pumps.** Wort, transfer, CIP and glycol pumps. Motor current against flow shows a worn impeller or a failing seal.",
+      "**Centrifuges and filters.** Differential pressure, motor load and bowl vibration. Expensive to repair and slow to replace.",
+      "**Air and CO2 compressors and boilers.** Run hours, load cycles and efficiency, which feed straight into energy cost per hectolitre."
      ]
     },
     {
-     "p": "Pick by cost of failure multiplied by how often it happens, not by which machine has the most sensors. The filler that stops forty times a shift for a few seconds each may cost more beer and time than the compressor that never fails."
-    },
-    {
-     "p": "Hygienic design matters for sensors too. Anything fitted to product-contact pipework has to meet the brewery's hygiene standards and survive CIP chemistry and temperatures. Clamp-on vibration and current sensors on motors avoid that problem entirely, which is one reason motor current is often the first signal a brewery adds. It needs no break into the process line and the cabinet usually already has room for it."
+     "p": "Rank machines by cost of failure multiplied by how often it happens, not by which one has the most sensors. The filler that stops forty times a shift for a few seconds each may cost more beer and time than the compressor that never fails."
     }
    ]
   },
@@ -78,7 +78,7 @@
    "h2": "A worked example: a compressor losing efficiency",
    "blocks": [
     {
-     "p": "Not every problem is a breakdown. Some machines degrade slowly and cost money every hour while they do. Say the cellar's refrigeration plant delivers 300 kW of cooling. When clean and well set, it runs at a coefficient of performance (COP) of 4.0. Over a season, fouled condensers and a drifting setpoint take it to 3.4."
+     "p": "Not every problem is a breakdown. Some machines degrade slowly and cost money every hour while they do. Say the cellar's refrigeration plant delivers 300 kW of cooling. Clean and well set, it runs at a coefficient of performance (COP) of 4.0. Over a season, fouled condensers and a drifting setpoint take it to 3.4."
     },
     {
      "eq": {
@@ -88,64 +88,63 @@
      }
     },
     {
-     "p": "If the plant runs that load for 6,000 hours a year, the extra 13.2 kW comes to about 79,400 kWh a year. Nothing has failed. No alarm has fired. A model watching COP against its own normal would have flagged the drift months earlier. The fix was a condenser clean and a setpoint check."
+     "p": "If the plant carries that load for 6,000 hours a year, the extra 13.2 kW comes to about 79,400 kWh a year. Multiply by your tariff for the money. Nothing has failed. No alarm has fired. A flag on COP against its own normal would have shown the drift months earlier. The fix was a condenser clean and a setpoint check."
     },
     {
-     "p": "COP has to be calculated from data the brewery may not log yet: cooling delivered, which needs glycol or brine flow and temperatures in and out, plus compressor power. That is a good example of the real work in predictive maintenance. The model is simple. Getting the right two or three measurements logged reliably is the project."
+     "p": "COP needs cooling delivered as well as compressor power, which means glycol or brine flow and temperatures in and out. Some breweries do not log all of those yet. Finding that gap early is worth more than any model, because it tells you exactly which meter to fit."
     }
    ]
   },
   {
-   "h2": "Where predictive maintenance goes wrong in breweries",
+   "h2": "Questions to ask any provider before you buy predictive maintenance",
    "blocks": [
     {
      "ul": [
-      "**Too few failures.** Two recorded bearing failures in five years cannot train a failure model. Use anomaly detection and engineering judgement instead.",
-      "**Maintenance logs in free text.** 'Fixed pump' with no asset ID or cause cannot be joined to sensor data. Cleaning up the work order history is often the first deliverable.",
-      "**Operating mode ignored.** A pump on CIP behaves differently from the same pump on product transfer. A model that does not know the mode flags every CIP as an anomaly and gets switched off within a week.",
-      "**Sensor drift.** A vibration sensor that drifts looks exactly like a degrading bearing. Keep calibration and replacement records with the data.",
-      "**Alerts with no owner.** An alert at 02:00 that goes to a shared inbox is not maintenance. Each alert needs a named person and a decision: inspect, plan or ignore with a reason."
+      "**How many failures does the model learn from?** Two bearing failures in five years cannot train a failure model.",
+      "**Does it know the operating mode?** A pump on CIP behaves differently from the same pump on transfer. A model that does not know the mode flags every CIP and gets switched off within a week.",
+      "**Who receives the alert at 02:00?** It needs a named person and enough context to judge it: the reading, its normal range, the mode and the last work order.",
+      "**How are false alarms recorded?** That log is what turns alerts into something engineers trust.",
+      "**What about sensor drift?** A drifting vibration sensor looks exactly like a failing bearing. Calibration records should sit beside the data.",
+      "**Does it write to the PLC?** It should not."
      ]
-    },
-    {
-     "p": "The CIP problem catches nearly everyone. I have seen a well-built model ignored because it cried wolf every night at the same hour. The fix was one extra column telling it which program was running."
     }
    ]
   },
   {
-   "h2": "How to start predictive maintenance in a brewery",
+   "h2": "How Beer365 delivers predictive maintenance",
    "blocks": [
     {
-     "p": "Choose two or three machines where failure is costly and data already exists, usually the ammonia compressors and the filler. Pull six to twelve months of readings, the operating mode and the work order history into one place. Agree what normal looks like with the maintenance team, by mode. Start with clear condition limits and an anomaly score per machine. Review every alert for a month with the engineers and record whether it was real. That review log is what turns a model into a tool people trust."
+     "p": "Beer365 reads historian, SCADA and maintenance records into the same batch record as the rest of the brewery, inside your own Microsoft Azure and Microsoft Fabric tenant. It flags machines against condition limits and against their own normal, by operating mode. Each flag links to the batches and runs it affected and to energy cost per hectolitre, so engineering and finance see the same consequence. It never writes back to control."
     },
     {
-     "p": "The tooling is less important than the routine. On Microsoft Fabric, high-frequency readings sit in an Eventhouse, which has built-in anomaly detection on time-series data and can drive Activator rules that notify a named person. On AWS, IoT SiteWise offers alarms on equipment data. Either works. What decides success is whether the alert lands with someone who knows the machine, at a time they can act, with enough context to judge it: the reading, its normal range, the operating mode and the last work order on that asset. An alert that says 'anomaly score 0.83' with nothing else gets ignored by the second week."
+     "ul": [
+      "**Assessment, two weeks, fixed price.** We pick two or three machines where failure or drift costs most and the data exists. We also list any meter that is missing.",
+      "**Proof of concept, 20 weeks.** Flags run against a signed baseline. Every alert is reviewed with your engineers and recorded as real or not. Your plant controller signs a monthly statement.",
+      "**Live.** More machines join, with the review log kept running."
+     ]
     },
     {
-     "p": "It also ties maintenance to the rest of the brewery. A filler anomaly links to the packaging plan and the beer waiting in the bright tank. A refrigeration drift links to cellar temperatures and energy cost per hectolitre in the finance pack. Maintenance data on its own tells you a machine is tired. Joined to the batch record, it tells you what that costs."
-    },
-    {
-     "p": "Beer365 joins maintenance and historian data to the batch record on Microsoft Fabric inside your own tenant, so an equipment anomaly can be traced to the batches and runs it affected, with the records cited."
+     "p": "Your IT team provides the Microsoft tenant with Fabric capacity, read-only access to the source systems and a named contact. You own every report, model and record."
     }
    ]
   }
  ],
  "faq": [
   {
-   "q": "What is predictive maintenance in brewing?",
-   "a": "It is using data from brewery equipment, such as motor current, vibration, temperatures, pressures and stoppage codes, to spot machines degrading before they fail, so repairs can be planned around brewing and packaging schedules."
+   "q": "Do we need new sensors?",
+   "a": "Often not to start. Motor current, temperatures, pressures and stoppage codes usually already sit in the PLC or historian. Some measures, such as cooling delivered for compressor efficiency, may need a flow meter. The assessment says which."
   },
   {
-   "q": "Which brewery equipment benefits most from predictive maintenance?",
-   "a": "Equipment that is expensive to lose and already logs data: ammonia compressors and refrigeration, fillers and seamers, centrifuges and the larger process pumps."
+   "q": "Will Beer365 change our PLC settings?",
+   "a": "No. It reads from SCADA, the historian and the maintenance system. It never writes back to control."
   },
   {
-   "q": "Do you need machine learning for brewery predictive maintenance?",
-   "a": "Not always. Condition limits on the right readings catch many problems. Anomaly detection against each machine's own normal running adds early warning. Failure prediction models need many recorded failures, which most breweries do not have."
+   "q": "Do we need a history of failures?",
+   "a": "Not for condition limits or for anomaly flags against each machine's own normal running. Predicting time to failure needs many recorded failures, which most breweries do not have."
   },
   {
-   "q": "How do you monitor ammonia compressor efficiency?",
-   "a": "Track coefficient of performance, which is cooling delivered divided by compressor power. That needs glycol or brine flow and temperatures plus power metering. A falling COP at the same load usually points to fouling or a drifting setpoint."
+   "q": "Which machines should we start with?",
+   "a": "The ones that are expensive to lose and already log data, typically ammonia compressors and the filler. The assessment ranks them by cost of failure multiplied by how often it happens."
   }
  ]
 }

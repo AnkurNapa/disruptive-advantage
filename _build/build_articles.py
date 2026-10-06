@@ -116,6 +116,19 @@ AUTHOR = {"@type": "Person", "name": "Ankur Napa", "jobTitle": "Growth Officer, 
           "sameAs": ["https://www.linkedin.com/in/ankur-napa"]}
 
 
+def solution_box(a, area_name):
+    """Every article ends on what Beer365 does for the reader, not on technique."""
+    if a.get("pillar"):
+        return ""
+    ask = quote(f"We would like this answered from our own records: {a['title']}")
+    return (f'<div class="solbox"><p class="sbk">How Beer365 answers this for you</p><ul>'
+            f'<li><b>From the records you already keep.</b> Beer365 reads your brew sheets, lab results, ERP and plant systems in your own Microsoft tenant, and never writes back to them.</li>'
+            f'<li><b>Answered every day, not once.</b> The figure in this article becomes a live view for the people who own it, and a question anyone can ask the copilot in plain English, with the batch and tank behind every answer.</li>'
+            f'<li><b>Proved before you commit.</b> A fixed-price two-week assessment, then a proof of concept with a baseline your plant controller signs.</li></ul>'
+            f'<div class="sba"><a class="btn sm" href="contact.html?produce=beer&amp;ask={ask}">See it on your data</a>'
+            f'<a class="txtlink" href="solutions.html#{E(a["area"])}">The {E(area_name.lower())} solution</a></div></div>')
+
+
 def article_page(a, arts):
     url = f"{BASE}article-{a['slug']}.html"
     desc = a.get("description") or a["standfirst"]
@@ -159,6 +172,7 @@ def article_page(a, arts):
 <div class="sidecta"><p>Want this answered from your own records?</p><a class="btn sm" href="contact.html?produce=beer&amp;ask={ask}">Book a free demo</a></div>
 </aside>
 <div class="prose">{body}
+{solution_box(a, area_name)}
 <p class="ucline">Part of the Beer365 solution for <a href="solutions.html#{E(a["area"])}">{E(area_name.lower())}</a>.</p>
 <div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a><br/><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
 </div>

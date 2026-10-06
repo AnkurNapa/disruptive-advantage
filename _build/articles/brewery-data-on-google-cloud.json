@@ -2,79 +2,37 @@
  "slug": "brewery-data-on-google-cloud",
  "uc_id": null,
  "area": "layer",
- "title": "How to approach brewery data and AI on Google Cloud",
- "standfirst": "BigQuery is a fine home for brewery data. What it cannot do for you is decide which brew number, tank and packaging lot belong together. That part is still the brewery's job.",
- "description": "Brewery data and AI on Google Cloud (GCP): BigQuery, BigQuery ML and grounded GenAI for breweries, plus how Microsoft Fabric reads it without a migration.",
+ "title": "Brewery data on Google Cloud, read where it already sits",
+ "standfirst": "If your sales, e-commerce or group reporting already lives on Google Cloud, you do not need to move it. Beer365 reads BigQuery and Cloud Storage and joins them to the brewing side.",
+ "description": "Brewery data on Google Cloud: Beer365 reads BigQuery and Cloud Storage where they sit and joins them to brewing data, with no migration of your stack.",
  "keywords": [
   "brewery data on Google Cloud",
   "GCP for breweries",
   "BigQuery brewery analytics",
-  "BigQuery ML demand forecast beer",
-  "brewery AI Google Cloud"
+  "brewery AI Google Cloud",
+  "Microsoft Fabric BigQuery"
  ],
- "read_min": 6,
+ "read_min": 5,
  "sections": [
   {
-   "h2": "Can a brewery run its data and AI on Google Cloud?",
+   "h2": "Why breweries on Google Cloud get stuck",
    "blocks": [
     {
-     "p": "Yes. A brewery whose sales data, e-commerce or group reporting already lives on Google Cloud can build its brewery data and AI work there. BigQuery handles the volumes a brewery produces without strain. Google's AI tools can forecast, flag and answer questions over the records. The cloud is rarely what stands between a brewery and a trustworthy number. The missing join between the brewhouse log, the cellar log, the filler and the lab book is."
+     "p": "Breweries usually arrive on Google Cloud through the commercial side. E-commerce, distributor portals, marketing and sales reporting land in BigQuery because that is where the analytics team was comfortable. The production side lives somewhere else: brew sheets in Excel, the historian on site, the ERP in its own database."
     },
     {
-     "p": "To be straight about my position: Beer365 runs on Microsoft Azure and Microsoft Fabric, inside the brewery's own Microsoft tenant. This article still starts with how to do brewery data well on Google Cloud, because that advice holds whichever tool sits on top. The last part covers how Fabric can read the same data without moving it."
+     "p": "So the forecast can be right and the beer can still be missing from the warehouse. The sales data knows what will sell. It does not know that the wheat beer needed for festival week is still in a fermenter, or that the bright tank it needs is booked for something else. That gap is not a cloud problem. It is a join nobody has made."
+    },
+    {
+     "p": "The usual answer from a provider is to move everything into one cloud first. That puts a year of migration between the brewery and its first useful number. The commercial team loses tools that work. The brewing side waits. We think the order should be the other way round: answer the question first, on the data where it sits."
     }
    ]
   },
   {
-   "h2": "How a brewery should approach data and AI on Google Cloud",
+   "h2": "A worked example: festival week",
    "blocks": [
     {
-     "table": {
-      "head": [
-       "Brewery need",
-       "Google Cloud service",
-       "What it does for the brewery"
-      ],
-      "rows": [
-       [
-        "Landing raw files",
-        "Cloud Storage",
-        "Holds ERP extracts, lab exports, distributor files and historian dumps in buckets"
-       ],
-       [
-        "The batch record and reporting tables",
-        "BigQuery",
-        "The warehouse where brewhouse, cellar, packaging, lab and sales tables are joined and queried with SQL"
-       ],
-       [
-        "Forecasts and anomaly flags",
-        "BigQuery ML",
-        "Creates and runs machine learning models with SQL, including ARIMA_PLUS for time-series forecasting and anomaly detection with seasonality and holidays"
-       ],
-       [
-        "GenAI over batch records and SOPs",
-        "Gemini Enterprise Agent Platform (the product previously called Vertex AI)",
-        "Grounding connects model output to verifiable sources and returns links to them"
-       ]
-      ]
-     }
-    },
-    {
-     "p": "BigQuery ML is the piece I would show a brewery's supply chain team first. Demand for beer is seasonal, holiday-shaped and promotion-shaped. ARIMA_PLUS models handle seasonality and holiday effects. They run where the sales data already sits, written in SQL that an analyst can read. No separate data science platform, no extra copy of the data."
-    },
-    {
-     "p": "For floor data, plan the route before the tags. Process historians and PLCs speak OPC UA or MQTT on site. Google's connected-device architecture guidance describes using an MQTT broker or a fuller IoT platform product to bring device data in. Either way, land a per-batch summary in BigQuery rather than pointing every report at the raw stream. The cellar manager wants minutes out of profile per tank, not a billion readings."
-    },
-    {
-     "p": "Breweries that land on Google Cloud often arrive through the commercial side: e-commerce, distributor portals, marketing data. That shapes where AI pays first. Demand forecasting by SKU and channel, account-level depletion trends and promotion lift are natural first projects, because the data is already in BigQuery and the money is visible in stock-outs and write-offs. The production side usually follows later, once someone asks why the forecast was right and the beer still was not in the warehouse. That question needs brewhouse and cellar data in the same place as the sales data."
-    }
-   ]
-  },
-  {
-   "h2": "A worked example: a festival week forecast",
-   "blocks": [
-    {
-     "p": "Say a brewery sells a wheat beer that averages 800 hL a week. Three years of weekly sales in BigQuery show it rising for a regional festival. An ARIMA_PLUS model with the holiday calendar forecasts 1,200 hL for the festival week. Stock on hand is 3,000 hL."
+     "p": "Say a brewery sells a wheat beer that averages 800 hL a week. Three years of sales history show demand rising for a regional festival. The forecast for festival week is 1,200 hL. Stock on hand is 3,000 hL."
     },
     {
      "eq": {
@@ -84,66 +42,98 @@
      }
     },
     {
-     "p": "The gap between 3.75 weeks and 2.5 weeks is the gap between a relaxed planner and a brewhouse that should have brewed a fortnight ago. A wheat beer brewed today will not be packaged for a couple of weeks at best. The forecast only helps if it reaches the brewing plan in time, which is why it belongs in the same tables the planner reads, not in a separate notebook."
+     "p": "The gap between 3.75 and 2.5 weeks is the gap between a relaxed planner and a brewhouse that should have brewed a fortnight ago. A wheat beer brewed today will not be packaged for a couple of weeks at best. The forecast only helps if it sits next to tank availability and the brewing plan, in front of the person who decides what to brew next."
     },
     {
-     "p": "The forecast is also only as honest as the sales history. If depletions and shipments are mixed in one column, or a stock-out week is recorded as low demand, the model learns that festivals are quieter than they are. Clean that first."
+     "p": "The forecast is also only as honest as its history. If a stock-out week is recorded as low demand, the forecast learns that festivals are quieter than they are. How to treat those weeks is a sales and supply chain decision. Your people sign it off, not ours."
     },
     {
-     "p": "Keep units and time zones explicit from the first load. BigQuery will happily store gravity in °Plato from one source and specific gravity from another in the same column if nobody stops it. Name columns with their units, convert at the silver layer and record the conversion rule in the table description where every analyst will see it."
+     "p": "That is what the brewery decides differently once the two sides meet. The planner sees cover by SKU against the date each tank will be free. Sales sees which outlets will run short. Finance sees what a missed festival week costs in hectolitres not sold."
     }
    ]
   },
   {
-   "h2": "What Google Cloud will not do for a brewery",
+   "h2": "How Beer365 reads Google Cloud data",
+   "blocks": [
+    {
+     "p": "Beer365 runs on Microsoft Azure and Microsoft Fabric inside your own Microsoft tenant. It reaches Google Cloud in two ways, chosen per source."
+    },
+    {
+     "table": {
+      "head": [
+       "Where the data sits",
+       "How Beer365 reads it",
+       "What your IT team should know"
+      ],
+      "rows": [
+       [
+        "Files in Google Cloud Storage",
+        "A read-only OneLake shortcut that points at the bucket",
+        "Nothing is copied by default. Access uses an HMAC key for an account with read and list rights on the bucket. Fabric can cache files for 1 to 28 days to cut repeated egress."
+       ],
+       [
+        "Tables in BigQuery",
+        "BigQuery mirroring into OneLake",
+        "A copy kept in step with BigQuery, typically about ten minutes behind. Microsoft does not charge Fabric compute for the replication. Storage is free up to a limit set by capacity. BigQuery's own change tracking and storage costs still apply on the Google side."
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The choice between the two is practical. Tables that already live in BigQuery, such as depletions by outlet, suit mirroring. Files in buckets, such as distributor sales drops or historian exports, suit a shortcut. Either way the brewing side, read from Excel, the ERP, SCADA, the historian and the LIMS, joins the same batch record inside your tenant. Nothing is written back to any of them."
+    },
+    {
+     "p": "One point to plan for. Security rules set inside BigQuery do not travel with a mirror. They are set again in Fabric, matching the rules you already have, as part of the proof of concept. The work is small. Forgetting it is not."
+    }
+   ]
+  },
+  {
+   "h2": "Questions to ask any provider when you run on Google Cloud",
    "blocks": [
     {
      "ul": [
-      "**Map the batch keys.** One fermentation packaged into three SKUs, a blend from two tanks, a re-worked lot. Only the brewery knows these rules.",
-      "**Separate brewed, packaged and sold volume.** All three get called production. They need three named measures.",
-      "**Fix the sensors.** A model trained on a probe reading high learns the error. Keep calibration records beside the data.",
-      "**Do the duty maths in a language model.** Excise and ABV figures belong in tested formulas. A grounded assistant can quote the result with its source."
+      "**Does it need a migration?** If it does, ask what that gives the brewery that reading in place does not.",
+      "**Is each source copied or read in place?** Both are fine. You should know which, source by source.",
+      "**How current will it be?** A mirror about ten minutes behind is fine for planning. It is not an alarm.",
+      "**Who rebuilds the security rules?** Mirrored tables do not inherit BigQuery permissions.",
+      "**What will it cost on both sides?** Google charges for egress and change tracking. Microsoft charges for capacity.",
+      "**Who owns the batch record at the end?** It should already sit in your tenant."
      ]
-    },
-    {
-     "p": "With the batch record built, grounding a Gemini model on batch records and SOPs gives a quality team search with sources: what happened the last three times this yeast stalled, with the batch numbers attached. Without it, the same assistant gives tidy answers about the wrong batch."
-    },
-    {
-     "p": "Build it in stages. Start with one question, such as stock cover for the top ten SKUs, with the two or three tables it needs. Agree the definitions with the planner and the finance team before writing a model. Add the cellar and packaging tables next so the forecast can be checked against what the brewery can actually produce. Each stage should end with a number used in a weekly meeting. If nobody uses it, stop and ask why before adding more data."
     }
    ]
   },
   {
-   "h2": "Can Microsoft Fabric read brewery data on Google Cloud?",
+   "h2": "How Beer365 delivers it alongside Google Cloud",
    "blocks": [
     {
-     "p": "Yes, in two ways. The first is a OneLake shortcut to Google Cloud Storage. It points at the bucket without copying the data. Microsoft documents GCS shortcuts as read-only, authenticated with an HMAC key for a user or service account that has storage.objects.get and storage.objects.list on the bucket. Fabric can cache shortcut files for between 1 and 28 days to reduce egress costs from cross-cloud reads."
+     "ul": [
+      "**Assessment, two weeks, fixed price.** We list what sits in BigQuery and Cloud Storage, what sits on site and which question links them first, for example stock cover against tank availability.",
+      "**Proof of concept, 20 weeks.** The batch record joins brewing and commercial data for that question against a baseline signed at the start. Your plant controller signs a statement every month.",
+      "**Live.** More sources and roles join the same record, with the Power BI pages, the digital twin and the copilot reading from it."
+     ]
     },
     {
-     "p": "The second is mirroring Google BigQuery into Fabric, which Microsoft lists as generally available. Mirroring continuously replicates chosen BigQuery tables into OneLake as Delta tables. Microsoft states the Fabric compute for replication is free and storage is free up to a limit set by the capacity, while BigQuery's own change data capture and storage costs still apply on the Google side. Any granular security set in BigQuery must be set again in Fabric. Microsoft also notes that BigQuery reflects changes with a delay of around ten minutes, so this is a near real-time copy, not a live one."
-    },
-    {
-     "p": "Which to use depends on where the shaped data lives. Batch tables in BigQuery suit mirroring. Files in buckets suit shortcuts. Beer365 can sit on either: it reads the brewery's Google Cloud data through Fabric, builds the one batch record inside the brewery's Microsoft tenant and answers questions with the batch records cited."
+     "p": "From IT we need a read-only key on the relevant buckets, access to the BigQuery tables to mirror, a Microsoft tenant with Fabric capacity and a named contact. You own every report, model and record. Your Google Cloud stack stays exactly where it is."
     }
    ]
   }
  ],
  "faq": [
   {
-   "q": "Is Google Cloud good for brewery analytics?",
-   "a": "Yes. BigQuery can hold and join brewhouse, cellar, packaging, lab and sales tables. BigQuery ML can build forecasting and anomaly detection models in SQL. The brewery still has to map batch keys and agree definitions."
+   "q": "Do we have to leave Google Cloud?",
+   "a": "No. Beer365 reads Cloud Storage in place through a read-only shortcut and mirrors the BigQuery tables it needs. Your Google Cloud stack stays as it is."
   },
   {
-   "q": "Can BigQuery ML forecast beer demand?",
-   "a": "Yes. BigQuery ML's ARIMA_PLUS model is built for time-series forecasting and handles seasonality and holiday effects, which suits weekly beer sales by SKU, provided stock-out weeks are not mistaken for low demand."
+   "q": "Is our BigQuery data copied?",
+   "a": "Mirrored tables are. The copy sits in OneLake inside your own tenant, kept in step with BigQuery and typically about ten minutes behind. Files in Cloud Storage are read in place."
   },
   {
-   "q": "Can Microsoft Fabric read data from BigQuery or Google Cloud Storage?",
-   "a": "Yes. Fabric can mirror BigQuery tables into OneLake as Delta tables and can create read-only OneLake shortcuts to Google Cloud Storage buckets without copying the data."
+   "q": "Will our BigQuery permissions carry over?",
+   "a": "No. Mirroring does not bring BigQuery's granular security with it. The same rules are set again in Fabric during the proof of concept."
   },
   {
-   "q": "Do we need to leave Google Cloud to use Beer365?",
-   "a": "No. Beer365 runs on Azure and Microsoft Fabric but can read brewery data held in Google Cloud Storage or BigQuery through shortcuts or mirroring."
+   "q": "Who pays the Google Cloud costs?",
+   "a": "You do, on your Google account, for egress and BigQuery change tracking. The assessment estimates them alongside the Fabric capacity cost."
   }
  ]
 }
