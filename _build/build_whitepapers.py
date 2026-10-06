@@ -71,6 +71,7 @@ def page(w):
 <div class="findings"><p class="blocklabel">Key findings</p><ul>{findings}</ul></div>
 {body}
 <h2>Sources</h2><ul class="caps srcs">{sources}</ul>
+<div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a></p></div></div>
 </div>
 </div>
 </section>

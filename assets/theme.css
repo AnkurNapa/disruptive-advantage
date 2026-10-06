@@ -396,3 +396,7 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
   url(photos/brewhouse.jpg) center/cover no-repeat,var(--night)}
 @media print{.p-art .ahero{display:none}}
 .area .aimg,.acard .cimg,.p-art .ahero img{height:auto}
+.p-art .author img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.teamph{margin:28px 0 0;max-width:360px}
+.teamph img{display:block;width:100%;height:auto;border-radius:var(--radius);aspect-ratio:9/10;object-fit:cover}
+.teamph figcaption{font-size:.8125rem;color:var(--soft);margin-top:8px}

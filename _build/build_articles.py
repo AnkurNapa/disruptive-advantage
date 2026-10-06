@@ -112,7 +112,7 @@ def ld(obj):
 ORG = {"@type": "Organization", "name": "Beer365", "url": BASE,
        "logo": BASE + "assets/beer365-logo.svg",
        "parentOrganization": {"@type": "Organization", "name": "Disruptive Advantage"}}
-AUTHOR = {"@type": "Person", "name": "Ankur Napa", "jobTitle": "Growth Officer, Beverage R&D",
+AUTHOR = {"@type": "Person", "name": "Ankur Napa", "jobTitle": "Growth Officer, Beverage R&D", "image": BASE + "assets/ankur-napa.jpg",
           "sameAs": ["https://www.linkedin.com/in/ankur-napa"]}
 
 
@@ -160,7 +160,7 @@ def article_page(a, arts):
 </aside>
 <div class="prose">{body}
 <p class="ucline">This article answers one of the <a href="use-cases.html#{E(a["area"])}">{E(area_name.lower())} questions</a> Beer365 is built for.</p>
-<div class="author"><img src="assets/beer365-mark.svg" alt="" width="48" height="48"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
+<div class="author"><img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="72" height="72"><div><p class="an">Written by Ankur Napa</p><p>R&amp;D brewer at United Breweries, SABMiller and AB InBev, then a data scientist on AI and generative AI for AB InBev&#39;s global business units. MSc Brewing Science and Technology, MSc Data Science and AI, Microsoft Certified Fabric Analytics Engineer. He leads Beer365 at Disruptive Advantage.</p><p><a href="https://www.linkedin.com/in/ankur-napa" target="_blank" rel="noopener">Ankur on LinkedIn</a> · <a href="contact.html?produce=beer&amp;ask=I%20would%20like%20to%20talk%20to%20Ankur%20about%20our%20brewery.">Talk to Ankur</a></p></div></div>
 </div>
 </div>
 </section>
