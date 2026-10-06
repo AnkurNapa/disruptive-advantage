@@ -1,0 +1,181 @@
+/* ======================================================================
+   Disruptive Advantage, editorial theme.
+
+   Sits on top of site.css and is deliberately unlayered, so it wins over
+   all three of site.css's layers without any !important.
+
+   THE SHIFT. Heavy Inter headlines with tight tracking, pill shaped
+   actions, soft grey cards with rounded corners, and full bleed dark
+   bands for the moments that should feel like a product, not a page.
+   The brand colours do not change: blue is still action, the three
+   warm hues still mean beer, whisky and wine.
+   ====================================================================== */
+:root{
+  --ink:#0C2340;  --mid:#3D4B5C;  --steel:#0C2340;  --soft:#6B7787;
+  --band:#F4F5F7; --sunk:#F8F9FA; --rule:#DDE1E6; --hair:#ECEEF1;
+  --navy:#0C2340; --night:#07111D;
+  --grad:linear-gradient(120deg,#07111D 0%,#0C2340 45%,#1F4F93 100%);
+  --mint:#5BD6A5; --mint-ink:#03261A;
+  --radius:14px;  --radius-sm:10px; --pill:999px;
+  --display:'Inter',-apple-system,'Segoe UI',sans-serif;
+}
+body{font-family:var(--display);color:var(--ink);letter-spacing:-.005em}
+
+/* ---------- type: one heavy display weight, tight tracking ---------- */
+/* no colours on bare elements: this file is unlayered, so a colour here would
+   beat every .dark and .ask rule in site.css and hide headings on dark bands */
+h1,h2{font-weight:800;letter-spacing:-.035em}
+h1{font-size:clamp(2.5rem,1.3rem + 4vw,4.25rem);line-height:1.04}
+.phero h1{font-size:clamp(2.2rem,1.3rem + 3vw,3.5rem);line-height:1.06}
+h2{font-size:clamp(1.9rem,1.25rem + 2.2vw,3rem);line-height:1.1}
+h3{font-weight:700;letter-spacing:-.02em}
+h4{font-weight:700;letter-spacing:-.01em}
+.std{font-weight:400}
+.kicker{font-size:.875rem;font-weight:600}
+.kicker::before{display:none}
+.dark h1{color:#fff}
+
+/* ---------- actions: pills, one size ---------- */
+.btn{border-radius:var(--pill);min-height:50px;padding:0 28px;font-size:1rem;font-weight:600;letter-spacing:0}
+.btn.sm{min-height:42px;padding:0 20px;font-size:.9375rem}
+.btn.ghost{border:1.5px solid var(--blue);color:var(--blue);background:transparent}
+.btn.ghost:hover{background:var(--blue-t);color:var(--blue-deep);border-color:var(--blue-deep)}
+.dark .btn{background:var(--mint);border-color:var(--mint);color:var(--mint-ink)}
+.dark .btn:hover{background:#7FE3BB;border-color:#7FE3BB;color:var(--mint-ink)}
+.dark .btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.dark .btn.ghost:hover{background:rgba(255,255,255,.1);color:#fff}
+.txtlink{font-weight:600}
+
+/* ---------- header ---------- */
+.hdr{background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px)}
+nav a{color:var(--ink);font-weight:500;font-size:.9375rem}
+nav a.on,nav a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--blue)}
+.hdr .hdr-cta{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.hdr .hdr-cta:hover{background:var(--blue);color:#fff}
+.burger{border-radius:var(--pill)}
+
+/* ---------- surfaces ---------- */
+.tinted{background:var(--band)}
+.dark{background:var(--grad)}
+.frame{border-radius:var(--radius);overflow:hidden;padding:0;border:0}
+.frame img{border-radius:var(--radius) var(--radius) 0 0}
+.frame .cap{padding:12px 16px 14px}
+.ind,.csc,.tile{border-radius:var(--radius);border:0;background:var(--band);border-top:0}
+.ind{padding:32px 30px}
+.ind h3{color:var(--c);font-size:1.5rem;font-weight:800;letter-spacing:-.025em}
+.ind:hover{background:var(--t)}
+.tinted .ind,.tinted .csc{background:#fff}
+.kpi{border-top:0;padding-top:0}
+.kpi b{font-weight:700}
+.ctastrip{background:var(--band);border-top:0}
+.ctastrip h3{font-weight:800;letter-spacing:-.025em}
+.live,.p-index .live{border-radius:var(--radius);overflow:hidden;border-top-width:1px;box-shadow:0 30px 60px -20px rgba(7,17,29,.45)}
+.p-index .modlist{background:transparent;gap:16px;border:0}
+.p-index .mod{background:var(--band);border-radius:var(--radius)}
+.p-index .mod .num{color:var(--blue);font-weight:700}
+.thread{border-radius:var(--radius);overflow:hidden}
+.pipe .stage{border-radius:var(--radius-sm)}
+input,select,textarea{border-radius:var(--radius-sm)}
+.chip,.pill,button.sub,.form button{border-radius:var(--pill)}
+button.sub,.form button{font-weight:600;padding-left:28px;padding-right:28px}
+.two-up{background:transparent;gap:20px;border:0}
+.upcard{background:var(--band);border:0;border-radius:var(--radius)}
+
+/* ---------- footer: light, like the rest of the page ---------- */
+.ftr{background:var(--band);color:var(--ink)}
+.ftr h5{color:var(--ink);font-weight:700}
+.ftr a,.ftr p{color:var(--mid)}
+.ftr a:hover{color:var(--blue)}
+.ftr .base{border-top-color:var(--rule);color:var(--soft)}
+.ftr :focus-visible{outline-color:var(--blue)}
+
+/* ======================================================================
+   Home page only
+   ====================================================================== */
+/* hero: full bleed night with a dot field, the instrument panel as the product shot */
+.p-index .hero.xh{position:relative;overflow:hidden;background:var(--night);color:#fff;border:0;
+  padding:clamp(56px,6vw,104px) 0 clamp(56px,6vw,96px)}
+.p-index .hero.xh::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(60% 80% at 85% 30%,rgba(56,111,185,.55),transparent 70%),
+    radial-gradient(40% 60% at 70% 90%,rgba(54,165,128,.28),transparent 70%)}
+.p-index .hero.xh::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1.4px);background-size:22px 22px;
+  -webkit-mask-image:linear-gradient(100deg,transparent 35%,#000 75%);mask-image:linear-gradient(100deg,transparent 35%,#000 75%)}
+.p-index .hero.xh .wrap{position:relative;z-index:1}
+.p-index .hero.xh .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.p-index .hero.xh h1{color:#fff;max-width:13ch}
+.p-index .hero.xh .std{color:rgba(255,255,255,.82);max-width:44ch}
+.p-index .hero.xh .trust{border-top-color:rgba(255,255,255,.18);color:rgba(255,255,255,.7)}
+.p-index .hero.xh .live{margin-top:0}
+.eyebrow-x{display:inline-block;font-size:.875rem;font-weight:600;color:var(--mint);margin-bottom:18px}
+
+/* section head: heading left, pill right */
+.xhead{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px}
+.xhead h2{max-width:20ch;margin-top:10px}
+
+/* featured platform card */
+.feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);background:var(--grad);color:#fff;
+  border-radius:var(--radius);overflow:hidden;margin-bottom:24px}
+.feat .fx{padding:clamp(28px,3.4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.feat .fx .lbl{font-size:.875rem;font-weight:600;color:var(--mint)}
+.feat h3{color:#fff;font-size:clamp(1.6rem,1.1rem + 1.4vw,2.25rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.feat p{color:rgba(255,255,255,.8);max-width:44ch}
+.feat .fx .btn{align-self:flex-start;margin-top:8px}
+.feat figure{margin:0;align-self:stretch;min-height:280px;
+  clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
+.feat figure img{width:100%;height:100%;object-fit:cover}
+.ind .btn{align-self:flex-start;margin-top:auto}
+
+/* big-number rows */
+.nums{display:grid;gap:0}
+.nums .row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1.3fr) auto;gap:32px;
+  align-items:center;padding:30px 0;border-bottom:1px solid var(--rule)}
+.nums .row:first-child{border-top:1px solid var(--rule)}
+.nums .big{font-size:clamp(3rem,2rem + 3.6vw,5rem);font-weight:800;letter-spacing:-.05em;line-height:1;
+  background:linear-gradient(100deg,var(--blue) 10%,var(--green-bar) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nums h3{font-size:1.25rem;font-weight:700;line-height:1.3}
+.nums p{color:var(--mid);font-size:.9375rem}
+
+/* insights band */
+.xin .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.xin .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;color:#fff;transition:background .16s ease,transform .16s ease}
+.xin .card:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);color:#fff}
+.xin .card.big{grid-column:span 3;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.xin .card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.xin .card.big img{aspect-ratio:auto;height:100%}
+.xin .card .cx{padding:26px 28px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.xin .card .lbl{font-size:.8125rem;font-weight:600;color:var(--mint)}
+.xin .card h3{color:#fff;font-size:1.375rem;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.xin .card.big h3{font-size:clamp(1.6rem,1.1rem + 1.3vw,2.25rem)}
+.xin .card p{color:rgba(255,255,255,.76);font-size:.9375rem}
+.xin .card .meta{margin-top:auto;display:flex;gap:12px;align-items:center;font-size:.8125rem;color:rgba(255,255,255,.66)}
+.xin .card .meta span:first-child{background:rgba(255,255,255,.14);padding:3px 10px;border-radius:6px;color:#fff}
+.xin .more{text-align:center;margin-top:36px}
+
+/* let's talk */
+.talk{background:var(--band)}
+.talk .inner{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.talk h2 span{color:var(--blue)}
+.talk p{font-size:1.25rem;font-weight:700;color:var(--ink);margin-top:14px}
+
+@media (max-width: 1080px){
+  .p-index .hero.xh .split{grid-template-columns:minmax(0,1fr);gap:44px}
+  .feat{grid-template-columns:minmax(0,1fr)}
+  .feat figure{clip-path:none;min-height:220px}
+  .xin .card.big{grid-template-columns:minmax(0,1fr)}
+  .nums .row{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:12px 28px}
+  .nums .row p,.nums .row .btn{grid-column:2}
+}
+@media (max-width: 860px){
+  .xin .cards{grid-template-columns:minmax(0,1fr)}
+  .xin .card.big{grid-column:auto}
+  .xhead{flex-direction:column;align-items:flex-start}
+}
+@media (max-width: 620px){
+  .nums .row{grid-template-columns:minmax(0,1fr)}
+  .nums .row p,.nums .row .btn{grid-column:auto}
+  .nums .row .btn{justify-self:start}
+}
+@media (prefers-reduced-motion: reduce){ .xin .card{transition:none} .xin .card:hover{transform:none} }
