@@ -10,3 +10,4 @@ python3 _build/build_solutions.py
 python3 _build/build_articles.py
 python3 _build/build_credits.py
 python3 _build/build_og.py
+python3 _build/stamp_assets.py

@@ -420,7 +420,7 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .sreads{list-style:none;padding:0;margin:10px 0 0}
 .sreads li{padding:10px 0;border-bottom:1px solid var(--hair)}
 .sreads a{font-weight:600;font-size:.9375rem;color:var(--ink);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
-@media (max-width:980px){.sgrid{grid-template-columns:minmax(0,1fr);gap:28px}.sside{order:-1}}
+@media (max-width:980px){.sgrid{grid-template-columns:minmax(0,1fr);gap:28px}}
 @media (max-width:620px){.sfeat{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- the app: real dashboard screens in a browser frame ---------- */
@@ -436,4 +436,5 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 .sapp{margin:0 0 22px}
 .sapp img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-top:0;border-radius:0 0 var(--radius) var(--radius)}
 @media (max-width:860px){.appgrid{grid-template-columns:minmax(0,1fr)}}
-.appgrid figure:not(.appbig) img,.sapp img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+
+.appgrid{align-items:start}
