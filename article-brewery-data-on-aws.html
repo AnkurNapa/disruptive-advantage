@@ -18,7 +18,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="assets/site.css?v=d48118b0" rel="stylesheet"/>
-<link href="assets/theme.css?v=612dde31" rel="stylesheet"/>
+<link href="assets/theme.css?v=2b7ab073" rel="stylesheet"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Brewery data on AWS without moving your stack", "description": "Brewery data on AWS: Beer365 reads your Amazon S3 data where it sits, joins it into one batch record and leaves your AWS stack exactly as it is today.", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "author": {"@type": "Person", "name": "Ankur Napa", "jobTitle": "Growth Officer, Beverage R&D", "image": "https://ankurnapa.github.io/disruptive-advantage/assets/ankur-napa.jpg", "sameAs": ["https://www.linkedin.com/in/ankur-napa"]}, "publisher": {"@type": "Organization", "name": "Beer365", "url": "https://ankurnapa.github.io/disruptive-advantage/", "logo": "https://ankurnapa.github.io/disruptive-advantage/assets/beer365-logo.svg?v=1b0dad0e", "parentOrganization": {"@type": "Organization", "name": "Disruptive Advantage"}}, "mainEntityOfPage": "https://ankurnapa.github.io/disruptive-advantage/article-brewery-data-on-aws.html", "keywords": "brewery data on AWS, AWS for breweries, Amazon S3 brewery data, brewery analytics AWS, Microsoft Fabric and AWS", "articleSection": "Across the whole brewery"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do we have to move off AWS?", "acceptedAnswer": {"@type": "Answer", "text": "No. Beer365 reads your Amazon S3 data where it sits through a read-only OneLake shortcut. Your AWS stack stays as it is."}}, {"@type": "Question", "name": "Is our data copied out of S3?", "acceptedAnswer": {"@type": "Answer", "text": "Not by default. A shortcut points at the files. Fabric can cache files for 1 to 28 days to reduce repeated cross-cloud reads."}}, {"@type": "Question", "name": "Who pays for cross-cloud reads?", "acceptedAnswer": {"@type": "Answer", "text": "AWS charges egress to your account. Reading shaped summaries instead of raw streams keeps it small. The assessment estimates the cost before you commit."}}, {"@type": "Question", "name": "Can our AWS team keep building on AWS?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Beer365 only reads. Anything your team builds that lands in S3 can join the batch record later."}}]}</script>
 <meta content="https://ankurnapa.github.io/disruptive-advantage/og/article-brewery-data-on-aws.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="https://ankurnapa.github.io/disruptive-advantage/og/article-brewery-data-on-aws.jpg" name="twitter:image"/>
@@ -45,8 +45,8 @@
 <a class="btn sm hdr-cta" href="contact.html">Book a free demo</a>
 </header>
 <main id="main">
-<div class="crumb"><div class="wrap"><a href="articles.html">Articles</a>  /  Across the whole brewery</div></div>
-<section class="phero">
+<section class="phero nhero dark">
+<img alt="" class="nhero-bg" fetchpriority="high" height="700" src="assets/photos/cellar.jpg" width="1200"/>
 <div class="wrap">
 <span class="topic">Across the whole brewery</span>
 <h1>Brewery data on AWS without moving your stack</h1>
@@ -55,6 +55,7 @@
 <figure class="ahero"><img alt="" height="700" src="assets/photos/cellar.jpg" width="1200"/></figure>
 </div>
 </section>
+<nav aria-label="Breadcrumb" class="wrap ncrumb"><a href="index.html">Home</a><span aria-hidden="true">›</span><a href="articles.html">Articles</a><span aria-hidden="true">›</span><span aria-current="page">Brewery data on AWS without moving your stack</span></nav>
 <section>
 <div class="wrap article">
 <aside class="side">
@@ -70,7 +71,7 @@
 </section>
 <section class="tinted">
 <div class="wrap">
-<div class="xhead"><div><p class="kicker">Keep reading</p><h2>More on across the whole brewery</h2></div><a class="btn ghost" href="articles.html">All articles</a></div>
+<div class="xhead"><div><h2 class="nrule">More on across the whole brewery</h2></div><a class="btn ghost" href="articles.html">All articles</a></div>
 <div class="acards"><a class="acard" data-area="layer" href="article-ai-in-brewing.html"><img alt="" class="cimg" height="700" loading="lazy" src="assets/photos/raw.jpg" width="1200"/><span class="topic">Across the whole brewery</span><h3>AI in brewing, judged by what it saves in malt, tanks and beer</h3><p>AI in brewing pays when it answers a question someone already asks and the sum behind it is written down. It fails when the model comes before the batch record.</p><span class="ameta">5 Oct 2026 · 5 min read</span></a><a class="acard" data-area="layer" href="article-beer-data-you-already-have.html"><img alt="" class="cimg" height="700" loading="lazy" src="assets/photos/brewhouse.jpg" width="1200"/><span class="topic">Across the whole brewery</span><h3>The beer data your brewery already has and what it is worth</h3><p>Most breweries do not need more data to start. Brew sheets, lab books, the historian, the ERP, the excise register and sales files already hold the answers. They just never meet.</p><span class="ameta">2 Oct 2026 · 4 min read</span></a><a class="acard" data-area="layer" href="article-brewery-data-on-google-cloud.html"><img alt="" class="cimg" height="700" loading="lazy" src="assets/photos/packaging.jpg" width="1200"/><span class="topic">Across the whole brewery</span><h3>Brewery data on Google Cloud, read where it already sits</h3><p>If your sales, e-commerce or group reporting already lives on Google Cloud, you do not need to move it. Beer365 reads BigQuery and Cloud Storage and joins them to the brewing side.</p><span class="ameta">27 Sep 2026 · 4 min read</span></a></div>
 </div>
 </section>
@@ -106,6 +107,6 @@
 <span class="places"><span>Microsoft Partner</span><span>North Sydney</span><span>Bangalore</span></span>
 </div>
 </footer>
-<script defer="" src="assets/site.js?v=26d0d413"></script>
+<script defer="" src="assets/site.js?v=e3efbfd2"></script>
 </body>
 </html>

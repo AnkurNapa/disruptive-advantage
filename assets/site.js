@@ -121,6 +121,11 @@
     if (ask && msg && !msg.value) { msg.value = ask.slice(0, 1200); }
   }
 
+  /* --- hero videos: stay still for people who ask for less motion --- */
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    $$('video.nhero-bg').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+  }
+
   /* --- sticky call to action on long pages (phones) -------------------- */
   var stick = $('#stickcta');
   var hero = $('.hero, .nhero');

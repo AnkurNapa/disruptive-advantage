@@ -548,7 +548,7 @@ img[width][height]{height:auto}
 .nhero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.72) 100%),linear-gradient(90deg,rgba(0,0,0,.45),transparent 70%)}
 .nhero::after{content:'';position:absolute;right:0;bottom:44px;width:min(30vw,420px);height:10px;background:var(--yellow)}
 .nhero .wrap{position:relative;z-index:1;padding-bottom:clamp(56px,7vw,96px);width:100%}
-.p-sol .nhero h1,.p-index .nhero h1{color:#fff;max-width:20ch;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.85);display:inline-block}
+.nhero h1{color:#fff;max-width:20ch;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.85);display:inline-block}
 .nhero p{color:rgba(255,255,255,.92);font-size:1.0625rem;max-width:52ch;margin-top:18px}
 .ncrumb{display:flex;gap:10px;font-size:.8125rem;color:var(--soft);padding-top:18px;padding-bottom:18px}
 .ncrumb a{color:var(--soft)}
@@ -641,3 +641,18 @@ img[width][height]{height:auto}
 @media (max-width:700px){.p-index .nhero::before{background:rgba(0,0,0,.62)}}
 .nhero::before{z-index:1}.nhero .wrap{z-index:2}
 .nhero::after{z-index:2}
+/* every inner page: the old .phero becomes a NIRAS photo hero */
+.phero.nhero{padding:0;border-bottom:0;background:var(--night);min-height:clamp(380px,56vh,560px)}
+.phero.nhero h1{max-width:22ch;margin-top:0}
+.phero.nhero .std{color:rgba(255,255,255,.92);max-width:56ch}
+.phero.nhero .topic,.phero.nhero .tag{color:var(--yellow);font-weight:700;font-size:.875rem;letter-spacing:.02em}
+.phero.nhero .hmeta,.phero.nhero .hmeta span{color:rgba(255,255,255,.82)}
+.phero.nhero .acts{margin-top:24px}
+.p-art .phero.nhero h1{font-size:clamp(2rem,1.3rem + 2.4vw,3.1rem)}
+video.nhero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+@media print{.nhero-bg,.ncrumb{display:none}.phero.nhero{min-height:0;background:none}.phero.nhero h1,.phero.nhero .std{color:var(--ink);text-shadow:none}}
+.phero.nhero .topic,.phero.nhero .tag{display:block;margin-bottom:12px}
+.ncrumb{align-items:baseline}
+.ncrumb [aria-current]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nhero .wrap{padding-top:clamp(64px,7vw,112px)}

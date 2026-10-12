@@ -40,7 +40,8 @@ head = re.sub(r'<meta content="[^"]*" property="og:description"/>', f'<meta cont
 head = head.replace('class="p-index"', 'class="p-index p-beer"')
 
 idx = open(os.path.join(SITE, "index.html")).read()
-panel = re.search(r'<figure[^>]*class="live"[^>]*>.*?</figure>', idx, flags=re.S).group(0)
+live = re.search(r'<figure[^>]*class="live"[^>]*>.*?</figure>', idx, flags=re.S)
+panel = live.group(0) if live else ""  # niras.py drops this hero panel after the build
 ask = re.search(r'<section class="ask">.*?</section>', idx, flags=re.S).group(0)
 
 
