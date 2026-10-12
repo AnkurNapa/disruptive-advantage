@@ -66,25 +66,102 @@ def section(i, a):
 </section>'''
 
 
-chips = "".join(f'<a href="#{k}">{E(n)}</a>' for k, n, _, _ in AREAS)
+FEATURED = [  # (page, tag, photo): the "Selected work" mosaic, NIRAS style
+    ("case-study-extract-loss", "Case study", "raw-2"),
+    ("whitepaper-state-of-beer-ai-2026", "White paper", "layer"),
+    ("whitepaper-brewery-business-cases", "White paper", "business-2"),
+    ("whitepaper-how-beer-ai-vendors-prove-value", "White paper", "quality-2"),
+    ("article-generative-ai-for-breweries", "Article", "cellar-2"),
+    ("article-brewery-digital-twin", "Article", "plant-2"),
+]
+RELATED = [("about.html", "About Beer365", "ankur-napa-speaking.jpg"), ("case-studies.html", "Case studies", "photos/packaging.jpg"),
+           ("pricing.html", "Pricing", "photos/market-2.jpg")]
+
+
+def title_of(page):
+    html = open(os.path.join(SITE, page + ".html")).read()
+    return html.split("<title>", 1)[1].split("</title>", 1)[0].replace(" | Beer365", "")
+
+
+def tile(page, tag, photo, big):
+    return (f'<a class="ntile{" big" if big else ""}" href="{page}.html"><img src="assets/photos/{photo}.jpg" alt="" width="1200" height="700" loading="lazy">'
+            f'<span class="ntag">{E(tag)}</span><b>{E(title_of(page))}</b></a>')
+
+
+def mosaic():
+    rows = [FEATURED[i:i + 3] for i in range(0, len(FEATURED), 3)]
+    out = []
+    for r, row in enumerate(rows):
+        big, small = tile(*row[0], True), "".join(tile(*x, False) for x in row[1:])
+        out.append(f'<div class="nrow{" flip" if r % 2 else ""}">{big}<div class="nstack">{small}</div></div>')
+    return "".join(out)
+
+
+arrow = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+services = "".join(f'<li><a class="nsvc" href="#{k}"><span>{E(n)}</span><small>{len(cases(a))} questions</small>{arrow}</a></li>'
+                   for a in AREAS for k, n in [a[:2]])
+related = "".join(f'<a class="nrel" href="{h}"><img src="assets/{img}" alt="" width="1200" height="800" loading="lazy"><span>{E(t)}</span></a>' for h, t, img in RELATED)
+total = sum(len(cases(a)) for a in AREAS)
 head = head_for("Solutions for the whole beer business | Beer365",
                 "Beer365 across the whole brewery: raw materials, brewhouse, cellar, packaging, quality, plant, supply chain, sales, marketing, finance and people.",
                 BASE + "solutions.html", "p-articles p-art p-sol", "")
 head = head.replace('<a href="solutions.html">Solutions</a>', '<a aria-current="page" href="solutions.html">Solutions</a>', 1)
 main = f'''<main id="main">
-<section class="phero">
+<section class="nhero">
+ <img class="nhero-bg" src="assets/photos/brewhouse-2.jpg" alt="" width="1200" height="700" fetchpriority="high">
  <div class="wrap">
- <p class="kicker">Solutions</p>
  <h1>One solution for the whole beer business</h1>
- <p class="std">Beer365 joins the brewhouse, cellar, packaging, quality, plant, supply chain, sales and finance on one batch record, inside your own Microsoft tenant. Start with the area that costs you most; every other area reads from the same record.</p>
- <nav class="sjump" aria-label="Areas of the business">{chips}</nav>
+ <p>Beer365 joins the brewhouse, cellar, packaging, quality, plant, supply chain, sales and finance on one batch record, inside your own Microsoft tenant.</p>
+ </div>
+</section>
+<nav class="wrap ncrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">›</span><span aria-current="page">Solutions</span></nav>
+<section class="nintro">
+ <div class="wrap">
+ <h2 class="nrule">One record, every department</h2>
+ <div class="nprose">
+ <p>Most breweries already hold the numbers that explain their losses. They sit in a brew log, a laboratory sheet, a packaging report and the finance ledger, and nobody joins them.</p>
+ <p>Beer365 answers {total} questions a brewer asks, grouped into nine areas of the business. Every answer reads from the same batch record, so the cellar and the finance team see one number.</p>
+ <p>Start with the area that costs you most; every other area reads from the same record.</p>
+ </div>
+ </div>
+</section>
+<section class="nwork">
+ <div class="wrap">
+ <h2 class="nrule right">Selected work:</h2>
+ {mosaic()}
+ </div>
+</section>
+<section class="nareas">
+ <div class="wrap">
+ <h2 class="nrule">Areas of the business</h2>
+ <ul class="nsvcs">{services}</ul>
  </div>
 </section>
 {"".join(section(i, a) for i, a in enumerate(AREAS))}
+<section class="ncontact">
+ <div class="wrap">
+ <h2 class="nrule">Want to know more?</h2>
+ <div class="ncard">
+ <img src="assets/ankur-napa.jpg" alt="Ankur Napa" width="480" height="480" loading="lazy">
+ <div>
+ <p class="nname">Ankur Napa</p>
+ <p class="nrole">Leads beverage work, Disruptive Advantage</p>
+ <p class="nloc">Bengaluru, India</p>
+ <p class="nlinks"><a href="tel:+917755909445">+91 7755 909445</a><a href="mailto:ankur.napa@disruptive-advantage.com">E-mail</a></p>
+ </div>
+ </div>
+ </div>
+</section>
+<section class="nrelated">
+ <div class="wrap">
+ <h2 class="nrule">You might also find interest in:</h2>
+ <div class="nrels">{related}</div>
+ </div>
+</section>
 <section class="talk">
  <div class="wrap inner">
  <div><h2>Start with the area that <span>hurts</span></h2><p>Tell us which part of the brewery costs you most. We will show you how it is answered from your own records.</p></div>
- <div class="talk-acts"><a class="btn" href="contact.html?produce=beer">Book a free demo</a><p class="direct">Or talk to Ankur directly: <a href="tel:+917755909445">+91 7755 909445</a> · <a href="mailto:ankur.napa@disruptive-advantage.com">ankur.napa@disruptive-advantage.com</a></p><p><a href="features.html">See all twelve modules</a></p></div>
+ <div class="talk-acts"><a class="btn" href="contact.html?produce=beer">Book a free demo</a><p><a href="features.html">See all twelve modules</a></p></div>
  </div>
 </section>
 </main>'''
