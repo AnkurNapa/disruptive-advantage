@@ -447,7 +447,7 @@ section.cta .std,section.cta p{color:rgba(255,255,255,.78)}
 /* ======================================================================
    One form system and one icon family, everywhere
    ====================================================================== */
-:root{--field-h:50px;--field-r:12px;--field-b:#D3CFC2;--ring:0 0 0 4px rgba(245,224,3,.55)}
+:root{--field-h:50px;--field-r:0;--field-b:#D3CFC2;--ring:0 0 0 4px rgba(245,224,3,.55)}
 /* icons: 24 grid, line, colour from the text */
 .ic{width:20px;height:20px;flex:none;display:inline-block;vertical-align:-4px}
 .ic.sm{width:16px;height:16px;vertical-align:-3px;margin-right:8px;opacity:.85}
