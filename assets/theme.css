@@ -548,7 +548,7 @@ img[width][height]{height:auto}
 .nhero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.72) 100%),linear-gradient(90deg,rgba(0,0,0,.45),transparent 70%)}
 .nhero::after{content:'';position:absolute;right:0;bottom:44px;width:min(30vw,420px);height:10px;background:var(--yellow)}
 .nhero .wrap{position:relative;z-index:1;padding-bottom:clamp(56px,7vw,96px);width:100%}
-.p-sol .nhero h1{color:#fff;max-width:20ch;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.85);display:inline-block}
+.p-sol .nhero h1,.p-index .nhero h1{color:#fff;max-width:20ch;padding-bottom:20px;border-bottom:2px solid rgba(255,255,255,.85);display:inline-block}
 .nhero p{color:rgba(255,255,255,.92);font-size:1.0625rem;max-width:52ch;margin-top:18px}
 .ncrumb{display:flex;gap:10px;font-size:.8125rem;color:var(--soft);padding-top:18px;padding-bottom:18px}
 .ncrumb a{color:var(--soft)}
@@ -611,3 +611,33 @@ img[width][height]{height:auto}
 .nhero h1,.nhero p,.ntag,.ntile b{text-shadow:0 1px 12px rgba(0,0,0,.55)}
 .ntile::after{background:linear-gradient(200deg,rgba(0,0,0,.45),transparent 30%),linear-gradient(180deg,transparent 40%,rgba(0,0,0,.78))}
 @media (max-width:700px){.nhero::before{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.78))}}
+/* ======================================================================
+   Home, niras.com homepage anatomy: photo hero, feature split, selected
+   work, a pale sign-up band, a "join us" split, ruled headings throughout
+   ====================================================================== */
+.p-index .nhero{min-height:clamp(480px,78vh,760px)}
+.p-index .nhero h1{max-width:22ch}
+.p-index .nhero .acts{margin-top:28px}
+.p-index .nhero .cta-note{color:rgba(255,255,255,.8);margin-top:14px;font-size:.875rem}
+.nfeature{padding:clamp(24px,3vw,48px) 0 clamp(40px,5vw,80px)}
+.nsplit{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);align-items:start}
+.nsplit img[width][height]{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover}
+.nsplit h2{max-width:16ch;margin:0 0 16px}
+.nsplit .std{max-width:44ch;margin-bottom:20px}
+.nband{background:var(--cream);padding:clamp(40px,5vw,72px) 0}
+.nband .inner{display:flex;align-items:center;justify-content:space-between;gap:32px;max-width:960px}
+.nband h2{max-width:18ch;margin:0 0 12px}
+.nband p{margin:0;color:var(--mid)}
+.nband .btn{flex:none}
+.dark .nrule{border-bottom-color:rgba(255,255,255,.85)}
+.xhead .nrule{margin-bottom:0}
+.njoin ul.caps li{padding-left:30px}
+.njoin ul.caps li::before{top:5px;width:12px;height:7px;background:none;border:solid var(--ink);border-width:0 0 2px 2px;transform:rotate(-45deg)}
+@media (max-width:860px){
+  .nsplit{grid-template-columns:minmax(0,1fr)}
+  .nband .inner{flex-direction:column;align-items:flex-start}
+}
+.p-index .nhero::before{background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.78)),linear-gradient(90deg,rgba(0,0,0,.5),transparent 75%)}
+@media (max-width:700px){.p-index .nhero::before{background:rgba(0,0,0,.62)}}
+.nhero::before{z-index:1}.nhero .wrap{z-index:2}
+.nhero::after{z-index:2}

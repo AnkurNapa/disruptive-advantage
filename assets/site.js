@@ -123,7 +123,7 @@
 
   /* --- sticky call to action on long pages (phones) -------------------- */
   var stick = $('#stickcta');
-  var hero = $('.hero');
+  var hero = $('.hero, .nhero');
   if (stick && hero && window.IntersectionObserver) {
     var closing = $('.talk');
     var heroGone = false, endSeen = false;
