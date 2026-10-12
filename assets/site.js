@@ -121,9 +121,18 @@
     if (ask && msg && !msg.value) { msg.value = ask.slice(0, 1200); }
   }
 
-  /* --- hero videos: stay still for people who ask for less motion --- */
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    $$('video.nhero-bg').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+  /* --- hero videos: only where they cost nothing to the reader --------
+     The HTML ships the poster only. Wide screens with no data saver and no
+     reduced motion get the clip; everyone else keeps the still. */
+  var mm = function (q) { return window.matchMedia && window.matchMedia(q).matches; };
+  var saver = navigator.connection && navigator.connection.saveData;
+  if (!saver && !mm('(prefers-reduced-motion: reduce)') && mm('(min-width: 900px)')) {
+    $$('video.nhero-bg[data-src]').forEach(function (v) {
+      v.src = v.getAttribute('data-src');
+      v.autoplay = true;
+      var p = v.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    });
   }
 
   /* --- sticky call to action on long pages (phones) -------------------- */

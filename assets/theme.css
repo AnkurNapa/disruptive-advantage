@@ -656,3 +656,23 @@ video.nhero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover
 .ncrumb{align-items:baseline}
 .ncrumb [aria-current]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .nhero .wrap{padding-top:clamp(64px,7vw,112px)}
+/* UX pass: reading and form pages start their content on the first screen */
+.nhero.ncompact{min-height:clamp(260px,38vh,400px)}
+.nhero.ncompact .wrap{padding-top:clamp(40px,4vw,64px);padding-bottom:clamp(36px,4vw,56px)}
+.nhero.ncompact h1{font-size:clamp(1.9rem,1.2rem + 2.2vw,2.9rem);padding-bottom:14px}
+.nhero.ncompact .std{font-size:1rem;margin-top:12px}
+.nhero.ncompact .hmeta{margin-top:14px}
+.nhero.ncompact::after{bottom:24px;height:8px}
+/* home: detail one click away */
+.nmore{margin-top:8px}
+.nmore>summary{cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:14px 0;border-bottom:2px solid var(--gold);list-style:none}
+.nmore>summary::-webkit-details-marker{display:none}
+.nmore>summary::after{content:'+';font-size:1.25rem;line-height:1;transition:transform var(--duration-fast,150ms)}
+.nmore[open]>summary::after{transform:rotate(45deg)}
+.nmore>summary:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+.nmore[open]>summary{margin-bottom:28px}
+.pains+.cta-row,.p-index .pains~.acts{margin-top:32px}
+@media (prefers-reduced-motion:reduce){.nmore>summary::after{transition:none}}
+.nhero .hmeta{display:flex;flex-wrap:wrap;gap:4px 20px;border:0;padding-top:0}
+.nhero .hmeta span{display:inline;margin:0;padding:0;border:0}
+.ncrumb + section{padding-top:clamp(12px,2vw,32px)}

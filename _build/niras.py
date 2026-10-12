@@ -26,6 +26,9 @@ PAGES = {  # page: (crumb label, photo); parents are worked out from the name
 VIDEO = json.load(open(os.path.join(HERE, "videos.json"))) if os.path.exists(os.path.join(HERE, "videos.json")) else {}
 
 
+COMPACT = ("article-", "whitepaper-", "case-study-")
+
+
 def parent(page):
     if page.startswith("article-"):
         return '<a href="articles.html">Articles</a><span aria-hidden="true">›</span>'
@@ -37,8 +40,9 @@ def parent(page):
 
 
 def video_tag(name):
-    return (f'<video class="nhero-bg" autoplay muted loop playsinline preload="metadata" poster="assets/video/{name}.jpg" aria-hidden="true">'
-            f'<source src="assets/video/{name}.mp4" type="video/mp4"></video>')
+    # no <source> here: site.js attaches it on wide screens without data saver or reduced motion
+    return (f'<video class="nhero-bg" muted loop playsinline preload="none" poster="assets/video/{name}.jpg" '
+            f'data-src="assets/video/{name}.mp4" aria-hidden="true"></video>')
 
 
 def media(page, photo):
@@ -56,7 +60,8 @@ def convert(page, s):
         label, photo = PAGES[page]
     i = s.index('<section class="phero">')
     j = s.index("</section>", i) + len("</section>")
-    hero = s[i:j].replace('<section class="phero">', f'<section class="phero nhero dark">\n{media(page, photo)}', 1)
+    compact = " ncompact" if page.startswith(COMPACT) or page == "contact.html" else ""
+    hero = s[i:j].replace('<section class="phero">', f'<section class="phero nhero dark{compact}">\n{media(page, photo)}', 1)
     hero = re.sub(r'<p class="kicker">[^<]*</p>\s*', "", hero, count=1)
     crumb = (f'\n<nav aria-label="Breadcrumb" class="wrap ncrumb"><a href="index.html">Home</a><span aria-hidden="true">›</span>'
              f'{parent(page)}<span aria-current="page">{label}</span></nav>')
@@ -68,6 +73,11 @@ def drop_old_crumb(s):
     return re.sub(r'<div class="crumb"><div class="wrap">.*?</div></div>\n?', "", s, count=1)
 
 
+def drop_hero_figure(s):
+    # the article photo is already the hero background; showing it again pushes the text a screen down
+    return re.sub(r'<figure class="ahero">.*?</figure>\s*', "", s, count=1, flags=re.S)
+
+
 def rules(s):
     # NIRAS has no kicker labels: the heading carries a rule under it instead
     s = re.sub(r'<p class="kicker">[^<]*</p>\s*<h2([^>]*)>', lambda m: '<h2 class="nrule"' + m.group(1).replace(' class="', ' data-c="') + '>', s)
@@ -75,10 +85,21 @@ def rules(s):
 
 
 def videos(page, s):
-    # pages converted on an earlier run (and the hand built hero pages) swap their still for the clip
-    if page not in VIDEO or '<video class="nhero-bg"' in s:
+    """Bring an already converted page up to date: current clip (or the still), compact hero where it belongs."""
+    old = re.search(r'<video[^>]*class="nhero-bg"[^>]*>.*?</video>|<img[^>]*class="nhero-bg"[^>]*/?>', s, flags=re.S)
+    if not old:
         return s
-    return re.sub(r'<img alt="" class="nhero-bg"[^>]*/?>', video_tag(VIDEO[page]), s, count=1)
+    if page in VIDEO:
+        new = video_tag(VIDEO[page])
+    else:
+        photo = PAGES.get(page, ("", "brewhouse"))[1] if not page.startswith("article-") else ART_PHOTO.get(page, "brewhouse")
+        new = old.group(0) if old.group(0).startswith("<img") else f'<img alt="" class="nhero-bg" fetchpriority="high" height="700" src="assets/photos/{photo}.jpg" width="1200"/>'
+    if re.sub(r"\s+", " ", old.group(0)) == new or ('data-src="assets/video/' + VIDEO.get(page, "?") + '.mp4"') in old.group(0):
+        new = old.group(0)  # already current (attribute order may differ after the icon pass)
+    s = s.replace(old.group(0), new, 1)
+    if (page.startswith(COMPACT) or page == "contact.html") and "ncompact" not in s:
+        s = re.sub(r'<section class="phero nhero dark"', '<section class="phero nhero dark ncompact"', s, count=1)
+    return s
 
 
 def home(s):
@@ -150,12 +171,49 @@ def home(s):
     return s
 
 
+HOME_ORDER = ["nhero", "pains", "nfeature", "nareas", "appshow", "nband", "method", "proof", "poc", "ask",
+              "trust", "team", "market", "nwork", "faq", "talk"]
+HOME_KEY = {"nhero": 'class="nhero', "pains": 'class="pains"', "nfeature": 'class="nfeature"', "nareas": 'class="nareas"',
+            "appshow": 'class="appshow"', "nband": 'class="nband"', "method": 'id="method"', "proof": "modlist proof",
+            "poc": 'class="weeks"', "ask": 'class="ask"', "trust": "trustg", "team": "njoin", "market": "dark market",
+            "nwork": 'class="nwork"', "faq": 'id="faq"', "talk": 'class="talk"'}
+BANDED = {"pains", "nfeature", "nareas", "appshow", "method", "proof", "poc", "trust", "team", "nwork", "faq"}
+
+
+def home_story(s):
+    """Problem first, then what it is, what it saves, the proof, trust and the questions."""
+    if 'data-story="1"' in s:
+        return s
+    a, b = s.index('<main id="main">') + len('<main id="main">'), s.index("</main>")
+    secs = re.findall(r"<section.*?</section>", s[a:b], flags=re.S)
+    by = {k: next(x for x in secs if HOME_KEY[k] in x) for k in HOME_ORDER}
+    assert len(secs) == len(HOME_ORDER), [x[:60] for x in secs]
+    # the five formulas stay one click away instead of filling three screens
+    m = by["method"]
+    i, j = m.index('<div class="leaks">'), m.rindex("</div>\n</section>")
+    by["method"] = m[:i] + '<details class="nmore"><summary>See the five formulas and what we never count</summary>' + m[i:j] + "</details>\n" + m[j:]
+    # the savings band straight above already carries this button
+    by["method"] = re.sub(r'<a class="btn" href="roi.html">Work out my savings</a>', "", by["method"], count=1)
+    by["nwork"] = by["nwork"].replace("Selected work:", "Read before you call")
+    out, band = [], False
+    for k in HOME_ORDER:
+        x = re.sub(r'^<section class="([^"]*)"', lambda m: '<section class="' + " ".join(c for c in m.group(1).split() if c != "tinted") + '"', by[k])
+        x = x.replace('<section class="">', "<section>", 1).replace('<section class="" ', "<section ", 1)
+        if k in BANDED:
+            if band:
+                x = x.replace("<section>", '<section class="tinted">', 1) if x.startswith("<section>") else x.replace('<section class="', '<section class="tinted ', 1)
+            band = not band
+        out.append(x)
+    return s[:a] + "\n" + "\n".join(out).replace("<section", '<section data-story="1"', 1) + "\n" + s[b:]
+
+
 for path in sorted(glob.glob(os.path.join(SITE, "*.html"))):
     page = os.path.basename(path)
     s = open(path).read()
     if "http-equiv=\"refresh\"" in s or len(s) < 2000:
         continue
-    out = videos(page, rules(drop_old_crumb(convert(page, home(s) if page == "index.html" else s))))
+    out = videos(page, rules(drop_hero_figure(drop_old_crumb(convert(page, home(s) if page == "index.html" else s)))))
+    out = home_story(out) if page == "index.html" else out
     if out != s:
         open(path, "w").write(out)
         print(page)
