@@ -2,21 +2,21 @@
  {
   "area": "raw",
   "file": "assets/photos/raw.jpg",
-  "title": "Fresh hop cones tree",
-  "creator": "Markus Spiske",
-  "source": "rawpixel",
+  "title": "Hop cones",
+  "creator": null,
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/503188/free-photo-image-beer-hops-brewery"
+  "landing": "https://pxhere.com/en/photo/778478"
  },
  {
   "area": "brewhouse",
   "file": "assets/photos/brewhouse.jpg",
-  "title": "Biera microbrewery in Amman, 2023",
+  "title": "File:Biera microbrewery in Amman, 2023.jpg",
   "creator": "Makeandtoss",
   "source": "wikimedia",
   "license": "cc0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "landing": "https://commons.wikimedia.org/w/index.php?curid=148774128"
  },
  {
@@ -32,141 +32,245 @@
  {
   "area": "packaging",
   "file": "assets/photos/packaging.jpg",
-  "title": "Numerous bottles foreground bottles conveyor",
-  "creator": "U.S. National Archives",
-  "source": "rawpixel",
+  "title": "Bottling line",
+  "creator": "DimiTalen",
+  "source": "wikimedia",
   "license": "cc0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/8802792/photo-image-person-wood-vintage"
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=155569963"
  },
  {
   "area": "quality",
   "file": "assets/photos/quality.jpg",
-  "title": "APS Beamline scientist fixing equipment",
-  "creator": "usdoe",
-  "source": "rawpixel",
+  "title": "Laboratory glassware and test tubes",
+  "creator": null,
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/8708739/photo-image-medicine-public-domain-covid-19"
+  "landing": "https://pxhere.com/en/photo/1062742"
  },
  {
   "area": "plant",
   "file": "assets/photos/plant.jpg",
-  "title": "Green Flash Brewing",
-  "creator": "Daquella manera",
-  "source": "flickr",
-  "license": "cc0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.flickr.com/photos/62518311@N00/13074883324"
+  "title": "File:Urban South Brewery Tanks.jpg",
+  "creator": "Infrogmation of New Orleans",
+  "source": "wikimedia",
+  "license": "cc by 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=77525544"
  },
  {
   "area": "market",
   "file": "assets/photos/market.jpg",
-  "title": "Stack aluminium beer kegs",
+  "title": "Stacked aluminium beer kegs",
   "creator": null,
-  "source": "rawpixel",
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/6041345/photo-image-public-domain-free-metal"
+  "landing": "https://pxhere.com/en/photo/1239431"
  },
  {
   "area": "business",
   "file": "assets/photos/business.jpg",
-  "title": "Team Meeting",
-  "creator": "Startup Stock Photos",
-  "source": "stocksnap",
+  "title": "Team meeting",
+  "creator": null,
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://stocksnap.io/photo/team-meeting-69TMH4ITIE"
+  "landing": "https://pxhere.com/en/photo/764674"
  },
  {
   "area": "layer",
   "file": "assets/photos/layer.jpg",
-  "title": "Free glass beer image",
+  "title": "Beer taps at a bar",
   "creator": null,
-  "source": "rawpixel",
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/5927011/photo-image-public-domain-hand-person"
+  "landing": "https://pxhere.com/en/photo/1009622"
  },
  {
   "area": "raw-2",
   "file": "assets/photos/raw-2.jpg",
-  "title": "Malt barley raised on family-owned",
-  "creator": "U.S. Department of Agriculture",
-  "source": "rawpixel",
+  "title": "Green barley field",
+  "creator": null,
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/3335006/free-photo-image-agriculture-grassland-land-plant"
+  "landing": "https://pxhere.com/en/photo/13566"
  },
  {
   "area": "brewhouse-2",
   "file": "assets/photos/brewhouse-2.jpg",
-  "title": "Bird Brewery interior",
-  "creator": "Bird Brewery",
-  "source": "wikimedia",
+  "title": "Copper brewhouse vessels",
+  "creator": null,
+  "source": "pxhere",
   "license": "cc0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
-  "landing": "https://commons.wikimedia.org/w/index.php?curid=155870809"
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "landing": "https://pxhere.com/en/photo/1358180"
  },
  {
   "area": "cellar-2",
   "file": "assets/photos/cellar-2.jpg",
-  "title": "2014/365/231 Top o' The Tanks",
+  "title": "File:2014-365-231 Top o' The Tanks (14977042112).jpg",
   "creator": "cogdogblog",
-  "source": "flickr",
+  "source": "wikimedia",
   "license": "cc0",
-  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.flickr.com/photos/37996646802@N01/14977042112"
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=56942802"
  },
  {
   "area": "quality-2",
   "file": "assets/photos/quality-2.jpg",
-  "title": null,
+  "title": "Test tubes",
   "creator": null,
-  "source": "rawpixel",
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/5942872/free-public-domain-cc0-photo"
+  "landing": "https://pxhere.com/en/photo/863112"
  },
  {
   "area": "plant-2",
   "file": "assets/photos/plant-2.jpg",
-  "title": "Free brewery factory photo",
+  "title": "Brewery silos",
   "creator": null,
-  "source": "rawpixel",
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/5924609/photo-image-public-domain-free-metal"
+  "landing": "https://pxhere.com/en/photo/1239436"
  },
  {
   "area": "market-2",
   "file": "assets/photos/market-2.jpg",
-  "title": "Beer Tap",
-  "creator": "Maciej Korsan",
-  "source": "stocksnap",
+  "title": "Beer pouring into a glass",
+  "creator": "rawpixel.com",
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://stocksnap.io/photo/beer-tap-CS5KND10L2"
+  "landing": "https://pxhere.com/en/photo/1456499"
  },
  {
   "area": "business-2",
   "file": "assets/photos/business-2.jpg",
-  "title": "Team Meeting",
-  "creator": "Startup Stock Photos",
-  "source": "stocksnap",
+  "title": "Team meeting",
+  "creator": null,
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://stocksnap.io/photo/team-meeting-JBW2PXDOL6"
+  "landing": "https://pxhere.com/en/photo/764428"
  },
  {
   "area": "layer-2",
   "file": "assets/photos/layer-2.jpg",
-  "title": "Beer Pouring",
-  "creator": null,
-  "source": "rawpixel",
+  "title": "Three glasses of beer",
+  "creator": "rawpixel.com",
+  "source": "pxhere",
   "license": "cc0",
   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
-  "landing": "https://www.rawpixel.com/image/5969781/beer-pouring"
+  "landing": "https://pxhere.com/en/photo/1447581"
+ },
+ {
+  "area": "video-brewhouse",
+  "file": "assets/video/brewhouse.jpg",
+  "video": "assets/video/brewhouse.mp4",
+  "title": "Brewer opening a mash tun",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/brewer-opening-a-barley-bagasse-tank-1411/",
+  "original": "https://assets.mixkit.co/videos/1411/1411-1080.mp4",
+  "note": "Re-encoded from the 1080p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-mash",
+  "file": "assets/video/mash.jpg",
+  "video": "assets/video/mash.mp4",
+  "title": "Stirring the mash",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/shovel-moving-ground-barley-in-a-tank-1408/",
+  "original": "https://assets.mixkit.co/videos/1408/1408-1080.mp4",
+  "note": "Re-encoded from the 1080p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-fermentation",
+  "file": "assets/video/fermentation.jpg",
+  "video": "assets/video/fermentation.mp4",
+  "title": "Sampling beer from a tank",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/beer-being-served-from-a-brewer-tank-1421/",
+  "original": "https://assets.mixkit.co/videos/1421/1421-1080.mp4",
+  "note": "Re-encoded from the 1080p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-pour",
+  "file": "assets/video/pour.jpg",
+  "video": "assets/video/pour.mp4",
+  "title": "Beer poured from a wall tap",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/beer-taps-on-a-wall-1427/",
+  "original": "https://assets.mixkit.co/videos/1427/1427-1080.mp4",
+  "note": "Re-encoded from the 1080p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-lab",
+  "file": "assets/video/lab.jpg",
+  "video": "assets/video/lab.mp4",
+  "title": "Beakers of malt and hops",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/glass-beakers-with-barley-seeds-1432/",
+  "original": "https://assets.mixkit.co/videos/1432/1432-1080.mp4",
+  "note": "Re-encoded from the 1080p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-packaging",
+  "file": "assets/video/packaging.jpg",
+  "video": "assets/video/packaging.mp4",
+  "title": "Beer bottle production line",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/beer-bottle-production-line-in-the-factory-33003/",
+  "original": "https://assets.mixkit.co/videos/33003/33003-720.mp4",
+  "note": "Re-encoded from the 720p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-field",
+  "file": "assets/video/field.jpg",
+  "video": "assets/video/field.mp4",
+  "title": "Grain field ready for harvest",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/wheat-field-ready-for-harvesting-8297/",
+  "original": "https://assets.mixkit.co/videos/8297/8297-720.mp4",
+  "note": "Re-encoded from the 720p original: 10 s loop, H.264, no audio"
+ },
+ {
+  "area": "video-malt",
+  "file": "assets/video/malt.jpg",
+  "video": "assets/video/malt.mp4",
+  "title": "Malted barley grains",
+  "creator": "Mixkit",
+  "source": "mixkit",
+  "license": "mixkit free license",
+  "license_url": "https://mixkit.co/license/#videoFree",
+  "landing": "https://mixkit.co/free-stock-video/rotating-barley-grains-30760/",
+  "original": "https://assets.mixkit.co/videos/30760/30760-720.mp4",
+  "note": "Re-encoded from the 720p original: 10 s loop, H.264, no audio"
  }
 ]

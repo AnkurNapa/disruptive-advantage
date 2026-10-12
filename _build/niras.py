@@ -36,13 +36,15 @@ def parent(page):
     return ""
 
 
+def video_tag(name):
+    return (f'<video class="nhero-bg" autoplay muted loop playsinline preload="metadata" poster="assets/video/{name}.jpg" aria-hidden="true">'
+            f'<source src="assets/video/{name}.mp4" type="video/mp4"></video>')
+
+
 def media(page, photo):
-    img = f'<img alt="" class="nhero-bg" fetchpriority="high" height="700" src="assets/photos/{photo}.jpg" width="1200"/>'
-    v = VIDEO.get(page) or VIDEO.get("*")
-    if not v:
-        return img
-    return (f'<video class="nhero-bg" autoplay muted loop playsinline preload="metadata" poster="assets/photos/{photo}.jpg" aria-hidden="true">'
-            f'<source src="assets/video/{v}" type="video/mp4"></video>')
+    if page in VIDEO:
+        return video_tag(VIDEO[page])
+    return f'<img alt="" class="nhero-bg" fetchpriority="high" height="700" src="assets/photos/{photo}.jpg" width="1200"/>'
 
 
 def convert(page, s):
@@ -72,13 +74,11 @@ def rules(s):
     return s
 
 
-def videos(s):
-    # swap a still hero for its video once one is assigned (home and solutions are hand built)
-    page_v = VIDEO.get("*")
-    if not page_v or '<video class="nhero-bg"' in s:
+def videos(page, s):
+    # pages converted on an earlier run (and the hand built hero pages) swap their still for the clip
+    if page not in VIDEO or '<video class="nhero-bg"' in s:
         return s
-    return re.sub(r'<img alt="" class="nhero-bg"[^>]*src="assets/photos/([\w-]+)\.jpg"[^>]*/?>',
-                  lambda m: f'<video class="nhero-bg" autoplay muted loop playsinline preload="metadata" poster="assets/photos/{m.group(1)}.jpg" aria-hidden="true"><source src="assets/video/{page_v}" type="video/mp4"></video>', s, count=1)
+    return re.sub(r'<img alt="" class="nhero-bg"[^>]*/?>', video_tag(VIDEO[page]), s, count=1)
 
 
 def home(s):
@@ -155,7 +155,7 @@ for path in sorted(glob.glob(os.path.join(SITE, "*.html"))):
     s = open(path).read()
     if "http-equiv=\"refresh\"" in s or len(s) < 2000:
         continue
-    out = videos(rules(drop_old_crumb(convert(page, home(s) if page == "index.html" else s))))
+    out = videos(page, rules(drop_old_crumb(convert(page, home(s) if page == "index.html" else s))))
     if out != s:
         open(path, "w").write(out)
         print(page)
