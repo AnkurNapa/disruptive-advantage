@@ -21,7 +21,7 @@
   --night:#000000;
   --grad:radial-gradient(70% 90% at 100% 0%,rgba(245,224,3,.22),transparent 60%),linear-gradient(160deg,#000 0%,#141414 100%);
   --mint:var(--yellow); --mint-ink:#0A0A0A;
-  --radius:14px;  --radius-sm:10px; --pill:999px;
+  --radius:0;  --radius-sm:0; --pill:999px;
   --display:'Inter',-apple-system,'Segoe UI',sans-serif;
 }
 body{font-family:var(--display);color:var(--ink);letter-spacing:-.005em}
@@ -676,3 +676,10 @@ video.nhero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover
 .nhero .hmeta{display:flex;flex-wrap:wrap;gap:4px 20px;border:0;padding-top:0}
 .nhero .hmeta span{display:inline;margin:0;padding:0;border:0}
 .ncrumb + section{padding-top:clamp(12px,2vw,32px)}
+/* one box system, NIRAS style: square corners, flat fills, one straight gold rule
+   where a card needs an accent (no colour that means nothing, no bent borders) */
+.leak .f,.talk h2 span,.xin .card .meta span:first-child,.p-art .author img{border-radius:0}
+.leak,.p-index .mod{border-top:3px solid var(--gold)}
+.wk::before,.wk:nth-child(n)::before{height:3px;background:var(--gold)}
+.weeks{background:#fff;border-top:0}
+.trustg .kpi,.pain,.acard,.upcard,.ind,.csc,.tile{border-radius:0}
